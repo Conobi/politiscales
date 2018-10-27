@@ -650,8 +650,8 @@ function onImageLoaded() {
           key: "s",
           color0: "#850083",
           color1: "#970000",
-          name0: "Progressivism",
-          name1: "Conservatism"
+          name0: "Progressive",
+          name1: "Conservative"
         },
         {
           key: "b",
