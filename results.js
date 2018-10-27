@@ -405,7 +405,7 @@ if (sloganDiv) {
 }
 
 if (!bonusEnabled) {
-  bonusBox = document.getElementById("bonusBox");
+  var bonusBox = document.getElementById("bonusBox");
   bonusBox.style.display = "none";
 }
 
