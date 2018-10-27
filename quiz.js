@@ -1,7 +1,7 @@
 "use strict";
 
 var questions = [
-  /* ESSENTIALISME ************************************************ */
+  // Constructionism/Essentialism
   {
     question: "“One is not born, but rather becomes, a woman.”",
     answer: 0,
@@ -24,7 +24,7 @@ var questions = [
   },
   {
     question:
-      "Differences of treatment and quality of life in our society show that racism is still omnipresent.",
+      "Differences in treatment and quality of life in our society show that racism is still omnipresent.",
     answer: 0,
     valuesYes: [
       {
@@ -169,7 +169,7 @@ var questions = [
     ]
   },
   {
-    question: "Sexual assaults are partly caused by men's natural impulse.",
+    question: "Sexual assaults are partly caused by men’s natural impulse.",
     answer: 0,
     valuesYes: [
       {
@@ -255,7 +255,7 @@ var questions = [
       }
     ]
   },
-  /* NATIONALISME ************************************************* */
+  // Internationalism/Nationalism
   {
     question: "Borders should eventually be abolished.",
     answer: 0,
@@ -490,7 +490,7 @@ var questions = [
       }
     ]
   },
-  /* PRODUCTION *************************************************** */
+  // Communism/Capitalism
   {
     question:
       "No one should get rich from owning a business, housing, or land.",
@@ -606,7 +606,7 @@ var questions = [
     ]
   },
   {
-    question: "Looking for one's own profit is healthy for the economy.",
+    question: "Looking for one’s own profit is healthy for the economy.",
     answer: 0,
     valuesYes: [
       {
@@ -720,7 +720,7 @@ var questions = [
       }
     ]
   },
-  /* MARKET ******************************************************* */
+  // Regulation/Laissez-faire
   {
     question: "Revenues and capital should be taxed to redistribute wealth.",
     answer: 0,
@@ -772,7 +772,7 @@ var questions = [
   },
   {
     question:
-      "Minimal levels of salary should be ensured to make sure that a worker can live of her/his work.",
+      "Minimal levels of salary should be ensured to make sure that a worker can live of their work.",
     answer: 0,
     valuesYes: [
       {
@@ -788,7 +788,7 @@ var questions = [
     ]
   },
   {
-    question: "It is necessary to avoid private monopoly.",
+    question: "It is necessary to avoid a private monopoly.",
     answer: 0,
     valuesYes: [
       {
@@ -954,7 +954,7 @@ var questions = [
       }
     ]
   },
-  /* SOCIETE ****************************************************** */
+  // Progressive/Conservative
   {
     question: "Traditions should be questioned.",
     answer: 0,
@@ -1131,7 +1131,7 @@ var questions = [
   },
   {
     question:
-      "School should mostly teach our values, traditions and fundamental knowledge.",
+      "School should mostly teach our values, traditions, and fundamental knowledge.",
     answer: 0,
     valuesYes: [
       {
@@ -1199,7 +1199,7 @@ var questions = [
       }
     ]
   },
-  /* ECOLOGIE ***************************************************** */
+  // Ecology/Production
   {
     question:
       "It is not acceptable that human actions should lead to the extinction of species.",
@@ -1285,7 +1285,7 @@ var questions = [
   },
   {
     question:
-      "Preserving non urban ecosystems is more important than creating jobs.",
+      "Preserving non-urban ecosystems is more important than creating jobs.",
     answer: 0,
     valuesYes: [
       {
@@ -1318,7 +1318,7 @@ var questions = [
   },
   {
     question:
-      "Space colonization is a good solution for supplying the lack of raw material on Earth (iron, rare metals, fuel...) ",
+      "Space colonization is a good solution for supplying the lack of raw material on Earth (iron, rare metals, fuel...)",
     answer: 0,
     valuesYes: [
       {
@@ -1369,7 +1369,7 @@ var questions = [
   },
   {
     question:
-      "Transhumanism will be beneficial because it will allow us to improve our capacities.",
+      "Trans-humanism will be beneficial because it will allow us to improve our capacities.",
     answer: 0,
     valuesYes: [
       {
@@ -1434,7 +1434,7 @@ var questions = [
       }
     ]
   },
-  /* LIBERTAIRE *************************************************** */
+  // Rehabilitative Justice/Punitive Justice
   {
     question: "Prisons should no longer exist.",
     answer: 0,
@@ -1470,7 +1470,7 @@ var questions = [
   },
   {
     question:
-      "Individuals who get out of prison should be accompanied in their reinsertion.",
+      "Individuals who get out of prison should be assisted in their reinsertion.",
     answer: 0,
     valuesYes: [
       {
@@ -1635,7 +1635,7 @@ var questions = [
   },
   {
     question:
-      "It is better to arrest someone potentially dangerous preventively rather than taking the risk of having them committing a crime.",
+      "It is better to arrest someone potentially dangerous preemptively rather than taking the risk of having them committing a crime.",
     answer: 0,
     valuesYes: [
       {
@@ -1650,7 +1650,7 @@ var questions = [
       }
     ]
   },
-  /* STRATEGIE **************************************************** */
+  // Revolution/Reform
   {
     question: "Mass strike is a good way to acquire new rights.",
     answer: 0,
@@ -1866,7 +1866,7 @@ var questions = [
   },
   {
     question:
-      "Changes in an individual&#39;s way of life can induce changes in society.",
+      "Changes in an individual’s way of life can induce changes in society.",
     answer: 0,
     valuesYes: [
       {
@@ -1881,7 +1881,7 @@ var questions = [
       }
     ]
   },
-  /* BONUS ******************************************************** */
+  // Bonus Badges
   {
     question: "My religion must be spread as widely as possible.",
     answer: 0,

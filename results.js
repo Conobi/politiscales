@@ -671,7 +671,7 @@ function onImageLoaded() {
           key: "m",
           color0: "#269B32",
           color1: "#6608C0",
-          name0: "Regulationism",
+          name0: "Regulation",
           name1: "Laissez-faire"
         },
         {
@@ -679,14 +679,14 @@ function onImageLoaded() {
           color0: "#a0e90d",
           color1: "#4deae9",
           name0: "Ecology",
-          name1: "Productivism"
+          name1: "Production"
         },
         {
           key: "t",
           color0: "#eb1a66",
           color1: "#0ee4c8",
           name0: "Revolution",
-          name1: "Reformism"
+          name1: "Reform"
         }
       ];
 

@@ -6,7 +6,7 @@ The **Constructivists** consider that people build themselves from their environ
 On the contrary, the **Essentialists** consider that an individual is by nature how he/she is and that his/her characteristics which make this person who she/he is, are innate.
 
 1. “One is not born, but rather becomes, a woman.”
-2. Differences of treatment and quality of life in our society show that racism is still omnipresent.
+2. Differences in treatment and quality of life in our society show that racism is still omnipresent.
 3. All sciences, even chemistry and biology are not uncompromising and are conditioned by our society.
 4. The categories “women” and “men” are social constructs that should be given up.
 5. Nobody is by nature predisposed to criminality.
@@ -46,7 +46,7 @@ On the other hand, **Nationalism** is a set of heterogeneous ideas which, when a
 **Capitalism** is as well an ambivalent concept. In this test a majority for capitalism simply signifies that you are for a private property of the means of production.
 
 29. No one should get rich from owning a business, housing, or land.
-30. Wages by private firms is stealing from the workers.
+30. Wage labor is a form of theft from the worker by companies.
 31. It is important that health should stay a public matter.
 32. Energy and transport structures should be a public matter.
 33. Patents should not exist.
@@ -55,7 +55,7 @@ On the other hand, **Nationalism** is a set of heterogeneous ideas which, when a
 36. Looking for one's own profit is healthy for the economy.
 37. It is merit that explains differences of wealth between two individuals.
 38. The fact that some schools and universities are private is not a problem.
-39. Offshoring is a necessary evil to improve production.
+39. Offshoring and outsourcing are necessary evils to improve production.
 40. It is acceptable that there are rich and poor people.
 41. It is acceptable that some industry sectors are private.
 42. Banks should remain private.
@@ -71,13 +71,13 @@ On the contrary, the **Laissez-faire** is the ideas in which the economical acti
 44. The age of retirement should be lowered.
 45. Dismissals of employees should be forbidden except if it is justified.
 46. Minimal levels of salary should be ensured to make sure that a worker can live off their work.
-47. It is necessary to avoid private monopoly.
+47. It is necessary to avoid a private monopoly.
 48. Loans contracted in the public sphere (State, regions, collectivities...) should not necessarily be refunded.
 49. Some sectors or type of employment should be financially supported.
 50. Market economy is optimal when it is not regulated.
 51. Nowadays employees are free to choose when signing a contract with their future employer.
 52. It is necessary to remove regulations in labor legislation to encourage firms to hire.
-53. Legal work time should be increased.
+53. The maximum allowed hours in the legal work week should be increased.
 54. Environmental norms should be influenced by mass consumption and not from an authority.
 55. Social assistance deters people from working.
 56. State-run companies should be managed like private ones and follow the logic of the market (competition, profitability...).
@@ -97,7 +97,7 @@ On the contrary the **Conservatives** want to keep the status quo and even to re
 64. Homosexuals should not be treated equally to heterosexuals treatment regarding marriage, parentage, adoption or procreation.
 65. In some specific conditions, the death penalty is justified.
 66. Technical progress should not change society too quickly.
-67. School should mostly teach our values, traditions and fundamental knowledge.
+67. School should mostly teach our values, traditions, and fundamental knowledge.
 68. Abortion should be limited to specific cases.
 69. The main goal of a couple is to make at least one child.
 70. Abstinence should be preferred to contraception, to preserve the true nature of the sexual act.
@@ -114,7 +114,7 @@ On the contrary the **Conservatives** want to keep the status quo and even to re
 75. It is important to encourage an agriculture that maintains a food biodiversity, even if the output is inferior.
 76. Preserving non-urban ecosystems is more important than creating jobs.
 77. Reduction of waste should be done by reducing production.
-78. Space colonization is a good alternative to supply the lack of raw material on Earth (rare metals, oil...)
+78. Space colonization is a good solution for supplying the lack of raw material on Earth (iron, rare metals, fuel...)
 79. Transforming ecosystems durably to increase the quality of life of human beings is legitimate.
 80. It is necessary to massively invest in research to improve productivity.
 81. Trans-humanism will be beneficial because it will allow us to improve our capacities.
@@ -129,7 +129,7 @@ Conversely the ones in favor of the **Punitive Justice** consider that the role 
 
 85. Prisons should no longer exist.
 86. It is unfair to set a minimal penalty for an offense or a crime.
-87. Individuals who get out of prison should be accompanied in their reinsertion.
+87. Individuals who get out of prison should be assisted in their reinsertion.
 88. Justice should always take into consideration the context and the past of the condemned and adapt their penalty accordingly.
 89. Conditions of life in jail should be greatly improved.
 90. The filing and storage of personal records should be delimited strictly and database cross-checking should be forbidden.
@@ -163,7 +163,7 @@ Conversely the ones in favor of the **Punitive Justice** consider that the role 
 
 ### Bonus Badges
 * **Missionary**: My religion must be spread as widely as possible.
-* **Conspiracist**: It is a small group that consciously and secretly controls the world.
+* **Conspiratorial**: It is a small group that consciously and secretly controls the world.
 * **Pragmatist**: A good policy is a pragmatic policy without ideology.
 * **Monarchist**: We need to establish a monarchy to federate the people and preserve our sovereignty.
 * **Vegan**: Humans should neither eat nor exploit animals.
