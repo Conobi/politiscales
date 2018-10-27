@@ -240,7 +240,6 @@ h3 {
   border-radius: 3px;
   text-decoration: none;
   font-size: 18px;
-  transition: 0.5s;
 }
 .button:hover {
   background-color: white;
