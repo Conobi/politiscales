@@ -605,7 +605,7 @@ function onImageLoaded() {
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 15px sans-serif";
       ctx.textAlign = "right";
-      ctx.fillText("www.politiscales.net", rPreview.width - 10, 27);
+      ctx.fillText("dbhq.github.io", rPreview.width - 10, 27);
 
       yPos += 48;
 
@@ -811,4 +811,11 @@ for (var b in images) {
   images[b] = new Image();
   images[b].src = src;
   images[b].onload = onImageLoaded;
+}
+
+function download_image(){
+  var canvas = document.getElementById('generatedResults');
+  var link = document.getElementById("download");
+  link.href = canvas.toDataURL();
+  link.download = `PolitiScales_Results_${+ new Date()}.png`;
 }
