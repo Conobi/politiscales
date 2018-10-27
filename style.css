@@ -63,23 +63,6 @@ h3 {
   margin: 1em auto 2em;
 }
 
-.ltr {
-  text-align: left;
-}
-.rtl {
-  text-align: right;
-}
-
-.shareText {
-  margin-top: 5vmin;
-  margin-bottom: 5vmin;
-  text-align: center;
-  text-justify: inter-word;
-  font-size: 2vmin;
-  padding-left: 2vmin;
-  padding-right: 2vmin;
-}
-
 .columnContainer {
   position: relative;
 }
@@ -101,48 +84,6 @@ h3 {
   }
 }
 
-.axisEnd {
-  display: inline-block;
-  width: 15vmin;
-  height: 15vmin;
-  vertical-align: middle;
-  z-index: 3;
-  position: relative;
-}
-.axisEnd > img {
-  width: 100%;
-  position: relative;
-  left: 5vmin;
-}
-.axisEndLeft > img {
-  left: 2vmin;
-}
-.axisEndRight > img {
-  left: -2vmin;
-}
-.axisProgress {
-  display: inline-block;
-  width: calc(100% - 30vmin);
-  height: 15vmin;
-  vertical-align: middle;
-}
-.axisSubProgress {
-  display: inline-block;
-  height: 5vmin;
-  margin-top: 5vmin;
-  color: white;
-  font-size: 3.2vmin;
-  box-shadow: 0vmin 0vmin 0.4vmin #222222;
-  z-index: 2;
-  position: relative;
-}
-.axisSubProgress span {
-  display: inline-block;
-  vertical-align: middle;
-  padding-left: 1.1vmin;
-  padding-right: 1.1vmin;
-}
-
 .questionBox {
   max-width: 640px;
   min-height: 5em;
@@ -160,6 +101,9 @@ h3 {
 }
 .descText {
   width: calc(100% - 30vmin);
+}
+.descText p {
+  margin: 0 0 1em;
 }
 .descTextMono {
   align-self: center;
