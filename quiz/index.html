@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<title>PolitiScales - Quiz</title>
+
+	<meta name="description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+	<link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@PolitiScales" />
+	<meta name="twitter:creator" content="@PolitiScales" />
+	<meta property="og:url" content="http://politiscales.net/en_US/" />
+	<meta property="og:title" content="PolitiScales" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion." />
+	<meta property="og:image" content="http://politiscales.net/images/facebook-preview.png" />
+</head>
+<body>
+
+<header>
+	<div id="header">
+		<h1><a href="/">PolitiScales</a></h1>
+	</div>
+</header>
+
+<div id="content">
+	<div id="mainFrame">
+
+
+<h2 id="question-number">Loading...</h2>
+<div class="questionBox">
+	<p id="question-text"></p>
+</div>
+<div class="navButtons">
+	<button class="buttonQuestion" onclick="next_question(1)" style="background-color: #1b5e20;">Absolutely agree</button>
+	<button class="buttonQuestion" onclick="next_question(2/3)" style="background-color: #4caf50;">Somewhat agree</button>
+	<button class="buttonQuestion" onclick="next_question(0)" style="background-color: #bbbbbb;">Neutral or hesitant</button>
+	<button class="buttonQuestion" onclick="next_question(-2/3)" style="background-color: #f44336;">Rather disagree</button>
+	<button class="buttonQuestion" onclick="next_question(-1)" style="background-color: #b71c1c;">Absolutely disagree</button>
+</div>
+
+<div class="navButtons">
+	<button class="button" onclick="prev_question()" id="back_button">Return to the previous question</button>
+	<button class="button" onclick="location.href='/';" id="back_button_off">Go back to home page</button>
+</div>
+
+
+
+	</div>
+</div>
+
+<div id="footer">
+<p>PolitiScale is an initiative of <a href="http://www.radicalisees-sur-internet.fr">“Radicalisé·e·s sur Internet”</a> which is freely inspired by <a href="https://8values.github.io/">8values</a>.</p>
+
+<p>Interested by translating PolitiScales? Please visit our <a href="https://crowdin.com/project/politiscales">Crowdin project</a>.</p>
+</div>
+
+<script src="/quiz.js"></script>
+</body>
+</html>
