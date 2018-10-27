@@ -1,4 +1,6 @@
-questions = [
+"use strict";
+
+var questions = [
   /* ESSENTIALISME ************************************************ */
   {
     question: "“One is not born, but rather becomes, a woman.”",
@@ -2011,10 +2013,10 @@ function results() {
   var axes = {};
 
   for (var i = 0; i < questions.length; i++) {
-    q = questions[i];
+    var q = questions[i];
 
     for (var j = 0; j < q.valuesYes.length; j++) {
-      a = q.valuesYes[j];
+      var a = q.valuesYes[j];
       if (!(a.axis in axes)) {
         axes[a.axis] = {
           val: 0,
@@ -2029,7 +2031,7 @@ function results() {
     }
 
     for (var j = 0; j < q.valuesNo.length; j++) {
-      a = q.valuesNo[j];
+      var a = q.valuesNo[j];
       if (!(a.axis in axes)) {
         axes[a.axis] = {
           val: 0,
@@ -2044,7 +2046,7 @@ function results() {
     }
   }
 
-  url = "";
+  var url = "";
   for (var aK in axes) {
     if (axes[aK].val > 0) {
       if (url != "") url += "&";
