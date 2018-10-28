@@ -131,16 +131,16 @@ characteristics.sort(function(a, b) {
 });
 
 var charSlogan = {
-  c0: "Equality",
   b0: "Humanity",
   b1: "Fatherland",
-  p0: "Socialism",
-  p1: "Work",
-  m1: "Liberty",
-  s1: "Family",
+  c0: "Equality",
+  e0: "Ecology",
   j0: "Justice",
   j1: "Order",
-  e0: "Ecology",
+  m1: "Liberty",
+  p0: "Socialism",
+  p1: "Work",
+  s1: "Family",
   t0: "Revolution"
 };
 
