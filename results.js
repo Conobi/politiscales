@@ -17,6 +17,7 @@ function shareLink() {
     try {
       // Now that we've selected the anchor text, execute the copy command
       if(document.execCommand('copy')) {
+        document.execCommand('copy');
         var button = document.getElementById("buttonLink");
         if (button) {
           button.className = "button buttonLinkGood";
