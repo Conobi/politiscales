@@ -1,7 +1,7 @@
 "use strict";
 
 var questions = [
-  // Constructionism/Essentialism
+  // Constructivism/Essentialism
   {
     question: "“One is not born, but rather becomes, a woman.”",
     answer: 0,
