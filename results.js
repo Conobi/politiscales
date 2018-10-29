@@ -31,8 +31,16 @@ function shareLink() {
   }
 }
 
+function rot13(s) {
+  return s.replace(/[A-Za-z]/g, function (c) {
+    return "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(
+           "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm".indexOf(c)
+    );
+  } );
+}
+
 function getQueryVariable(variable) {
-  var query = window.atob(window.location.search.substring(1));
+  var query = rot13(window.atob(window.location.search.substring(1)));
   var vars = query.split("&");
   for (var i = 0; i < vars.length; i++) {
     var pair = vars[i].split("=");

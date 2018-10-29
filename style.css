@@ -86,7 +86,7 @@ h3 {
 
 .questionBox {
   max-width: 640px;
-  min-height: 5em;
+  min-height: 5.5em;
   margin: 1em auto;
 }
 .description {
@@ -202,6 +202,7 @@ h3 {
 .button {
   background-color: #500076;
   color: white;
+  cursor: pointer;
 }
 .buttonQuestion,
 #back_button,
@@ -315,6 +316,7 @@ h3 {
 .scale .axis .axis-bar .axis-center,
 .scale .axis .axis-bar .axis-right {
   font-size: 3.2vmin;
+  line-height: 5vmin;
 }
 .scale .axis .axis-bar .axis-left span,
 .scale .axis .axis-bar .axis-right span {
@@ -325,8 +327,6 @@ h3 {
 .scale .axis .axis-bar .axis-left span,
 .scale .axis .axis-bar .axis-center span,
 .scale .axis .axis-bar .axis-right span {
-  line-height: 5vmin;
-  vertical-align: middle;
 }
 .scale .axis .axis-bar .axis-left {
   text-align: right;
