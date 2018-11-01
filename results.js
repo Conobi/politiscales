@@ -619,7 +619,7 @@ function onImageLoaded() {
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 15px sans-serif";
       ctx.textAlign = "right";
-      ctx.fillText("dbhq.github.io", rPreview.width - 10, 27);
+      ctx.fillText("DBHQ.github.io", rPreview.width - 10, 27);
 
       yPos += 48;
 
