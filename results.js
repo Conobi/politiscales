@@ -195,7 +195,7 @@ function findFlagColors() {
   }
 
   colors.sort(function(a, b) {
-    return a.value < b.value;
+    return b.value - a.value;
   });
 
   return colors;
