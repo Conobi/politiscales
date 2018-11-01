@@ -609,7 +609,7 @@ function onImageLoaded() {
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 25px sans-serif";
       ctx.textAlign = "left";
-      ctx.fillText("PolitiScales", 10, 30);
+      ctx.fillText("🅱️olitiScales", 10, 30);
 
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 15px sans-serif";
