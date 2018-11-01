@@ -8,27 +8,32 @@ if (urlToCopy) {
 function shareLink() {
   var urlToCopy = document.getElementById("urlToCopy");
   var urlToCopyContainer = document.getElementById("urlToCopyContainer");
-  if (urlToCopy && urlToCopyContainer) {
-    urlToCopyContainer.style.display = "block";
-    var range = document.createRange();
-    range.selectNode(urlToCopy);
-    window.getSelection().addRange(range);
 
-    try {
-      // Now that we've selected the anchor text, execute the copy command
-      if(document.execCommand('copy')) {
-        document.execCommand('copy');
-        var button = document.getElementById("buttonLink");
-        if (button) {
-          button.className = "button buttonLinkGood";
-          setTimeout(function() {
-            var buttonTimeout = document.getElementById("buttonLink");
-            if (buttonTimeout) button.className = "button buttonLink";
-          }, 2000);
-        }
-      }
-    } catch (err) {}
-  }
+  try {
+    if (document.body.createTextRange) {
+      // for Internet Explorer
+      var range = document.body.createTextRange();
+      range.moveToElementText(urlToCopy);
+      range.select();
+      document.execCommand("Copy");
+    } else if (window.getSelection) {
+      // other browsers
+      var selection = window.getSelection();
+      var range = document.createRange();
+      range.selectNodeContents(urlToCopy);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      document.execCommand("Copy");
+    }
+    var button = document.getElementById("buttonLink");
+    if (button) {
+      button.className = "button buttonLinkGood";
+      setTimeout(function() {
+        var buttonTimeout = document.getElementById("buttonLink");
+        if (buttonTimeout) button.className = "button buttonLink";
+      }, 2000);
+    }
+  } catch (err) {}
 }
 
 function rot13(s) {
