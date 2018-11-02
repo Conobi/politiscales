@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -317,8 +318,10 @@ h3 {
 }
 .scale .axis .axis-bar {
   display: flex;
-  box-shadow: 0vmin 0vmin 0.4vmin #222;
+  box-shadow: 0vmin 1px 0.4vmin #aaa;
   height: 5vmin;
+  background-color: #f3f3f3;
+  color: #888;
 }
 .scale .axis .axis-bar .axis-left,
 .scale .axis .axis-bar .axis-center,
@@ -330,7 +333,7 @@ h3 {
 .scale .axis .axis-bar .axis-right span {
   padding: 0 1.1vmin;
   color: white;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5)
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .scale .axis .axis-bar .axis-left span,
 .scale .axis .axis-bar .axis-center span,

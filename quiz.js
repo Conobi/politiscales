@@ -2010,7 +2010,7 @@ function calc_score(score, max_value) {
 }
 
 function rot13(s) {
-  return s.replace(/[A-Za-z]/g, function (c) {
+  return s.replace(/[A-Za-z]/g, function(c) {
     return "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(
            "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm".indexOf(c)
     );
