@@ -37,11 +37,11 @@ function shareLink() {
 }
 
 function rot13(s) {
-  return s.replace(/[A-Za-z]/g, function (c) {
+  return s.replace(/[A-Za-z]/g, function(c) {
     return "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(
            "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm".indexOf(c)
     );
-  } );
+  });
 }
 
 function getQueryVariable(variable) {
@@ -70,7 +70,7 @@ function setAxisValue(name, value) {
   axis.style.width = (100 * value).toFixed(1) + "%";
 
   text.innerHTML = (100 * value).toFixed(0) + "%";
-  if (text.offsetWidth > (axis.offsetWidth - 5)) text.style.display = "none";
+  if (text.offsetWidth > axis.offsetWidth - 5) text.style.display = "none";
   else text.style.display = "";
 }
 
@@ -827,11 +827,11 @@ for (var b in images) {
   images[b].onload = onImageLoaded;
 }
 
-function download_image(){
-  var canvas = document.getElementById('generatedResults');
-  var link = document.createElement('a');
+function download_image() {
+  var canvas = document.getElementById("generatedResults");
+  var link = document.createElement("a");
   link.href = canvas.toDataURL();
-  link.download = `PolitiScales_Results_${+ new Date()}.png`;
+  link.download = `PolitiScales_Results_${+new Date()}.png`;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
