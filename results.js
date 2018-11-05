@@ -36,16 +36,8 @@ function shareLink() {
   } catch (err) {}
 }
 
-function rot13(s) {
-  return s.replace(/[A-Za-z]/g, function(c) {
-    return "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(
-           "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm".indexOf(c)
-    );
-  });
-}
-
 function getQueryVariable(variable) {
-  var query = rot13(window.atob(window.location.search.substring(1)));
+  var query = window.atob(window.location.search.substring(1));
   var vars = query.split("&");
   for (var i = 0; i < vars.length; i++) {
     var pair = vars[i].split("=");
@@ -614,7 +606,7 @@ function onImageLoaded() {
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 25px sans-serif";
       ctx.textAlign = "left";
-      ctx.fillText("🅱️olitiScales", 10, 30);
+      ctx.fillText("P️olitiScales, DBHQ Edition", 10, 30);
 
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 15px sans-serif";
