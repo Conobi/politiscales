@@ -2009,14 +2009,6 @@ function calc_score(score, max_value) {
   return ((100 * score) / max_value).toFixed(0);
 }
 
-function rot13(s) {
-  return s.replace(/[A-Za-z]/g, function(c) {
-    return "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".charAt(
-           "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm".indexOf(c)
-    );
-  });
-}
-
 function results() {
   var axes = {};
 
@@ -2061,7 +2053,7 @@ function results() {
       url += aK + "=" + calc_score(axes[aK].val, axes[aK].sum);
     }
   }
-  url = window.btoa(rot13(url));
+  url = window.btoa(url);
   url = "/results/?" + url;
 
   location.href = url;
