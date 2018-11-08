@@ -102,12 +102,18 @@ var axesValues = {
   t: 0
 };
 
+var left = 0;
+var right = 0;
+
 for (var i = 0; i < axes.length; i++) {
   var negativeValue = getQueryVariable(axes[i] + "0");
   var positiveValue = getQueryVariable(axes[i] + "1");
   setAxisValue(axes[i] + "AxisNeg", negativeValue);
   setAxisValue(axes[i] + "AxisPos", positiveValue);
   setAxisValue(axes[i] + "AxisMid", 1 - negativeValue - positiveValue);
+
+  left += negativeValue;
+  right += positiveValue;
 
   if (negativeValue > positiveValue) {
     characteristics.push({ name: axes[i] + "0", value: negativeValue });
@@ -635,6 +641,16 @@ function onImageLoaded() {
       ctx.textAlign = "center";
       ctx.fillText(generatedSlogan, rPreview.width / 2.0, yPos + 30);
       yPos += 70;
+
+      // Totals
+      ctx.fillStyle = "#777";
+      ctx.font = "16px sans-serif";
+      ctx.textAlign = "right";
+      ctx.fillText(
+        `${Math.round(left * 100)}–${Math.round(right * 100)}`,
+        rPreview.width - 7,
+        rPreview.height - 10
+      );
 
       //Axes
       var axesDrawInfo = [
