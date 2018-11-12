@@ -9,7 +9,6 @@
 
 	<meta name="description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion.">
 	<link rel="stylesheet" href="/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<meta property="og:url" content="https://dbhq.github.io/">
 	<meta property="og:title" content="PolitiScales, DBHQ Edition">
 	<meta property="og:locale" content="en_US">
@@ -40,8 +39,14 @@
 				<div id="urlToCopy" class="urlToCopy"></div>
 			</div>
 			<div class="navButtons">
-				<button class="button buttonLink" onclick="shareLink();" id="buttonLink"><i class="fa fa-link" aria-hidden="true"></i> Copy Link</button>
-				<button id="download" target="_blank" class="button buttonLink" onclick="download_image();"><i class="fa fa-download" aria-hidden="true"></i> Download</button>
+				<button class="button buttonLink" onclick="shareLink();" id="buttonLink">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+					Copy Link
+				</button>
+				<button id="download" target="_blank" class="button buttonLink" onclick="download_image();">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+					Download
+				</button>
 			</div>
 
 			<hr/>
