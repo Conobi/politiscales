@@ -95,6 +95,10 @@ h3 {
   }
 }
 
+#bonusBox {
+  max-width: 640px;
+  margin: 0 auto;
+}
 .questionBox {
   max-width: 640px;
   min-height: 5.5em;
@@ -103,6 +107,7 @@ h3 {
 .description {
   margin: 1.5em auto;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
 }
 .descText,
@@ -118,6 +123,9 @@ h3 {
 }
 .descTextMono {
   align-self: center;
+}
+.descTextMono h4 {
+  margin: 0 0 0.5em;
 }
 .descTextMono p {
   margin: 0;
@@ -234,11 +242,11 @@ h3 {
 .buttonLink:hover {
   color: #500076;
 }
-.buttonLink svg {
+.button svg {
   fill: #fff;
   vertical-align: text-bottom;
 }
-.buttonLink:hover svg {
+.button:hover svg {
   fill: #500076;
 }
 .buttonLinkGood {
@@ -248,6 +256,10 @@ h3 {
 .buttonLinkGood:hover {
   background-color: #0eb31a;
   color: white;
+}
+.buttonLinkGood svg,
+.buttonLinkGood:hover svg {
+  fill: white;
 }
 
 .flagDecoration {
@@ -267,7 +279,7 @@ h3 {
 }
 #slogan {
   margin: 1em 0;
-  font-size: calc(14px + 2vmin);
+  font-size: calc(14px + 2vw);
 }
 .urlToCopyContainer {
   width: 100%;
