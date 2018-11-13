@@ -55,16 +55,20 @@ a {
   text-decoration: underline;
 }
 
-h2 {
+h2,
+h3,
+h4 {
   max-width: 640px;
   margin: 0 auto;
+  font-weight: 600;
 }
 
 h3 {
-  max-width: 640px;
-  margin: 0 auto;
   font-size: calc(16px + 1vmin);
-  font-weight: 500;
+}
+
+h4 {
+  margin: 0 auto 0.5em;
 }
 
 .simpleText {
@@ -123,9 +127,6 @@ h3 {
 }
 .descTextMono {
   align-self: center;
-}
-.descTextMono h4 {
-  margin: 0 0 0.5em;
 }
 .descTextMono p {
   margin: 0;
@@ -243,7 +244,7 @@ h3 {
   color: #500076;
 }
 .button svg {
-  fill: #fff;
+  fill: white;
   vertical-align: text-bottom;
 }
 .button:hover svg {
