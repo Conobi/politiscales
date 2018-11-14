@@ -33,55 +33,29 @@
       <div id="mainFrame">
         <h2 id="question-number">Loading...</h2>
         <div class="questionBox"><p id="question-text"></p></div>
-        <div class="navButtons">
-          <button
-            class="buttonQuestion"
-            onclick="next_question(1)"
-            style="background-color: #1b5e20;"
-          >
+        <div class="navButtons questionButtons">
+          <button onclick="next_question(1)" class="strong-agree">
             Absolutely agree
           </button>
-          <button
-            class="buttonQuestion"
-            onclick="next_question(2/3)"
-            style="background-color: #4caf50;"
-          >
+          <button onclick="next_question(2/3)" class="agree">
             Somewhat agree
           </button>
-          <button
-            class="buttonQuestion"
-            onclick="next_question(0)"
-            style="background-color: #bbbbbb;"
-          >
+          <button onclick="next_question(0)" class="neutral">
             Neutral or hesitant
           </button>
-          <button
-            class="buttonQuestion"
-            onclick="next_question(-2/3)"
-            style="background-color: #f44336;"
-          >
+          <button onclick="next_question(-2/3)" class="disagree">
             Rather disagree
           </button>
-          <button
-            class="buttonQuestion"
-            onclick="next_question(-1)"
-            style="background-color: #b71c1c;"
-          >
+          <button onclick="next_question(-1)" class="strong-disagree">
             Absolutely disagree
           </button>
-        </div>
 
-        <div class="navButtons">
-          <button class="button" onclick="prev_question()" id="back_button">
+          <a href="#" class="button" onclick="prev_question()" id="back_button">
             Return to the previous question
-          </button>
-          <button
-            class="button"
-            onclick="location.href='/';"
-            id="back_button_off"
-          >
+          </a>
+          <a class="button" href="/" id="back_button_off">
             Go back to home page
-          </button>
+          </a>
         </div>
       </div>
     </div>

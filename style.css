@@ -208,7 +208,7 @@ h4 {
   text-align: center;
   max-width: 400px;
 }
-.buttonQuestion,
+button,
 .button {
   text-align: center;
   margin: 0.5em 0;
@@ -218,29 +218,33 @@ h4 {
   border-radius: 3px;
   text-decoration: none;
   font-size: 18px;
-}
-.button {
   background-color: #500076;
   color: white;
   cursor: pointer;
 }
-.buttonQuestion,
-#back_button,
-#back_button_off {
+button.strong-agree {
+  background-color: #1b5e20;
+}
+button.agree {
+  background-color: #4caf50;
+}
+button.neutral {
+  background-color: #bbbbbb;
+}
+button.disagree {
+  background-color: #f44336;
+}
+button.strong-disagree {
+  background-color: #b71c1c;
+}
+
+.questionButtons button {
   color: white;
   width: 100%;
+  padding: 0.5em 0;
 }
-.button:hover,
-#back_button:hover,
-#back_button_off:hover {
+.button:hover {
   background-color: white;
-  color: #500076;
-}
-.buttonLink {
-  background-color: #500076;
-  color: white;
-}
-.buttonLink:hover {
   color: #500076;
 }
 .button svg {
@@ -262,6 +266,20 @@ h4 {
 .buttonLinkGood:hover svg {
   fill: white;
 }
+.urlToCopyContainer {
+  width: 100%;
+  text-align: center;
+}
+.urlToCopy {
+  max-width: 400px;
+  background-color: white;
+  display: inline-block;
+  padding: 0.5em;
+  margin: 1em 0 0;
+  z-index: 6;
+  border-radius: 3px;
+  word-break: break-all;
+}
 
 .flagDecoration {
   text-align: center;
@@ -281,20 +299,6 @@ h4 {
 #slogan {
   margin: 1em 0;
   font-size: calc(14px + 2vw);
-}
-.urlToCopyContainer {
-  width: 100%;
-  text-align: center;
-}
-.urlToCopy {
-  max-width: 400px;
-  background-color: white;
-  display: inline-block;
-  padding: 0.5em;
-  margin: 1em 0 0;
-  z-index: 6;
-  border-radius: 3px;
-  word-break: break-all;
 }
 
 .scale {
