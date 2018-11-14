@@ -1,57 +1,99 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolitiScales - Quiz</title>
 
-	<title>PolitiScales - Quiz</title>
+    <meta
+      name="description"
+      content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
+    />
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <meta property="og:url" content="https://dbhq.github.io/" />
+    <meta property="og:title" content="PolitiScales, DBHQ Edition" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:description"
+      content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
+    />
+    <meta property="og:image" content="/images/facebook-preview.jpg" />
+  </head>
 
-	<meta name="description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion.">
-	<link rel="stylesheet" href="/style.css" type="text/css" media="screen">
-	<link rel="shortcut icon" href="/images/favicon.ico">
-	<meta property="og:url" content="https://dbhq.github.io/">
-	<meta property="og:title" content="PolitiScales, DBHQ Edition">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion.">
-	<meta property="og:image" content="/images/facebook-preview.jpg">
-</head>
+  <body>
+    <header>
+      <div id="header">
+        <h1><a href="/">PolitiScales</a></h1>
+      </div>
+    </header>
 
-<body>
+    <div id="content">
+      <div id="mainFrame">
+        <h2 id="question-number">Loading...</h2>
+        <div class="questionBox"><p id="question-text"></p></div>
+        <div class="navButtons">
+          <button
+            class="buttonQuestion"
+            onclick="next_question(1)"
+            style="background-color: #1b5e20;"
+          >
+            Absolutely agree
+          </button>
+          <button
+            class="buttonQuestion"
+            onclick="next_question(2/3)"
+            style="background-color: #4caf50;"
+          >
+            Somewhat agree
+          </button>
+          <button
+            class="buttonQuestion"
+            onclick="next_question(0)"
+            style="background-color: #bbbbbb;"
+          >
+            Neutral or hesitant
+          </button>
+          <button
+            class="buttonQuestion"
+            onclick="next_question(-2/3)"
+            style="background-color: #f44336;"
+          >
+            Rather disagree
+          </button>
+          <button
+            class="buttonQuestion"
+            onclick="next_question(-1)"
+            style="background-color: #b71c1c;"
+          >
+            Absolutely disagree
+          </button>
+        </div>
 
-	<header>
-		<div id="header">
-			<h1><a href="/">PolitiScales</a></h1>
-		</div>
-	</header>
+        <div class="navButtons">
+          <button class="button" onclick="prev_question()" id="back_button">
+            Return to the previous question
+          </button>
+          <button
+            class="button"
+            onclick="location.href='/';"
+            id="back_button_off"
+          >
+            Go back to home page
+          </button>
+        </div>
+      </div>
+    </div>
 
-	<div id="content">
-		<div id="mainFrame">
-			<h2 id="question-number">Loading...</h2>
-			<div class="questionBox">
-				<p id="question-text"></p>
-			</div>
-			<div class="navButtons">
-				<button class="buttonQuestion" onclick="next_question(1)" style="background-color: #1b5e20;">Absolutely agree</button>
-				<button class="buttonQuestion" onclick="next_question(2/3)" style="background-color: #4caf50;">Somewhat agree</button>
-				<button class="buttonQuestion" onclick="next_question(0)" style="background-color: #bbbbbb;">Neutral or hesitant</button>
-				<button class="buttonQuestion" onclick="next_question(-2/3)" style="background-color: #f44336;">Rather disagree</button>
-				<button class="buttonQuestion" onclick="next_question(-1)" style="background-color: #b71c1c;">Absolutely disagree</button>
-			</div>
+    <div id="footer">
+      <p>
+        This quiz is a slightly modified version of
+        <a href="https://www.politiscales.net/">PolitiScales</a>, which is based
+        on <a href="https://8values.github.io/">8values</a>.
+      </p>
+    </div>
 
-			<div class="navButtons">
-				<button class="button" onclick="prev_question()" id="back_button">Return to the previous question</button>
-				<button class="button" onclick="location.href='/';" id="back_button_off">Go back to home page</button>
-			</div>
-		</div>
-	</div>
-
-	<div id="footer">
-		<p>
-			This quiz is a slightly modified version of <a href="https://www.politiscales.net/">PolitiScales</a>, which is based on <a href="https://8values.github.io/">8values</a>.
-		</p>
-	</div>
-
-<script src="/quiz.js"></script>
-</body>
+    <script src="/quiz.js"></script>
+  </body>
 </html>

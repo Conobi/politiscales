@@ -1,402 +1,382 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolitiScales - Results</title>
 
-	<title>PolitiScales - Results</title>
+    <meta
+      name="description"
+      content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
+    />
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <meta property="og:url" content="https://dbhq.github.io/" />
+    <meta property="og:title" content="PolitiScales, DBHQ Edition" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      property="og:description"
+      content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
+    />
+    <meta property="og:image" content="/images/facebook-preview.jpg" />
+  </head>
 
-	<meta name="description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion.">
-	<link rel="stylesheet" href="/style.css" type="text/css" media="screen">
-	<link rel="shortcut icon" href="/images/favicon.ico">
-	<meta property="og:url" content="https://dbhq.github.io/">
-	<meta property="og:title" content="PolitiScales, DBHQ Edition">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:description" content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion.">
-	<meta property="og:image" content="/images/facebook-preview.jpg">
-</head>
+  <body>
+    <header>
+      <div id="header">
+        <h1><a href="/">PolitiScales</a></h1>
+      </div>
+    </header>
 
-<body>
+    <div id="content">
+      <div id="mainFrame">
+        <h2>Results</h2>
 
-	<header>
-		<div id="header">
-			<h1><a href="/">PolitiScales</a></h1>
-		</div>
-	</header>
+        <p class="simpleText">
+          The result of your PolitiScale is decomposed in 8 axes. Each axis
+          indicates your positioning compared with two opposed ideologies. Some
+          particular characteristics, displayed at the end of the page can also
+          complete your result. For further information on the different axis
+          <a href="/help">Look at the help page</a>.
+        </p>
 
-	<div id="content">
-		<div id="mainFrame">
+        <div class="generatedResultsDecorations">
+          <canvas id="generatedResults" width="800" height="1200"></canvas>
+        </div>
 
-			<h2>Results</h2>
+        <div id="urlToCopyContainer" class="urlToCopyContainer">
+          <div id="urlToCopy" class="urlToCopy"></div>
+        </div>
+        <div class="navButtons">
+          <button
+            class="button buttonLink"
+            onclick="shareLink();"
+            id="buttonLink"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
+              />
+            </svg>
+            Copy Link
+          </button>
+          <button
+            id="download"
+            target="_blank"
+            class="button buttonLink"
+            onclick="download_image();"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"
+              />
+            </svg>
+            Download
+          </button>
+        </div>
 
-			<p class="simpleText">
-				The result of your PolitiScale is decomposed in 8 axes. Each axis indicates your positioning compared with two opposed ideologies. Some particular characteristics, displayed at the end of the page can also complete your result. For further information on the different axis <a href="/help">Look at the help page</a>.
-			</p>
+        <hr />
 
-			<div class="generatedResultsDecorations">
-				<canvas id="generatedResults" width="800" height="1200"></canvas>
-			</div>
+        <div class="flagDecoration">
+          <canvas id="generatedFlag" width="512" height="256"></canvas>
+          <div id="slogan"></div>
+        </div>
 
-			<div id="urlToCopyContainer" class="urlToCopyContainer">
-				<div id="urlToCopy" class="urlToCopy"></div>
-			</div>
-			<div class="navButtons">
-				<button class="button buttonLink" onclick="shareLink();" id="buttonLink">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
-					Copy Link
-				</button>
-				<button id="download" target="_blank" class="button buttonLink" onclick="download_image();">
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
-					Download
-				</button>
-			</div>
+        <div class="columnContainer">
+          <div class="columnLeft">
+            <div class="scale">
+              <div class="left"><img src="/images/constructivism.png" /></div>
+              <div class="axis">
+                <div class="label">
+                  <div class="left-label">Constructivism</div>
+                  <div class="right-label">Essentialism</div>
+                </div>
+                <div class="axis-bar">
+                  <div id="cAxisNeg" class="axis-left axisConstructivism">
+                    <span id="cAxisNegText"></span>
+                  </div>
+                  <div id="cAxisMid" class="axis-center axisNeutral">
+                    <span id="cAxisMidText"></span>
+                  </div>
+                  <div id="cAxisPos" class="axis-right axisEssentialism">
+                    <span id="cAxisPosText"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="right"><img src="/images/essentialism.png" /></div>
+            </div>
 
-			<hr/>
+            <div class="scale">
+              <div class="left"><img src="/images/justice_soft.png" /></div>
+              <div class="axis">
+                <div class="label">
+                  <div class="left-label">Rehabilitative Justice</div>
+                  <div class="right-label">Punitive Justice</div>
+                </div>
+                <div class="axis-bar">
+                  <div id="jAxisNeg" class="axis-left axisLiberal">
+                    <span id="jAxisNegText"></span>
+                  </div>
+                  <div id="jAxisMid" class="axis-center axisNeutral">
+                    <span id="jAxisMidText"></span>
+                  </div>
+                  <div id="jAxisPos" class="axis-right axisAuthoritarism">
+                    <span id="jAxisPosText"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="right"><img src="/images/justice_hard.png" /></div>
+            </div>
 
-			<div class="flagDecoration">
-				<canvas id="generatedFlag" width="512" height="256"></canvas>
-				<div id="slogan"></div>
-			</div>
+            <div class="scale">
+              <div class="left"><img src="/images/progressism.png" /></div>
+              <div class="axis">
+                <div class="label">
+                  <div class="left-label">Progressive</div>
+                  <div class="right-label">Conservative</div>
+                </div>
+                <div class="axis-bar">
+                  <div id="sAxisNeg" class="axis-left axisProgressism">
+                    <span id="sAxisNegText"></span>
+                  </div>
+                  <div id="sAxisMid" class="axis-center axisNeutral">
+                    <span id="sAxisMidText"></span>
+                  </div>
+                  <div id="sAxisPos" class="axis-right axisConservatism">
+                    <span id="sAxisPosText"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="right"><img src="/images/conservatism.png" /></div>
+            </div>
 
-			<div class="columnContainer">
-				<div class="columnLeft">
+            <div class="scale">
+              <div class="left"><img src="/images/internationalism.png" /></div>
+              <div class="axis">
+                <div class="label">
+                  <div class="left-label">Internationalism</div>
+                  <div class="right-label">Nationalism</div>
+                </div>
+                <div class="axis-bar">
+                  <div id="bAxisNeg" class="axis-left axisInternationalism">
+                    <span id="bAxisNegText"></span>
+                  </div>
+                  <div id="bAxisMid" class="axis-center axisNeutral">
+                    <span id="bAxisMidText"></span>
+                  </div>
+                  <div id="bAxisPos" class="axis-right axisNationalism">
+                    <span id="bAxisPosText"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="right"><img src="/images/nationalism.png" /></div>
+            </div>
+          </div>
 
-					<div class="scale">
-						<div class="left">
-							<img src="/images/constructivism.png">
-						</div>
-						<div class="axis">
-							<div class="label">
-								<div class="left-label">
-									Constructivism
-								</div>
-								<div class="right-label">
-									Essentialism
-								</div>
-							</div>
-							<div class="axis-bar">
-								<div id="cAxisNeg" class="axis-left axisConstructivism">
-									<span id="cAxisNegText"></span>
-								</div>
-								<div id="cAxisMid" class="axis-center axisNeutral">
-									<span id="cAxisMidText"></span>
-								</div>
-								<div id="cAxisPos" class="axis-right axisEssentialism">
-									<span id="cAxisPosText"></span>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<img src="/images/essentialism.png">
-						</div>
-					</div>
+          <div class="columnRight">
+            <div class="scale">
+              <div class="left"><img src="/images/communism.png" /></div>
+              <div class="axis">
+                <div class="label">
+                  <div class="left-label">Communism</div>
+                  <div class="right-label">Capitalism</div>
+                </div>
+                <div class="axis-bar">
+                  <div id="pAxisNeg" class="axis-left axisCommunism">
+                    <span id="pAxisNegText"></span>
+                  </div>
+                  <div id="pAxisMid" class="axis-center axisNeutral">
+                    <span id="pAxisMidText"></span>
+                  </div>
+                  <div id="pAxisPos" class="axis-right axisCapitalism">
+                    <span id="pAxisPosText"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="right"><img src="/images/capitalism.png" /></div>
+            </div>
 
-					<div class="scale">
-						<div class="left">
-							<img src="/images/justice_soft.png">
-						</div>
-						<div class="axis">
-							<div class="label">
-								<div class="left-label">
-									Rehabilitative Justice
-								</div>
-								<div class="right-label">
-									Punitive Justice
-								</div>
-							</div>
-							<div class="axis-bar">
-								<div id="jAxisNeg" class="axis-left axisLiberal">
-									<span id="jAxisNegText"></span>
-								</div>
-								<div id="jAxisMid" class="axis-center axisNeutral">
-									<span id="jAxisMidText"></span>
-								</div>
-								<div id="jAxisPos" class="axis-right axisAuthoritarism">
-									<span id="jAxisPosText"></span>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<img src="/images/justice_hard.png">
-						</div>
-					</div>
+            <div class="scale">
+              <div class="left"><img src="/images/regulation.png" /></div>
+              <div class="axis">
+                <div class="label">
+                  <div class="left-label">Regulation</div>
+                  <div class="right-label">Laissez-faire</div>
+                </div>
+                <div class="axis-bar">
+                  <div id="mAxisNeg" class="axis-left axisRegulation">
+                    <span id="mAxisNegText"></span>
+                  </div>
+                  <div id="mAxisMid" class="axis-center axisNeutral">
+                    <span id="mAxisMidText"></span>
+                  </div>
+                  <div id="mAxisPos" class="axis-right axisLaissez">
+                    <span id="mAxisPosText"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="right"><img src="/images/laissezfaire.png" /></div>
+            </div>
 
-					<div class="scale">
-						<div class="left">
-							<img src="/images/progressism.png">
-						</div>
-						<div class="axis">
-							<div class="label">
-								<div class="left-label">
-									Progressive
-								</div>
-								<div class="right-label">
-									Conservative
-								</div>
-							</div>
-							<div class="axis-bar">
-								<div id="sAxisNeg" class="axis-left axisProgressism">
-									<span id="sAxisNegText"></span>
-								</div>
-								<div id="sAxisMid" class="axis-center axisNeutral">
-									<span id="sAxisMidText"></span>
-								</div>
-								<div id="sAxisPos" class="axis-right axisConservatism">
-									<span id="sAxisPosText"></span>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<img src="/images/conservatism.png">
-						</div>
-					</div>
+            <div class="scale">
+              <div class="left"><img src="/images/ecology.png" /></div>
+              <div class="axis">
+                <div class="label">
+                  <div class="left-label">Ecology</div>
+                  <div class="right-label">Production</div>
+                </div>
+                <div class="axis-bar">
+                  <div id="eAxisNeg" class="axis-left axisEcology">
+                    <span id="eAxisNegText"></span>
+                  </div>
+                  <div id="eAxisMid" class="axis-center axisNeutral">
+                    <span id="eAxisMidText"></span>
+                  </div>
+                  <div id="eAxisPos" class="axis-right axisProductivism">
+                    <span id="eAxisPosText"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="right"><img src="/images/productivism.png" /></div>
+            </div>
 
-					<div class="scale">
-						<div class="left">
-							<img src="/images/internationalism.png">
-						</div>
-						<div class="axis">
-							<div class="label">
-								<div class="left-label">
-									Internationalism
-								</div>
-								<div class="right-label">
-									Nationalism
-								</div>
-							</div>
-							<div class="axis-bar">
-								<div id="bAxisNeg" class="axis-left axisInternationalism">
-									<span id="bAxisNegText"></span>
-								</div>
-								<div id="bAxisMid" class="axis-center axisNeutral">
-									<span id="bAxisMidText"></span>
-								</div>
-								<div id="bAxisPos" class="axis-right axisNationalism">
-									<span id="bAxisPosText"></span>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<img src="/images/nationalism.png">
-						</div>
-					</div>
-				
-				</div>
+            <div class="scale">
+              <div class="left"><img src="/images/revolution.png" /></div>
+              <div class="axis">
+                <div class="label">
+                  <div class="left-label">Revolution</div>
+                  <div class="right-label">Reform</div>
+                </div>
+                <div class="axis-bar">
+                  <div id="tAxisNeg" class="axis-left axisRevo">
+                    <span id="tAxisNegText"></span>
+                  </div>
+                  <div id="tAxisMid" class="axis-center axisNeutral">
+                    <span id="tAxisMidText"></span>
+                  </div>
+                  <div id="tAxisPos" class="axis-right axisRefo">
+                    <span id="tAxisPosText"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="right"><img src="/images/reformism.png" /></div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div id="bonusBox">
+          <h3>Additional characteristics</h3>
 
-				<div class="columnRight">
+          <div id="anarBonus" class="description">
+            <div class="descImg">
+              <img src="/images/anarchism.png" alt="" />
+            </div>
+            <div class="descTextMono">
+              <h4>Anarchist</h4>
+              <p>
+                When the people are being hit with a stick, they are not happier
+                if the stick is called “the stick of the people”. The State is
+                an oppression that must be abolished.
+              </p>
+            </div>
+          </div>
 
-					<div class="scale">
-						<div class="left">
-							<img src="/images/communism.png">
-						</div>
-						<div class="axis">
-							<div class="label">
-								<div class="left-label">
-									Communism
-								</div>
-								<div class="right-label">
-									Capitalism
-								</div>
-							</div>
-							<div class="axis-bar">
-								<div id="pAxisNeg" class="axis-left axisCommunism">
-									<span id="pAxisNegText"></span>
-								</div>
-								<div id="pAxisMid" class="axis-center axisNeutral">
-									<span id="pAxisMidText"></span>
-								</div>
-								<div id="pAxisPos" class="axis-right axisCapitalism">
-									<span id="pAxisPosText"></span>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<img src="/images/capitalism.png">
-						</div>
-					</div>
+          <div id="pragBonus" class="description">
+            <div class="descImg">
+              <img src="/images/pragmatism.png" alt="" />
+            </div>
+            <div class="descTextMono">
+              <h4>Pragmatist</h4>
+              <p>
+                Politics objectively boils down to looking at where the problems
+                are and trying to solve them according to the means available.
+              </p>
+            </div>
+          </div>
 
-					<div class="scale">
-						<div class="left">
-							<img src="/images/regulation.png">
-						</div>
-						<div class="axis">
-							<div class="label">
-								<div class="left-label">
-									Regulation
-								</div>
-								<div class="right-label">
-									Laissez-faire
-								</div>
-							</div>
-							<div class="axis-bar">
-								<div id="mAxisNeg" class="axis-left axisRegulation">
-									<span id="mAxisNegText"></span>
-								</div>
-								<div id="mAxisMid" class="axis-center axisNeutral">
-									<span id="mAxisMidText"></span>
-								</div>
-								<div id="mAxisPos" class="axis-right axisLaissez">
-									<span id="mAxisPosText"></span>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<img src="/images/laissezfaire.png">
-						</div>
-					</div>
+          <div id="femiBonus" class="description">
+            <div class="descImg"><img src="/images/feminism.png" alt="" /></div>
+            <div class="descTextMono">
+              <h4>Radical Feminist</h4>
+              <p>Gender should disappear to put an end to the patriarchy.</p>
+            </div>
+          </div>
 
-					<div class="scale">
-						<div class="left">
-							<img src="/images/ecology.png">
-						</div>
-						<div class="axis">
-							<div class="label">
-								<div class="left-label">
-									Ecology
-								</div>
-								<div class="right-label">
-									Production
-								</div>
-							</div>
-							<div class="axis-bar">
-								<div id="eAxisNeg" class="axis-left axisEcology">
-									<span id="eAxisNegText"></span>
-								</div>
-								<div id="eAxisMid" class="axis-center axisNeutral">
-									<span id="eAxisMidText"></span>
-								</div>
-								<div id="eAxisPos" class="axis-right axisProductivism">
-									<span id="eAxisPosText"></span>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<img src="/images/productivism.png">
-						</div>
-					</div>
+          <div id="compBonus" class="description">
+            <div class="descImg">
+              <img src="/images/complotism.png" alt="" />
+            </div>
+            <div class="descTextMono">
+              <h4>Conspiracist</h4>
+              <p>
+                The biggest problems of our society are the work of a small
+                group of people. It is then essential to find them, inform the
+                people of their objective and neutralize them.
+              </p>
+            </div>
+          </div>
 
-					<div class="scale">
-						<div class="left">
-							<img src="/images/revolution.png">
-						</div>
-						<div class="axis">
-							<div class="label">
-								<div class="left-label">
-									Revolution
-								</div>
-								<div class="right-label">
-									Reform
-								</div>
-							</div>
-							<div class="axis-bar">
-								<div id="tAxisNeg" class="axis-left axisRevo">
-									<span id="tAxisNegText"></span>
-								</div>
-								<div id="tAxisMid" class="axis-center axisNeutral">
-									<span id="tAxisMidText"></span>
-								</div>
-								<div id="tAxisPos" class="axis-right axisRefo">
-									<span id="tAxisPosText"></span>
-								</div>
-							</div>
-						</div>
-						<div class="right">
-							<img src="/images/reformism.png">
-						</div>
-					</div>
+          <div id="vegaBonus" class="description">
+            <div class="descImg"><img src="/images/veganism.png" alt="" /></div>
+            <div class="descTextMono">
+              <h4>Vegan</h4>
+              <p>
+                Human beings must stop at all costs the consumption and
+                exploitation of “sensible” being.
+              </p>
+            </div>
+          </div>
 
-				</div>
-			</div>
-			<br/>
-			<div id="bonusBox">
-				<h3>Additional characteristics</h3>
+          <div id="monaBonus" class="description">
+            <div class="descImg">
+              <img src="/images/monarchism.png" alt="" />
+            </div>
+            <div class="descTextMono">
+              <h4>Monarchist</h4>
+              <p>Society should be organized around a king.</p>
+            </div>
+          </div>
 
-				<div id="anarBonus" class="description">
-					<div class="descImg"><img src="/images/anarchism.png" alt=""></div>
-					<div class="descTextMono">
-						<p>
-							<h4>Anarchist</h4>
-							When the people are being hit with a stick, they are not happier if the stick is called “the stick of the people”. The State is an oppression that must be abolished.
-						</p>
-					</div>
-				</div>
+          <div id="reliBonus" class="description">
+            <div class="descImg"><img src="/images/religion.png" alt="" /></div>
+            <div class="descTextMono">
+              <h4>Missionary</h4>
+              <p>
+                For you religion is important, especially yours. It is therefore
+                appropriate to spread it as globally as possible.
+              </p>
+            </div>
+          </div>
+        </div>
 
-				<div id="pragBonus" class="description">
-					<div class="descImg"><img src="/images/pragmatism.png" alt=""></div>
-					<div class="descTextMono">
-						<p>
-							<h4>Pragmatist</h4>
-							Politics objectively boils down to looking at where the problems are and trying to solve them according to the means available.
-						</p>
-					</div>
-				</div>
+        <div class="navButtons">
+          <a class="button" href="/quiz">Restart the test</a>
+        </div>
+      </div>
+    </div>
 
-				<div id="femiBonus" class="description">
-					<div class="descImg"><img src="/images/feminism.png" alt=""></div>
-					<div class="descTextMono">
-						<p>
-							<h4>Radical Feminist</h4>
-							Gender should disappear to put an end to the patriarchy.
-						</p>
-					</div>
-				</div>
+    <div id="footer">
+      <p>
+        This quiz is a slightly modified version of
+        <a href="https://www.politiscales.net/">PolitiScales</a>, which is based
+        on <a href="https://8values.github.io/">8values</a>.
+      </p>
+    </div>
 
-				<div id="compBonus" class="description">
-					<div class="descImg"><img src="/images/complotism.png" alt=""></div>
-					<div class="descTextMono">
-						<p>
-							<h4>Conspiracist</h4>
-							The biggest problems of our society are the work of a small group of people. It is then essential to find them, inform the people of their objective and neutralize them.
-						</p>
-					</div>
-				</div>
-
-				<div id="vegaBonus" class="description">
-					<div class="descImg"><img src="/images/veganism.png" alt=""></div>
-					<div class="descTextMono">
-						<p>
-							<h4>Vegan</h4>
-							Human beings must stop at all costs the consumption and exploitation of “sensible” being.
-						</p>
-					</div>
-				</div>
-
-				<div id="monaBonus" class="description">
-					<div class="descImg"><img src="/images/monarchism.png" alt=""></div>
-					<div class="descTextMono">
-						<p>
-							<h4>Monarchist</h4>
-							Society should be organized around a king.
-						</p>
-					</div>
-				</div>
-
-				<div id="reliBonus" class="description">
-					<div class="descImg"><img src="/images/religion.png" alt=""></div>
-					<div class="descTextMono">
-						<p>
-							<h4>Missionary</h4>
-							For you religion is important, especially yours. It is therefore appropriate to spread it as globally as possible.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="navButtons">
-				<a class="button" href="/quiz">Restart the test</a>
-			</div>
-		</div>
-	</div>
-
-	<div id="footer">
-		<p>
-			This quiz is a slightly modified version of <a href="https://www.politiscales.net/">PolitiScales</a>, which is based on <a href="https://8values.github.io/">8values</a>.
-		</p>
-	</div>
-
-<script src="/flags.js"></script>
-<script src="/results.js"></script>
-</body>
+    <script src="/flags.js"></script>
+    <script src="/results.js"></script>
+  </body>
 </html>
-
