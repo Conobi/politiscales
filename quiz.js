@@ -805,7 +805,7 @@ var questions = [
   },
   {
     question:
-      "Loans contracted in the public sphere (State, regions, collectivities...) should not necessarily be refunded.",
+      "Loans contracted by the public sector (states, regions, communities) do not necessarily have to be repaid.",
     answer: 0,
     valuesYes: [
       {
