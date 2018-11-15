@@ -1,6 +1,7 @@
 # PolitiScales Questions
 
 ### Constructivism/Essentialism
+
 The **Constructivists** consider that people build themselves from their environment (notably social) and that the characteristics that make them who they are, are acquired.
 
 On the contrary, the **Essentialists** consider that an individual is by nature how he/she is and that his/her characteristics which make this person who she/he is, are innate.
@@ -21,6 +22,7 @@ On the contrary, the **Essentialists** consider that an individual is by nature 
 14. Selfishness is the overriding drive in the human species, no matter the context.
 
 ### Internationalism/Nationalism
+
 **Internationalism** is a set of different ides which have for common point to stop making a hierarchy between countries and their inhabitants and to promote as much as possible their cooperation. Pushed to its maximum the final objective is the abolitions of borders.
 
 On the other hand, **Nationalism** is a set of heterogeneous ideas which, when applied, favor one country and its citizens over foreigners, it also justifies the idea that each people has a nation.
@@ -41,6 +43,7 @@ On the other hand, **Nationalism** is a set of heterogeneous ideas which, when a
 28. Research produced by my country should not be available to other countries.
 
 ### Communism/Capitalism
+
 **Communism** is a vast political doctrine. In this test a majority for communism simply signifies that you are for a public property of the means of production.
 
 **Capitalism** is as well an ambivalent concept. In this test a majority for capitalism simply signifies that you are for a private property of the means of production.
@@ -61,6 +64,7 @@ On the other hand, **Nationalism** is a set of heterogeneous ideas which, when a
 42. Banks should remain private.
 
 ### Regulation/Laissez-faire
+
 This axis represents the attitude that a government needs to have concerning the market economy in which an important part of the means of production are private. Liberals and Keynesians are opposed to the method that needs to be adopted without putting into question capitalism. If you are more capitalist, this axis represents your goal in terms of economy. If you are more communist, this axis represents the least bad that you can expect of the current system.
 
 **Regulationism** or interventionism is an idea in which the economical activity should be regulated for the common interest. It can be through legislation, planning, subventions, a variable taxation...
@@ -72,7 +76,7 @@ On the contrary, the **Laissez-faire** is the ideas in which the economical acti
 45. Dismissals of employees should be forbidden except if it is justified.
 46. Minimal levels of salary should be ensured to make sure that a worker can live off their work.
 47. It is necessary to avoid a private monopoly.
-48. Loans contracted in the public sphere (State, regions, collectivities...) should not necessarily be refunded.
+48. Loans contracted by the public sector (states, regions, communities) do not necessarily have to be repaid.
 49. Some sectors or type of employment should be financially supported.
 50. Market economy is optimal when it is not regulated.
 51. Nowadays employees are free to choose when signing a contract with their future employer.
@@ -83,6 +87,7 @@ On the contrary, the **Laissez-faire** is the ideas in which the economical acti
 56. State-run companies should be managed like private ones and follow the logic of the market (competition, profitability...).
 
 ### Progressivism/Conservatism
+
 The **Progressives** try to build social progress, make a better society without caring about traditions. They often consider the present as better than the past and that it is necessary to keep on this path.
 
 On the contrary the **Conservatives** want to keep the status quo and even to reinsert some values already considered as disappeared or disappearing. Traditions, among those the religious heritage, are put forward as a source of wisdom.
@@ -103,6 +108,7 @@ On the contrary the **Conservatives** want to keep the status quo and even to re
 70. Abstinence should be preferred to contraception, to preserve the true nature of the sexual act.
 
 ### Ecology/Production
+
 **Ecology** in politics privileges the protection of the environment by limiting as much as possible the impact of human activities on the biodiversity even if it implies to limit the these human activities by modifying more or less radically our current way of life.
 
 **Production** privileges human needs notably by supporting the increase of the production or the use of methods that have an uncertain impact on the environment.
@@ -123,6 +129,7 @@ On the contrary the **Conservatives** want to keep the status quo and even to re
 84. Maintaining strong economic growth should be an objective for the government.
 
 ### Rehabilitative Justice/Punitive Justice
+
 The ones in favor of the **Rehabilitative Justice** consider that the role of justice is to put the condemned on the “right path” again by making them understand why they should not do what they did and why they were condemned and by accompanying them all along the process.
 
 Conversely the ones in favor of the **Punitive Justice** consider that the role of justice is dissuasive, both for the condemned (to avoid recidivism) and for the rest of the society (by making them examples not to follow).
@@ -142,29 +149,31 @@ Conversely the ones in favor of the **Punitive Justice** consider that the role 
 97. It is better to arrest someone potentially dangerous preemptively rather than taking the risk of having them committing a crime.
 
 ### Revolution/Reform
+
 **Revolutionaries** have a tendency to privilege direct action, often in the margin of legality, to reach their goal: replace the current political organization for totally different one.
 
 **Reformists** have a tendency to privilege legal action to reach their goal: reform the political organization step by step. This can be done through the institutions, via elections, authorized demonstrations, petitions...
 
 98. Mass strike is a good way to acquire new rights.
 99. Armed struggle in a country is sometimes necessary.
-100. Insurrection is necessary to deeply change society.
-101. Activism in existing political organizations is not relevant to change society.
-102. Elections organized by the state cannot question the powers in place.
-103. Computer hacking has a legitimate place in political struggle.
-104. Sabotage is legitimate under certain conditions.
-105. Activists must always act in strict accordance with the law.
-106. Revolutions will always end up in a bad way.
-107. Changing the system radically is counter-productive. We should rather transform it progressively.
-108. Violence against individuals is never productive.
-109. We should always break with protesters who use violence.
-110. We need to make compromises with the opposition to apply our ideas.
-111. Changes in an individual's way of life can induce changes in society.
+100.    Insurrection is necessary to deeply change society.
+101.    Activism in existing political organizations is not relevant to change society.
+102.    Elections organized by the state cannot question the powers in place.
+103.    Computer hacking has a legitimate place in political struggle.
+104.    Sabotage is legitimate under certain conditions.
+105.    Activists must always act in strict accordance with the law.
+106.    Revolutions will always end up in a bad way.
+107.    Changing the system radically is counter-productive. We should rather transform it progressively.
+108.    Violence against individuals is never productive.
+109.    We should always break with protesters who use violence.
+110.    We need to make compromises with the opposition to apply our ideas.
+111.    Changes in an individual's way of life can induce changes in society.
 
 ### Bonus Badges
-* **Missionary**: My religion must be spread as widely as possible.
-* **Conspiratorial**: It is a small group that consciously and secretly controls the world.
-* **Pragmatist**: A good policy is a pragmatic policy without ideology.
-* **Monarchist**: We need to establish a monarchy to federate the people and preserve our sovereignty.
-* **Vegan**: Humans should neither eat nor exploit animals.
-* **Anarchist**: The State should be abolished.
+
+-   **Missionary**: My religion must be spread as widely as possible.
+-   **Conspiratorial**: It is a small group that consciously and secretly controls the world.
+-   **Pragmatist**: A good policy is a pragmatic policy without ideology.
+-   **Monarchist**: We need to establish a monarchy to federate the people and preserve our sovereignty.
+-   **Vegan**: Humans should neither eat nor exploit animals.
+-   **Anarchist**: The State should be abolished.
