@@ -84,7 +84,6 @@ var bonus = {
   anar: 0.9,
   prag: 0.5,
   femi: 0.9,
-  comp: 0.9,
   vega: 0.5,
   reli: 0.5,
   mona: 0.5
@@ -442,7 +441,6 @@ var images = {
   anar: "/images/anarchism_small.png",
   prag: "/images/pragmatism_small.png",
   femi: "/images/feminism_small.png",
-  comp: "/images/complotism_small.png",
   vega: "/images/veganism_small.png",
   mona: "/images/monarchism_small.png",
   reli: "/images/religion_small.png"

@@ -1894,18 +1894,6 @@ var questions = [
     valuesNo: []
   },
   {
-    question:
-      "It is a small group that consciously and secretly controls the world.",
-    answer: 0,
-    valuesYes: [
-      {
-        axis: "comp",
-        value: 3
-      }
-    ],
-    valuesNo: []
-  },
-  {
     question: "A good policy is a pragmatic policy without ideology.",
     answer: 0,
     valuesYes: [
