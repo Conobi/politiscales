@@ -4,7 +4,7 @@
 
 The **Constructivists** consider that people build themselves from their environment (notably social) and that the characteristics that make them who they are, are acquired.
 
-On the contrary, the **Essentialists** consider that an individual is by nature how he/she is and that his/her characteristics which make this person who she/he is, are innate.
+On the contrary, the **Essentialists** consider that an individual is how they are by nature and that the characteristics that make them who they are, are innate.
 
 1. “One is not born, but rather becomes, a woman.”
 2. Differences in treatment and quality of life in our society show that racism is still omnipresent.
@@ -15,15 +15,15 @@ On the contrary, the **Essentialists** consider that an individual is by nature 
 7. Social differences between ethnic groups cannot be explained by biology.
 8. The social roles of women and men can partly be explained by biological differences.
 9. Hormonal differences can explain some differences in individual characteristics between women and men.
-10. Sexual assaults are partly caused by men's natural impulse.
-11. Transgender individuals will never really be of the gender they would like to be.
+10. Sexual assaults are partly caused by natural impulse.
+11. Transgender individuals will never really be of the gender they identify as.
 12. Members of a nation or culture have some unchangeable characteristics that define them.
-13. Biologically, human beings are designed for heterosexuality.
+13. Biologically, human beings are meant for heterosexuality.
 14. Selfishness is the overriding drive in the human species, no matter the context.
 
 ### Internationalism/Nationalism
 
-**Internationalism** is a set of different ides which have for common point to stop making a hierarchy between countries and their inhabitants and to promote as much as possible their cooperation. Pushed to its maximum the final objective is the abolitions of borders.
+**Internationalism** is a set of different ideas which have for common point to stop making a hierarchy between countries and their inhabitants and to promote their cooperation as much as possible. Pushed to its maximum the final objective is the abolition of borders.
 
 On the other hand, **Nationalism** is a set of heterogeneous ideas which, when applied, favor one country and its citizens over foreigners, it also justifies the idea that each people has a nation.
 
@@ -44,7 +44,7 @@ On the other hand, **Nationalism** is a set of heterogeneous ideas which, when a
 
 ### Communism/Capitalism
 
-**Communism** is a vast political doctrine. In this test a majority for communism simply signifies that you are for a public property of the means of production.
+**Communism** is a vastly complex political doctrine, economic ideology and movement. In this test a majority for communism simply signifies that you are for a public property of the means of production.
 
 **Capitalism** is as well an ambivalent concept. In this test a majority for capitalism simply signifies that you are for a private property of the means of production.
 
@@ -99,8 +99,8 @@ On the contrary the **Conservatives** want to keep the status quo and even to re
 61. The influence of religion should decrease.
 62. A language is defined by its users, not by scholars.
 63. Euthanasia should be authorized.
-64. Homosexuals should not be treated equally to heterosexuals treatment regarding marriage, parentage, adoption or procreation.
-65. In some specific conditions, the death penalty is justified.
+64. Homosexuals should not be treated equally to heterosexuals in regards to marriage, parentage, adoption or procreation.
+65. In some specific conditions the death penalty is justified.
 66. Technical progress should not change society too quickly.
 67. School should mostly teach our values, traditions, and fundamental knowledge.
 68. Abortion should be limited to specific cases.
@@ -109,7 +109,7 @@ On the contrary the **Conservatives** want to keep the status quo and even to re
 
 ### Ecology/Production
 
-**Ecology** in politics privileges the protection of the environment by limiting as much as possible the impact of human activities on the biodiversity even if it implies to limit the these human activities by modifying more or less radically our current way of life.
+**Ecology** in politics privileges the protection of the environment by limiting as much as possible the impact of human activities on biodiversity even if it limits these human activities by modifying, more or less radically, our current way of life.
 
 **Production** privileges human needs notably by supporting the increase of the production or the use of methods that have an uncertain impact on the environment.
 
@@ -130,9 +130,9 @@ On the contrary the **Conservatives** want to keep the status quo and even to re
 
 ### Rehabilitative Justice/Punitive Justice
 
-The ones in favor of the **Rehabilitative Justice** consider that the role of justice is to put the condemned on the “right path” again by making them understand why they should not do what they did and why they were condemned and by accompanying them all along the process.
+Those in favor of **Rehabilitative Justice** consider that the role of justice is to put the condemned on the “right path” again by making them understand why they should not do what they did and why they were condemned and by accompanying them all along the process.
 
-Conversely the ones in favor of the **Punitive Justice** consider that the role of justice is dissuasive, both for the condemned (to avoid recidivism) and for the rest of the society (by making them examples not to follow).
+Conversely the ones in favor of **Punitive Justice** consider that the role of justice is dissuasive, both for the condemned (to avoid recidivism) and for the rest of society (by making them examples not to follow).
 
 85. Prisons should no longer exist.
 86. It is unfair to set a minimal penalty for an offense or a crime.
@@ -150,9 +150,9 @@ Conversely the ones in favor of the **Punitive Justice** consider that the role 
 
 ### Revolution/Reform
 
-**Revolutionaries** have a tendency to privilege direct action, often in the margin of legality, to reach their goal: replace the current political organization for totally different one.
+**Revolutionaries** have a tendency to privilege direct action, often in the margin of legality, to reach their goal: replace the current political organization with a totally different one.
 
-**Reformists** have a tendency to privilege legal action to reach their goal: reform the political organization step by step. This can be done through the institutions, via elections, authorized demonstrations, petitions...
+**Reformists** have a tendency to privilege legal action to reach their goal and reform the political organization step by step. This can be done through the institutions, via elections, authorized demonstrations, petitions, etc.
 
 98. Mass strike is a good way to acquire new rights.
 99. Armed struggle in a country is sometimes necessary.
