@@ -169,7 +169,7 @@ var questions = [
     ]
   },
   {
-    question: "Sexual assaults are partly caused by men’s natural impulse.",
+    question: "Sexual assaults are partly caused by natural impulse.",
     answer: 0,
     valuesYes: [
       {
@@ -190,7 +190,7 @@ var questions = [
   },
   {
     question:
-      "Transgender individuals will never really be of the gender they would like to be.",
+      "Transgender individuals will never really be of the gender they identify as.",
     answer: 0,
     valuesYes: [
       {
@@ -223,7 +223,7 @@ var questions = [
     ]
   },
   {
-    question: "Biologically, human beings are designed for heterosexuality.",
+    question: "Biologically, human beings are meant for heterosexuality.",
     answer: 0,
     valuesYes: [
       {
@@ -1074,7 +1074,7 @@ var questions = [
   },
   {
     question:
-      "Homosexuals should not be treated equally to heterosexuals with regards to marriage, parentage, adoption or procreation.",
+      "Homosexuals should not be treated equally to heterosexuals in regards to marriage, parentage, adoption or procreation.",
     answer: 0,
     valuesYes: [
       {
@@ -1090,7 +1090,7 @@ var questions = [
     ]
   },
   {
-    question: "In some specific conditions, the death penalty is justified.",
+    question: "In some specific conditions the death penalty is justified.",
     answer: 0,
     valuesYes: [
       {
