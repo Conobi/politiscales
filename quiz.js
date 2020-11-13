@@ -2042,7 +2042,7 @@ function results() {
     }
   }
   url = window.btoa(url);
-  url = "/results/?" + url;
+  url = "./results/?" + url;
 
   location.href = url;
 }
