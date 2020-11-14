@@ -8,7 +8,7 @@
 
     <meta
       name="description"
-      content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
+      content="Welcome to the PolitiScales, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
     />
     <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
     <link rel="shortcut icon" href="../images/favicon.ico" />
@@ -21,6 +21,20 @@
       content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
     />
     <meta property="og:image" content="../images/facebook-preview.jpg" /> -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script>
+      var pageType = "quiz";
+    </script>
+    <script src="../src/jquery.i18n.js"></script>
+    <script src="../src/jquery.i18n.messagestore.js"></script>
+    <script src="../src/jquery.i18n.fallbacks.js"></script>
+    <script src="../src/jquery.i18n.parser.js"></script>
+    <script src="../src/jquery.i18n.emitter.js"></script>
+    <script src="../src/jquery.i18n.language.js"></script>
+    <script src="../translate.js"></script>
   </head>
 
   <body>
@@ -32,29 +46,29 @@
 
     <div id="content">
       <div id="mainFrame">
-        <h2 id="question-number">Loading...</h2>
+        <h2 id="question-number"></h2>
         <div class="questionBox"><p id="question-text"></p></div>
         <div class="navButtons questionButtons">
-          <button onclick="next_question(1)" class="strong-agree">
+          <button onclick="next_question(1)" class="strong-agree" data-i18n="strong-agree">
             Absolutely agree
           </button>
-          <button onclick="next_question(2/3)" class="agree">
+          <button onclick="next_question(2/3)" class="agree" data-i18n="agree">
             Somewhat agree
           </button>
-          <button onclick="next_question(0)" class="neutral">
+          <button onclick="next_question(0)" class="neutral" data-i18n="neutral">
             Neutral or hesitant
           </button>
-          <button onclick="next_question(-2/3)" class="disagree">
+          <button onclick="next_question(-2/3)" class="disagree" data-i18n="disagree">
             Rather disagree
           </button>
-          <button onclick="next_question(-1)" class="strong-disagree">
+          <button onclick="next_question(-1)" class="strong-disagree" data-i18n="strong-disagree">
             Absolutely disagree
           </button>
 
-          <a href="#" class="button" onclick="prev_question()" id="back_button">
+          <a href="#" class="button" onclick="prev_question()" id="back_button" data-i18n="prev_question">
             Return to the previous question
           </a>
-          <a class="button" href="../" id="back_button_off">
+          <a class="button" href="../" id="back_button_off" data-i18n="back_home">
             Go back to home page
           </a>
         </div>
@@ -62,13 +76,13 @@
     </div>
 
     <div id="footer">
-      <p>
+      <p data-i18n="[html]footer">
         This quiz is a slightly modified version of
         <a href="https://www.politiscales.net/">PolitiScales</a>, which is based
         on <a href="https://8values.github.io/">8values</a>.
       </p>
     </div>
-    <script src="../langs/questions_en.js"></script>
+    <!-- <script src="../langs/questions_en.js"></script> -->
     <script src="../quiz.js"></script>
   </body>
 </html>
