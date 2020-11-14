@@ -1,0 +1,10 @@
+{
+  "title": "PolitiScales",
+  "description": "Bienvenue sur Politiscales, le test politique en ligne. Vous allez être confronté à une série d'affirmations et pour chacune d'entre elles vous devrez cliquer sur le bouton correspondant à votre opinion.",
+  "index_subtitle": "Explications",
+  "info_1": "Les questions partent du principe que vous êtes citoyen d'un pays ayant plusieurs partis politiques et une économie de marché.",
+  "info_2": "Vous n'êtes jamais obligé de répondre à une question. Mais si vous ne comprenez pas l'une d'entre elles, essayez d'inverser son sens pour comprendre ce qu'elle implique.",
+  "warning": "Ce test essaie de représenter le plus large panel d'opinions et peut contenir des phrases choquantes, notamment concernant le racisme ou l'homosexualité.",
+  "start_button": "Démarrer le test",
+  "footer": "Ce test est une version modifiée et améliorée de PolitiScales, qui est basé sur 8values."
+}
