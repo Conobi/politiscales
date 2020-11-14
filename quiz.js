@@ -1,7 +1,27 @@
-"use strict";
 
-var qn = 0; // Question number
-var prev_answer = null;
+// Choosing right translation file
+
+jQuery.loadScript = function (url, callback) {
+    jQuery.ajax({
+        url: url,
+        dataType: 'script',
+        success: callback,
+        async: false
+    });
+}
+
+$.loadScript('../langs/questions_'+userLang+'.js', function(){
+  // We shuffle questions once they have been dl
+  shuffle(questions);
+});
+
+function init_quiz() {
+  qn = 0; // Question number
+  prev_answer = null;
+
+  init_question();
+
+}
 
 function shuffle(array) {
   var i = 0,
@@ -15,17 +35,16 @@ function shuffle(array) {
     array[j] = temp;
   }
 }
-shuffle(questions);
-
-init_question();
 
 function init_question() {
+  question_string = $.i18n("question")
+  ques_of_string = $.i18n("of")
+
   document.getElementById("question-text").innerHTML = questions[qn].question;
   document.getElementById(
     "question-number"
-  ).innerHTML = "Question %num% of %sum%"
-    .replace("%num%", qn + 1)
-    .replace("%sum%", questions.length);
+  ).innerHTML = question_string +" "+ (qn + 1) +" "+  ques_of_string +" "+ questions.length
+
   if (qn == 0) {
     document.getElementById("back_button").style.display = "none";
     document.getElementById("back_button_off").style.display = "block";
@@ -102,7 +121,7 @@ function results() {
     }
   }
   url = window.btoa(url);
-  url = "./results/?" + url;
+  url = "../results/?" + url;
 
   location.href = url;
 }

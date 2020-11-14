@@ -8,10 +8,11 @@
 
     <meta
       name="description"
-      content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
+      content="Welcome to the PolitiScales, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
     />
     <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
     <link rel="shortcut icon" href="../images/favicon.ico" />
+    <!--
     <meta property="og:url" content="https://dbhq.github.io/" />
     <meta property="og:title" content="PolitiScales, DBHQ Edition" />
     <meta property="og:locale" content="en_US" />
@@ -20,6 +21,18 @@
       content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
     />
     <meta property="og:image" content="../images/facebook-preview.jpg" />
+    -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="../src/jquery.i18n.js"></script>
+    <script src="../src/jquery.i18n.messagestore.js"></script>
+    <script src="../src/jquery.i18n.fallbacks.js"></script>
+    <script src="../src/jquery.i18n.parser.js"></script>
+    <script src="../src/jquery.i18n.emitter.js"></script>
+    <script src="../src/jquery.i18n.language.js"></script>
+    <script src="../translate.js"></script>
   </head>
 
   <body>
@@ -31,14 +44,14 @@
 
     <div id="content">
       <div id="mainFrame">
-        <h2>Results</h2>
+        <h2 data-i18n="results">Results</h2>
 
-        <p class="simpleText">
+        <p class="simpleText" data-i18n="results_desc">
           The result of your PolitiScale is decomposed in 8 axes. Each axis
           indicates your positioning compared with two opposed ideologies. Some
           particular characteristics, displayed at the end of the page can also
           complete your result. For further information on the different axis
-          <a href="../help">Look at the help page</a>.
+          <a href="../help" data-i18n="look_help">Look at the help page</a>.
         </p>
 
         <div class="generatedResultsDecorations">
@@ -65,7 +78,7 @@
                 d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
               />
             </svg>
-            Copy Link
+            <span data-i18n="copy_link">Copy Link</span>
           </button>
           <button
             id="download"
@@ -84,7 +97,7 @@
                 d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"
               />
             </svg>
-            Download
+            <span data-i18n="download">Download</span>
           </button>
         </div>
 
@@ -101,8 +114,8 @@
               <div class="left"><img src="../images/constructivism.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label">Constructivism</div>
-                  <div class="right-label">Essentialism</div>
+                  <div class="left-label" data-i18n="constructivism">Constructivism</div>
+                  <div class="right-label" data-i18n="essentialism">Essentialism</div>
                 </div>
                 <div class="axis-bar">
                   <div id="cAxisNeg" class="axis-left axisConstructivism">
@@ -123,8 +136,8 @@
               <div class="left"><img src="../images/justice_soft.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label">Rehabilitative Justice</div>
-                  <div class="right-label">Punitive Justice</div>
+                  <div class="left-label" data-i18n="rehabilitative_justice">Rehabilitative Justice</div>
+                  <div class="right-label" data-i18n="punitive_justice">Punitive Justice</div>
                 </div>
                 <div class="axis-bar">
                   <div id="jAxisNeg" class="axis-left axisLiberal">
@@ -145,8 +158,8 @@
               <div class="left"><img src="../images/progressism.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label">Progressive</div>
-                  <div class="right-label">Conservative</div>
+                  <div class="left-label" data-i18n="progressive">Progressive</div>
+                  <div class="right-label" data-i18n="conservative">Conservative</div>
                 </div>
                 <div class="axis-bar">
                   <div id="sAxisNeg" class="axis-left axisProgressism">
@@ -167,8 +180,8 @@
               <div class="left"><img src="../images/internationalism.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label">Internationalism</div>
-                  <div class="right-label">Nationalism</div>
+                  <div class="left-label" data-i18n="internationalism">Internationalism</div>
+                  <div class="right-label" data-i18n="nationalism">Nationalism</div>
                 </div>
                 <div class="axis-bar">
                   <div id="bAxisNeg" class="axis-left axisInternationalism">
@@ -191,8 +204,8 @@
               <div class="left"><img src="../images/communism.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label">Communism</div>
-                  <div class="right-label">Capitalism</div>
+                  <div class="left-label" data-i18n="communism">Communism</div>
+                  <div class="right-label" data-i18n="capitalism">Capitalism</div>
                 </div>
                 <div class="axis-bar">
                   <div id="pAxisNeg" class="axis-left axisCommunism">
@@ -213,8 +226,8 @@
               <div class="left"><img src="../images/regulation.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label">Regulation</div>
-                  <div class="right-label">Laissez-faire</div>
+                  <div class="left-label" data-i18n="regulation">Regulation</div>
+                  <div class="right-label" data-i18n="laissez_faire">Laissez-faire</div>
                 </div>
                 <div class="axis-bar">
                   <div id="mAxisNeg" class="axis-left axisRegulation">
@@ -235,8 +248,8 @@
               <div class="left"><img src="../images/ecology.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label">Ecology</div>
-                  <div class="right-label">Production</div>
+                  <div class="left-label" data-i18n="ecology">Ecology</div>
+                  <div class="right-label" data-i18n="production">Production</div>
                 </div>
                 <div class="axis-bar">
                   <div id="eAxisNeg" class="axis-left axisEcology">
@@ -257,8 +270,8 @@
               <div class="left"><img src="../images/revolution.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label">Revolution</div>
-                  <div class="right-label">Reform</div>
+                  <div class="left-label" data-i18n="revolution">Revolution</div>
+                  <div class="right-label" data-i18n="reform">Reform</div>
                 </div>
                 <div class="axis-bar">
                   <div id="tAxisNeg" class="axis-left axisRevo">
@@ -278,15 +291,15 @@
         </div>
         <br />
         <div id="bonusBox">
-          <h3>Additional characteristics</h3>
+          <h3 data-i18n="bonus_chars">Additional characteristics</h3>
 
           <div id="anarBonus" class="description">
             <div class="descImg">
               <img src="../images/anarchism.png" alt="" />
             </div>
             <div class="descTextMono">
-              <h4>Anarchist</h4>
-              <p>
+              <h4 data-i18n="anarchist">Anarchist</h4>
+              <p data-i18n="anarchist_desc">
                 When the people are being hit with a stick, they are not happier
                 if the stick is called “the stick of the people”. The State is
                 an oppression that must be abolished.
@@ -299,8 +312,8 @@
               <img src="../images/pragmatism.png" alt="" />
             </div>
             <div class="descTextMono">
-              <h4>Pragmatist</h4>
-              <p>
+              <h4 data-i18n="pragmatist">Pragmatist</h4>
+              <p data-i18n="pragmatist">
                 Politics objectively boils down to looking at where the problems
                 are and trying to solve them according to the means available.
               </p>
@@ -310,16 +323,16 @@
           <div id="femiBonus" class="description">
             <div class="descImg"><img src="../images/feminism.png" alt="" /></div>
             <div class="descTextMono">
-              <h4>Radical Feminist</h4>
-              <p>Gender should disappear to put an end to the patriarchy.</p>
+              <h4 data-i18n="feminist">Radical Feminist</h4>
+              <p data-i18n="feminist_desc">Gender should disappear to put an end to the patriarchy.</p>
             </div>
           </div>
 
           <div id="vegaBonus" class="description">
             <div class="descImg"><img src="../images/veganism.png" alt="" /></div>
             <div class="descTextMono">
-              <h4>Vegan</h4>
-              <p>
+              <h4 data-i18n="vegan">Vegan</h4>
+              <p data-i18n="vegan_desc">
                 Human beings must stop at all costs the consumption and
                 exploitation of “sensible” being.
               </p>
@@ -331,16 +344,16 @@
               <img src="../images/monarchism.png" alt="" />
             </div>
             <div class="descTextMono">
-              <h4>Monarchist</h4>
-              <p>Society should be organized around a king.</p>
+              <h4 data-i18n="monarchist">Monarchist</h4>
+              <p data-i18n="monarchist_desc">Society should be organized around a king.</p>
             </div>
           </div>
 
           <div id="reliBonus" class="description">
             <div class="descImg"><img src="../images/religion.png" alt="" /></div>
             <div class="descTextMono">
-              <h4>Missionary</h4>
-              <p>
+              <h4 data-i18n="missionary">Missionary</h4>
+              <p data-i18n="missionary_desc">
                 For you religion is important, especially yours. It is therefore
                 appropriate to spread it as globally as possible.
               </p>
@@ -349,19 +362,18 @@
         </div>
 
         <div class="navButtons">
-          <a class="button" href="../quiz">Restart the test</a>
+          <a class="button" href="../quiz" data-i18n="restart_test">Restart the test</a>
         </div>
       </div>
     </div>
 
     <div id="footer">
-      <p>
+      <p data-i18n="[html]footer">
         This quiz is a slightly modified version of
         <a href="https://www.politiscales.net/">PolitiScales</a>, which is based
         on <a href="https://8values.github.io/">8values</a>.
       </p>
     </div>
-
     <script src="../flags.js"></script>
     <script src="../results.js"></script>
   </body>
