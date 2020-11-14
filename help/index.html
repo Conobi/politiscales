@@ -8,7 +8,7 @@
 
     <meta
       name="description"
-      content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
+      content="Welcome to the PolitiScales, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
     />
     <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
     <link rel="shortcut icon" href="../images/favicon.ico" />
@@ -21,6 +21,17 @@
       content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
     />
     <meta property="og:image" content="../images/facebook-preview.jpg" /> -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="../src/jquery.i18n.js"></script>
+    <script src="../src/jquery.i18n.messagestore.js"></script>
+    <script src="../src/jquery.i18n.fallbacks.js"></script>
+    <script src="../src/jquery.i18n.parser.js"></script>
+    <script src="../src/jquery.i18n.emitter.js"></script>
+    <script src="../src/jquery.i18n.language.js"></script>
+    <script src="../translate.js"></script>
   </head>
 
   <body>
@@ -32,22 +43,22 @@
 
     <div id="content">
       <div id="mainFrame">
-        <h2>Who are we?</h2>
+        <h2 data-i18n="whoarewe">Who are we?</h2>
 
-        <p class="simpleText">
-          PolitiScale is a political test using 8 ideological values to help you
+        <p class="simpleText" data-i18n="[html]long_desc">
+          PolitiScales is a political test using 8 ideological values to help you
           know approximately where you belong to in the political field, or
           simply to share your profile with your friends. this internet website
           is an initiative of “Radicalisé·e·s sur Internet” which is freely
           inspired by <a href="https://8values.github.io/">8values</a>.
         </p>
 
-        <h3>Constructivism vs. Essentialism</h3>
+        <h3 data-i18n="axis_1_title">Constructivism vs. Essentialism</h3>
         <div class="description">
           <div class="descImg">
             <img src="../images/constructivism.png" alt="Constructivism" />
           </div>
-          <div class="descText">
+          <div class="descText" data-i18n="[html]axis_1_desc">
             <p>
               Why are the people how they are? This axis allows you to situate
               yourself between two opposite poles which answer this question.
@@ -72,12 +83,12 @@
           </div>
         </div>
 
-        <h3>Rehabilitative Justice vs. Punitive Justice</h3>
+        <h3 data-i18n="axis_2_title">Rehabilitative Justice vs. Punitive Justice</h3>
         <div class="description">
           <div class="descImg">
             <img src="../images/justice_soft.png" alt="Rehabilitative justice" />
           </div>
-          <div class="descText">
+          <div class="descText" data-i18n="[html]axis_2_desc">
             <p>
               Those in favor of <strong>rehabilitative justice</strong> consider
               that the role of justice is to put the condemned on the “right
@@ -102,12 +113,12 @@
           </div>
         </div>
 
-        <h3>Progressive vs. Conservative</h3>
+        <h3 data-i18n="axis_3_title">Progressive vs. Conservative</h3>
         <div class="description">
           <div class="descImg">
             <img src="../images/progressism.png" alt="Progressism" />
           </div>
-          <div class="descText">
+          <div class="descText" data-i18n="[html]axis_3_desc">
             <p>
               The <strong>progressives</strong> try to build social progress,
               make a better society without caring about traditions. They often
@@ -130,12 +141,12 @@
           </div>
         </div>
 
-        <h3>Internationalism vs. Nationalism</h3>
+        <h3 data-i18n="axis_4_title">Internationalism vs. Nationalism</h3>
         <div class="description">
           <div class="descImg">
             <img src="../images/internationalism.png" alt="Internationalism" />
           </div>
-          <div class="descText">
+          <div class="descText" data-i18n="[html]axis_4_desc">
             <p>
               <strong>Internationalism</strong> is a set of different ides which
               have for common point to stop making a hierarchy between countries
@@ -159,12 +170,12 @@
           </div>
         </div>
 
-        <h3>Communism vs. Capitalism</h3>
+        <h3 data-i18n="axis_5_title">Communism vs. Capitalism</h3>
         <div class="description">
           <div class="descImg">
             <img src="../images/communism.png" alt="Communism" />
           </div>
-          <div class="descText">
+          <div class="descText" data-i18n="[html]axis_5_desc">
             <p>
               <strong>Communism</strong> is a vast political doctrine. In this
               test a majority for communism simply signifies that you are for a
@@ -185,12 +196,12 @@
           </div>
         </div>
 
-        <h3>Regulation vs. Laissez-faire</h3>
+        <h3 data-i18n="axis_6_title">Regulation vs. Laissez-faire</h3>
         <div class="description">
           <div class="descImg">
             <img src="../images/regulation.png" alt="Regulationnism" />
           </div>
-          <div class="descText">
+          <div class="descText" data-i18n="[html]axis_6_desc">
             <p>
               This axis represents the attitude that a government needs to have
               concerning the market economy in which an important part of the
@@ -225,12 +236,12 @@
           </div>
         </div>
 
-        <h3>Ecology vs. Production</h3>
+        <h3 data-i18n="axis_7_title">Ecology vs. Production</h3>
         <div class="description">
           <div class="descImg">
             <img src="../images/ecology.png" alt="Ecology" />
           </div>
-          <div class="descText">
+          <div class="descText" data-i18n="[html]axis_7_desc">
             <p>
               <strong>Ecology</strong> in politics privileges the protection of
               the environment by limiting as much as possible the impact of
@@ -253,12 +264,12 @@
           </div>
         </div>
 
-        <h3>Revolution vs. Reform</h3>
+        <h3 data-i18n="axis_8_title">Revolution vs. Reform</h3>
         <div class="description">
           <div class="descImg">
             <img src="../images/revolution.png" alt="Revolution" />
           </div>
-          <div class="descText">
+          <div class="descText" data-i18n="[html]axis_8_desc">
             <p>
               <strong>Revolutionaries</strong> have a tendency to privilege
               direct action, often in the margin of legality, to reach their
@@ -284,7 +295,7 @@
     </div>
 
     <div id="footer">
-      <p>
+      <p data-i18n="[html]footer">
         This quiz is a slightly modified version of
         <a href="https://www.politiscales.net/">PolitiScales</a>, which is based
         on <a href="https://8values.github.io/">8values</a>.
