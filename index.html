@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>PolitiScales, DBHQ Edition</title>
+    <title>PolitiScales</title>
 
     <meta
       name="description"
@@ -20,6 +20,17 @@
       content="Welcome to the PolitiScale, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
     />
     <meta property="og:image" content="./images/facebook-preview.jpg" /> -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="./src/jquery.i18n.js"></script>
+    <script src="./src/jquery.i18n.messagestore.js"></script>
+    <script src="./src/jquery.i18n.fallbacks.js"></script>
+    <script src="./src/jquery.i18n.parser.js"></script>
+    <script src="./src/jquery.i18n.emitter.js"></script>
+    <script src="./src/jquery.i18n.language.js"></script>
+    <script src="./translate.js"></script>
   </head>
 
   <body>
@@ -31,14 +42,14 @@
 
     <div id="content">
       <div id="mainFrame">
-        <h2>Instructions</h2>
-        <p class="simpleText">
+        <h2 data-i18n="index_subtitle">Instructions</h2>
+        <p class="simpleText" data-i18n="description">
           Welcome to the PolitiScale, the online political test. You will be
           confronted to a series of affirmations and for each of them you will
           have to click on the button which corresponds the most to your
           opinion.
         </p>
-        <br />
+        <br/>
 
         <p class="simpleText">
           <svg
@@ -51,8 +62,8 @@
               d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
             />
           </svg>
-          The questions assume that you are a citizen of a multi-party
-          political system and a market economy.
+          <span data-i18n="info_2">The questions assume that you are a citizen of a multi-party
+          political system and a market economy.</span>
         </p>
         <p class="simpleText">
           <svg
@@ -65,9 +76,9 @@
               d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"
             />
           </svg>
-          You can always avoid answering a question. But if you do not
+          <span data-i18n="info_2">You can always avoid answering a question. But if you do not
           understand the meaning of one of them, try to invert its meaning for a
-          better understanding of what is implied.
+          better understanding of what is implied.</span>
         </p>
         <p class="simpleText">
           <svg
@@ -79,19 +90,19 @@
             <path d="M0 0h24v24H0z" fill="none" />
             <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
           </svg>
-          This test tries to represent the wider set of ideas as possible and
+          <span data-i18n="warning">This test tries to represent the wider set of ideas as possible and
           contains some phrases that can be shocking, notably concerning racism
-          and homosexuality.
+          and homosexuality.</span>
         </p>
 
         <div class="navButtons">
-          <a class="button" href="./quiz">Start the test</a>
+          <a class="button" href="./quiz" data-i18n="start_button">Start the test</a>
         </div>
       </div>
     </div>
 
     <div id="footer">
-      <p>
+      <p data-i18n="[html]footer">
         This quiz is a slightly modified version of
         <a href="https://www.politiscales.net/">PolitiScales</a>, which is based
         on <a href="https://8values.github.io/">8values</a>.
