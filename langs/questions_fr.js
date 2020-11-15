@@ -2,7 +2,7 @@ var questions = [
 
 	/* ESSENTIALISME ************************************************ */
 	{
-		question: "« We are not born women, we become women. ».",
+		question: "« On ne naît pas femme, on le devient ».",
 		answer: 0,
 		valuesYes: [
 			{
@@ -22,7 +22,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Differences in treatment and quality of life in our society show that racism is still very much alive.",
+		question: "Les différences de traitements et de qualité de vie dans notre société montrent que le racisme est encore très présent.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -38,7 +38,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Science, even physics or biology, is not absolute and is conditioned by our society.",
+		question: "Les sciences, même la physique ou la biologie, ne sont pas absolues et sont conditionnées par notre société.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -54,7 +54,7 @@ var questions = [
 		]
 	},
 	{
-		question: "The categories \"man\" and \"woman\" are social constructs that must be overcome.",
+		question: "Les catégories « homme » et « femme » sont des constructions sociales qu&#39;il convient de dépasser.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -74,7 +74,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Nobody is predisposed to crime by nature.",
+		question: "Personne n’est prédisposé à la criminalité par sa nature.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -90,7 +90,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Sexual orientation is acquired.",
+		question: "L’orientation sexuelle est une construction sociale",
 		answer: 0,
 		valuesYes: [
 			{
@@ -106,7 +106,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Social differences between ethnic groups cannot be explained by biology.",
+		question: "Les differences sociales entre groupes ethniques ne s&#39;expliquent pas par la biologie.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -122,27 +122,7 @@ var questions = [
 		]
 	},
 	{
-		question: "The place of men and women in society can be partly explained by biology.",
-		answer: 0,
-		valuesYes: [
-			{
-				axis: "c1",
-				value: 3
-			}
-		],
-		valuesNo: [
-			{
-				axis: "c0",
-				value: 3
-			},
-			{
-				axis: "femi",
-				value: 3
-			}
-		]
-	},
-	{
-		question: "Hormonal differences explain some differences in character traits between men and women.",
+		question: "La place des hommes et des femmes dans la société peut être en partie expliquée par la biologie.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -162,7 +142,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Sexual abuse is partly caused by men's natural impulses.",
+		question: "Les différences hormonales expliquent certaines différences de traits de caractère entre les hommes et les femmes.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -182,7 +162,27 @@ var questions = [
 		]
 	},
 	{
-		question: "Transgender people will never be exactly what they want to achieve.",
+		question: "Les agressions sexuelles sont en partie causées par les pulsions naturelles des hommes.",
+		answer: 0,
+		valuesYes: [
+			{
+				axis: "c1",
+				value: 3
+			}
+		],
+		valuesNo: [
+			{
+				axis: "c0",
+				value: 3
+			},
+			{
+				axis: "femi",
+				value: 3
+			}
+		]
+	},
+	{
+		question: "Les personnes transgenres ne seront jamais vraiment du genre qu’elles veulent atteindre.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -198,7 +198,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Members of the same nation or culture have immutable characteristic traits that define them.",
+		question: "Les membres d&#39;une même nation ou d&#39;une même culture ont des traits caractéristiques immuables qui les définissent.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -214,7 +214,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Biologically, the human species is made for heterosexuality.",
+		question: "Biologiquement, l&#39;espèce humaine est faite pour l&#39;hétérosexualité.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -230,7 +230,7 @@ var questions = [
 		]
 	},
 	{
-		question: "L'égoïsme est prépondérant dans l'espèce humaine, indépendamment du contexte.",
+		question: "L&#39;égoïsme est prépondérant dans l&#39;espèce humaine, indépendamment du contexte.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -279,7 +279,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Mon pays doit payer pour réparer les dégâts causés par les crimes qu'il a commis à l'étranger.",
+		question: "Mon pays doit payer pour réparer les dégâts causés par les crimes qu&#39;il a commis à l&#39;étranger.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -391,7 +391,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Le multiculturalisme est un danger.",
+		question: "Le multiculturalisme est un danger pour notre société.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -423,7 +423,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il est légitime pour un pays d'intervenir militairement à l'étranger pour défendre ses intérêts économiques.",
+		question: "Il est légitime pour un pays d&#39;intervenir militairement à l&#39;étranger pour défendre ses intérêts économiques.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -439,7 +439,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il faut enseigner l'Histoire d'une façon qui permet de créer un sentiment d'appartenance à la nation.",
+		question: "Il faut enseigner l&#39;Histoire d&#39;une façon qui permet de créer un sentiment d&#39;appartenance à la nation.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -472,7 +472,7 @@ var questions = [
 	},
     /* PRODUCTION *************************************************** */
 	{
-		question: "Nul ne doit s'enrichir par le fait de posséder une entreprise, un logement ou un terrain.",
+		question: "Nul ne doit s&#39;enrichir par le fait de posséder une entreprise, un logement ou un terrain.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -504,7 +504,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il est important que la santé reste majoritairement publique.",
+		question: "Il est important que la santé reste du domaine publique.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -520,7 +520,7 @@ var questions = [
 		]
 	},
 	{
-		question: "L'énergie et les infrastructures de transport doivent être publiques.",
+		question: "L&#39;énergie et les infrastructures de transport doivent être publiques.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -552,7 +552,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il faut mettre en place des assemblées pour répartir les productions vers les consommateurs en fonction des besoins.",
+		question: "Il faut mettre en place des assemblées pour rationner les productions vers les consommateurs en fonction des besoins.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -584,7 +584,7 @@ var questions = [
 		]
 	},
 	{
-		question: "La recherche de son profit personnel est saine pour l'économie.",
+		question: "La recherche de son profit personnel est saine pour l&#39;économie.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -600,7 +600,7 @@ var questions = [
 		]
 	},
 	{
-		question: "C'est le mérite qui explique la différence de richesse entre deux personnes.",
+		question: "C&#39;est le mérite qui explique la différence de richesse entre deux personnes.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -616,7 +616,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il n'y a pas de problème à ce que certaines écoles et universités puissent être privées.",
+		question: "Il n&#39;y a pas de problème à ce que certaines écoles et universités puissent être privées.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -648,7 +648,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il est acceptable qu'il y ait des riches et des pauvres.",
+		question: "Il est acceptable qu&#39;il y ait des riches et des pauvres.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -664,7 +664,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il est acceptable que certains secteurs de l'industrie soient privés.",
+		question: "Il est acceptable que certains secteurs de l&#39;industrie soient privés.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -713,7 +713,7 @@ var questions = [
 		]
 	},
 	{
-		question: "L'âge du départ à la retraite doit être diminué.",
+		question: "L&#39;âge du départ à la retraite doit être diminué.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -777,7 +777,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Les prêts contractés par la sphère publique ne doivent pas nécessairement être remboursés.",
+		question: "Les prêts contractés par la sphère publique (États, régions, collectivités, ...) ne doivent pas nécessairement être remboursés.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -905,7 +905,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché.",
+		question: "Les entreprises publiques doivent être administrées comme des entreprises privées et suivre la logique du marché (concurrence, rentabilité, ...).",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1022,7 +1022,7 @@ var questions = [
 		]
 	},
 	{
-		question: "L'euthanasie doit être autorisée.",
+		question: "L&#39;euthanasie doit être autorisée.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1038,7 +1038,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Les homosexuels n’ont pas à avoir une égalité de traitement avec les hétérosexuels en ce qui concerne le mariage, la filiation, l’adoption ou la procréation.",
+		question: "Les homosexuels n’ont pas à être traité à égalité avec les hétérosexuels en ce qui concerne le mariage, la filiation, l’adoption ou la procréation.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1094,7 +1094,7 @@ var questions = [
 		]
 	},
 	{
-		question: "L'école doit principalement enseigner nos valeurs, nos traditions et les connaissances fondamentales.",
+		question: "L&#39;école doit principalement enseigner nos valeurs, nos traditions et les connaissances fondamentales.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1110,7 +1110,7 @@ var questions = [
 		]
 	},
 	{
-		question: "L'avortement devrait être limité à des cas précis.",
+		question: "L&#39;avortement devrait être limité à des cas précis.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1227,7 +1227,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il est important d'encourager une agriculture qui maintienne une biodiversité alimentaire, même si son rendement est inférieur.",
+		question: "Il est important d&#39;encourager une agriculture qui maintienne une biodiversité alimentaire, même si son rendement est inférieur.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1436,7 +1436,7 @@ var questions = [
 		]
 	},
 	{
-		question: "La justice doit toujours prendre en compte le contexte et le passif du condamné et adapter les peines en fonction.",
+		question: "La justice doit toujours prendre en compte le contexte et le passé du condamné et adapter les peines en fonction.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1580,7 +1580,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il vaut mieux arrêter préventivement une personne potentiellement dangereuse que de courir le risque qu'elle commette un crime.",
+		question: "Il vaut mieux arrêter préventivement une personne potentiellement dangereuse que de courir le risque qu&#39;elle commette un crime.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1613,7 +1613,7 @@ var questions = [
 		]
 	},
 	{
-		question: "La lutte armée au sein d'un pays est parfois necessaire.",
+		question: "La lutte armée au sein d&#39;un pays est parfois nécessaire.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1629,7 +1629,7 @@ var questions = [
 		]
 	},
 	{
-		question: "L'insurrection est nécessaire pour transformer la société en profondeur.",
+		question: "L&#39;insurrection est nécessaire pour transformer la société en profondeur.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1661,7 +1661,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Les élections organisées par l'État ne peuvent pas remettre en question les pouvoirs en place.",
+		question: "Les élections organisées par l&#39;État ne peuvent pas remettre en question les pouvoirs en place.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1677,7 +1677,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Le piratage informatique a une place légitime dans la lutte politique.",
+		question: "Le piratage informatique est un moyen légitime de lutte politique.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1757,7 +1757,7 @@ var questions = [
 		]
 	},
 	{
-		question: "La violence contre les personnes n'est jamais une solution.",
+		question: "La violence contre les personnes n&#39;est jamais une solution.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1877,7 +1877,7 @@ var questions = [
 		valuesNo: []
 	},
 	{
-		question: "L'état doit être aboli.",
+		question: "L&#39;état doit être aboli.",
 		answer: 0,
 		valuesYes: [
 			{
