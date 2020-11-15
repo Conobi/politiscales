@@ -1,3 +1,4 @@
+language = localStorage.getItem("language") || navigator.language || navigator.userLanguage;
 
 // Choosing right translation file
 
@@ -10,7 +11,7 @@ jQuery.loadScript = function (url, callback) {
     });
 }
 
-$.loadScript('../langs/questions_'+userLang+'.js', function(){
+$.loadScript('../langs/questions_'+ language +'.js', function(){
   // We shuffle questions once they have been dl
   shuffle(questions);
 });
