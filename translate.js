@@ -60,9 +60,13 @@ function setLanguage() {
 }
 
 $(function() {
+  // We check if we are on the french domain
+  if(localStorage.getItem("language") == null && window.location.host.includes("politiscales.fr")) {
+    localStorage.setItem("language", "fr");
+    $('.language option[value=fr]').attr('selected','selected');
   // We check if the language is not set and not included in the project
-  if(localStorage.getItem("language") == null && Object.keys(translations).includes(navigator.language || navigator.userLanguage) == false) {
-    userLang = localStorage.setItem("language", "en");
+  } else if(localStorage.getItem("language") == null && Object.keys(translations).includes(navigator.language || navigator.userLanguage) == false) {
+    localStorage.setItem("language", "en");
     $('.language option[value=en]').attr('selected','selected');
 
   // If the language is not set but included in our files
