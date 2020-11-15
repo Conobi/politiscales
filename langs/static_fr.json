@@ -7,7 +7,7 @@
   "info_2": "Vous n'êtes jamais obligé de répondre à une question. Mais si vous ne comprenez pas l'une d'entre elles, essayez d'inverser son sens pour comprendre ce qu'elle implique.",
   "warning": "Ce test essaie de représenter le plus large panel d'opinions et peut contenir des phrases choquantes, notamment concernant le racisme ou l'homosexualité.",
   "start_button": "Démarrer le test",
-  "footer": "Ce test est une version modifiée et améliorée de {{SITENAME}}, qui est basé sur 8values.",
+  "footer": "Ce test est une version modifiée et améliorée de {{SITENAME}}, qui est basé sur <a href=\"https://8values.github.io/\">8values</a>.",
   "question": "Question",
   "of": "sur",
   "strong-agree": "Absolument d'accord",
