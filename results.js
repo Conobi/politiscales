@@ -597,7 +597,7 @@ function init_results() {
         ctx.fillStyle = "#ffffff";
         ctx.font = "bold 15px sans-serif";
         ctx.textAlign = "right";
-        if(window.location.href.indexOf("/politiscales") > -1) {
+        if(window.location.pathname.indexOf("/politiscales") > -1) {
           ctx.fillText(window.location.host+"/politiscales", rPreview.width - 10, 27);
         } else {
           ctx.fillText(window.location.host, rPreview.width - 10, 27);
