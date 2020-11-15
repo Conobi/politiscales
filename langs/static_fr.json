@@ -1,13 +1,13 @@
 {
-  "title": "PolitiScales",
-  "description": "Bienvenue sur Politiscales, le test politique en ligne. Vous allez être confronté à une série d'affirmations et pour chacune d'entre elles vous devrez cliquer sur le bouton correspondant à votre opinion.",
-  "long_desc": "PolitiScales est un test politique utilisant 8 axes idéologiques pour vous aider à vos situer politiquement, ou simplement partager votre profil avec vos amis. Ce site internet est une initiative du collectif « Radicalisé·e·s sur Internet », librement inspirée de <a href=\"https://8values.github.io/\">8values</a>.",
+  "title": "{{SITENAME}}",
+  "description": "Bienvenue sur {{SITENAME}}, le test politique en ligne. Vous allez être confronté à une série d'affirmations et pour chacune d'entre elles vous devrez cliquer sur le bouton correspondant à votre opinion.",
+  "long_desc": "{{SITENAME}} est un test politique utilisant 8 axes idéologiques pour vous aider à vos situer politiquement, ou simplement partager votre profil avec vos amis. Ce site internet est une initiative du collectif « Radicalisé·e·s sur Internet », librement inspirée de <a href=\"https://8values.github.io/\">8values</a>.",
   "index_subtitle": "Explications",
   "info_1": "Les questions partent du principe que vous êtes citoyen d'un pays ayant plusieurs partis politiques et une économie de marché.",
   "info_2": "Vous n'êtes jamais obligé de répondre à une question. Mais si vous ne comprenez pas l'une d'entre elles, essayez d'inverser son sens pour comprendre ce qu'elle implique.",
   "warning": "Ce test essaie de représenter le plus large panel d'opinions et peut contenir des phrases choquantes, notamment concernant le racisme ou l'homosexualité.",
   "start_button": "Démarrer le test",
-  "footer": "Ce test est une version modifiée et améliorée de PolitiScales, qui est basé sur 8values.",
+  "footer": "Ce test est une version modifiée et améliorée de {{SITENAME}}, qui est basé sur 8values.",
   "question": "Question",
   "of": "sur",
   "strong-agree": "Absolument d'accord",
@@ -18,7 +18,7 @@
   "prev_question": "Retour à la question précédente",
   "back_home": "Retour à l'accueil",
   "results": "Résultats",
-  "results_desc": "Le résultat de votre PolitiScales est décomposé en 8 axes. Chaque axe indique votre positionnement par rapport à deux idéologies contradictoires. Des caractéristiques particulières, affichés en bas de page, peuvent également venir compléter votre résultat. Pour plus d'information sur les différents axes, <a href=\"../help\">consultez la page d'aide</a>.",
+  "results_desc": "Le résultat de votre {{SITENAME}} est décomposé en 8 axes. Chaque axe indique votre positionnement par rapport à deux idéologies contradictoires. Des caractéristiques particulières, affichés en bas de page, peuvent également venir compléter votre résultat. Pour plus d'information sur les différents axes, <a href=\"../about\">consultez notre page À propos</a>.",
   "copy_link": "Copier le lien",
   "download": "Télécharger",
   "constructivism": "Constructivisme",
@@ -79,5 +79,9 @@
   "socialism": "Socialisme",
   "work": "Travail",
   "family": "Famille",
-  "results": "Résultats"
+  "results": "Résultats",
+  "home_title": "{{SITENAME}} - Le test politique en ligne",
+  "about_title": "{{SITENAME}} - À propos",
+  "quiz_title": "{{SITENAME}} - Questions",
+  "results_title": "{{SITENAME}} - Vos résultats"
 }
