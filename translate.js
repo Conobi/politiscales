@@ -1,8 +1,13 @@
-//var userLang = navigator.language || navigator.userLanguage;
+// We check the path used to access the website and we adapt translations imports depending on path
+if(window.location.pathname.indexOf("/politiscales") > -1) {
+  path = "/politiscales";
+} else {
+  path = "";
+}
 
 const translations = {
-  "en": "/politiscales/langs/static_en.json",
-  "fr": "/politiscales/langs/static_fr.json"
+  "en": path+"/langs/static_en.json",
+  "fr": path+"/langs/static_fr.json"
 }
 
 $(function() {
