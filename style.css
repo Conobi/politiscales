@@ -246,7 +246,7 @@ button.strong-disagree {
 .questionButtons button {
   color: white;
   width: 100%;
-  padding: 0.5em 0;
+  height: 2.5em;
 }
 .button:hover {
   background-color: white;
