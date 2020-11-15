@@ -1,14 +1,13 @@
 {
-  "title": "PolitiScales",
-  "description": "Welcome to the PolitiScales, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion.",
-  "long_desc": "PolitiScales is a political test using 8 ideological values to help you know approximately where you belong to in the political field, or simply to share your profile with your friends. this internet website is an initiative of “Radicalisé·e·s sur Internet” which is freely inspired by <a href=\"https://8values.github.io/\">8values</a>.",
+  "title": "{{SITENAME}}",
+  "description": "Welcome to the {{SITENAME}}, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion.",
+  "long_desc": "{{SITENAME}} is a political test using 8 ideological values to help you know approximately where you belong to in the political field, or simply to share your profile with your friends. this internet website is an initiative of “Radicalisé·e·s sur Internet” which is freely inspired by <a href=\"https://8values.github.io/\">8values</a>.",
   "index_subtitle": "Instructions",
   "info_1": "The questions assume that you are a citizen of a multi-party political system and a market economy.",
   "info_2": "You can always avoid answering a question. But if you do not understand the meaning of one of them, try to invert its meaning for a better understanding of what is implied.",
   "warning": "This test tries to represent the wider set of ideas as possible and contains some phrases that can be shocking, notably concerning racism and homosexuality.",
   "start_button": "Start the test",
-  "footer": "This quiz is a slightly modified version of PolitiScales, which is based on <a href=\"https://8values.github.io/\">8values</a>.",
-  "loading": "Loading...",
+  "footer": "This quiz is a slightly modified version of {{SITENAME}}, which is based on <a href=\"https://8values.github.io/\">8values</a>.",
   "question": "Question",
   "of": "of",
   "strong-agree": "Absolutely agree",
@@ -19,7 +18,7 @@
   "prev_question": "Return to the previous question",
   "back_home": "Go back to home page",
   "results": "Results",
-  "results_desc": "The result of your PolitiScale is decomposed in 8 axes. Each axis indicates your positioning compared with two opposed ideologies. Some particular characteristics, displayed at the end of the page can also complete your result. For further information on the different axis <a href=\"../help\">Look at the help page</a>.",
+  "results_desc": "The result of your {{SITENAME}} is decomposed in 8 axes. Each axis indicates your positioning compared with two opposed ideologies. Some particular characteristics, displayed at the end of the page can also complete your result. For further information on the different axis <a href=\"../about\">Look at the about page</a>.",
   "copy_link": "Copy Link",
   "download": "Download",
   "constructivism": "Constructivism",
@@ -80,5 +79,9 @@
   "socialism": "Socialism",
   "work": "Work",
   "family": "Family",
-  "results": "Results"
+  "results": "Results",
+  "home_title": "{{SITENAME}} - The political test",
+  "about_title": "{{SITENAME}} - About",
+  "quiz_title": "{{SITENAME}} - Questions",
+  "results_title": "{{SITENAME}} - Your results"
 }

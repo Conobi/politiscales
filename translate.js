@@ -5,18 +5,46 @@ const translations = {
   "fr": "/politiscales/langs/static_fr.json"
 }
 
+$(function() {
+  $.extend($.i18n.parser.emitter, {
+    sitename: function() {
+      return "PolitiScales";
+    }
+  });
+});
+
 async function updateText() {
   language = localStorage.getItem("language")
   i18n = await $.i18n().load(translations);
 
   $.i18n().locale = language;
 
-  $('body').i18n();
+  $("html").attr("lang", language)
   $("meta[name='description']").attr("content", $.i18n("description"));
+  $("meta[property='og\\:description']").attr("content", $.i18n("description"));
+  $("meta[property='og\\:locale']").attr("content", language);
+  $('body').i18n();
 
-  if(typeof pageType !== 'undefined' && pageType == "quiz") {
+  if (typeof pageType !== 'undefined' && pageType == "home") {
+    document.title = $.i18n("home_title");
+    $("meta[property='og\\:locale']").attr("content", $.i18n("home_title"));
+
+  } else if(typeof pageType !== 'undefined' && pageType == "quiz") {
+    document.title = $.i18n("quiz_title");
+    $("meta[property='og\\:locale']").attr("content", $.i18n("quiz_title"));
+
     init_quiz();
+
   } else if (typeof pageType !== 'undefined' && pageType == "results") {
+    document.title = $.i18n("results_title");
+    $("meta[property='og\\:locale']").attr("content", $.i18n("results_title"));
+
+    init_results();
+
+  } else if (typeof pageType !== 'undefined' && pageType == "about") {
+    document.title = $.i18n("about_title");
+    $("meta[property='og\\:locale']").attr("content", $.i18n("about_title"));
+
     init_results();
   }
 }
