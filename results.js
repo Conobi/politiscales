@@ -421,7 +421,7 @@ if (!bonusEnabled) {
 }
 
 var images = {
-  sprites: "../images/flag_sprites.png",
+  sprites: "..../images/flag_sprites.png",
   c0: "../images/constructivism_small.png",
   c1: "../images/essentialism_small.png",
   j0: "../images/justice_soft_small.png",
@@ -610,12 +610,12 @@ function onImageLoaded() {
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 25px sans-serif";
       ctx.textAlign = "left";
-      ctx.fillText("P️olitiScales, DBHQ Edition", 10, 30);
+      ctx.fillText("P️olitiScales", 10, 30);
 
       ctx.fillStyle = "#ffffff";
       ctx.font = "bold 15px sans-serif";
       ctx.textAlign = "right";
-      ctx.fillText("DBHQ.github.io", rPreview.width - 10, 27);
+      ctx.fillText("donokami.github.io/politiscales", rPreview.width - 10, 27);
 
       yPos += 48;
 
