@@ -13,15 +13,20 @@ body {
   flex-direction: column;
 }
 
-#header {
-  padding: 1em;
+header {
   background-color: #500076;
 }
 
-#header h1 {
+#header {
+  padding: 1em;
   max-width: 640px;
   margin: 0 auto;
+  display: flex;
+}
+
+#header h1 {
   font-weight: 600;
+  margin: 0 auto;
 }
 
 #header a {
