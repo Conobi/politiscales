@@ -13,8 +13,11 @@ async function updateText() {
 
   $('body').i18n();
   $("meta[name='description']").attr("content", $.i18n("description"));
+
   if(typeof pageType !== 'undefined' && pageType == "quiz") {
     init_quiz();
+  } else if (typeof pageType !== 'undefined' && pageType == "results") {
+    init_results();
   }
 }
 
