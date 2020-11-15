@@ -13,3 +13,6 @@ In mid-2020, PolitiScales was stopped, so it is now time to fork and enhance the
   - [x] Of metadatas
   - [ ] Import the different translations from PolitiScales webarchive
 - [ ] Check the neutrality of the differents questions
+- [ ] Set date seed to questions shuffle
+- [ ] Add a fast quiz mode
+- [ ] Add statistics based on consent
