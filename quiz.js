@@ -11,7 +11,7 @@ jQuery.loadScript = function (url, callback) {
     });
 }
 
-$.loadScript('../langs/questions_'+ language +'.js', function(){
+$.loadScript('./langs/questions_'+ language +'.js', function(){
   // We shuffle questions once they have been dl
   shuffle(questions);
 });
@@ -122,7 +122,7 @@ function results() {
     }
   }
   url = window.btoa(url);
-  url = "../results/?" + url;
+  url = "./results/?" + url;
 
   location.href = url;
 }
