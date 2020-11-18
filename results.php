@@ -1,62 +1,19 @@
+<?php
+  $page_type = "results";
+  include('translate.php');
+?>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>PolitiScales - Your results</title>
-
-    <meta
-      name="description"
-      content="Welcome to the PolitiScales, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
-    />
-    <link rel="stylesheet" href="../style.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" href="../images/favicon.ico" />
-    <meta property="og:url" content="https://donokami.github.io/politiscales" />
-    <meta property="og:title" content="PolitiScales - Your results" />
-    <meta property="og:locale" content="en" />
-    <meta
-      property="og:description"
-      content="Welcome to the PolitiScales, the online political test. You will be confronted to a series of affirmations and for each of them you will have to click on the button which corresponds the most to your opinion."
-    />
-    <meta property="og:image" content="../images/facebook-preview.png" />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
-    <script>
-      var pageType = "results";
-    </script>
-    <script src="../src/jquery.i18n.js"></script>
-    <script src="../src/jquery.i18n.messagestore.js"></script>
-    <script src="../src/jquery.i18n.fallbacks.js"></script>
-    <script src="../src/jquery.i18n.parser.js"></script>
-    <script src="../src/jquery.i18n.emitter.js"></script>
-    <script src="../src/jquery.i18n.language.js"></script>
-    <script src="../translate.js"></script>
-  </head>
-
+<html lang="<?= $i18n->_lang ?>">
+  <?php include('partials/head.php'); ?>
   <body>
-    <header>
-      <div id="header">
-        <h1><a href="../">PolitiScales</a></h1>
-        <select class="language">
-          <option value="en" data-i18n="english">🇬🇧 English</option>
-          <option value="fr" data-i18n="french">🇫🇷 French</option>
-        </select>
-      </div>
-    </header>
+    <?php include('partials/header.php') ?>
 
     <div id="content">
       <div id="mainFrame">
-        <h2 data-i18n="results">Results</h2>
+        <h2 data-i18n="results"><?= $i18n->get("results") ?></h2>
 
         <p class="simpleText" data-i18n="[html]results_desc">
-          The result of your PolitiScale is decomposed in 8 axes. Each axis
-          indicates your positioning compared with two opposed ideologies. Some
-          particular characteristics, displayed at the end of the page can also
-          complete your result. For further information on the different axis
-          <a href="../about">Look at the about page</a>.
+          <?= $i18n->get("[html]results_desc") ?>
         </p>
 
         <div class="generatedResultsDecorations">
@@ -83,7 +40,7 @@
                 d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"
               />
             </svg>
-            <span data-i18n="copy_link">Copy Link</span>
+            <span data-i18n="copy_link"><?= $i18n->get("copy_link") ?></span>
           </button>
           <button
             id="download"
@@ -102,7 +59,7 @@
                 d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"
               />
             </svg>
-            <span data-i18n="download">Download</span>
+            <span data-i18n="download"><?= $i18n->get("download") ?></span>
           </button>
         </div>
 
@@ -116,11 +73,11 @@
         <div class="columnContainer">
           <div class="columnLeft">
             <div class="scale">
-              <div class="left"><img src="../images/constructivism.png" /></div>
+              <div class="left"><img src="./images/constructivism.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label" data-i18n="constructivism">Constructivism</div>
-                  <div class="right-label" data-i18n="essentialism">Essentialism</div>
+                  <div class="left-label" data-i18n="constructivism"><?= $i18n->get("constructivism") ?></div>
+                  <div class="right-label" data-i18n="essentialism"><?= $i18n->get("essentialism") ?></div>
                 </div>
                 <div class="axis-bar">
                   <div id="cAxisNeg" class="axis-left axisConstructivism">
@@ -134,15 +91,15 @@
                   </div>
                 </div>
               </div>
-              <div class="right"><img src="../images/essentialism.png" /></div>
+              <div class="right"><img src="./images/essentialism.png" /></div>
             </div>
 
             <div class="scale">
-              <div class="left"><img src="../images/justice_soft.png" /></div>
+              <div class="left"><img src="./images/justice_soft.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label" data-i18n="rehabilitative_justice">Rehabilitative Justice</div>
-                  <div class="right-label" data-i18n="punitive_justice">Punitive Justice</div>
+                  <div class="left-label" data-i18n="rehabilitative_justice"><?= $i18n->get("rehabilitative_justice") ?></div>
+                  <div class="right-label" data-i18n="punitive_justice"><?= $i18n->get("punitive_justice") ?></div>
                 </div>
                 <div class="axis-bar">
                   <div id="jAxisNeg" class="axis-left axisLiberal">
@@ -156,15 +113,15 @@
                   </div>
                 </div>
               </div>
-              <div class="right"><img src="../images/justice_hard.png" /></div>
+              <div class="right"><img src="./images/justice_hard.png" /></div>
             </div>
 
             <div class="scale">
-              <div class="left"><img src="../images/progressism.png" /></div>
+              <div class="left"><img src="./images/progressism.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label" data-i18n="progressive">Progressive</div>
-                  <div class="right-label" data-i18n="conservative">Conservative</div>
+                  <div class="left-label" data-i18n="progressive"><?= $i18n->get("progressive") ?></div>
+                  <div class="right-label" data-i18n="conservative"><?= $i18n->get("conservative") ?></div>
                 </div>
                 <div class="axis-bar">
                   <div id="sAxisNeg" class="axis-left axisProgressism">
@@ -178,15 +135,15 @@
                   </div>
                 </div>
               </div>
-              <div class="right"><img src="../images/conservatism.png" /></div>
+              <div class="right"><img src="./images/conservatism.png" /></div>
             </div>
 
             <div class="scale">
-              <div class="left"><img src="../images/internationalism.png" /></div>
+              <div class="left"><img src="./images/internationalism.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label" data-i18n="internationalism">Internationalism</div>
-                  <div class="right-label" data-i18n="nationalism">Nationalism</div>
+                  <div class="left-label" data-i18n="internationalism"><?= $i18n->get("internationalism") ?></div>
+                  <div class="right-label" data-i18n="nationalism"><?= $i18n->get("nationalism") ?></div>
                 </div>
                 <div class="axis-bar">
                   <div id="bAxisNeg" class="axis-left axisInternationalism">
@@ -200,17 +157,17 @@
                   </div>
                 </div>
               </div>
-              <div class="right"><img src="../images/nationalism.png" /></div>
+              <div class="right"><img src="./images/nationalism.png" /></div>
             </div>
           </div>
 
           <div class="columnRight">
             <div class="scale">
-              <div class="left"><img src="../images/communism.png" /></div>
+              <div class="left"><img src="./images/communism.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label" data-i18n="communism">Communism</div>
-                  <div class="right-label" data-i18n="capitalism">Capitalism</div>
+                  <div class="left-label" data-i18n="communism"><?= $i18n->get("communism") ?></div>
+                  <div class="right-label" data-i18n="capitalism"><?= $i18n->get("capitalism") ?></div>
                 </div>
                 <div class="axis-bar">
                   <div id="pAxisNeg" class="axis-left axisCommunism">
@@ -224,15 +181,15 @@
                   </div>
                 </div>
               </div>
-              <div class="right"><img src="../images/capitalism.png" /></div>
+              <div class="right"><img src="./images/capitalism.png" /></div>
             </div>
 
             <div class="scale">
-              <div class="left"><img src="../images/regulation.png" /></div>
+              <div class="left"><img src="./images/regulation.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label" data-i18n="regulation">Regulation</div>
-                  <div class="right-label" data-i18n="laissez_faire">Laissez-faire</div>
+                  <div class="left-label" data-i18n="regulation"><?= $i18n->get("regulation") ?></div>
+                  <div class="right-label" data-i18n="laissez_faire"><?= $i18n->get("laissez_faire") ?></div>
                 </div>
                 <div class="axis-bar">
                   <div id="mAxisNeg" class="axis-left axisRegulation">
@@ -246,15 +203,15 @@
                   </div>
                 </div>
               </div>
-              <div class="right"><img src="../images/laissezfaire.png" /></div>
+              <div class="right"><img src="./images/laissezfaire.png" /></div>
             </div>
 
             <div class="scale">
-              <div class="left"><img src="../images/ecology.png" /></div>
+              <div class="left"><img src="./images/ecology.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label" data-i18n="ecology">Ecology</div>
-                  <div class="right-label" data-i18n="production">Production</div>
+                  <div class="left-label" data-i18n="ecology"><?= $i18n->get("ecology") ?></div>
+                  <div class="right-label" data-i18n="production"><?= $i18n->get("production") ?></div>
                 </div>
                 <div class="axis-bar">
                   <div id="eAxisNeg" class="axis-left axisEcology">
@@ -268,15 +225,15 @@
                   </div>
                 </div>
               </div>
-              <div class="right"><img src="../images/productivism.png" /></div>
+              <div class="right"><img src="./images/productivism.png" /></div>
             </div>
 
             <div class="scale">
-              <div class="left"><img src="../images/revolution.png" /></div>
+              <div class="left"><img src="./images/revolution.png" /></div>
               <div class="axis">
                 <div class="label">
-                  <div class="left-label" data-i18n="revolution">Revolution</div>
-                  <div class="right-label" data-i18n="reform">Reform</div>
+                  <div class="left-label" data-i18n="revolution"><?= $i18n->get("revolution") ?></div>
+                  <div class="right-label" data-i18n="reform"><?= $i18n->get("reform") ?></div>
                 </div>
                 <div class="axis-bar">
                   <div id="tAxisNeg" class="axis-left axisRevo">
@@ -290,96 +247,85 @@
                   </div>
                 </div>
               </div>
-              <div class="right"><img src="../images/reformism.png" /></div>
+              <div class="right"><img src="./images/reformism.png" /></div>
             </div>
           </div>
         </div>
         <br />
         <div id="bonusBox">
-          <h3 data-i18n="bonus_chars">Additional characteristics</h3>
+          <h3 data-i18n="bonus_chars"><?= $i18n->get("bonus_chars") ?></h3>
 
           <div id="anarBonus" class="description">
             <div class="descImg">
-              <img src="../images/anarchism.png" alt="" />
+              <img src="./images/anarchism.png" alt="" />
             </div>
             <div class="descTextMono">
-              <h4 data-i18n="anarchist">Anarchist</h4>
+              <h4 data-i18n="anarchist"><?= $i18n->get("anarchist") ?></h4>
               <p data-i18n="anarchist_desc">
-                When the people are being hit with a stick, they are not happier
-                if the stick is called “the stick of the people”. The State is
-                an oppression that must be abolished.
+                <?= $i18n->get("anarchist_desc") ?>
               </p>
             </div>
           </div>
 
           <div id="pragBonus" class="description">
             <div class="descImg">
-              <img src="../images/pragmatism.png" alt="" />
+              <img src="./images/pragmatism.png" alt="" />
             </div>
             <div class="descTextMono">
-              <h4 data-i18n="pragmatist">Pragmatist</h4>
+              <h4 data-i18n="pragmatist"><?= $i18n->get("pragmatist") ?></h4>
               <p data-i18n="pragmatist_desc">
-                Politics objectively boils down to looking at where the problems
-                are and trying to solve them according to the means available.
+                <?= $i18n->get("pragmatist_desc") ?>
               </p>
             </div>
           </div>
 
           <div id="femiBonus" class="description">
-            <div class="descImg"><img src="../images/feminism.png" alt="" /></div>
+            <div class="descImg"><img src="./images/feminism.png" alt="" /></div>
             <div class="descTextMono">
-              <h4 data-i18n="feminist">Radical Feminist</h4>
-              <p data-i18n="feminist_desc">Gender should disappear to put an end to the patriarchy.</p>
+              <h4 data-i18n="feminist"><?= $i18n->get("feminist") ?></h4>
+              <p data-i18n="feminist_desc"><?= $i18n->get("feminist_desc") ?></p>
             </div>
           </div>
 
           <div id="vegaBonus" class="description">
-            <div class="descImg"><img src="../images/veganism.png" alt="" /></div>
+            <div class="descImg"><img src="./images/veganism.png" alt="" /></div>
             <div class="descTextMono">
-              <h4 data-i18n="vegan">Vegan</h4>
+              <h4 data-i18n="vegan"><?= $i18n->get("vegan") ?></h4>
               <p data-i18n="vegan_desc">
-                Human beings must stop at all costs the consumption and
-                exploitation of “sensible” being.
+                <?= $i18n->get("vegan_desc") ?>
               </p>
             </div>
           </div>
 
           <div id="monaBonus" class="description">
             <div class="descImg">
-              <img src="../images/monarchism.png" alt="" />
+              <img src="./images/monarchism.png" alt="" />
             </div>
             <div class="descTextMono">
-              <h4 data-i18n="monarchist">Monarchist</h4>
-              <p data-i18n="monarchist_desc">Society should be organized around a king.</p>
+              <h4 data-i18n="monarchist"><?= $i18n->get("monarchist") ?></h4>
+              <p data-i18n="monarchist_desc"><?= $i18n->get("monarchist_desc") ?></p>
             </div>
           </div>
 
           <div id="reliBonus" class="description">
-            <div class="descImg"><img src="../images/religion.png" alt="" /></div>
+            <div class="descImg"><img src="./images/religion.png" alt="" /></div>
             <div class="descTextMono">
-              <h4 data-i18n="missionary">Missionary</h4>
+              <h4 data-i18n="missionary"><?= $i18n->get("missionary") ?></h4>
               <p data-i18n="missionary_desc">
-                For you religion is important, especially yours. It is therefore
-                appropriate to spread it as globally as possible.
+                <?= $i18n->get("missionary_desc") ?>
               </p>
             </div>
           </div>
         </div>
 
         <div class="navButtons">
-          <a class="button" href="../quiz" data-i18n="restart_test">Restart the test</a>
+          <a class="button" href="./quiz" data-i18n="restart_test"><?= $i18n->get("restart_test") ?></a>
         </div>
       </div>
     </div>
 
-    <div id="footer">
-      <p data-i18n="[html]footer">
-        This quiz is a slightly modified version of
-        <a href="https://www.politiscales.net/">PolitiScales</a>, which is based
-        on <a href="https://8values.github.io/">8values</a>.
-      </p>
-    </div>
-    <script src="../flags.js"></script>
-    <script src="../results.js"></script>
+    <?php include('partials/footer.php'); ?>
+    <script src="./flags.js"></script>
+    <script src="./results.js"></script>
   </body>
 </html>
