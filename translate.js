@@ -10,14 +10,6 @@ const translations = {
   "fr": path+"/langs/static_fr.json"
 }
 
-$(function() {
-  $.extend($.i18n.parser.emitter, {
-    sitename: function() {
-      return "PolitiScales";
-    }
-  });
-});
-
 async function updateText() {
   language = localStorage.getItem("language")
   i18n = await $.i18n().load(translations);
@@ -78,6 +70,11 @@ $(function() {
   } else {
     $('.language option[value='+ localStorage.getItem("language") +']').attr('selected','selected');
   }
+  $.extend($.i18n.parser.emitter, {
+    sitename: function() {
+      return $.i18n("sitename");
+    }
+  });
   updateText();
   $('.language').on('change keyup', setLanguage);
 });

@@ -4,7 +4,7 @@ know approximately where you belong to in the political field, or
 simply to share your profile with your friends. It was an initiative of “Radicalisé·e·s sur Internet” which is freely
 inspired by [8values](https://8values.github.io/).
 
-In mid-2020, PolitiScales was stopped, so it is now time to fork and enhance the project!
+In mid-2020, PolitiScales.net was stopped, so it is now time to fork and enhance the project!
 
 ## What need to be made?
 - [x] Enable localization:
