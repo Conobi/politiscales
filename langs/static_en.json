@@ -83,5 +83,6 @@
   "home_title": "{{SITENAME}} - The political test",
   "about_title": "{{SITENAME}} - About",
   "quiz_title": "{{SITENAME}} - Questions",
-  "results_title": "{{SITENAME}} - Your results"
+  "results_title": "{{SITENAME}} - Your results",
+  "about": "About"
 }
