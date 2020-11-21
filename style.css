@@ -22,15 +22,21 @@ header {
 }
 
 #header {
-  padding: 1em;
+  padding: 1.2em;
   max-width: 640px;
   margin: 0 auto;
   display: flex;
+  align-items: center;
 }
 
 #header h1 {
   font-weight: 600;
   margin: 0 auto;
+}
+
+#header .about {
+  display: block;
+  line-height: 0;
 }
 
 #header a {

@@ -20,6 +20,7 @@ async function updateText() {
   $("meta[name='description']").attr("content", $.i18n("description"));
   $("meta[property='og\\:description']").attr("content", $.i18n("description"));
   $("meta[property='og\\:locale']").attr("content", language);
+  $(".about").attr("title", $.i18n("about"));
   $('body').i18n();
 
   if (typeof pageType !== 'undefined' && pageType == "home") {

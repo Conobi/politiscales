@@ -83,5 +83,6 @@
   "home_title": "{{SITENAME}} - Le test politique en ligne",
   "about_title": "{{SITENAME}} - À propos",
   "quiz_title": "{{SITENAME}} - Questions",
-  "results_title": "{{SITENAME}} - Vos résultats"
+  "results_title": "{{SITENAME}} - Vos résultats",
+  "about": "À propos"
 }
