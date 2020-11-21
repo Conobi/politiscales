@@ -3,7 +3,12 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-//header('content-type:application/json');
+$translations = array(
+  "en" => "./langs/static_en.json",
+  "fr" => "./langs/static_fr.json"
+);
+
+$browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 class i18n {
 
@@ -37,19 +42,23 @@ class i18n {
   public function get_meta($string) {
     return $this->get($this->_page_type."_".$string);
   }
+
+  public function get_langs() {
+    return array_keys($this->_data);
+  }
 }
 
 $i18n = new i18n;
 
-$i18n->loadLanguage(array(
-  "en" => "./langs/static_en.json",
-  "fr" => "./langs/static_fr.json"
-));
+$i18n->loadLanguage($translations);
 
-$i18n->setLang("fr");
+
+if(strpos($_SERVER['HTTP_HOST'], "politiscales.fr") !== false) {
+  $i18n->setLang("fr");
+} elseif(in_array($browser_lang, $i18n->get_langs())) {
+  $i18n->setLang($browser_lang);
+} else {
+  $i18n->setLang("en");
+}
 
 $i18n->_page_type = $page_type;
-
-//echo($i18n->get("description"));
-
-//include('index.html');
