@@ -287,6 +287,18 @@
             </div>
           </div>
 
+          <div id="compBonus" class="description">
+            <div class="descImg">
+              <img src="/images/complotism.png" alt="" />
+            </div>
+            <div class="descTextMono">
+              <h4><?= $i18n->get("conspiracist") ?></h4>
+              <p>
+                <?= $i18n->get("conspiracist_desc") ?>
+              </p>
+            </div>
+          </div>
+
           <div id="vegaBonus" class="description">
             <div class="descImg"><img src="./images/veganism.png" alt="" /></div>
             <div class="descTextMono">
