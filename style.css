@@ -5,12 +5,16 @@ body {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
-    Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   font-size: calc(14px + 0.5vmin);
   background-color: #ebebeb;
   display: flex;
   flex-direction: column;
+}
+
+.darkbody {
+  background-color: #141414;
+  color: #ebebeb;
 }
 
 * {
@@ -31,17 +35,29 @@ header {
 
 #header h1 {
   font-weight: 600;
-  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
 }
 
 #header .about {
   display: block;
   line-height: 0;
+  margin: 0;
+}
+
+#header .title img {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 #header a {
   color: white;
   text-decoration: none;
+  margin: 0 auto;
 }
 
 #content {
@@ -70,14 +86,14 @@ header {
 }
 
 hr {
-  background-color: #ccc;
+  background-color: rgba(138, 138, 138, 0.1);
   border: none;
   margin: 2em 0;
   height: 4px;
 }
 
 a {
-  color: black;
+  color: inherit;
   text-decoration: underline;
 }
 
@@ -103,6 +119,13 @@ h4 {
 }
 .simpleText svg {
   vertical-align: text-bottom;
+}
+.simpleImg {
+  width: 100%;
+  max-width: 640px;
+  display: block;
+  object-fit: contain;
+  margin: 0em auto 2em;
 }
 .columnContainer {
   position: relative;
@@ -131,7 +154,7 @@ h4 {
 }
 .questionBox {
   max-width: 640px;
-  min-height: 5.5em;
+  min-height: 4.5em;
   margin: 1em auto;
 }
 .description {
@@ -230,7 +253,7 @@ h4 {
 }
 
 .navButtons {
-  margin: 0 auto 1em;
+  margin: 0 auto 3em;
   text-align: center;
   max-width: 400px;
 }
@@ -304,7 +327,7 @@ button.strong-disagree {
 }
 .urlToCopy {
   max-width: 400px;
-  background-color: white;
+  background-color: rgba(138, 138, 138, 0.1);
   display: inline-block;
   padding: 0.5em;
   margin: 1em 0 0;
