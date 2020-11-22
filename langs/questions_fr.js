@@ -568,7 +568,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Le marché du travail asservit les travailleurs.",
+		question: "Le marché du travail surexploite les travailleurs.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -713,7 +713,7 @@ var questions = [
 		]
 	},
 	{
-		question: "L&#39;âge du départ à la retraite doit être diminué.",
+		question: "Nous devrions partir à la retraite plus tard.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -841,7 +841,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il faut supprimer des règlementations dans code du travail pour encourager les entreprises à embaucher.",
+		question: "Il faut supprimer des règlementations dans le code du travail pour encourager les entreprises à embaucher.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -857,7 +857,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Le temps de travail légal doit être augmenté.",
+		question: "Le temps de travail par semaine devrait être augmenté.",
 		answer: 0,
 		valuesYes: [
 			{
@@ -1388,7 +1388,7 @@ var questions = [
 	},
     /* LIBERTAIRE *************************************************** */
 	{
-		question: "Les prisons doivent être supprimées.",
+		question: "Les prisons ne devraient plus exister.",
 		answer: 0,
 		valuesYes: [
 			{

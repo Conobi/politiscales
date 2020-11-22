@@ -736,7 +736,7 @@ var questions = [
     ]
   },
   {
-    question: "The age of retirement should be lowered.",
+    question: "We should be retiring earlier.",
     answer: 0,
     valuesYes: [
       {
@@ -1886,6 +1886,18 @@ var questions = [
     valuesYes: [
       {
         axis: "reli",
+        value: 3
+      }
+    ],
+    valuesNo: []
+  },
+  {
+    question:
+      "It is a small group that consciously and secretly controls the world.",
+    answer: 0,
+    valuesYes: [
+      {
+        axis: "comp",
         value: 3
       }
     ],
