@@ -16,7 +16,7 @@ function init_results() {
   twitterButton = document.getElementById("buttonTwitter");
   redditButton = document.getElementById("buttonReddit");
   if (twitterButton) {
-  	twitterButton.href = "https://twitter.com/intent/tweet?text="+encodeURIComponent($.i18n("share_desc"))+"&url="+encodeURIComponent(location.href);
+  	twitterButton.href = "https://twitter.com/intent/tweet?text="+encodeURIComponent($.i18n("share_desc"))+"&url="+encodeURIComponent(location.href)+"&via=rePolitiScales";
   }
   if (redditButton) {
   	redditButton.href = "http://www.reddit.com/submit?url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent($.i18n("share_desc"));

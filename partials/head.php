@@ -9,15 +9,15 @@
     content="<?= $i18n->get("description") ?>"
   />
   <link rel="stylesheet" href="./style.css" type="text/css" media="screen" />
-  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <link rel="shortcut icon" href="<?= (strpos($_SERVER['REQUEST_URI'], "politiscales/") !== false) ? $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']."/politiscales/images/favicon.ico" : $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']."/images/favicon.ico" ?>" />
   <meta property="og:url" content="<?= $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].explode('?',$_SERVER['REQUEST_URI'], 2)[0] ?>" />
   <meta property="og:title" content="<?= $i18n->get_meta("title") ?>" />
   <meta property="og:locale" content="<?= $i18n->_lang ?>" />
-  <meta
-    property="og:description"
-    content="<?= $i18n->get("description") ?>"
-  />
-  <meta property="og:image" content="../images/facebook-preview.png" />
+  <meta property="og:description" content="<?= $i18n->get("description") ?>"/>
+  <meta property="og:image" content="<?= (strpos($_SERVER['REQUEST_URI'], "politiscales/") !== false) ? $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']."/politiscales/images/facebook-preview.png" : $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']."/images/facebook-preview.png" ?>" />
+  <meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@rePolitiScales" />
+	<meta name="twitter:creator" content="@rePolitiScales" />
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
