@@ -14,7 +14,7 @@
   <meta property="og:title" content="<?= $i18n->get_meta("title") ?>" />
   <meta property="og:locale" content="<?= $i18n->_lang ?>" />
   <meta property="og:description" content="<?= $i18n->get("description") ?>"/>
-  <meta property="og:image" content="<?= (strpos($_SERVER['REQUEST_URI'], "politiscales/") !== false) ? $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']."/politiscales/images/facebook-preview.png" : $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']."/images/facebook-preview.png" ?>" />
+  <meta property="og:image" content="<?= (strpos($_SERVER['REQUEST_URI'], "politiscales/") !== false) ? $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']."/politiscales/images/politiscales_cover.png" : $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST']."/images/politiscales_cover.png" ?>" />
   <meta name="twitter:card" content="summary" />
 	<meta name="twitter:site" content="@rePolitiScales" />
 	<meta name="twitter:creator" content="@rePolitiScales" />
