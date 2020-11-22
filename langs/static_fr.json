@@ -86,5 +86,8 @@
   "about_title": "{{SITENAME}} - À propos",
   "quiz_title": "{{SITENAME}} - Questions",
   "results_title": "{{SITENAME}} - Vos résultats",
-  "about": "À propos"
+  "about": "À propos",
+  "twitter_share": "Partager sur Twitter",
+  "reddit_share": "Partager sur Reddit",
+  "share_desc": "Mon résultat sur #PolitiScales :"
 }

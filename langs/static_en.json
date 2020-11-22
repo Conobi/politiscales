@@ -86,5 +86,8 @@
   "about_title": "{{SITENAME}} - About",
   "quiz_title": "{{SITENAME}} - Questions",
   "results_title": "{{SITENAME}} - Your results",
-  "about": "About"
+  "about": "About",
+  "twitter_share": "Share on Twitter",
+  "reddit_share": "Share on Reddit",
+  "share_desc": "My result on #{{SITENAME}} :"
 }

@@ -6,10 +6,20 @@ function init_results() {
     urlToCopy.innerHTML = location.href;
   }
 
+  var bonusEnabled = true;
 
   if (!bonusEnabled) {
     var bonusBox = document.getElementById("bonusBox");
     bonusBox.style.display = "none";
+  }
+
+  twitterButton = document.getElementById("buttonTwitter");
+  redditButton = document.getElementById("buttonReddit");
+  if (twitterButton) {
+  	twitterButton.href = "https://twitter.com/intent/tweet?text="+encodeURIComponent($.i18n("share_desc"))+"&url="+encodeURIComponent(location.href);
+  }
+  if (redditButton) {
+  	redditButton.href = "http://www.reddit.com/submit?url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent($.i18n("share_desc"));
   }
 
   var images = {
@@ -33,7 +43,7 @@ function init_results() {
     anar: "./images/anarchism_small.png",
     prag: "./images/pragmatism_small.png",
     femi: "./images/feminism_small.png",
-    comp: "/images/complotism_small.png",
+    comp: "./images/complotism_small.png",
     vega: "./images/veganism_small.png",
     mona: "./images/monarchism_small.png",
     reli: "./images/religion_small.png"
@@ -87,8 +97,6 @@ function init_results() {
 
     axesValues[axes[i]] = positiveValue - negativeValue;
   }
-
-  var bonusEnabled = 0;
 
   for (var b in bonus) {
     var value = getQueryVariable(b);
