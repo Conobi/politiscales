@@ -31,5 +31,5 @@
   <script src="./src/jquery.i18n.parser.js"></script>
   <script src="./src/jquery.i18n.emitter.js"></script>
   <script src="./src/jquery.i18n.language.js"></script>
-  <script src="./translate.js"></script>
+  <script src="./main.js"></script>
 </head>
