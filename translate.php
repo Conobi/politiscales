@@ -8,7 +8,7 @@ $translations = array(
   "fr" => "./langs/static_fr.json"
 );
 
-$browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+$browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';
 
 class i18n {
 
