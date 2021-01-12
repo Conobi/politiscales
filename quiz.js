@@ -12,8 +12,12 @@ jQuery.loadScript = function (url, callback) {
 }
 
 $.loadScript('./langs/questions_'+ language +'.js', function(){
-  // We shuffle questions once they have been dl
-  shuffle(questions);
+  var now = new Date();
+  var startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  var timestamp = startOfDay / 1000;
+
+  // We shuffle questions once they have been dl with a different seed every day
+  shuffle(questions, timestamp);
 });
 
 function init_quiz() {
@@ -24,17 +28,24 @@ function init_quiz() {
 
 }
 
-function shuffle(array) {
-  var i = 0,
-    j = 0,
-    temp = null;
-
-  for (i = array.length - 1; i > 0; i -= 1) {
-    j = Math.floor(Math.random() * (i + 1));
-    temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
+function shuffle(array, seed) {
+  let currentIndex = array.length, temporaryValue, randomIndex;
+  seed = seed || 1;
+  let random = function() {
+    var x = Math.sin(seed++) * 10000;
+    return x - Math.floor(x);
+  };
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(random() * currentIndex);
+    currentIndex -= 1;
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
   }
+  return array;
 }
 
 function init_question() {
