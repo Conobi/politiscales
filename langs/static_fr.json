@@ -7,7 +7,7 @@
   "info_2": "Vous n'êtes jamais obligé de répondre à une question. Mais si vous ne comprenez pas l'une d'entre elles, essayez d'inverser son sens pour comprendre ce qu'elle implique.",
   "warning": "Ce test essaie de représenter le plus large panel d'opinions et peut contenir des phrases choquantes, notamment concernant le racisme ou l'homosexualité.",
   "start_button": "Démarrer le test",
-  "footer": "Une idée basée sur <a href=\"https://8values.github.io/\" target=\"_blank\">8values</a>. Projet maintenu par <a href=\"https://twitter.com/Conobipe\" target=\"_blank\">Conobi</a>. ⋅ <a href=\"https://twitter.com/rePolitiScales\" target=\"_blank\">Notre Twitter</a> ⋅ <a href=\"https://github.com/Donokami/politiscales\" target=\"_blank\">Code source</a>",
+  "footer": "Une idée basée sur <a href=\"https://8values.github.io/\" target=\"_blank\">8values</a>. Projet maintenu par <a href=\"https://twitter.com/Conobipe\" target=\"_blank\">Conobi</a>. ⋅ <a href=\"https://twitter.com/rePolitiScales\" target=\"_blank\">Notre Twitter</a> ⋅ <a href=\"https://github.com/Donokami/politiscales\" target=\"_blank\">Code source</a> ·  <a href=\"./about_data\" target=\"_blank\">Politique de confidentialité</a>",
   "question": "Question",
   "of": "sur",
   "strong_agree": "Absolument d'accord",
@@ -18,7 +18,7 @@
   "prev_question": "Retour à la question précédente",
   "back_home": "Retour à l'accueil",
   "results": "Résultats",
-  "results_desc": "Le résultat de votre {{SITENAME}} est décomposé en 8 axes. Chaque axe indique votre positionnement par rapport à deux idéologies contradictoires. Des caractéristiques particulières, affichés en bas de page, peuvent également venir compléter votre résultat. Pour plus d'information sur les différents axes, <a href=\"../about\">consultez notre page À propos</a>.",
+  "results_desc": "Le résultat de votre {{SITENAME}} est décomposé en 8 axes. Chaque axe indique votre positionnement par rapport à deux idéologies contradictoires. Des caractéristiques particulières, affichés en bas de page, peuvent également venir compléter votre résultat. Pour plus d'information sur les différents axes, <a href=\"./about\">consultez notre page À propos</a>.",
   "copy_link": "Copier le lien",
   "download": "Télécharger",
   "constructivism": "Constructivisme",
@@ -86,8 +86,10 @@
   "about_title": "{{SITENAME}} - À propos",
   "quiz_title": "{{SITENAME}} - Questions",
   "results_title": "{{SITENAME}} - Vos résultats",
+  "data_title": "{{SITENAME}} - Politique de confidentialité",
   "about": "À propos",
   "twitter_share": "Partager sur Twitter",
   "reddit_share": "Partager sur Reddit",
-  "share_desc": "Mon résultat sur #PolitiScales :"
+  "share_desc": "Mon résultat sur #PolitiScales :",
+  "data_policy_content": "<p>Les données politiques sont des données sensibles, et personne ne devrait pouvoir savoir ce que vous pensez personnellement.<br>C&#39;est pourquoi ce projet fonctionne avec un engagement : ne récolter que des données anonymes.</p><h2>Les données récoltées</h2><p>Voici une liste exhaustive des données que nous récoltons :</p><ul><li>Liste des accès au serveur web (logs)</li><li>Liste des erreurs potentiellement rencontrées lors du chargement du site</li><li>Des données de résultats politiques associées à :<ul><li>Des coordonnées géographiques (calculées grâce à une base de donnée GeoLite2 téléchargée localement et fournie par MaxMind)</li><li>Le temps passé sur le questionnaire</li><li>Des données de navigateur (agent utilisateur, référent de la page locale)</li></ul><br></li></ul><h2>Les données non récoltées &amp; nos engagements</h2><p>Par cette présente charte, nous nous engageons à protéger et ne pas regrouper des données politiques avec des éléments permettant d&#39;identifier des personnes individuellement. Les adresses IP ne sont ainsi pas traitées, et aucune organisation/entreprise tiers n&#39;a accès à des données pouvant vous identifier individuellement. À terme, bien qu&#39;il ne soit actuellement pas possible de vous identifier personnellement grâce aux données que nous récoltons, les données récoltées seront automatiquement anonymisées par les outils de confidentialité différentielle. </p><h2>Finalités de ces données</h2><p>Les données d&#39;accès et d&#39;erreurs au site permettent de constater l&#39;usage effectif du service, afin de fournir des ressources optimales pour le trafic observé.<br>Les données de résultats du test sont utilisées afin de proposer des rapports publics sur les différentes opinions politiques observées sur des territoires données, ainsi que leur évolution en fonction du temps. Ces données seront proposées sous la forme de données agrégées.</p><h2>Conservation des données</h2><p>Nous conservons généralement les données personnelles le temps nécessaire aux fins définies dans ce document.</p><br>"
 }
