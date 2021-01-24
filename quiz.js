@@ -7,7 +7,7 @@ jQuery.loadScript = function (url, callback) {
         url: url,
         dataType: 'script',
         success: callback,
-        async: false
+        async: true
     });
 }
 
@@ -20,12 +20,30 @@ $.loadScript('./langs/questions_'+ language +'.js', function(){
   shuffle(questions, timestamp);
 });
 
+start_time();
+
 function init_quiz() {
   qn = 0; // Question number
   prev_answer = null;
 
   init_question();
 
+}
+
+// Count time passed on the quiz
+function start_time() {
+  startTime = new Date();
+};
+
+function end_time() {
+  endTime = new Date();
+  var timeDiff = endTime - startTime; //in ms
+  // strip the ms
+  timeDiff /= 1000;
+
+  // get seconds
+  var seconds = Math.round(timeDiff);
+  return(seconds);
 }
 
 function shuffle(array, seed) {
@@ -132,8 +150,13 @@ function results() {
       url += aK + "=" + calc_score(axes[aK].val, axes[aK].sum);
     }
   }
-  url = window.btoa(url);
-  url = "./results?" + url;
 
-  location.href = url;
+  base64_url = window.btoa(url);
+  quiz_time = end_time();
+  $.post("save",{"data": base64_url, "time": quiz_time})
+    .always(function() {
+      url = "./results?" + base64_url;
+      console.log("It tooks " + quiz_time + " seconds");
+      location.href = url;
+    });
 }

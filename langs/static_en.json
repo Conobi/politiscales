@@ -7,7 +7,7 @@
   "info_2": "You can always avoid answering a question. But if you do not understand the meaning of one of them, try to invert its meaning for a better understanding of what is implied.",
   "warning": "This test tries to represent the wider set of ideas as possible and contains some phrases that can be shocking, notably concerning racism and homosexuality.",
   "start_button": "Start the test",
-  "footer": "An idea based on <a href=\"https://8values.github.io/\" target=\"_blank\">8values</a>. Project maintened by <a href=\"https://twitter.com/Conobipe\" target=\"_blank\">Conobi</a>. ⋅ <a href=\"https://twitter.com/rePolitiScales\" target=\"_blank\">Our Twitter</a> ⋅ <a href=\"https://github.com/Donokami/politiscales\" target=\"_blank\">Source code</a>",
+  "footer": "An idea based on <a href=\"https://8values.github.io/\" target=\"_blank\">8values</a>. Project maintened by <a href=\"https://twitter.com/Conobipe\" target=\"_blank\">Conobi</a>. ⋅ <a href=\"https://twitter.com/rePolitiScales\" target=\"_blank\">Our Twitter</a> ⋅ <a href=\"https://github.com/Donokami/politiscales\" target=\"_blank\">Source code</a> · <a href=\"./about_data\" target=\"_blank\">Data policy</a>",
   "question": "Question",
   "of": "of",
   "strong_agree": "Absolutely agree",
@@ -18,7 +18,7 @@
   "prev_question": "Return to the previous question",
   "back_home": "Go back to home page",
   "results": "Results",
-  "results_desc": "The result of your {{SITENAME}} is decomposed in 8 axes. Each axis indicates your positioning compared with two opposed ideologies. Some particular characteristics, displayed at the end of the page can also complete your result. For further information on the different axis <a href=\"../about\">Look at the about page</a>.",
+  "results_desc": "The result of your {{SITENAME}} is decomposed in 8 axes. Each axis indicates your positioning compared with two opposed ideologies. Some particular characteristics, displayed at the end of the page can also complete your result. For further information on the different axis <a href=\"./about\">Look at the about page</a>.",
   "copy_link": "Copy Link",
   "download": "Download",
   "constructivism": "Constructivism",
@@ -86,8 +86,10 @@
   "about_title": "{{SITENAME}} - About",
   "quiz_title": "{{SITENAME}} - Questions",
   "results_title": "{{SITENAME}} - Your results",
+  "data_title": "{{SITENAME}} - Data Policy",
   "about": "About",
   "twitter_share": "Share on Twitter",
   "reddit_share": "Share on Reddit",
-  "share_desc": "My result on #{{SITENAME}} :"
+  "share_desc": "My result on #{{SITENAME}} :",
+  "data_policy_content": "<p>Political data is sensitive data, and no one should be able to know what you personally think.<br>That&#39;s why this project operates with one commitment: to collect only anonymous data.</p><h2>The data collected</h2><p>Here is an exhaustive list of the data we collect:</p><ul><li>List of web server accesses (logs)</li><li>List of errors potentially encountered when loading the site</li><li>Policy outcome data associated with :<ul><li>Geographic coordinates (calculated using a GeoLite2 database downloaded locally and provided by MaxMind)</li><li>Time spent on the questionnaire</li><li>Browser data (user agent, local page referrer)</li></ul><br></li></ul><h2>Data not collected &amp; our commitments</h2><p>By this policy, we are committed to protecting and not combining political data with elements that identify individuals. IP addresses are not processed in this way, and no third party organization/company has access to data that could identify you individually. Eventually, although it is not currently possible to identify you personally from the data we collect, the data collected will be automatically anonymized by differential privacy tools. </p><h2>Purposes of this data</h2><p>The access and error data on the site allow us to determine the actual use of the service, in order to provide optimal resources for the observed traffic.<br>Test result data is used to provide public reports on the different political opinions observed in given territories, as well as their evolution over time. <br>These data will be offered in the form of aggregated data.</p><h2>Data storage</h2><p>We generally retain personal data for as long as is necessary for the purposes set out in this document.</p><br>"
 }
