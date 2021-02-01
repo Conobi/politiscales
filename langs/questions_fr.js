@@ -504,7 +504,7 @@ var questions = [
 		]
 	},
 	{
-		question: "Il est important que la santé reste du domaine publique.",
+		question: "Il est important que la santé reste du domaine public.",
 		answer: 0,
 		valuesYes: [
 			{
