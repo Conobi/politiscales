@@ -7,7 +7,7 @@ jQuery.loadScript = function (url, callback) {
         url: url,
         dataType: 'script',
         success: callback,
-        async: true
+        async: false
     });
 }
 
