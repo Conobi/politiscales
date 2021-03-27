@@ -4,8 +4,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $translations = array(
-  "en" => "./langs/static_en.json",
-  "fr" => "./langs/static_fr.json"
+  "en" => "./langs/en/static.json",
+  "fr" => "./langs/fr/static.json",
+  "it" => "./langs/it/static.json",
+  "es" => "./langs/es/static.json"
 );
 
 $browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';

@@ -6,8 +6,10 @@ if(window.location.pathname.indexOf("/politiscales") > -1) {
 }
 
 const translations = {
-  "en": path+"/langs/static_en.json",
-  "fr": path+"/langs/static_fr.json"
+  "en": path+"/langs/en/static.json",
+  "fr": path+"/langs/fr/static.json",
+  "es": path+"/langs/es/static.json",
+  "it": path+"/langs/it/static.json",
 }
 
 async function updateText() {
