@@ -1,0 +1,3 @@
+files:
+  - source: /langs/en/*.js*
+    translation: /langs/%two_letters_code%/%original_file_name%
