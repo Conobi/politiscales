@@ -1,7 +1,7 @@
 var questions = [
     // Constructivism/Essentialism
     {
-        question: '&quot;Non si nasce donna, lo si diventa.&quot;',
+        question: '"Non si nasce donna, lo si diventa."',
         answer: 0,
         valuesYes: [
             {
@@ -43,7 +43,7 @@ var questions = [
             }]
     },
     {
-        question: 'Le categorie &quot;donna&quot; e &quot;uomo&quot; sono costrutti sociali ai quali dovremmo rinunciare.',
+        question: 'Le categorie "donna" e "uomo" sono costrutti sociali ai quali dovremmo rinunciare.',
         answer: 0,
         valuesYes: [
             {
@@ -73,7 +73,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;orientamento sessuale è un costrutto sociale',
+        question: 'L\'orientamento sessuale è un costrutto sociale',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -175,7 +175,7 @@ var questions = [
             }]
     },
     {
-        question: 'Gli esseri umani sono biologicamente progettati per l&#39;eterosessualità.',
+        question: 'Gli esseri umani sono biologicamente progettati per l\'eterosessualità.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -187,7 +187,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;egoismo è la motivazione prevalente nella specie umana, a prescindere dal contesto.',
+        question: 'L\'egoismo è la motivazione prevalente nella specie umana, a prescindere dal contesto.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -405,7 +405,7 @@ var questions = [
             }]
     },
     {
-        question: 'I trasporti e l&#39;energia dovrebbero essere pubblici.',
+        question: 'I trasporti e l\'energia dovrebbero essere pubblici.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: 'Cercare il proprio profitto è salutare per l&#39;economia.',
+        question: 'Cercare il proprio profitto è salutare per l\'economia.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -513,7 +513,7 @@ var questions = [
             }]
     },
     {
-        question: 'È accettabile che alcuni settori dell&#39;industria siano privati.',
+        question: 'È accettabile che alcuni settori dell\'industria siano privati.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -550,7 +550,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;età pensionabile dovrebbe essere abbassata.',
+        question: 'L\'età pensionabile dovrebbe essere abbassata.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -622,7 +622,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;economia di mercato è ottimale quando non è regolamentata.',
+        question: 'L\'economia di mercato è ottimale quando non è regolamentata.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -634,7 +634,7 @@ var questions = [
             }]
     },
     {
-        question: 'Al giorno d&#39;oggi un dipendente è libero di scegliere quando firma un contratto con il suo futuro datore di lavoro',
+        question: 'Al giorno d\'oggi un dipendente è libero di scegliere quando firma un contratto con il suo futuro datore di lavoro',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -658,7 +658,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;orario di lavoro stabilito per legge dovrebbe essere aumentato.',
+        question: 'L\'orario di lavoro stabilito per legge dovrebbe essere aumentato.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -670,7 +670,7 @@ var questions = [
             }]
     },
     {
-        question: 'Le norme riguardanti l&#39;ambiente dovrebbero essere influenzate dai consumi di massa e non da un&#39;autorità.',
+        question: 'Le norme riguardanti l\'ambiente dovrebbero essere influenzate dai consumi di massa e non da un\'autorità.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -761,7 +761,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;influenza della religione dovrebbe diminuire.',
+        question: 'L\'influenza della religione dovrebbe diminuire.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -785,7 +785,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;eutanasia dovrebbe essere legale.',
+        question: 'L\'eutanasia dovrebbe essere legale.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -797,7 +797,7 @@ var questions = [
             }]
     },
     {
-        question: 'Gli omosessuali non devono avere gli stessi diritti degli eterosessuali per quanto riguarda il matrimonio, l&#39;avere figli, l&#39;adozione o la procreazione.',
+        question: 'Gli omosessuali non devono avere gli stessi diritti degli eterosessuali per quanto riguarda il matrimonio, l\'avere figli, l\'adozione o la procreazione.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -857,7 +857,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;aborto dovrebbe essere limitato a casi particolari.',
+        question: 'L\'aborto dovrebbe essere limitato a casi particolari.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -875,7 +875,7 @@ var questions = [
         ]
     },
     {
-        question: 'L&#39;obiettivo principale di una coppia è di fare almeno un figlio.',
+        question: 'L\'obiettivo principale di una coppia è di fare almeno un figlio.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -887,7 +887,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;astinenza dovrebbe essere preferita alla contraccezione, per preservare la vera natura dell&#39;atto sessuale.',
+        question: 'L\'astinenza dovrebbe essere preferita alla contraccezione, per preservare la vera natura dell\'atto sessuale.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -900,7 +900,7 @@ var questions = [
     },
     // Ecology/Production
     {
-        question: 'Non è accettabile che le azioni umane portino all&#39;estinzione della specie.',
+        question: 'Non è accettabile che le azioni umane portino all\'estinzione della specie.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -948,7 +948,7 @@ var questions = [
             }]
     },
     {
-        question: 'È importante incoraggiare un&#39;agricoltura che mantenga una biodiversità alimentare, anche se la resa fosse inferiore.',
+        question: 'È importante incoraggiare un\'agricoltura che mantenga una biodiversità alimentare, anche se la resa fosse inferiore.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -1129,7 +1129,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;archiviazione e la memorizzazione dei dati personali deve essere limitata in maniera rigorosa e il controllo incrociato su database dovrebbe essere vietato.',
+        question: 'L\'archiviazione e la memorizzazione dei dati personali deve essere limitata in maniera rigorosa e il controllo incrociato su database dovrebbe essere vietato.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1250,7 +1250,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;insurrezione è necessaria per cambiare profondamente la società.',
+        question: 'L\'insurrezione è necessaria per cambiare profondamente la società.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1262,7 +1262,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;attivismo in seno a organizzazioni politiche esistenti non serve a cambiare la società.',
+        question: 'L\'attivismo in seno a organizzazioni politiche esistenti non serve a cambiare la società.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1370,7 +1370,7 @@ var questions = [
             }]
     },
     {
-        question: 'Bisogna fare compromessi con l&#39;opposizione per far passare le nostre idee.',
+        question: 'Bisogna fare compromessi con l\'opposizione per far passare le nostre idee.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
