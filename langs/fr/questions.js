@@ -224,7 +224,7 @@ var questions = [
             }]
     },
     {
-        question: 'Mon pays doit payer pour réparer les dégâts causés par les crimes qu&#39;il a commis à l&#39;étranger.',
+        question: 'Mon pays doit payer pour réparer les dégâts causés par les crimes qu\'il a commis à l\'étranger.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -332,7 +332,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il est légitime pour un pays d&#39;intervenir militairement à l&#39;étranger pour défendre ses intérêts économiques.',
+        question: 'Il est légitime pour un pays d\'intervenir militairement à l\'étranger pour défendre ses intérêts économiques.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -344,7 +344,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il faut enseigner l&#39;Histoire d&#39;une façon qui permet de créer un sentiment d&#39;appartenance à la nation.',
+        question: 'Il faut enseigner l\'Histoire d\'une façon qui permet de créer un sentiment d\'appartenance à la nation.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -369,7 +369,7 @@ var questions = [
     },
     // Communism/Capitalism
     {
-        question: 'Nul ne doit s&#39;enrichir par le fait de posséder une entreprise, un logement ou un terrain.',
+        question: 'Nul ne doit s\'enrichir par le fait de posséder une entreprise, un logement ou un terrain.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -405,7 +405,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;énergie et les infrastructures de transport doivent être publiques.',
+        question: 'L\'énergie et les infrastructures de transport doivent être publiques.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: 'La recherche de son profit personnel est saine pour l&#39;économie.',
+        question: 'La recherche de son profit personnel est saine pour l\'économie.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -465,7 +465,7 @@ var questions = [
             }]
     },
     {
-        question: 'C&#39;est le mérite qui explique la différence de richesse entre deux personnes.',
+        question: 'C\'est le mérite qui explique la différence de richesse entre deux personnes.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -477,7 +477,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il n&#39;y a pas de problème à ce que certaines écoles et universités puissent être privées.',
+        question: 'Il n\'y a pas de problème à ce que certaines écoles et universités puissent être privées.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -501,7 +501,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il est acceptable qu&#39;il y ait des riches et des pauvres.',
+        question: 'Il est acceptable qu\'il y ait des riches et des pauvres.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -513,7 +513,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il est acceptable que certains secteurs de l&#39;industrie soient privés.',
+        question: 'Il est acceptable que certains secteurs de l\'industrie soient privés.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -610,7 +610,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il faut subventionner certains secteurs ou certains types d’emploi.',
+        question: 'Il faut subventionner certains secteurs ou certains types d\'emploi.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -622,7 +622,7 @@ var questions = [
             }]
     },
     {
-        question: 'L’économie de marché est optimale quand elle n’est pas régulée.',
+        question: 'L\'économie de marché est optimale quand elle n\'est pas régulée.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -670,7 +670,7 @@ var questions = [
             }]
     },
     {
-        question: 'C’est par la consommation que les normes environnementales doivent émerger, et non par une autorité.',
+        question: 'C\'est par la consommation que les normes environnementales doivent émerger, et non par une autorité.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -719,7 +719,7 @@ var questions = [
             }]
     },
     {
-        question: 'Je n’ai aucun problème avec le fait que d’autres langues officielles soient ajoutées ou remplacent la langue officielle existante de mon pays.',
+        question: 'Je n\'ai aucun problème avec le fait que d\'autres langues officielles soient ajoutées ou remplacent la langue officielle existante de mon pays.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -761,7 +761,7 @@ var questions = [
             }]
     },
     {
-        question: 'L’influence de la religion doit diminuer.',
+        question: 'L\'influence de la religion doit diminuer.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -773,7 +773,7 @@ var questions = [
             }]
     },
     {
-        question: 'Une langue est définie par ceux qui l’utilisent et non pas par des académiciens.',
+        question: 'Une langue est définie par ceux qui l\'utilisent et non pas par des académiciens.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -785,7 +785,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;euthanasie doit être autorisée.',
+        question: 'L\'euthanasie doit être autorisée.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -797,7 +797,7 @@ var questions = [
             }]
     },
     {
-        question: 'Les homosexuels n’ont pas à être traité à égalité avec les hétérosexuels en ce qui concerne le mariage, la filiation, l’adoption ou la procréation.',
+        question: 'Les homosexuels n\'ont pas à être traité à égalité avec les hétérosexuels en ce qui concerne le mariage, la filiation, l\'adoption ou la procréation.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -845,7 +845,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;école doit principalement enseigner nos valeurs, nos traditions et les connaissances fondamentales.',
+        question: 'L\'école doit principalement enseigner nos valeurs, nos traditions et les connaissances fondamentales.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -857,7 +857,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;avortement devrait être limité à des cas précis.',
+        question: 'L\'avortement devrait être limité à des cas précis.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -875,7 +875,7 @@ var questions = [
         ]
     },
     {
-        question: 'Le but principal d’un couple doit être de faire au moins un enfant.',
+        question: 'Le but principal d\'un couple doit être de faire au moins un enfant.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -887,7 +887,7 @@ var questions = [
             }]
     },
     {
-        question: 'L’abstinence devrait être préférée à la contraception pour préserver la vraie nature de l’acte sexuel.',
+        question: 'L\'abstinence devrait être préférée à la contraception pour préserver la vraie nature de l\'acte sexuel.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -900,7 +900,7 @@ var questions = [
     },
     // Ecology/Production
     {
-        question: 'Il n’est pas acceptable que les actions humaines entraînent des extinctions d’espèces.',
+        question: 'Il n\'est pas acceptable que les actions humaines entraînent des extinctions d\'espèces.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -936,7 +936,7 @@ var questions = [
             }]
     },
     {
-        question: 'Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l’exploitation de la nature.',
+        question: 'Nous devons accepter de changer notre mode de consommation alimentaire pour limiter l\'exploitation de la nature.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -948,7 +948,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il est important d&#39;encourager une agriculture qui maintienne une biodiversité alimentaire, même si son rendement est inférieur.',
+        question: 'Il est important d\'encourager une agriculture qui maintienne une biodiversité alimentaire, même si son rendement est inférieur.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -1020,7 +1020,7 @@ var questions = [
             }]
     },
     {
-        question: 'Le transhumanisme sera bénéfique car il permettra d’améliorer nos capacités.',
+        question: 'Le transhumanisme sera bénéfique car il permettra d\'améliorer nos capacités.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1032,7 +1032,7 @@ var questions = [
             }]
     },
     {
-        question: 'La fission nucléaire, quand elle est bien entretenue, est une bonne source d’énergie.',
+        question: 'La fission nucléaire, quand elle est bien entretenue, est une bonne source d\'énergie.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1044,7 +1044,7 @@ var questions = [
             }]
     },
     {
-        question: 'L’exploitation des énergies fossiles est nécessaire.',
+        question: 'L\'exploitation des énergies fossiles est nécessaire.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1141,7 +1141,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il faut garantir le droit d’être anonyme sur Internet.',
+        question: 'Il faut garantir le droit d\'être anonyme sur Internet.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1189,7 +1189,7 @@ var questions = [
             }]
     },
     {
-        question: 'L’ordre et l’autorité doivent être respectés en toute circonstance.',
+        question: 'L\'ordre et l\'autorité doivent être respectés en toute circonstance.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1213,7 +1213,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il vaut mieux arrêter préventivement une personne potentiellement dangereuse que de courir le risque qu&#39;elle commette un crime.',
+        question: 'Il vaut mieux arrêter préventivement une personne potentiellement dangereuse que de courir le risque qu\'elle commette un crime.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1226,7 +1226,7 @@ var questions = [
     },
     // Revolution/Reform
     {
-        question: 'La grève générale est une bonne façon d’obtenir de nouveaux droits.',
+        question: 'La grève générale est une bonne façon d\'obtenir de nouveaux droits.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1238,7 +1238,7 @@ var questions = [
             }]
     },
     {
-        question: 'La lutte armée au sein d&#39;un pays est parfois nécessaire.',
+        question: 'La lutte armée au sein d\'un pays est parfois nécessaire.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1250,7 +1250,7 @@ var questions = [
             }]
     },
     {
-        question: 'L&#39;insurrection est nécessaire pour transformer la société en profondeur.',
+        question: 'L\'insurrection est nécessaire pour transformer la société en profondeur.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1274,7 +1274,7 @@ var questions = [
             }]
     },
     {
-        question: 'Les élections organisées par l&#39;État ne peuvent pas remettre en question les pouvoirs en place.',
+        question: 'Les élections organisées par l\'État ne peuvent pas remettre en question les pouvoirs en place.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1346,7 +1346,7 @@ var questions = [
             }]
     },
     {
-        question: 'La violence contre les personnes n&#39;est jamais une solution.',
+        question: 'La violence contre les personnes n\'est jamais une solution.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1370,7 +1370,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il faut faire des compromis avec l’opposition pour faire passer certaines de nos idées.',
+        question: 'Il faut faire des compromis avec l\'opposition pour faire passer certaines de nos idées.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1404,7 +1404,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'C’est un petit groupe qui contrôle secrètement et consciemment le monde.',
+        question: 'C\'est un petit groupe qui contrôle secrètement et consciemment le monde.',
         answer: 0,
         valuesYes: [{
                 axis: 'comp',
@@ -1413,7 +1413,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'Une bonne politique, c’est une politique pragmatique et sans idéologie.',
+        question: 'Une bonne politique, c\'est une politique pragmatique et sans idéologie.',
         answer: 0,
         valuesYes: [{
                 axis: 'prag',
@@ -1440,7 +1440,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'L&#39;état doit être aboli.',
+        question: 'L\'État doit être aboli.',
         answer: 0,
         valuesYes: [{
                 axis: 'anar',
