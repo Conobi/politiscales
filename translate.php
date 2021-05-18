@@ -7,7 +7,8 @@ $translations = array(
   "en" => "./langs/en/static.json",
   "fr" => "./langs/fr/static.json",
   "it" => "./langs/it/static.json",
-  "es" => "./langs/es/static.json"
+  "es" => "./langs/es/static.json",
+  "zh" => "./langs/zh/static.json"
 );
 
 $browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';
