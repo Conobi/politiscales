@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: 'Looking for one\'s own profit is healthy for the economy.',
+        question: 'Looking for one’s own profit is healthy for the economy.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -586,7 +586,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to avoid private monopoly.',
+        question: 'It is necessary to avoid a private monopoly.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -1020,7 +1020,7 @@ var questions = [
             }]
     },
     {
-        question: 'Transhumanism will be beneficial because it will allow us to improve our capacities.',
+        question: 'Trans-humanism will be beneficial because it will allow us to improve our capacities.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1382,7 +1382,7 @@ var questions = [
             }]
     },
     {
-        question: 'Changes in an individual\'s way of life can induce changes in society.',
+        question: 'Changes in an individual’s way of life can induce changes in society.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1440,7 +1440,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'The state should be abolished.',
+        question: 'The State should be abolished.',
         answer: 0,
         valuesYes: [{
                 axis: 'anar',

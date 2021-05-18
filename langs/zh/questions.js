@@ -1,7 +1,7 @@
 var questions = [
     // Constructivism/Essentialism
     {
-        question: '“One is not born, but rather becomes, a woman.”',
+        question: '一个人并非生来就是女性，而是在成长过程中成为女性的。',
         answer: 0,
         valuesYes: [
             {
@@ -19,7 +19,7 @@ var questions = [
             }]
     },
     {
-        question: 'Differences in treatment and quality of life in our society show that racism is still omnipresent.',
+        question: '我们社会中的待遇和生活质量的差异表明，种族主义仍然无处不在。',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -31,7 +31,7 @@ var questions = [
             }]
     },
     {
-        question: 'All sciences, even chemistry and biology are not uncompromising and are conditioned by our society.',
+        question: '所有的科学理论，乃至化学和生物学，都不是绝对而纯粹的，因为这些科学理论会被我们的社会所影响塑造。',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -43,7 +43,7 @@ var questions = [
             }]
     },
     {
-        question: 'The categories “women” and “men” are social constructs that should be given up.',
+        question: '“男性”与“女性”这两种社会结构类别应当被抛弃。',
         answer: 0,
         valuesYes: [
             {
@@ -61,7 +61,7 @@ var questions = [
             }]
     },
     {
-        question: 'Nobody is by nature predisposed to criminality.',
+        question: '没有人天生更容易去犯罪。',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -73,7 +73,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sexual orientation is a social construct',
+        question: '性取向是一种社会建构。',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -85,7 +85,7 @@ var questions = [
             }]
     },
     {
-        question: 'Social differences between ethnic groups cannot be explained by biology.',
+        question: '不同族群之间的社会差异不能通过生理差异来解释。',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -97,7 +97,7 @@ var questions = [
             }]
     },
     {
-        question: 'The social roles of women and men can partly be explained by biological differences.',
+        question: '男性和女性的社会角色不同，一部分原因是他们在生理上的不同。',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -115,7 +115,7 @@ var questions = [
         ]
     },
     {
-        question: 'Hormonal differences can explain some differences in individual characteristics between women and men.',
+        question: '男性和女性在人格上的一些差异可以通过激素的不同来解释。',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -133,7 +133,7 @@ var questions = [
         ]
     },
     {
-        question: 'Sexual assaults are partly caused by natural impulse.',
+        question: '性侵犯一部分的原因是本能冲动。',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -151,7 +151,7 @@ var questions = [
         ]
     },
     {
-        question: 'Transgender individuals will never really be of the gender they identify as.',
+        question: '跨性别者永远无法真正成为他们想变成的性别。',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -163,7 +163,7 @@ var questions = [
             }]
     },
     {
-        question: 'Members of a nation or culture have some unchangeable characteristics that define them.',
+        question: '一个民族或文化的成员总有些不变的特质，将他们同其他群体区分开来。',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -175,7 +175,7 @@ var questions = [
             }]
     },
     {
-        question: 'Biologically, human beings are meant for heterosexuality.',
+        question: '人类的生理结构注定了人类是异性恋的生物。',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -187,7 +187,7 @@ var questions = [
             }]
     },
     {
-        question: 'Selfishness is the overriding drive in the human species, no matter the context.',
+        question: '不管在什么情况下，自私都是人类的首要动力。',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -200,7 +200,7 @@ var questions = [
     },
     // Internationalism/Nationalism
     {
-        question: 'Borders should eventually be abolished.',
+        question: '国界终将被废除。',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -212,7 +212,7 @@ var questions = [
             }]
     },
     {
-        question: 'People need to stand up for their ideals, even if it leads them to betray their country.',
+        question: '即使信念会使人背叛国家，人们也应当忠于信念。',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -224,7 +224,7 @@ var questions = [
             }]
     },
     {
-        question: 'My country must pay for the damages caused by the crimes it committed in other countries.',
+        question: '我国必须为它在其他国家犯下的罪行所造成的损害付出代价。',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -236,7 +236,7 @@ var questions = [
             }]
     },
     {
-        question: 'If two countries have similar economies, social systems and environmental norms, then the free market between them has no negative impact.',
+        question: '如果两个国家有相似的经济和社会体制以及环境保护规范，那么两国之间的自由市场不会造成任何负面影响。',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -248,7 +248,7 @@ var questions = [
             }]
     },
     {
-        question: 'National Chauvinism during sports competitions is not acceptable.',
+        question: '体育赛事中的民族沙文主义是不可接受的。',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -260,7 +260,7 @@ var questions = [
             }]
     },
     {
-        question: 'I am equally concerned about the inhabitants of my country and those of other the countries.',
+        question: '我对我国居民和外国居民一视同仁。',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -272,7 +272,7 @@ var questions = [
             }]
     },
     {
-        question: 'Foreigners living in my country should be allowed to act politically, equally to those who have the nationality.',
+        question: '生活在我国的外国人应当有与拥有我国国籍的人同等的政治权利。',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -284,7 +284,7 @@ var questions = [
             }]
     },
     {
-        question: 'Citizens should take priority over foreigners.',
+        question: '本国公民应该优先于外国人。',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -296,7 +296,7 @@ var questions = [
             }]
     },
     {
-        question: 'The values of my country are superior to those of other countries.',
+        question: '我国的价值观高于其他国家。',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -308,7 +308,7 @@ var questions = [
             }]
     },
     {
-        question: 'Multiculturalism is a threat to our society.',
+        question: '多元文化主义是对我们社会的威胁。',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -320,7 +320,7 @@ var questions = [
             }]
     },
     {
-        question: 'A good citizen is a patriot.',
+        question: '一个爱国者才是一个优秀的公民',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -332,7 +332,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is legitimate for a country to intervene militarily to defend its economic interests.',
+        question: '国家为了保护自身的经济利益而进行军事干涉是正当的。',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -344,7 +344,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to teach history in order to create a sense of belonging to the nation.',
+        question: '通过历史教育来培养国家归属感很有必要。',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -356,7 +356,7 @@ var questions = [
             }]
     },
     {
-        question: 'Research produced by my country should not be available to other countries.',
+        question: '我国不应与其他国家共享本国的研究成果。',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -369,7 +369,7 @@ var questions = [
     },
     // Communism/Capitalism
     {
-        question: 'No one should get rich from owning a business, housing, or land.',
+        question: '人们不应该通过金融、房产或地产致富。',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -381,7 +381,7 @@ var questions = [
             }]
     },
     {
-        question: 'Wage labor is a form of theft from the worker by companies.',
+        question: '雇佣劳动是企业对劳动者的剥削。',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -393,7 +393,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is important that health should stay a public matter.',
+        question: '健康产业必须保持在公众领域。',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -405,7 +405,7 @@ var questions = [
             }]
     },
     {
-        question: 'Energy and transport structures should be a public matter.',
+        question: '能源与公共运输应该成为公共事业。',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -417,7 +417,7 @@ var questions = [
             }]
     },
     {
-        question: 'Patents should not exist.',
+        question: '专利制度不应该存在。',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -429,7 +429,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to implement assemblies to ration our production to the consumers according to their needs.',
+        question: '有必要要求企业根据消费者需求的比例来生产。',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -441,7 +441,7 @@ var questions = [
             }]
     },
     {
-        question: 'The labor market enslaves workers.',
+        question: '劳动力市场奴役了劳动者。',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: 'Looking for one\'s own profit is healthy for the economy.',
+        question: '关注个人利益有助于经济健康。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -465,7 +465,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is merit that explains differences of wealth between two individuals.',
+        question: '个人之间品行、能力的差异可以解释他们的贫富差异。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -477,7 +477,7 @@ var questions = [
             }]
     },
     {
-        question: 'The fact that some schools and universities are private is not a problem.',
+        question: '一些学校和大学可以是私立的，这不成问题。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -489,7 +489,7 @@ var questions = [
             }]
     },
     {
-        question: 'Offshoring and outsourcing are necessary evils to improve production.',
+        question: '外包和离岸生产对于提高生产是必要之恶。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -501,7 +501,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is acceptable that there are rich and poor people.',
+        question: '人分贫富是可以接受的。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -513,7 +513,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is acceptable that some industry sectors are private.',
+        question: '一些工业部门由私人所有是可以接受的。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -525,7 +525,7 @@ var questions = [
             }]
     },
     {
-        question: 'Banks should remain private.',
+        question: '银行应该保持私有制。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -538,7 +538,7 @@ var questions = [
     },
     // Regulation/Laissez-faire
     {
-        question: 'Revenues and capital should be taxed to redistribute wealth.',
+        question: '应该向个人收入与资本征税以重新分配财富。',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -550,7 +550,7 @@ var questions = [
             }]
     },
     {
-        question: 'We should be retiring earlier.',
+        question: '退休年龄应该调低。',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -562,7 +562,7 @@ var questions = [
             }]
     },
     {
-        question: 'Dismissals of employees should be forbidden except if it is justified.',
+        question: '除非理由正当，否则不可解雇员工。',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -574,7 +574,7 @@ var questions = [
             }]
     },
     {
-        question: 'Minimal levels of salary should be ensured to make sure that a worker can live of their work.',
+        question: '应该确立最低工资标准以保证劳动者能靠劳动活下去。',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -586,7 +586,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to avoid private monopoly.',
+        question: '避免私人垄断十分必要。',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -598,7 +598,7 @@ var questions = [
             }]
     },
     {
-        question: 'Loans contracted by the public sector (states, regions, communities) do not necessarily have to be repaid.',
+        question: '公共领域（国家、地区或集体等）提供的贷款不一定要偿还。',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -610,7 +610,7 @@ var questions = [
             }]
     },
     {
-        question: 'Some sectors or type of employment should be financially supported.',
+        question: '一些产业或就业形式应该得到财政支持。',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -622,7 +622,7 @@ var questions = [
             }]
     },
     {
-        question: 'Market economy is optimal when it is not regulated.',
+        question: '没有规范限制的市场经济是最理想的。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -634,7 +634,7 @@ var questions = [
             }]
     },
     {
-        question: 'Nowadays employees are free to choose when signing a contract with their future employer',
+        question: '今天，劳动者在与未来的雇主签订劳动合同时，有自由选择权。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -646,7 +646,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to remove regulations in labor legislation to encourage firms to hire.',
+        question: '有必要废除劳动法规中的规定以鼓励企业雇佣劳动力。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -658,7 +658,7 @@ var questions = [
             }]
     },
     {
-        question: 'The maximum allowed hours in the legal work week should be increased.',
+        question: '每周最大合法劳动时间应该被提高。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -670,7 +670,7 @@ var questions = [
             }]
     },
     {
-        question: 'Environmental norms should be influenced by mass consumption and not from an authority.',
+        question: '环境保护法规应该受广大消费者而不是权威机构的影响。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -682,7 +682,7 @@ var questions = [
             }]
     },
     {
-        question: 'Social assistance deters people from working.',
+        question: '社会援助使人们懈怠于工作。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -694,7 +694,7 @@ var questions = [
             }]
     },
     {
-        question: 'State-run companies should be managed like private ones and follow the logic of the market (competition, profitability...).',
+        question: '国营企业应该像私营企业那样运营，也要遵守市场规律（竞争，盈利等） 。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -707,7 +707,7 @@ var questions = [
     },
     // Progressive/Conservative
     {
-        question: 'Traditions should be questioned.',
+        question: '传统应当被质疑。',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -719,7 +719,7 @@ var questions = [
             }]
     },
     {
-        question: 'I do not have any problem if other official languages are added or replace the already existing official language in my country.',
+        question: '如果我国增加一门新官方语言，或者用另一门语言取代现有的官方语言，我将不持任何意见。',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -731,7 +731,7 @@ var questions = [
             }]
     },
     {
-        question: 'Marriage should be abolished.',
+        question: '婚姻制度应该被废除。',
         answer: 0,
         valuesYes: [
             {
@@ -749,7 +749,7 @@ var questions = [
             }]
     },
     {
-        question: 'Foreigners enrich our culture.',
+        question: '外国人丰富了我国的文化。',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -761,7 +761,7 @@ var questions = [
             }]
     },
     {
-        question: 'The influence of religion should decrease.',
+        question: '应当削弱宗教的影响力。',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -773,7 +773,7 @@ var questions = [
             }]
     },
     {
-        question: 'A language is defined by its users, not by scholars.',
+        question: '一门语言应由它的使用者而不是学者来定义。',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -785,7 +785,7 @@ var questions = [
             }]
     },
     {
-        question: 'Euthanasia should be authorized.',
+        question: '安乐死应该合法。',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -797,7 +797,7 @@ var questions = [
             }]
     },
     {
-        question: 'Homosexuals should not be treated equally to heterosexuals in regards to marriage, parentage, adoption or procreation.',
+        question: '同性恋者在婚姻、亲子关系、收养或生育方面，不应与异性恋者同等对待。',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -809,7 +809,7 @@ var questions = [
             }]
     },
     {
-        question: 'In some specific conditions the death penalty is justified.',
+        question: '在某些特定情况下，死刑是合理的。',
         answer: 0,
         valuesYes: [
             {
@@ -833,7 +833,7 @@ var questions = [
         ]
     },
     {
-        question: 'Technological progress must not change society too quickly.',
+        question: '技术进步不应该过快地改变社会。',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -845,7 +845,7 @@ var questions = [
             }]
     },
     {
-        question: 'School should mostly teach our values, traditions, and fundamental knowledge.',
+        question: '学校应该主要传授我们的价值观、传统和基本知识。',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -857,7 +857,7 @@ var questions = [
             }]
     },
     {
-        question: 'Abortion should be limited to specific cases.',
+        question: '堕胎应该只在一些特定情况下被允许。',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -875,7 +875,7 @@ var questions = [
         ]
     },
     {
-        question: 'The main goal of a couple is to make at least one child.',
+        question: '一对夫妇的主要目标就是至少生育一个孩子。',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -887,7 +887,7 @@ var questions = [
             }]
     },
     {
-        question: 'Abstinence should be preferred to contraception, to preserve the true nature of the sexual act.',
+        question: '应选择禁欲而不是避孕，以保全性行为的本质。',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -900,7 +900,7 @@ var questions = [
     },
     // Ecology/Production
     {
-        question: 'It is not acceptable that human actions should lead to the extinction of species.',
+        question: '人类的行为导致物种灭绝是无法接受的。',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -912,7 +912,7 @@ var questions = [
             }]
     },
     {
-        question: 'GMOs should be forbidden outside research and medical purposes.',
+        question: '应该禁止转基因技术在研究和医疗以外领域的用途。',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -924,7 +924,7 @@ var questions = [
             }]
     },
     {
-        question: 'We must fight against global warming.',
+        question: '我们必须与全球变暖作斗争。',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -936,7 +936,7 @@ var questions = [
             }]
     },
     {
-        question: 'We should accept changes in our way of consuming food to limit the exploitation of nature.',
+        question: '为了限制对大自然的开发，我们应该改变我们消费食物的方式。',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -948,7 +948,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is important to encourage an agriculture that maintains a food biodiversity, even if the output is inferior.',
+        question: '有必要鼓励农业生产中保持生物的多样性，即使这样会降低产量。',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -960,7 +960,7 @@ var questions = [
             }]
     },
     {
-        question: 'Preserving non-urban ecosystems is more important than creating jobs.',
+        question: '保护非城市生态系统比创造就业更重要。',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -972,7 +972,7 @@ var questions = [
             }]
     },
     {
-        question: 'Reduction of waste should be done by reducing production.',
+        question: '我们应该减少生产以减少浪费。',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -984,7 +984,7 @@ var questions = [
             }]
     },
     {
-        question: 'Space colonization is a good solution for supplying the lack of raw material on Earth (iron, rare metals, fuel...)',
+        question: '太空殖民是解决地球上原材料（如铁、稀有金属、燃料）匮乏的好办法。',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -996,7 +996,7 @@ var questions = [
             }]
     },
     {
-        question: 'Transforming ecosystems durably to increase the quality of life of human beings is legitimate.',
+        question: '通过持久地改变生态系统来提高人类的生活质量是可以接受的。',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1008,7 +1008,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to massively invest in research to improve productivity.',
+        question: '有必要向研究领域大规模投资以提高生产力。',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1020,7 +1020,7 @@ var questions = [
             }]
     },
     {
-        question: 'Transhumanism will be beneficial because it will allow us to improve our capacities.',
+        question: '超人类主义是有益的，因为这会使人类的能力获得提升。',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1032,7 +1032,7 @@ var questions = [
             }]
     },
     {
-        question: 'Nuclear fission, when well maintained, is a good source of energy.',
+        question: '若能得到良好的维护，核能将是优良的能量来源。',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1044,7 +1044,7 @@ var questions = [
             }]
     },
     {
-        question: 'Exploitation of fossil fuels is necessary.',
+        question: '开采化石燃料是必要的。',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1056,7 +1056,7 @@ var questions = [
             }]
     },
     {
-        question: 'Maintaining strong economic growth should be an objective for the government.',
+        question: '保持强劲的经济增长应是政府的目标之一。',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1069,7 +1069,7 @@ var questions = [
     },
     // Rehabilitative Justice/Punitive Justice
     {
-        question: 'Prisons should no longer exist.',
+        question: '监狱不应该存在。',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1081,7 +1081,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is unfair to set a minimal penalty for an offense or a crime.',
+        question: '对罪行设定最低刑罚是不公平的。',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1093,7 +1093,7 @@ var questions = [
             }]
     },
     {
-        question: 'Individuals who get out of prison should be assisted in their reinsertion.',
+        question: '出狱人员在重返社会的过程中是需要有人帮助的。',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1105,7 +1105,7 @@ var questions = [
             }]
     },
     {
-        question: 'Justice should always take into consideration the context and the past of the condemned and adapt their penalty accordingly.',
+        question: '司法机关应始终考虑被判刑者的背景和过往经历，并据此调整其刑罚。',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1117,7 +1117,7 @@ var questions = [
             }]
     },
     {
-        question: 'Conditions of life in jail should be greatly improved.',
+        question: '监狱的生活条件应该大大提高。',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1129,7 +1129,7 @@ var questions = [
             }]
     },
     {
-        question: 'The filing and storage of personal records should be delimited strictly and database cross-checking should be forbidden.',
+        question: '应该严格分开个人记录的存档和存储，数据库之间的交叉查询应该被禁止。',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1141,7 +1141,7 @@ var questions = [
             }]
     },
     {
-        question: 'The right to be anonymous on Internet should be guaranteed.',
+        question: '在互联网上匿名的权利应该得到保证。',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1153,7 +1153,7 @@ var questions = [
             }]
     },
     {
-        question: 'The purpose of the judiciary system should be to punish those who went against the law.',
+        question: '司法系统的目的是惩罚违背法律者。',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1165,7 +1165,7 @@ var questions = [
             }]
     },
     {
-        question: 'The police should be armed.',
+        question: '警察应该装备武器。',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1177,7 +1177,7 @@ var questions = [
             }]
     },
     {
-        question: 'The sacrifice of some civil liberties is a necessity in order to be protected from terrorist acts.',
+        question: '牺牲一些公民自由是打击恐怖袭击的必要之举。',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1189,7 +1189,7 @@ var questions = [
             }]
     },
     {
-        question: 'Order and authority should be respected in all circumstances.',
+        question: '任何情况下，都应该遵守秩序和权威。',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1201,7 +1201,7 @@ var questions = [
             }]
     },
     {
-        question: 'Heavy penalties are efficient because they are dissuasive.',
+        question: '严刑峻法之所以有效，是因为这能劝诫人们不去犯罪。',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1213,7 +1213,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is better to arrest someone potentially dangerous preemptively rather than taking the risk of having them committing a crime.',
+        question: '相比于承受那些具备潜在危险性的人犯罪的风险，不如提前把他们逮捕。',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1226,7 +1226,7 @@ var questions = [
     },
     // Revolution/Reform
     {
-        question: 'Mass strike is a good way to acquire new rights.',
+        question: '大规模罢工是争取权利的好办法。',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1238,7 +1238,7 @@ var questions = [
             }]
     },
     {
-        question: 'Armed struggle in a country is sometimes necessary.',
+        question: '有时，国家内部的武装斗争是必要的。',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1250,7 +1250,7 @@ var questions = [
             }]
     },
     {
-        question: 'Insurrection is necessary to deeply change society.',
+        question: '起义对深刻地改变社会很有必要。',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1262,7 +1262,7 @@ var questions = [
             }]
     },
     {
-        question: 'Activism in existing political organizations is not relevant to change society.',
+        question: '现有政治组织中的行动无法改变社会。',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1274,7 +1274,7 @@ var questions = [
             }]
     },
     {
-        question: 'Elections organized by the state cannot question the powers in place.',
+        question: '国家组织的选举不能质疑当权者。',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1286,7 +1286,7 @@ var questions = [
             }]
     },
     {
-        question: 'Hacking has a legitimate place in political struggle.',
+        question: '黑客行为在政治斗争中有着合法的地位。',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1298,7 +1298,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sabotage is legitimate under certain conditions.',
+        question: '在某些特定情况下，破坏行为是正当的。',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1310,7 +1310,7 @@ var questions = [
             }]
     },
     {
-        question: 'Activists must always act in strict accordance with the law.',
+        question: '社会活动家必须始终严格按照法律行事。',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1322,7 +1322,7 @@ var questions = [
             }]
     },
     {
-        question: 'Revolutions will always end up in a bad way.',
+        question: '革命不会导致好的结果。',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1334,7 +1334,7 @@ var questions = [
             }]
     },
     {
-        question: 'Changing the system radically is counter-productive. We should rather transform it progressively.',
+        question: '极端地改变现有体系会适得其反。我们更应循序渐进地改变它。',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1346,7 +1346,7 @@ var questions = [
             }]
     },
     {
-        question: 'Violence against individuals is never productive.',
+        question: '针对个人的暴力永远不会有效果。',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1358,7 +1358,7 @@ var questions = [
             }]
     },
     {
-        question: 'We should always distance ourselves from protesters who use violence.',
+        question: '我们应该远离那些使用暴力的示威者。',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1370,7 +1370,7 @@ var questions = [
             }]
     },
     {
-        question: 'We need to make compromises with the opposition to apply our ideas.',
+        question: '为了实现我们的想法，可以与反对派妥协。',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1382,7 +1382,7 @@ var questions = [
             }]
     },
     {
-        question: 'Changes in an individual\'s way of life can induce changes in society.',
+        question: '个人生活方式的改变会引起社会的变化。',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1395,7 +1395,7 @@ var questions = [
     },
     // Bonus Badges
     {
-        question: 'My religion must be spread as widely as possible.',
+        question: '我的宗教必须传播得越广泛越好。',
         answer: 0,
         valuesYes: [{
                 axis: 'reli',
@@ -1404,7 +1404,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'It is a small group that consciously and secretly controls the world.',
+        question: '一个小团体隐秘又有意识地控制着全世界。',
         answer: 0,
         valuesYes: [{
                 axis: 'comp',
@@ -1413,7 +1413,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'A good policy is a pragmatic policy without ideology.',
+        question: '一个好的政策应该是实用主义的和没有意识形态的。',
         answer: 0,
         valuesYes: [{
                 axis: 'prag',
@@ -1422,7 +1422,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'We need to establish a monarchy to federate the people and preserve our sovereignty.',
+        question: '为了团结人民并维护我们的主权，我们应设立君主制。',
         answer: 0,
         valuesYes: [{
                 axis: 'mona',
@@ -1431,7 +1431,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'Humans should neither eat nor exploit animals.',
+        question: '人类不应食用或奴役其他动物。',
         answer: 0,
         valuesYes: [{
                 axis: 'vega',
@@ -1440,7 +1440,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'The state should be abolished.',
+        question: '国家不应继续存在。',
         answer: 0,
         valuesYes: [{
                 axis: 'anar',
