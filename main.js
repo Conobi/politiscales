@@ -10,6 +10,7 @@ const translations = {
   "fr": path+"/langs/fr/static.json",
   "es": path+"/langs/es/static.json",
   "it": path+"/langs/it/static.json",
+  "zh": path+"/langs/zh/static.json"
 }
 
 async function updateText() {
