@@ -1,7 +1,7 @@
 var questions = [
     // Constructivism/Essentialism
     {
-        question: '一个人并非生来就是女性，而是在成长过程中成为女性的。',
+        question: '女性不是天生的，而是被建构的。',
         answer: 0,
         valuesYes: [
             {
@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: '关注个人利益有助于经济健康。',
+        question: '关注个人利益有助于经济。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -586,7 +586,7 @@ var questions = [
             }]
     },
     {
-        question: '避免私人垄断十分必要。',
+        question: '有必要避免私人垄断。',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -1020,7 +1020,7 @@ var questions = [
             }]
     },
     {
-        question: '超人类主义是有益的，因为这会使人类的能力获得提升。',
+        question: '超人类主义是有益的，因为这会使人们提高自己的能力。',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1382,7 +1382,7 @@ var questions = [
             }]
     },
     {
-        question: '个人生活方式的改变会引起社会的变化。',
+        question: '个人生活方式的变化会引起社会的变化。',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1440,7 +1440,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: '国家不应继续存在。',
+        question: '联邦应该被废除。',
         answer: 0,
         valuesYes: [{
                 axis: 'anar',
