@@ -1,7 +1,7 @@
 var questions = [
     // Constructivism/Essentialism
     {
-        question: '"Man wird nicht als Frau geboren, sondern man wird zu einer."',
+        question: '„Man wird nicht als Frau geboren, sondern man wird zu einer.“',
         answer: 0,
         valuesYes: [
             {
@@ -19,7 +19,7 @@ var questions = [
             }]
     },
     {
-        question: 'Unterschiede im Umgang mit verschiedenen Gruppen in unserer Gesellschaft sowie in deren Lebensqualität zeigen, dass Rassismus in unserer Gesellschaft immer noch allgegenwärtig ist.',
+        question: 'Unterschiede in der Behandlung und Lebensqualität in unserer Gesellschaft zeigen, dass Rassismus immer noch allgegenwärtig ist.',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -43,7 +43,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Kategorien "Mann" und "Frau" sind soziale Konstrukte, die aufgegeben werden sollten.',
+        question: 'Die Kategorien „Mann“ und „Frau“ sind soziale Konstrukte, die aufgegeben werden sollten.',
         answer: 0,
         valuesYes: [
             {
@@ -73,7 +73,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sexuelle Orientierung ist ein soziales Konstrukt.',
+        question: 'Sexuelle Orientierung ist ein soziales Konstrukt',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -133,7 +133,7 @@ var questions = [
         ]
     },
     {
-        question: 'Sexuelle Übergriffe können zum Teil durch die natürlichen Triebe von Männern erklärt werden.',
+        question: 'Sexuelle Übergriffe können zum Teil durch natürliche Triebe erklärt werden.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -224,7 +224,7 @@ var questions = [
             }]
     },
     {
-        question: 'Mein Land muss für die Schäden zahlen, die durch die Verbrechen verursacht worden sind, die es im Ausland begangen hat.',
+        question: 'Mein Land muss für die Schäden aufkommen, die durch die von ihm begangenen Verbrechen in anderen Ländern entstanden sind.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: 'Suche nach dem eigenen persönlichen Profit ist gesund für die Wirtschaft.',
+        question: 'Das Streben nach eigenem Profit ist gesund für die Wirtschaft.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -586,7 +586,7 @@ var questions = [
             }]
     },
     {
-        question: 'Private Monopole müssen vermieden werden.',
+        question: 'Es ist notwendig, private Monopole zu vermeiden.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -1020,7 +1020,7 @@ var questions = [
             }]
     },
     {
-        question: 'Transhumanismus ist vorteilhaft, denn es erlaubt uns, unser Potenzial zu erweitern.',
+        question: 'Der Transhumanismus wird von Vorteil sein, weil er uns ermöglicht, unsere Fähigkeiten zu verbessern.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1382,7 +1382,7 @@ var questions = [
             }]
     },
     {
-        question: 'Veränderung im eigenen Leben kann zu Veränderungen in der Gesellschaft führen.',
+        question: 'Veränderungen in der eigenen Lebensweise können zu Veränderungen in der Gesellschaft führen.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
