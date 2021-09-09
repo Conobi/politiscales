@@ -1,7 +1,7 @@
 var questions = [
     // Constructivism/Essentialism
     {
-        question: '„Man wird nicht als Frau geboren, sondern man wird zu einer.“',
+        question: '„Man kommt nicht als Frau zur Welt, man wird es.“',
         answer: 0,
         valuesYes: [
             {
@@ -151,7 +151,7 @@ var questions = [
         ]
     },
     {
-        question: 'Transgender Individuen werden nie wirklich das Geschlecht sein, dass sie gerne wären.',
+        question: 'Transgender Individuen werden nie wirklich das Geschlecht sein, als das sie identifizieren.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -163,7 +163,7 @@ var questions = [
             }]
     },
     {
-        question: 'Mitglieder einer Nation oder Kultur haben unveränderliche Charakteristiken, die sie ausmachen.',
+        question: 'Angehörige einer Nation oder Kultur haben unveränderliche Charakteristiken, die sie ausmachen.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -260,7 +260,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ich bin gleichermaßen besorgt um die Bewohner meines Landes und der Bewohner anderer Länder.',
+        question: 'Ich bin gleichermaßen besorgt um die Bewohner anderer Länder wie die meines Landes.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -405,7 +405,7 @@ var questions = [
             }]
     },
     {
-        question: 'Energie und Transport/Mobilität sollten eine öffentliche Angelegenheit sein.',
+        question: 'Energie- und Verkehrsinfrastruktur sollten eine öffentliche Angelegenheit sein.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -429,7 +429,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist wichtig, Versammlungen zu haben, die unsere Produktion den Bedürfnissen der Verbraucher anpasst.',
+        question: 'Es ist notwendig, Versammlungen zu haben, um unsere Produktion den Bedürfnissen der Verbraucher anzupassen.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -477,7 +477,7 @@ var questions = [
             }]
     },
     {
-        question: 'Dass manche Schulen und Universitäten privat sind ist kein Problem.',
+        question: 'Dass manche Schulen und Universitäten privat sind, ist kein Problem.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -562,7 +562,7 @@ var questions = [
             }]
     },
     {
-        question: 'Willkürliche Entlassungen sollten verboten werden.',
+        question: 'Willkürliche Entlassungen sollten verboten sein.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -634,7 +634,7 @@ var questions = [
             }]
     },
     {
-        question: 'Heutzutage ist ein Arbeitnehmer*in frei Entscheidungen zu treffen, wenn er/sie einen Vertrag mit seinem zukünftigen Arbeitgeber unterschreibt.',
+        question: 'Heutzutage sind Arbeitnehmer frei in der Entscheidung, wenn sie einen Vertrag mit dem zukünftigen Arbeitgeber unterschreiben',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -670,7 +670,7 @@ var questions = [
             }]
     },
     {
-        question: 'Umweltfreundliche Regeln sollten von dem Massenverbrauch und nicht von einer staatlichen Instanz beeinflusst werden.',
+        question: 'Umweltvorschriften sollten durch Massenverbrauch und nicht von einer staatlichen Instanz beeinflusst werden.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -682,7 +682,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sozialhilfe hält Leute davon ab, zu arbeiten.',
+        question: 'Sozialhilfe hält Leute davon ab zu arbeiten.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -694,7 +694,7 @@ var questions = [
             }]
     },
     {
-        question: 'Staatseigene Unternehmen sollten verwaltet werden, wie private Unternehmen d. h. nach der Logik des Marktes (Konkurrenz, Rentabilität).',
+        question: 'Staatseigene Unternehmen sollten wie private Unternehmen verwaltet werden, d. h. nach der Logik des Marktes (Wettbewerb, Rentabilität).',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -731,7 +731,7 @@ var questions = [
             }]
     },
     {
-        question: 'Heiraten/Ehe sollte abgeschafft werden.',
+        question: 'Ehe sollte abgeschafft werden.',
         answer: 0,
         valuesYes: [
             {
@@ -773,7 +773,7 @@ var questions = [
             }]
     },
     {
-        question: 'Eine Sprache wird von deren Nutzern und nicht von Akademikern definiert.',
+        question: 'Eine Sprache wird von ihren Nutzern bestimmt, nicht von Akademikern.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -797,7 +797,7 @@ var questions = [
             }]
     },
     {
-        question: 'Homosexuellen sollten im Vergleich zu Heterosexuellen anders behandelt werden, z. B. Bei der Ehe, Adoption, Zeugung.',
+        question: 'Homosexuelle Personen sollten bezüglich Ehe, Adoption und Fortpflanzung anders behandelt werden als heterosexuelle.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -833,7 +833,7 @@ var questions = [
         ]
     },
     {
-        question: 'Technischer Fortschritt sollte die Gesellschaft nicht zu schnell verändern.',
+        question: 'Technischer Fortschritt darf die Gesellschaft nicht zu schnell verändern.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -857,7 +857,7 @@ var questions = [
             }]
     },
     {
-        question: 'Abtreiben sollte auf spezifische Fälle begrenzt werden.',
+        question: 'Abtreibung sollte auf spezifische Fälle begrenzt sein.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -875,7 +875,7 @@ var questions = [
         ]
     },
     {
-        question: 'Das Hauptziel eines Paars ist mindestens ein Kind zu bekommen.',
+        question: 'Das Hauptziel eines Paares ist, mindestens ein Kind zu bekommen.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -900,7 +900,7 @@ var questions = [
     },
     // Ecology/Production
     {
-        question: 'Es ist nicht hinnehmbar, dass Tierarten durch menschliche Handlungen aussterben.',
+        question: 'Es ist nicht hinnehmbar, dass menschliche Handlungen zum Aussterben einer Spezies führen.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -960,7 +960,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Erhaltung von ländlichen Ökosystemen is wichtiger als Arbeitschaffung.',
+        question: 'Die Erhaltung von ländlichen Ökosystemen is wichtiger als Arbeitsschaffung.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -1189,7 +1189,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ordnung und Autorität sollten unter allen Umständen Respektiert werden.',
+        question: 'Ordnung und Autorität sollten unter allen Umständen respektiert werden.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
