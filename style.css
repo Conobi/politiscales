@@ -259,21 +259,7 @@ h4 {
   max-width: 400px;
 }
 
-#buttonDiscord {
-  background-color: #7289DA;
-}
-
-#buttonDiscord:hover {
-  color: #7289DA;
-  background-color: white;
-}
-
-#buttonDiscord:hover svg {
-  fill: #7289DA;
-}
-
-button,
-.button {
+button, .button {
   text-align: center;
   margin: 0.5em 0;
   padding: 0.5em 1.5em;
