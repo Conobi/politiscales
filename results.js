@@ -1,9 +1,15 @@
 
 function init_results() {
 
+  if ($.i18n().locale == "fr") {
+    var resultsUrl = location.href.replace(window.location.hostname+"/politiscales", "politiscales.fr").replace(window.location.hostname, "politiscales.fr");
+  } else {
+    var resultsUrl = location.href.replace(window.location.hostname+"/politiscales", "politiscales.party").replace(window.location.hostname, "politiscales.party");
+  }
+
   var urlToCopy = document.getElementById("urlToCopy");
   if (urlToCopy) {
-    urlToCopy.innerHTML = location.href;
+    urlToCopy.innerHTML = resultsUrl;
   }
 
   var bonusEnabled = true;
@@ -16,10 +22,10 @@ function init_results() {
   twitterButton = document.getElementById("buttonTwitter");
   redditButton = document.getElementById("buttonReddit");
   if (twitterButton) {
-  	twitterButton.href = "https://twitter.com/intent/tweet?text="+encodeURIComponent($.i18n("share_desc"))+"&url="+encodeURIComponent(location.href)+"&via=rePolitiScales";
+  	twitterButton.href = "https://twitter.com/intent/tweet?text="+encodeURIComponent($.i18n("share_desc"))+"&url="+encodeURIComponent(resultsUrl)+"&via=rePolitiScales";
   }
   if (redditButton) {
-  	redditButton.href = "http://www.reddit.com/submit?url="+encodeURIComponent(location.href)+"&title="+encodeURIComponent($.i18n("share_desc"));
+  	redditButton.href = "http://www.reddit.com/submit?url="+encodeURIComponent(resultsUrl)+"&title="+encodeURIComponent($.i18n("share_desc"));
   }
 
   var images = {

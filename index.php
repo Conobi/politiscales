@@ -51,7 +51,7 @@
         </p>
 
         <div class="navButtons">
-          <a class="button" href="./quiz" data-i18n="start_button"><?= $i18n->get("start_button") ?></a>
+          <a class="button" href="./quiz<?php if (isset($_GET['lang'])) { echo "?lang=".$_GET['lang']; } ?>" data-i18n="start_button"><?= $i18n->get("start_button") ?></a>
         </div>
       </div>
     </div>
