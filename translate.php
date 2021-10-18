@@ -11,7 +11,8 @@ $translations = array(
   "zh" => "./langs/zh/static.json"
 );
 
-$browser_lang = !empty($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? strtok(strip_tags($_SERVER['HTTP_ACCEPT_LANGUAGE']), ',') : '';
+/* Get the language from the browser HTTP headers, in the 639-1 format */
+$browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 
 class i18n {
 
@@ -42,11 +43,11 @@ class i18n {
     }
   }
 
-  public function get_meta($string) {
+  public function getMeta($string) {
     return $this->get($this->_page_type."_".$string);
   }
 
-  public function get_langs() {
+  public function getLangs() {
     return array_keys($this->_data);
   }
 }
@@ -56,9 +57,11 @@ $i18n = new i18n;
 $i18n->loadLanguage($translations);
 
 
-if(strpos($_SERVER['HTTP_HOST'], "politiscales.fr") !== false) {
+if (strpos($_SERVER['HTTP_HOST'], "politiscales.fr") !== false) {
   $i18n->setLang("fr");
-} elseif(in_array($browser_lang, $i18n->get_langs())) {
+} elseif(isset($_GET["lang"]) && in_array($_GET["lang"], $i18n->getLangs())) {
+  $i18n->setLang($_GET["lang"]);
+} elseif(in_array($browser_lang, $i18n->getLangs())) {
   $i18n->setLang($browser_lang);
 } else {
   $i18n->setLang("en");
