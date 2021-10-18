@@ -16,6 +16,7 @@
         <option value="it" data-i18n="italian"><?= $i18n->get("italian") ?></option>
         <option value="es" data-i18n="spanish"><?= $i18n->get("spanish") ?></option>
         <option value="zh" data-i18n="chinese"><?= $i18n->get("chinese") ?></option>
+        <option value="ru" data-i18n="russian"><?= $i18n->get("russian") ?></option>
       </select>
     <?php endif; ?>
   </div>
