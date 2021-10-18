@@ -1,7 +1,7 @@
 var questions = [
     // Constructivism/Essentialism
     {
-        question: '„Man kommt nicht als Frau zur Welt, man wird es.“',
+        question: '“Женщиной становятся, а не рождаются.”',
         answer: 0,
         valuesYes: [
             {
@@ -19,7 +19,7 @@ var questions = [
             }]
     },
     {
-        question: 'Unterschiede in der Behandlung und Lebensqualität in unserer Gesellschaft zeigen, dass Rassismus immer noch allgegenwärtig ist.',
+        question: 'Различия в обращении и качестве жизни между людьми разных рас в нашем обществе показывают, что расизм все еще вездесущ.',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -31,7 +31,7 @@ var questions = [
             }]
     },
     {
-        question: 'Alle Wissenschaften, sogar Chemie und Biologie, sind nicht absolut, sondern werden von unserer Gesellschaft bestimmt.',
+        question: 'Все науки, даже химия и биология не являются бескомпромиссными и обусловлены нашим обществом.',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -43,7 +43,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Kategorien „Mann“ und „Frau“ sind soziale Konstrukte, die aufgegeben werden sollten.',
+        question: 'Категории "женщина" и "мужчина" - социальные конструкты, от которых мы должны отказаться.',
         answer: 0,
         valuesYes: [
             {
@@ -61,7 +61,7 @@ var questions = [
             }]
     },
     {
-        question: 'Niemand ist von Natur aus zur Kriminalität geneigt.',
+        question: 'Никто по своей природе не предрасположен к преступным деяниям.',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -73,7 +73,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sexuelle Orientierung ist ein soziales Konstrukt',
+        question: 'Сексуальная ориентация - это социальный конструкт',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -85,7 +85,7 @@ var questions = [
             }]
     },
     {
-        question: 'Soziale Unterschiede zwischen ethnischen Gruppen lassen sich nicht biologisch erklären.',
+        question: 'Социальные различия между этническими группами не могут быть объяснены биологически.',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -97,7 +97,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die sozialen Rollen von Mann und Frau in unserer Gesellschaft können teilweise biologisch erklärt werden.',
+        question: 'Социальные роли женщин и мужчин частично могут быть объяснены биологическими различиями.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -115,7 +115,7 @@ var questions = [
         ]
     },
     {
-        question: 'Hormonelle Unterschiede können manche individuellen Charakterunterschiede zwischen Frauen und Männern erklären.',
+        question: 'Гормональные различия могут объяснить некоторые расхождения в личных характеристиках женщин и мужчин.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -133,7 +133,7 @@ var questions = [
         ]
     },
     {
-        question: 'Sexuelle Übergriffe können zum Teil durch natürliche Triebe erklärt werden.',
+        question: 'Причины изнасилований отчасти кроются в естественных позывах мужчин.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -151,7 +151,7 @@ var questions = [
         ]
     },
     {
-        question: 'Transgender Individuen werden nie wirklich das Geschlecht sein, als das sie identifizieren.',
+        question: 'Трансгендеры никогда не станут людьми желаемого ими пола.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -163,7 +163,7 @@ var questions = [
             }]
     },
     {
-        question: 'Angehörige einer Nation oder Kultur haben unveränderliche Charakteristiken, die sie ausmachen.',
+        question: 'Представители любой нации или культуры обладают некоторыми неизменными характеристиками, которые их определяют.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -175,7 +175,7 @@ var questions = [
             }]
     },
     {
-        question: 'Biologisch gesehen ist die menschliche Spezies für Heterosexualität gemacht.',
+        question: 'С биологической точки зрения, человек создан для гетеросексуальности.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -187,7 +187,7 @@ var questions = [
             }]
     },
     {
-        question: 'Unabhängig vom Kontext ist Egoismus der Hauptantrieb der menschlichen Spezies.',
+        question: 'В любой ситуации люди в первую очередь движимы собственной выгодой.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -200,7 +200,7 @@ var questions = [
     },
     // Internationalism/Nationalism
     {
-        question: 'Grenzen sollten irgendwann abgeschafft werden.',
+        question: 'Рано или поздно границы должны быть упразднены.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -212,7 +212,7 @@ var questions = [
             }]
     },
     {
-        question: 'Menschen sollten für ihre Ideale einstehen, selbst wenn das dazu führt, dass sie ihr Land verraten.',
+        question: 'Люди должны придерживаться своих идеалов, даже если это будет означать предательство своей страны.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -224,7 +224,7 @@ var questions = [
             }]
     },
     {
-        question: 'Mein Land muss für die Schäden aufkommen, die durch die von ihm begangenen Verbrechen in anderen Ländern entstanden sind.',
+        question: 'Моя страна должна выплатить компенсацию за преступления, которые она совершила в отношении других государств.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -236,7 +236,7 @@ var questions = [
             }]
     },
     {
-        question: 'Wenn zwei Länder eine Wirtschaft, soziale Systeme, und ähnliche Umweltnormen teilen, stellt ein freier Handel zwischen ihnen keine Probleme dar.',
+        question: 'Если две страны имеют схожие экономики, социальные системы и экологические нормы, то свободная торговля между ними не имеет отрицательного воздействия.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -248,7 +248,7 @@ var questions = [
             }]
     },
     {
-        question: 'Nationalchauvinismus ist bei sportlichen Wettkämpfen inakzeptabel.',
+        question: 'Национальный шовинизм во время спортивных соревнований неприемлем.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -260,7 +260,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ich bin gleichermaßen besorgt um die Bewohner anderer Länder wie die meines Landes.',
+        question: 'Я в равной степени беспокоюсь о жизни и благосостоянии жителей как моей, так и других стран.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -272,7 +272,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ausländer, die in meinem Land leben, sollten politisch genauso handeln können, wie Menschen mit Staatsangehörigkeit.',
+        question: 'Иностранцы, проживающие в моей стране, должны иметь те же политические права, что и её граждане.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -284,7 +284,7 @@ var questions = [
             }]
     },
     {
-        question: 'Staatsbürger sollten gegenüber Ausländern Priorität haben.',
+        question: 'Граждане государства должны иметь приоритет перед иностранцами.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -296,7 +296,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Werte meines Landes sind denen anderer Länder überlegen.',
+        question: 'Ценности моей страны превосходят ценности остальных стран.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -308,7 +308,7 @@ var questions = [
             }]
     },
     {
-        question: 'Multikulturalismus ist eine Bedrohung für unsere Gesellschaft.',
+        question: 'Мультикультурализм - это угроза нашему обществу.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -320,7 +320,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ein guter Bürger ist ein Patriot.',
+        question: 'Хороший гражданин должен быть патриотом.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -332,7 +332,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist legitim, dass ein Land militärisch im Ausland eingreift, um seine wirtschaftlichen Interessen zu verteidigen.',
+        question: 'Страна имеет право на военное вмешательство в целях защиты своих экономических интересов.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -344,7 +344,7 @@ var questions = [
             }]
     },
     {
-        question: 'Geschichte sollte auf solch eine Weise unterrichtet werden, dass ein Gefühl der Zugehörigkeit zur Nation geschaffen wird.',
+        question: 'Необходимо преподавать историю для создания чувства принадлежности к нации.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -356,7 +356,7 @@ var questions = [
             }]
     },
     {
-        question: 'Forschungen meines Landes sollten anderen Ländern nicht verfügbar sein.',
+        question: 'Исследования, проведённые моей страной, не должны быть доступны другим странам.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -369,7 +369,7 @@ var questions = [
     },
     // Communism/Capitalism
     {
-        question: 'Niemand sollte davon reich werden, ein Geschäft, Häuser, oder Land zu besitzen.',
+        question: 'Никто не должен иметь права разбогатеть от владения бизнесом, жильём или землёй.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -381,7 +381,7 @@ var questions = [
             }]
     },
     {
-        question: 'Löhne von Privatunternehmen sind eine Art des Diebstahls von den Arbeitern.',
+        question: 'Наёмных работников, получающих заработную плату от частных фирм, эти же компании по сути обворовывают.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -393,7 +393,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist wichtig, dass Gesundheit eine Angelegenheit des Staates bleibt.',
+        question: 'Важно, чтобы здравоохранение оставалось в руках государства.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -405,7 +405,7 @@ var questions = [
             }]
     },
     {
-        question: 'Energie- und Verkehrsinfrastruktur sollten eine öffentliche Angelegenheit sein.',
+        question: 'Энергетика и транспортные структуры должны быть государственной собственностью.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -417,7 +417,7 @@ var questions = [
             }]
     },
     {
-        question: 'Patente sollten nicht existieren.',
+        question: 'Патенты не должны существовать.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -429,7 +429,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist notwendig, Versammlungen zu haben, um unsere Produktion den Bedürfnissen der Verbraucher anzupassen.',
+        question: 'Необходимо распределять блага между потребителями, исходя из их потребностей.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -441,7 +441,7 @@ var questions = [
             }]
     },
     {
-        question: 'Der Arbeitsmarkt versklavt die Arbeiter.',
+        question: 'Рынок труда ставит рабочих в положение рабов.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: 'Das Streben nach eigenem Profit ist gesund für die Wirtschaft.',
+        question: 'Поиск собственной прибыли - здоровое явление для экономики.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -465,7 +465,7 @@ var questions = [
             }]
     },
     {
-        question: 'Leistungsunterschiede erklären unterschiedlichen Wohlstand zwischen zwei Personen.',
+        question: 'Различия в уровне богатства между двумя людьми происходят от их личных заслуг и достоинств.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -477,7 +477,7 @@ var questions = [
             }]
     },
     {
-        question: 'Dass manche Schulen und Universitäten privat sind, ist kein Problem.',
+        question: 'Тот факт, что некоторые школы и университеты являются частными, не является проблемой.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -489,7 +489,7 @@ var questions = [
             }]
     },
     {
-        question: 'Betriebsverlagerungen sind ein notwendiges Übel, um Produktion zu steigern.',
+        question: 'Делокализация — необходимое зло для улучшения производства.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -501,7 +501,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist in Ordnung, dass es reiche und arme Menschen gibt.',
+        question: 'Вполне допустимо, что есть как богатые, так и бедные люди.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -513,7 +513,7 @@ var questions = [
             }]
     },
     {
-        question: 'Industriesektoren in privater Hand sind in Ordnung.',
+        question: 'Вполне допустимо, что некоторые отрасли промышленности являются частными.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -525,7 +525,7 @@ var questions = [
             }]
     },
     {
-        question: 'Banken sollten privat bleiben.',
+        question: 'Банки должны оставаться частными.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -538,7 +538,7 @@ var questions = [
     },
     // Regulation/Laissez-faire
     {
-        question: 'Einkommen und Kapital sollten besteuert werden, um Reichtum umzuverteilen.',
+        question: 'Доходы и капитал должны облагаться налогом, чтобы перераспределять богатство.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -550,7 +550,7 @@ var questions = [
             }]
     },
     {
-        question: 'Das Rentenalter sollte gesenkt werden.',
+        question: 'Возраст выхода на пенсию должен быть снижен.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -562,7 +562,7 @@ var questions = [
             }]
     },
     {
-        question: 'Willkürliche Entlassungen sollten verboten sein.',
+        question: 'Увольнения сотрудников должны быть запрещены, за исключением случаев, когда это оправдано.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -574,7 +574,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es sollte einen Mindestlohn geben, um zu garantieren, dass ein Arbeiter von seiner Arbeit leben kann.',
+        question: 'Существование минимальной заработной платы необходимо, чтобы работники могли прожить на плоды своего труда.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -586,7 +586,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist notwendig, private Monopole zu vermeiden.',
+        question: 'Необходимо избегать частных монополий.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -598,7 +598,7 @@ var questions = [
             }]
     },
     {
-        question: 'Schulden der öffentlichen Träger (Staaten, Länder, Gemeinden...) müssen nicht unbedingt zurückgezahlt werden.',
+        question: 'Займы, взятые вне частной сферы (у государства, регионов, коллективов и т.д.), должны быть необязательны к возврату.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -610,7 +610,7 @@ var questions = [
             }]
     },
     {
-        question: 'Manche Branchen oder Arten von Beschäftigung sollten finanziell unterstützt werden.',
+        question: 'Некоторым секторам или типам занятости следует оказывать финансовую поддержку.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -622,7 +622,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Marktwirtschaft ist optimal, wenn sie nicht reguliert wird.',
+        question: 'Рыночная экономика оптимальна тогда, когда не регулируется.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -634,7 +634,7 @@ var questions = [
             }]
     },
     {
-        question: 'Heutzutage sind Arbeitnehmer frei in der Entscheidung, wenn sie einen Vertrag mit dem zukünftigen Arbeitgeber unterschreiben',
+        question: 'В настоящее время сотрудники вольны выбирать, подписывая контракт со своим будущим работодателем',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -646,7 +646,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist notwendig arbeitsrechtliche Regelungen abzuschaffen, damit die Unternehmen angeregt werden, Angestellte einzustellen.',
+        question: 'Необходимо устранить ограничения в трудовом законодательстве, дабы поощрять фирмы к найму.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -658,7 +658,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die legal erlaubte Arbeitszeit sollte erhöht werden.',
+        question: 'Максимально разрешённое рабочее время по закону должно быть увеличено.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -670,7 +670,7 @@ var questions = [
             }]
     },
     {
-        question: 'Umweltvorschriften sollten durch Massenverbrauch und nicht von einer staatlichen Instanz beeinflusst werden.',
+        question: 'Экологические нормы должны определяться массовым потреблением, а не властями.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -682,7 +682,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sozialhilfe hält Leute davon ab zu arbeiten.',
+        question: 'Социальная помощь отбивает у людей охоту работать.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -694,7 +694,7 @@ var questions = [
             }]
     },
     {
-        question: 'Staatseigene Unternehmen sollten wie private Unternehmen verwaltet werden, d. h. nach der Logik des Marktes (Wettbewerb, Rentabilität).',
+        question: 'Государственные компании должны управляться как частные и следовать логике рынка (конкуренция, рентабельность...).',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -707,7 +707,7 @@ var questions = [
     },
     // Progressive/Conservative
     {
-        question: 'Sitten und Traditionen sollten hinterfragt werden.',
+        question: 'Традиции должны быть поставлены под сомнение.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -719,7 +719,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ich habe kein Problem damit, wenn andere Sprachen neben der bisherigen Amtssprache oder statt dieser offizielle Landessprache werden.',
+        question: 'Если в моей стране введут другие государственные языки или заменят существующий на новый, я не буду иметь ничего против.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -731,7 +731,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ehe sollte abgeschafft werden.',
+        question: 'Как таковой брак должен быть отменен.',
         answer: 0,
         valuesYes: [
             {
@@ -749,7 +749,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ausländer bereichern unsere Kultur.',
+        question: 'Иностранцы обогащают нашу культуру.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -761,7 +761,7 @@ var questions = [
             }]
     },
     {
-        question: 'Der Einfluss von Religionen sollte verringert werden.',
+        question: 'Необходимо ограничить влияние религии.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -773,7 +773,7 @@ var questions = [
             }]
     },
     {
-        question: 'Eine Sprache wird von ihren Nutzern bestimmt, nicht von Akademikern.',
+        question: 'Язык определяется его пользователями, а не учеными.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -785,7 +785,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sterbehilfe sollte erlaubt sein.',
+        question: 'Эвтаназия должна быть разрешена.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -797,7 +797,7 @@ var questions = [
             }]
     },
     {
-        question: 'Homosexuelle Personen sollten bezüglich Ehe, Adoption und Fortpflanzung anders behandelt werden als heterosexuelle.',
+        question: 'В отношении брака, усыновления или продолжения рода гомосексуалы не должны иметь тех же прав, что и гетеросексуалы.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -809,7 +809,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Todesstrafe ist unter bestimmten Umständen gerechtfertigt.',
+        question: 'Смертная казнь оправдана при определённых условиях.',
         answer: 0,
         valuesYes: [
             {
@@ -833,7 +833,7 @@ var questions = [
         ]
     },
     {
-        question: 'Technischer Fortschritt darf die Gesellschaft nicht zu schnell verändern.',
+        question: 'Технический прогресс не должен изменять общество слишком быстро.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -845,7 +845,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Schule sollte unsere Werte, Traditionen und grundlegendes Wissen lehren.',
+        question: 'Школа главным образом должна учить нашим ценностям, традициям и фундаментальным знаниям.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -857,7 +857,7 @@ var questions = [
             }]
     },
     {
-        question: 'Abtreibung sollte auf spezifische Fälle begrenzt sein.',
+        question: 'Доступ к абортам следует ограничить за исключением некоторых случаев.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -875,7 +875,7 @@ var questions = [
         ]
     },
     {
-        question: 'Das Hauptziel eines Paares ist, mindestens ein Kind zu bekommen.',
+        question: 'Главное предназначение пары — обзавестись хотя бы одним ребёнком.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -887,7 +887,7 @@ var questions = [
             }]
     },
     {
-        question: 'Abstinenz ist Verhütungsmitteln vorzuziehen, um die wahre Natur des Geschlechtsverkehrs zu bewahren.',
+        question: 'Дабы сохранить естество полового акта, следует отдавать приоритет воздержанию над контрацепцией.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -900,7 +900,7 @@ var questions = [
     },
     // Ecology/Production
     {
-        question: 'Es ist nicht hinnehmbar, dass menschliche Handlungen zum Aussterben einer Spezies führen.',
+        question: 'Недопустимо, чтобы действия людей приводили к исчезновению видов животных.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -912,7 +912,7 @@ var questions = [
             }]
     },
     {
-        question: 'Gentechnisch veränderte Organismen sollten - abgesehen von Forschung und medizinischen Zwecken - verboten sein.',
+        question: 'ГМО должны быть запрещены вне исследований и медицинских целей.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -924,7 +924,7 @@ var questions = [
             }]
     },
     {
-        question: 'Wir müssen die globale Erderwärmung bekämpfen.',
+        question: 'Мы должны бороться с глобальным потеплением.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -936,7 +936,7 @@ var questions = [
             }]
     },
     {
-        question: 'Wir sollten Veränderungen unserer Essgewohnheiten akzeptieren, um die Ausbeutung der Natur einzuschränken.',
+        question: 'Нам следует принять перемены в наших пищевых привычках, чтобы обуздать эксплуатацию природы.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -948,7 +948,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist wichtig eine umweltfreundliche Landwirtschaft zu fördern, die die Artenvielfalt bewahrt, selbst wenn der Ertrag geringer ist.',
+        question: 'Важно поощрять сельское хозяйство, которое поддерживает биологическое разнообразие продуктов питания, даже если от этого пострадает качество или количество.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -960,7 +960,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Erhaltung von ländlichen Ökosystemen is wichtiger als Arbeitsschaffung.',
+        question: 'Сохранение экосистем вне городов важнее, чем создание рабочих мест.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -972,7 +972,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Verringerung von Abfall sollte durch die Verringerung von Produktion erfolgen.',
+        question: 'Сокращение отходов должно осуществляться за счет сокращения производства.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -984,7 +984,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Weltraumkolonisierung ist eine gute Alternative, um den Mangel an Rohstoffen (Seltene Metalle, Öl...) zu überwinden',
+        question: 'Колонизация космоса — хорошее решение проблемы нехватки сырьевых ресурсов на Земле (железо, редкие металлы, топливо и т. д.)',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -996,7 +996,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ökosysteme dauerhaft zu verändern, um menschliche Lebensqualität zu verbessern, ist gerechtfertigt.',
+        question: 'Преобразование экосистем для повышения качества жизни людей — это разумно и приемлемо.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1008,7 +1008,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist notwendig, massiv in die Forschung zu investieren, um die Produktivität zu erhöhen.',
+        question: 'Для повышения производительности необходимо активно инвестировать в исследования.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1020,7 +1020,7 @@ var questions = [
             }]
     },
     {
-        question: 'Der Transhumanismus wird von Vorteil sein, weil er uns ermöglicht, unsere Fähigkeiten zu verbessern.',
+        question: 'Трансгуманизм будет выгоден тем, что позволит нам улучшить наши возможности.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1032,7 +1032,7 @@ var questions = [
             }]
     },
     {
-        question: 'Kernspaltung, sofern vernünftig instand gehalten, ist eine gute Energiequelle.',
+        question: 'При должном обращении, атомная энергетика — благо.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1044,7 +1044,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Verwertung fossiler Brennstoffe ist notwendig.',
+        question: 'Использование ископаемого топлива (нефть, природный газ, уголь и др.) — насущная необходимость.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1056,7 +1056,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ein Ziel der Regierung sollte sein, starkes Wirtschaftswachstum zu erhalten.',
+        question: 'Поддержание сильного экономического роста должно быть целью для правительства.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1069,7 +1069,7 @@ var questions = [
     },
     // Rehabilitative Justice/Punitive Justice
     {
-        question: 'Gefängnisse sollten abgeschafft werden.',
+        question: 'Тюрьмы нужно упразднить.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1081,7 +1081,7 @@ var questions = [
             }]
     },
     {
-        question: 'Minimalstrafen für Vergehen oder Straftaten sind ungerecht.',
+        question: 'Несправедливо устанавливать минимальное наказание за правонарушение или преступление.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1093,7 +1093,7 @@ var questions = [
             }]
     },
     {
-        question: 'Personen, die aus dem Gefängnis entlassen werden, sollten bei ihrer Wiedereingliederung in die Gesellschaft unterstützt werden.',
+        question: 'Людей, отбывших тюремный срок, следует реинтегрировать в общество.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1105,7 +1105,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Justiz sollte immer den Kontext und die Vorgeschichte des Verurteilten beachten und die Strafe dementsprechend anpassen.',
+        question: 'Правосудие должно всегда учитывать контекст и прошлое осужденных и соответствующим образом адаптировать свои наказания.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1117,7 +1117,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Haftbedingungen im Gefängnis sollten deutlich verbessert werden.',
+        question: 'Условия жизни в тюрьме должны быть значительно улучшены.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1129,7 +1129,7 @@ var questions = [
             }]
     },
     {
-        question: 'Das Speichern persönlicher Daten sollte stark eingeschränkt und der Abgleich verschiedener Datenbanken sollte verboten werden.',
+        question: 'Регистрация и хранение личных записей должны быть строго ограничены, и перекрестная проверка баз данных должна быть запрещена.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1141,7 +1141,7 @@ var questions = [
             }]
     },
     {
-        question: 'Das Recht, anonym im Internet zu sein, sollte gewährleistet werden.',
+        question: 'Анонимность в Интернете — неотъемлемое право.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1153,7 +1153,7 @@ var questions = [
             }]
     },
     {
-        question: 'Der Zweck der Justiz sollte es sein, diejenigen zu bestrafen, die gegen das Gesetz verstoßen.',
+        question: 'Цель судебной системы должна заключаться в наказании тех, кто пошел против закона.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1165,7 +1165,7 @@ var questions = [
             }]
     },
     {
-        question: 'Die Polizei sollte bewaffnet sein.',
+        question: 'Полиция должна быть вооружена.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1177,7 +1177,7 @@ var questions = [
             }]
     },
     {
-        question: 'Das Opfern von einigen bürgerlichen Freiheiten ist eine Notwendigkeit, um vor Terroranschlägen zu schützen.',
+        question: 'Нам необходимо пожертвовать некоторыми гражданскими свободами для защиты от терроризма.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1189,7 +1189,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ordnung und Autorität sollten unter allen Umständen respektiert werden.',
+        question: 'Порядок и субординация должны уважаться и соблюдаться при любых обстоятельствах.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1201,7 +1201,7 @@ var questions = [
             }]
     },
     {
-        question: 'Schwere Strafen sind effektiv, da sie abschreckend sind.',
+        question: 'Тяжёлые наказания эффективны как превентивная мера.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1213,7 +1213,7 @@ var questions = [
             }]
     },
     {
-        question: 'Es ist besser, jemand potenziell Gefährlichen präventiv zu verhaften, anstatt sich der Gefahr auszusetzen, dass er eine Straftat begeht.',
+        question: 'Потенционально опасное лицо лучше превентивно арестовать, чем допускать риск совершения им преступлений.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1226,7 +1226,7 @@ var questions = [
     },
     // Revolution/Reform
     {
-        question: 'Ein Generalstreik ist eine guter Weg um neue Rechte zu erwerben.',
+        question: 'Массовая забастовка — хороший способ получить новые права.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1238,7 +1238,7 @@ var questions = [
             }]
     },
     {
-        question: 'Bewaffneter Kampf in einem Land ist manchmal notwendig.',
+        question: 'Вооруженная борьба в стране иногда необходима.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1250,7 +1250,7 @@ var questions = [
             }]
     },
     {
-        question: 'Ein Aufstand ist notwendig um die Gesellschaft nachhaltig zu verändern.',
+        question: 'Для существенных изменений в обществе необходимо восстание.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1262,7 +1262,7 @@ var questions = [
             }]
     },
     {
-        question: 'Aktivismus in bestehenden politischen Organisationen ist nicht relevant um Gesellschaft zu verändern.',
+        question: 'Активизм существующих политических организаций не имеет отношения к изменению общества.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1274,7 +1274,7 @@ var questions = [
             }]
     },
     {
-        question: 'Vom Staat organisierte Wahlen können die Herrschenden nicht hinterfragen.',
+        question: 'Организованные государством выборы не могут изменить действующий баланс сил.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1286,7 +1286,7 @@ var questions = [
             }]
     },
     {
-        question: 'Hacken ist ein legitimes Mittel in politischen Auseinandersetzungen.',
+        question: 'Взлом имеет законное место в политической борьбе.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1298,7 +1298,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sabotage ist unter bestimmten Umständen legitim.',
+        question: 'Саботаж оправдан при определенных условиях.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1310,7 +1310,7 @@ var questions = [
             }]
     },
     {
-        question: 'Aktivisten müssen immer in strikter Übereinstimmung mit dem Gesetz handeln.',
+        question: 'Активисты всегда должны действовать строго в рамках закона.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1322,7 +1322,7 @@ var questions = [
             }]
     },
     {
-        question: 'Revolutionen werden immer schlecht enden.',
+        question: 'Революции всегда дурно заканчиваются.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1334,7 +1334,7 @@ var questions = [
             }]
     },
     {
-        question: 'Das System radikal zu verändern, ist kontraproduktiv. Wir sollten es eher schrittweise ändern.',
+        question: 'Радикально менять систему попросту непродуктивно. Нам скорее стоит преображать её постепенно.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1346,7 +1346,7 @@ var questions = [
             }]
     },
     {
-        question: 'Gewalt gegen Menschen ist niemals sinnvoll.',
+        question: 'Насилие над личностью никогда не бывает продуктивным.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1358,7 +1358,7 @@ var questions = [
             }]
     },
     {
-        question: 'Wir sollten niemals Demonstranten unterstützen, die Gewalt anwenden.',
+        question: 'Мы всегда должны порывать с теми из протестующих, кто использует насилие.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1370,7 +1370,7 @@ var questions = [
             }]
     },
     {
-        question: 'Wir müssen Kompromisse mit der Opposition machen, um unsere Ideen umzusetzen.',
+        question: 'Нам следует идти на компромиссы с оппозицией, чтобы претворить наши идеи в жизнь.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1382,7 +1382,7 @@ var questions = [
             }]
     },
     {
-        question: 'Veränderungen in der eigenen Lebensweise können zu Veränderungen in der Gesellschaft führen.',
+        question: 'Изменения в образе жизни отдельного человека могут вызвать изменения в обществе.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1395,7 +1395,7 @@ var questions = [
     },
     // Bonus Badges
     {
-        question: 'Meine Religion muss so weit verbreitet werden wie möglich.',
+        question: 'Мои религиозные ценности должны быть распостранены как можно шире.',
         answer: 0,
         valuesYes: [{
                 axis: 'reli',
@@ -1404,7 +1404,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'Es ist eine kleine Gruppe, die bewusst und heimlich die Welt beherrscht.',
+        question: 'Существует небольшая группа, которая сознательно и тайно контролирует мир.',
         answer: 0,
         valuesYes: [{
                 axis: 'comp',
@@ -1413,7 +1413,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'Eine gute Politik ist pragmatisch und hat keine Ideologie.',
+        question: 'Хорошая политика — это прагматичная политика без идеологии.',
         answer: 0,
         valuesYes: [{
                 axis: 'prag',
@@ -1422,7 +1422,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'Wir sollten eine Monarchie etablieren um die Menschen zu verbinden und unsere Souveränität zu schützen.',
+        question: 'Нам необходимо установить монархию для объединения народа и сохранения нашего суверенитета.',
         answer: 0,
         valuesYes: [{
                 axis: 'mona',
@@ -1431,7 +1431,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'Menschen sollten Tiere weder essen noch ausbeuten.',
+        question: 'Люди не должны ни есть, ни эксплуатировать животных.',
         answer: 0,
         valuesYes: [{
                 axis: 'vega',
@@ -1440,7 +1440,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'Der Staat sollte abgeschafft werden.',
+        question: 'Государство как таковое следует упразднить.',
         answer: 0,
         valuesYes: [{
                 axis: 'anar',
