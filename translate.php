@@ -8,7 +8,8 @@ $translations = array(
   "fr" => "./langs/fr/static.json",
   "it" => "./langs/it/static.json",
   "es" => "./langs/es/static.json",
-  "zh" => "./langs/zh/static.json"
+  "zh" => "./langs/zh/static.json",
+  "ru" => "./langs/ru/static.json"
 );
 
 /* Get the language from the browser HTTP headers, in the 639-1 format */
