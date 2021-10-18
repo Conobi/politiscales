@@ -80,6 +80,7 @@ header {
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
+  padding-left: 100px;
 }
 
 #footer p, #footer a {
