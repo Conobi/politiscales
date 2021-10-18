@@ -586,7 +586,7 @@ var questions = [
             }]
     },
     {
-        question: 'Il faut empêcher la création de monopoles privés.',
+        question: 'Il est nécessaire d’empêcher la création de monopoles privés.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -1020,7 +1020,7 @@ var questions = [
             }]
     },
     {
-        question: 'Le transhumanisme sera bénéfique car il permettra d\'améliorer nos capacités.',
+        question: 'Le transhumanisme sera bénéfique car il nous permettra d’améliorer nos capacités.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1382,7 +1382,7 @@ var questions = [
             }]
     },
     {
-        question: 'Les changements des modes de vie individuels peuvent provoquer des changements de société.',
+        question: 'Les changements dans le mode de vie d’un individu peut provoquer des changements de société.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1440,7 +1440,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'L\'État doit être aboli.',
+        question: 'L’État doit être aboli.',
         answer: 0,
         valuesYes: [{
                 axis: 'anar',
