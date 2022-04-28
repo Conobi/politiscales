@@ -85,7 +85,7 @@ var questions = [
             }]
     },
     {
-        question: '不同族群之间的社会差异不能通过生理差异来解释。',
+        question: '通过生理差异来解释不同族群之间的社会差异是错误的。',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -115,7 +115,7 @@ var questions = [
         ]
     },
     {
-        question: '男性和女性在人格上的一些差异可以通过激素的不同来解释。',
+        question: '男性和女性在人格上的一些差异可以通过激素水平的不同来解释。',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -175,7 +175,7 @@ var questions = [
             }]
     },
     {
-        question: '人类的生理结构注定了人类是异性恋的生物。',
+        question: '人类的生理结构决定了人类生下来就注定是异性恋。',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -797,7 +797,7 @@ var questions = [
             }]
     },
     {
-        question: '同性恋者在婚姻、亲子关系、收养或生育方面，不应与异性恋者同等对待。',
+        question: '在婚姻、亲子关系、收养或生育方面，不应像对异性恋者那样平等对待同性恋者。',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -1413,7 +1413,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: '一个好的政策应该是实用主义的和没有意识形态的。',
+        question: '一个好的政策应该是实用为上的，不该有基于观念的取向。',
         answer: 0,
         valuesYes: [{
                 axis: 'prag',
@@ -1440,7 +1440,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: '联邦应该被废除。',
+        question: '国家应该被废除。',
         answer: 0,
         valuesYes: [{
                 axis: 'anar',
