@@ -1,7 +1,7 @@
 var questions = [
     // Constructivism/Essentialism
     {
-        question: '女性不是天生的，而是被建构的。',
+        question: '作为社会角色的女性概念，不是与生俱来的，而是被社会影响的。',
         answer: 0,
         valuesYes: [
             {
