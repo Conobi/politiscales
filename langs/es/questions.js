@@ -248,7 +248,7 @@ var questions = [
             }]
     },
     {
-        question: 'El chovinismo durante competiciones deportivas no es acetable.',
+        question: 'El chovinismo durante competiciones deportivas no es aceptable.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: 'Buscar su beneficio personal es saludable para la economía.',
+        question: 'Buscar el beneficio propio es saludable para la economía.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -900,7 +900,7 @@ var questions = [
     },
     // Ecology/Production
     {
-        question: 'No es acetable que las acciones humanas conduzcan a la extinción de las especies.',
+        question: 'No es aceptable que las acciones humanas conduzcan a la extinción de las especies.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -1020,7 +1020,7 @@ var questions = [
             }]
     },
     {
-        question: 'El transhumanismo será beneficioso porque va a permitirnos mejorar nuestras capacidades.',
+        question: 'El trans-humanismo será beneficioso porque nos va a permitir mejorar nuestras capacidades.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1382,7 +1382,7 @@ var questions = [
             }]
     },
     {
-        question: 'Los cambios en la manera de vida de un individuo pueden inducir cambios en la sociedad.',
+        question: 'Los cambios en el estilo de vida de un individuo pueden inducir cambios en la sociedad.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
