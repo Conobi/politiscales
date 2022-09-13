@@ -61,7 +61,7 @@ var questions = [
             }]
     },
     {
-        question: '没有人天生更容易去犯罪。',
+        question: '没人是天生的罪犯。',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -212,7 +212,7 @@ var questions = [
             }]
     },
     {
-        question: '即使信念会使人背叛国家，人们也应当忠于信念。',
+        question: '即使理想会使人背叛国家，人们也应当为其挺身而出。',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -393,7 +393,7 @@ var questions = [
             }]
     },
     {
-        question: '健康产业必须保持在公众领域。',
+        question: '健康产业必须保证公有。',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -429,7 +429,7 @@ var questions = [
             }]
     },
     {
-        question: '有必要要求企业根据消费者需求的比例来生产。',
+        question: '有必要根据社会需求组织社会生产。',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: '关注个人利益有助于经济。',
+        question: '增进私人盈利有助于经济。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -477,7 +477,7 @@ var questions = [
             }]
     },
     {
-        question: '一些学校和大学可以是私立的，这不成问题。',
+        question: '教育机构可以是私立的，这不成问题。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -513,7 +513,7 @@ var questions = [
             }]
     },
     {
-        question: '一些工业部门由私人所有是可以接受的。',
+        question: '工业的私有制是可以接受的。',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -538,7 +538,7 @@ var questions = [
     },
     // Regulation/Laissez-faire
     {
-        question: '应该向个人收入与资本征税以重新分配财富。',
+        question: '应该向个人收入和资本征税以重新分配财富。',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -646,7 +646,7 @@ var questions = [
             }]
     },
     {
-        question: '有必要废除劳动法规中的规定以鼓励企业雇佣劳动力。',
+        question: '有必要废除劳动法以鼓励企业雇佣劳动力。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -670,7 +670,7 @@ var questions = [
             }]
     },
     {
-        question: '环境保护法规应该受广大消费者而不是权威机构的影响。',
+        question: '环境保护法规应该受大众消费而不是权威机构的影响。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -682,7 +682,7 @@ var questions = [
             }]
     },
     {
-        question: '社会援助使人们懈怠于工作。',
+        question: '社会援助使人懒惰。',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -773,7 +773,7 @@ var questions = [
             }]
     },
     {
-        question: '一门语言应由它的使用者而不是学者来定义。',
+        question: '一门语言应由它的使用者而不是权威学者来定义。',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -845,7 +845,7 @@ var questions = [
             }]
     },
     {
-        question: '学校应该主要传授我们的价值观、传统和基本知识。',
+        question: '学校应该仅是传授我们的价值观、传统和基本知识。',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -857,7 +857,7 @@ var questions = [
             }]
     },
     {
-        question: '堕胎应该只在一些特定情况下被允许。',
+        question: '堕胎应该仅在特定情况下被允许。',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -1177,7 +1177,7 @@ var questions = [
             }]
     },
     {
-        question: '牺牲一些公民自由是打击恐怖袭击的必要之举。',
+        question: '公民自由的牺牲是打击恐怖主义的必要代价',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1286,7 +1286,7 @@ var questions = [
             }]
     },
     {
-        question: '黑客行为在政治斗争中有着合法的地位。',
+        question: '黑客行为在政治斗争中有合法地位。',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1298,7 +1298,7 @@ var questions = [
             }]
     },
     {
-        question: '在某些特定情况下，破坏行为是正当的。',
+        question: '某些时候破坏行为是正当的。',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1346,7 +1346,7 @@ var questions = [
             }]
     },
     {
-        question: '针对个人的暴力永远不会有效果。',
+        question: '对个人施暴永远无伤大雅。',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1440,7 +1440,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: '联邦应该被废除。',
+        question: '国家应该被废除。',
         answer: 0,
         valuesYes: [{
                 axis: 'anar',
