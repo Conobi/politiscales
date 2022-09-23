@@ -489,7 +489,7 @@ var questions = [
             }]
     },
     {
-        question: 'Offshoring and outsourcing are necessary evils to improve production.',
+        question: 'Offshoring and outsourcing are necessary to improve production.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -1081,7 +1081,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is unfair to set a minimal penalty for an offense or a crime.',
+        question: 'It is unfair to set a mandatory minimum penalty for an offense or a crime.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1201,7 +1201,7 @@ var questions = [
             }]
     },
     {
-        question: 'Heavy penalties are efficient because they are dissuasive.',
+        question: 'Heavy penalties are efficient because they are a deterrent.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1422,7 +1422,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'We need to establish a monarchy to federate the people and preserve our sovereignty.',
+        question: 'We need to establish a monarchy to unite the people and preserve our sovereignty.',
         answer: 0,
         valuesYes: [{
                 axis: 'mona',
