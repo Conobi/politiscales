@@ -12,11 +12,12 @@
     <?php if($page_type != "quiz"): ?>
       <select class="language">
         <option value="en" data-i18n="english"><?= $i18n->get("english") ?></option>
+        <option value="es" data-i18n="spanish"><?= $i18n->get("spanish") ?></option>
         <option value="fr" data-i18n="french"><?= $i18n->get("french") ?></option>
         <option value="it" data-i18n="italian"><?= $i18n->get("italian") ?></option>
-        <option value="es" data-i18n="spanish"><?= $i18n->get("spanish") ?></option>
-        <option value="zh" data-i18n="chinese"><?= $i18n->get("chinese") ?></option>
         <option value="ru" data-i18n="russian"><?= $i18n->get("russian") ?></option>
+        <option value="zh" data-i18n="chinese"><?= $i18n->get("chinese") ?></option>
+        <option value="ar" data-i18n="arabic"><?= $i18n->get("arabic") ?></option>
       </select>
     <?php endif; ?>
   </div>
