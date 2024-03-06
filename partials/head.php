@@ -27,11 +27,12 @@
   </script>
   <?php if ($page_type !== 'results'): ?>
     <link rel="alternate" href="<?= "https://politiscales.fr".explode('?',$_SERVER['REQUEST_URI'], 2)[0] ?>" hreflang="fr" />
+    <link rel="alternate" href="<?= "https://politiscales.party".explode('?',$_SERVER['REQUEST_URI'], 2)[0]."?lang=ar" ?>" hreflang="ar" />
     <link rel="alternate" href="<?= "https://politiscales.party".explode('?',$_SERVER['REQUEST_URI'], 2)[0]."?lang=en" ?>" hreflang="en" />
-    <link rel="alternate" href="<?= "https://politiscales.party".explode('?',$_SERVER['REQUEST_URI'], 2)[0]."?lang=it" ?>" hreflang="it" />
     <link rel="alternate" href="<?= "https://politiscales.party".explode('?',$_SERVER['REQUEST_URI'], 2)[0]."?lang=es" ?>" hreflang="es" />
-    <link rel="alternate" href="<?= "https://politiscales.party".explode('?',$_SERVER['REQUEST_URI'], 2)[0]."?lang=zh" ?>" hreflang="zh" />
+    <link rel="alternate" href="<?= "https://politiscales.party".explode('?',$_SERVER['REQUEST_URI'], 2)[0]."?lang=it" ?>" hreflang="it" />
     <link rel="alternate" href="<?= "https://politiscales.party".explode('?',$_SERVER['REQUEST_URI'], 2)[0]."?lang=ru" ?>" hreflang="ru" />
+    <link rel="alternate" href="<?= "https://politiscales.party".explode('?',$_SERVER['REQUEST_URI'], 2)[0]."?lang=zh" ?>" hreflang="zh" />
   <?php endif; ?>
   <script src="./src/jquery.i18n.js"></script>
   <script src="./src/jquery.i18n.messagestore.js"></script>

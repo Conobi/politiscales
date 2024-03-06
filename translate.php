@@ -4,12 +4,13 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 $translations = array(
+  "ar" => "./langs/ar/static.json",
   "en" => "./langs/en/static.json",
+  "es" => "./langs/es/static.json",
   "fr" => "./langs/fr/static.json",
   "it" => "./langs/it/static.json",
-  "es" => "./langs/es/static.json",
-  "zh" => "./langs/zh/static.json",
-  "ru" => "./langs/ru/static.json"
+  "ru" => "./langs/ru/static.json",
+  "zh" => "./langs/zh/static.json"
 );
 
 /* Get the language from the browser HTTP headers, in the 639-1 format */

@@ -1,7 +1,7 @@
 var questions = [
     // Constructivism/Essentialism
     {
-        question: '“One is not born, but rather becomes, a woman.”',
+        question: '“المرأة لا تولد امرأة، بل تُصبح كذلك.”',
         answer: 0,
         valuesYes: [
             {
@@ -19,7 +19,7 @@ var questions = [
             }]
     },
     {
-        question: 'Differences in treatment and quality of life in our society show that racism is still omnipresent.',
+        question: 'التباينات في المعاملة بين الناس و نوعية الحياة في مجتمعاتنا تبيّن أن العنصرية لا تزال حاضرة.',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -31,7 +31,7 @@ var questions = [
             }]
     },
     {
-        question: 'All sciences, even chemistry and biology are not uncompromising and are conditioned by our society.',
+        question: 'كل العلوم، بما فيها الكيمياء و الفيزياء، ليست بلا ميل بل تتأثر بطبيعة المجتمع.',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -43,7 +43,7 @@ var questions = [
             }]
     },
     {
-        question: 'The categories “women” and “men” are social constructs that should be given up.',
+        question: 'التصنيفان “نساء” و “رجال” بناءان اجتماعيان ينبغي التخلّص منهما.',
         answer: 0,
         valuesYes: [
             {
@@ -61,7 +61,7 @@ var questions = [
             }]
     },
     {
-        question: 'Nobody is by nature predisposed to criminality.',
+        question: 'لا أحد مُجرم بالسليقة.',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -73,7 +73,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sexual orientation is a social construct',
+        question: 'الميل الجنسي بنية اجتماعية',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -85,7 +85,7 @@ var questions = [
             }]
     },
     {
-        question: 'Social differences between ethnic groups cannot be explained by biology.',
+        question: 'الاختلافات الاجتماعية بين المجموعات العرقية لا يمكن تفسيرها بيولوجيًّا.',
         answer: 0,
         valuesYes: [{
                 axis: 'c0',
@@ -97,7 +97,7 @@ var questions = [
             }]
     },
     {
-        question: 'The social roles of women and men can partly be explained by biological differences.',
+        question: 'الأدوار الاجتماعية للنساء و الرجال يمكن عزوها جزئيًّا إلى الاختلافات البيولوجيًة.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -115,7 +115,7 @@ var questions = [
         ]
     },
     {
-        question: 'Hormonal differences can explain some differences in individual characteristics between women and men.',
+        question: 'الاختلافات الهرمونية تفسّر بعض الاختلافات في الخصال الشخصية بين النساء و الرجال.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -133,7 +133,7 @@ var questions = [
         ]
     },
     {
-        question: 'Sexual assaults are partly caused by natural impulse.',
+        question: 'النزعة الطبيعية دافع جزئيٌّ للاعتداءات الجنسية.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -151,7 +151,7 @@ var questions = [
         ]
     },
     {
-        question: 'Transgender individuals will never really be of the gender they identify as.',
+        question: 'الأشخاص المتحوّلون جنسيا لا يمكن أن يصبحوا فعليًّا من الجنس الذي يعرّفون به أنفسهم.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -163,7 +163,7 @@ var questions = [
             }]
     },
     {
-        question: 'Members of a nation or culture have some unchangeable characteristics that define them.',
+        question: 'الأفراد المنتمون إلى شعب أو ثقافة ما تجمعهم بعض الخصال المميزة التي لا يمكن تغييرها.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -175,7 +175,7 @@ var questions = [
             }]
     },
     {
-        question: 'Biologically, human beings are meant for heterosexuality.',
+        question: 'البشر من الناحية البيولوجيّة مغايري الجنس.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -187,7 +187,7 @@ var questions = [
             }]
     },
     {
-        question: 'Selfishness is the overriding drive in the human species, no matter the context.',
+        question: 'الأنانية هي الدافع الأقوى للجنس البشري أيًّا كان السياق.',
         answer: 0,
         valuesYes: [{
                 axis: 'c1',
@@ -200,7 +200,7 @@ var questions = [
     },
     // Internationalism/Nationalism
     {
-        question: 'Borders should eventually be abolished.',
+        question: 'الحدود ينبغي أن تُزال.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -212,7 +212,7 @@ var questions = [
             }]
     },
     {
-        question: 'People need to stand up for their ideals, even if it leads them to betray their country.',
+        question: 'ينبغي أن يتمسك الناس بقيمهم حتّى إن أدّى ذلك إلى خيانة بلدهم.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -224,7 +224,7 @@ var questions = [
             }]
     },
     {
-        question: 'My country must pay for the damages caused by the crimes it committed in other countries.',
+        question: 'يجب أن تدفع بلدي تعويضات عن الجرائم التي ارتكبتها في بلاد أخرى.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -236,7 +236,7 @@ var questions = [
             }]
     },
     {
-        question: 'If two countries have similar economies, social systems and environmental norms, then the free market between them has no negative impact.',
+        question: 'إن كانت لدولتين ظروف اقتصادية و اجتماعية و بيئية متقاربة فإنّ السوق الحرّة بينهما لن يكون لها أثر سلبي.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -248,7 +248,7 @@ var questions = [
             }]
     },
     {
-        question: 'National Chauvinism during sports competitions is not acceptable.',
+        question: 'الشوفينية القومية أثناء المباريات الرياضية غير مقبولة.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -260,7 +260,7 @@ var questions = [
             }]
     },
     {
-        question: 'I am equally concerned about the inhabitants of my country and those of other the countries.',
+        question: 'أهتمُّ بأحوال سكّان البلاد الأخرى بقدر اهتمامي بأحوال أهل بلدي.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -272,7 +272,7 @@ var questions = [
             }]
     },
     {
-        question: 'Foreigners living in my country should be allowed to act politically, equally to those who have the nationality.',
+        question: 'الأجانب المقيمون في بلدي ينبغي أن يُسمح لهم بالمشاركة السياسية بنفس القدر الذي لمن لديهم الجنسية.',
         answer: 0,
         valuesYes: [{
                 axis: 'b0',
@@ -284,7 +284,7 @@ var questions = [
             }]
     },
     {
-        question: 'Citizens should take priority over foreigners.',
+        question: 'المواطنون ينبغي أن تكون لهم الأولوية على الأجانب.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -296,7 +296,7 @@ var questions = [
             }]
     },
     {
-        question: 'The values of my country are superior to those of other countries.',
+        question: 'القيم المتمثّلة في بلدي أفضل مما في البلاد الأخرى.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -308,7 +308,7 @@ var questions = [
             }]
     },
     {
-        question: 'Multiculturalism is a threat to our society.',
+        question: 'التعدّديّة الثقافية تهدد مجتمعنا.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -320,7 +320,7 @@ var questions = [
             }]
     },
     {
-        question: 'A good citizen is a patriot.',
+        question: 'المواطن الصالح هو من يتّصف بالوطنية.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -332,7 +332,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is legitimate for a country to intervene militarily to defend its economic interests.',
+        question: 'من المشروع تدخل الدول عسكريًّا للدفاع عن مصالحها الاقتصادية.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -344,7 +344,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to teach history in order to create a sense of belonging to the nation.',
+        question: 'من الضروري تعليم التاريخ لأجل ترسيخ الانتماء إلى الأمّة.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -356,7 +356,7 @@ var questions = [
             }]
     },
     {
-        question: 'Research produced by my country should not be available to other countries.',
+        question: 'البحث العلمي الحاصل في بلد ما ينبغي أن يُتاح للبلاد الأخرى.',
         answer: 0,
         valuesYes: [{
                 axis: 'b1',
@@ -369,7 +369,7 @@ var questions = [
     },
     // Communism/Capitalism
     {
-        question: 'No one should get rich from owning a business, housing, or land.',
+        question: 'لا يجوز لأحد أن يصبح غنيًّا نتيجة تملُّك عمل تجاري أو عقار أو أرض.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -381,7 +381,7 @@ var questions = [
             }]
     },
     {
-        question: 'Wage labor is a form of theft from the worker by companies.',
+        question: 'َالأجر عن العمل من ضروب سرقةِ الشركاتِ العمّال.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -393,7 +393,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is important that health should stay a public matter.',
+        question: 'من المهم استبقاء الرعاية الصحية قطاعًا عموميًّا.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -405,7 +405,7 @@ var questions = [
             }]
     },
     {
-        question: 'Energy and transport structures should be a public matter.',
+        question: 'الطاقة و هيكل المواصلات ينبغي أن تكون قطاعات عمومية.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -417,7 +417,7 @@ var questions = [
             }]
     },
     {
-        question: 'Patents should not exist.',
+        question: 'ينبغي ألا توجد براءات الاختراع.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -429,7 +429,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to implement assemblies to ration our production to the consumers according to their needs.',
+        question: 'من المهم إنشاء وحداتٍ تُكيّف الإنتاجَ وفق احتياجات المستهلكين.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -441,7 +441,7 @@ var questions = [
             }]
     },
     {
-        question: 'The labor market enslaves workers.',
+        question: 'سوق العمل استعباد للعمّال.',
         answer: 0,
         valuesYes: [{
                 axis: 'p0',
@@ -453,7 +453,7 @@ var questions = [
             }]
     },
     {
-        question: 'Looking for one’s own profit is healthy for the economy.',
+        question: 'السعي وراء الربح الشخصي مفيد للاقتصاد.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -465,7 +465,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is merit that explains differences of wealth between two individuals.',
+        question: 'الجدارة تفسّر التباين في الثروة بين الأفراد.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -477,7 +477,7 @@ var questions = [
             }]
     },
     {
-        question: 'The fact that some schools and universities are private is not a problem.',
+        question: 'وجود بعض المدارس و الجامعات الخاصّة ليس مشكلة.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -489,7 +489,7 @@ var questions = [
             }]
     },
     {
-        question: 'Offshoring and outsourcing are necessary evils to improve production.',
+        question: 'التعاقد الخارجي عبر الحدود شرّ لا بد منه لتحسين الإنتاج.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -501,7 +501,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is acceptable that there are rich and poor people.',
+        question: 'من المقبول وجود أغنياء و فقراء.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -513,7 +513,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is acceptable that some industry sectors are private.',
+        question: 'من المقبول وجود بعض القطاعات الصناعية الخاصّة.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -525,7 +525,7 @@ var questions = [
             }]
     },
     {
-        question: 'Banks should remain private.',
+        question: 'البنوك ينبغي أن تبقى خاصّة.',
         answer: 0,
         valuesYes: [{
                 axis: 'p1',
@@ -538,7 +538,7 @@ var questions = [
     },
     // Regulation/Laissez-faire
     {
-        question: 'Revenues and capital should be taxed to redistribute wealth.',
+        question: 'ينبغي فرض الضرائب على الريوع و رؤوس المال لإعادة توزيع الثروة.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -550,7 +550,7 @@ var questions = [
             }]
     },
     {
-        question: 'We should be retiring earlier.',
+        question: 'ينبغي تقليل سنّ القاعد.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -562,7 +562,7 @@ var questions = [
             }]
     },
     {
-        question: 'Dismissals of employees should be forbidden except if it is justified.',
+        question: 'الاستغناء عن الموظفين ينبغي أن يكون ممنوعًا إلا بوجود أسباب.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -574,7 +574,7 @@ var questions = [
             }]
     },
     {
-        question: 'Minimal levels of salary should be ensured to make sure that a worker can live of their work.',
+        question: 'ينبغي ضمان حد أدنى للأجور لضمان قدرة العمّال على العيش من عملهم.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -586,7 +586,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to avoid a private monopoly.',
+        question: 'من الضروري تجنّب الاحتكارات الخاصّة.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -598,7 +598,7 @@ var questions = [
             }]
     },
     {
-        question: 'Loans contracted by the public sector (states, regions, communities) do not necessarily have to be repaid.',
+        question: 'ديون القطاعات العامّة (الدول و الأقاليم و المجتمعات) لا يلزم سدادها.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -610,7 +610,7 @@ var questions = [
             }]
     },
     {
-        question: 'Some sectors or type of employment should be financially supported.',
+        question: 'بعض قطاعات أو أنواع التوظيف ينبغي دعمها ماليًّا.',
         answer: 0,
         valuesYes: [{
                 axis: 'm0',
@@ -622,7 +622,7 @@ var questions = [
             }]
     },
     {
-        question: 'Market economy is optimal when it is not regulated.',
+        question: 'اقتصاد السوق يعمل كما ينبغي عندما لا يفرض عليه تننظيم.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -634,7 +634,7 @@ var questions = [
             }]
     },
     {
-        question: 'Nowadays employees are free to choose when signing a contract with their future employer',
+        question: 'في هذه الأيّام، للموظفين حريّة الاختيار عند إمضاء عقود التوظيف.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -646,7 +646,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to remove regulations in labor legislation to encourage firms to hire.',
+        question: 'من الضروري إزالة القيود في قوانين العمل لتشجيع الشركات على التوظيف.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -658,7 +658,7 @@ var questions = [
             }]
     },
     {
-        question: 'The maximum allowed hours in the legal work week should be increased.',
+        question: 'تنبغي زيادة الحدّ الأقصى القانوني لساعات العمل في الأسبوع.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -670,7 +670,7 @@ var questions = [
             }]
     },
     {
-        question: 'Environmental norms should be influenced by mass consumption and not from an authority.',
+        question: 'المقبول بيئيًّا ينبغي أن يتحدّد بناء على الاستهلاء الجمعي لا من قِبَل السلطات.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -682,7 +682,7 @@ var questions = [
             }]
     },
     {
-        question: 'Social assistance deters people from working.',
+        question: 'الدعم الاجتماعي يُثْني الناس عن العمل.',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -694,7 +694,7 @@ var questions = [
             }]
     },
     {
-        question: 'State-run companies should be managed like private ones and follow the logic of the market (competition, profitability...).',
+        question: 'الشركات التي تملكها الدولة ينبغي أن تُدار مثل الشركات الخاصّة و أن تتّبع منطق السوق (المنافسة و الربحية، …إلخ)',
         answer: 0,
         valuesYes: [{
                 axis: 'm1',
@@ -707,7 +707,7 @@ var questions = [
     },
     // Progressive/Conservative
     {
-        question: 'Traditions should be questioned.',
+        question: 'تنبغي مساءلة العادات المجتمعية.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -719,7 +719,7 @@ var questions = [
             }]
     },
     {
-        question: 'I do not have any problem if other official languages are added or replace the already existing official language in my country.',
+        question: 'لا أرى مشكلة في إضافة لغات رسمية في بلدي أو استبدال اللغات الرسمية الحاليّة.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -731,7 +731,7 @@ var questions = [
             }]
     },
     {
-        question: 'Marriage should be abolished.',
+        question: 'ينبغي إبطال الزواج.',
         answer: 0,
         valuesYes: [
             {
@@ -749,7 +749,7 @@ var questions = [
             }]
     },
     {
-        question: 'Foreigners enrich our culture.',
+        question: 'الأجانب يغنون ثقافتنا.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -761,7 +761,7 @@ var questions = [
             }]
     },
     {
-        question: 'The influence of religion should decrease.',
+        question: 'ينبغي تقليل أثر العقيدة الدينية.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -773,7 +773,7 @@ var questions = [
             }]
     },
     {
-        question: 'A language is defined by its users, not by scholars.',
+        question: 'الناس هم من يشكلّون اللغة لا اللغويون.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -785,7 +785,7 @@ var questions = [
             }]
     },
     {
-        question: 'Euthanasia should be authorized.',
+        question: 'ينبغي التصريح بإنهاء الحياة الرحيم.',
         answer: 0,
         valuesYes: [{
                 axis: 's0',
@@ -797,7 +797,7 @@ var questions = [
             }]
     },
     {
-        question: 'Homosexuals should not be treated equally to heterosexuals in regards to marriage, parentage, adoption or procreation.',
+        question: 'المثليون ينبغي ألا يعاملوا مثل مغايري الجنس فيما يتعلّق بالزواج و رعاية الأطفال و التبني و الإنجاب.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -809,7 +809,7 @@ var questions = [
             }]
     },
     {
-        question: 'In some specific conditions the death penalty is justified.',
+        question: 'في بعض الحالات الخاصّة يكون الإعدام مقبولا.',
         answer: 0,
         valuesYes: [
             {
@@ -833,7 +833,7 @@ var questions = [
         ]
     },
     {
-        question: 'Technological progress must not change society too quickly.',
+        question: 'التقدّم التقني يجب ألّا يغيّر المجتمعات بسرعة كبيرة.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -845,7 +845,7 @@ var questions = [
             }]
     },
     {
-        question: 'School should mostly teach our values, traditions, and fundamental knowledge.',
+        question: 'ينبغي أن تُدرَّس في المدارس قيمنا و عاداتنا و العلوم الأساسية.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -857,7 +857,7 @@ var questions = [
             }]
     },
     {
-        question: 'Abortion should be limited to specific cases.',
+        question: 'الإجهاض ينبغي أن يقتصر على حالات خاصّة.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -875,7 +875,7 @@ var questions = [
         ]
     },
     {
-        question: 'The main goal of a couple is to make at least one child.',
+        question: 'الغرض الأساسي من العلاقة بين الزوجين إنجاب الأطفال.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -887,7 +887,7 @@ var questions = [
             }]
     },
     {
-        question: 'Abstinence should be preferred to contraception, to preserve the true nature of the sexual act.',
+        question: 'التعفّف ينبغي أن يفضّل على موانع الحمل و ذلك للحفاظ على الطبيعة الحقّة للفعل الجنسي.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
@@ -900,7 +900,7 @@ var questions = [
     },
     // Ecology/Production
     {
-        question: 'It is not acceptable that human actions should lead to the extinction of species.',
+        question: 'من غير المقبول أن تؤدّي أفعال الإنسان إلى انقراض الأنواع الحيّة.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -912,7 +912,7 @@ var questions = [
             }]
     },
     {
-        question: 'GMOs should be forbidden outside research and medical purposes.',
+        question: 'الأصناف المعدّلة وراثيًّا ينبغي أن يقتصر وجودها على الأغراض البحثية و الطبيّة.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -924,7 +924,7 @@ var questions = [
             }]
     },
     {
-        question: 'We must fight against global warming.',
+        question: 'يجب أن نُناضل ضد التغيّر المناخي.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -936,7 +936,7 @@ var questions = [
             }]
     },
     {
-        question: 'We should accept changes in our way of consuming food to limit the exploitation of nature.',
+        question: 'ينبغي أن نقبل التغيّر في أنماط استهلاكنا الغذاءَ لتقليل تخريب البيئة.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -948,7 +948,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is important to encourage an agriculture that maintains a food biodiversity, even if the output is inferior.',
+        question: 'من المهم تشجيع نمط زراعي يحافظ على التنوع الأحيائي حتّى إن كانت إنتاجيته أقل.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -960,7 +960,7 @@ var questions = [
             }]
     },
     {
-        question: 'Preserving non-urban ecosystems is more important than creating jobs.',
+        question: 'الحفاظ على النظم البيئية غير المدنية أهم من زيادة فرص العمل.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -972,7 +972,7 @@ var questions = [
             }]
     },
     {
-        question: 'Reduction of waste should be done by reducing production.',
+        question: 'تقليل النفاية ينبغي أن يكون بتقليل الإنتاج.',
         answer: 0,
         valuesYes: [{
                 axis: 'e0',
@@ -984,7 +984,7 @@ var questions = [
             }]
     },
     {
-        question: 'Space colonization is a good solution for supplying the lack of raw material on Earth (iron, rare metals, fuel...)',
+        question: 'استعمار الفضاء حلّ جيّد لتوفير المواد الخام للأرض (الحديد و الفلزّات النادرة و الوقود، …إلخ)',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -996,7 +996,7 @@ var questions = [
             }]
     },
     {
-        question: 'Transforming ecosystems durably to increase the quality of life of human beings is legitimate.',
+        question: 'من المشروع تغيير النظم البيئات على نحو غير عكوس بغرض تحسين نوعية حياة الإنسان.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1008,7 +1008,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is necessary to massively invest in research to improve productivity.',
+        question: 'من الضروري الاستثمار بكثافة في البحث العلمي لتحسين الإنتاجية.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1020,7 +1020,7 @@ var questions = [
             }]
     },
     {
-        question: 'Trans-humanism will be beneficial because it will allow us to improve our capacities.',
+        question: 'مابعدالإنسانية (تعديل الإنسان) سيفيدنا لأنّه سيمكنّنا من تحسين قدراتنا.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1032,7 +1032,7 @@ var questions = [
             }]
     },
     {
-        question: 'Nuclear fission, when well maintained, is a good source of energy.',
+        question: 'الانشطار النووي، عند حسن إدارته، مصدر جيّد للطاقة.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1044,7 +1044,7 @@ var questions = [
             }]
     },
     {
-        question: 'Exploitation of fossil fuels is necessary.',
+        question: 'استغلال الوقود الأحفوري ضروري.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1056,7 +1056,7 @@ var questions = [
             }]
     },
     {
-        question: 'Maintaining strong economic growth should be an objective for the government.',
+        question: 'الحفاظ على النمو الاقتصادي ينبغي أن يكون من أهداف الحكومة.',
         answer: 0,
         valuesYes: [{
                 axis: 'e1',
@@ -1069,7 +1069,7 @@ var questions = [
     },
     // Rehabilitative Justice/Punitive Justice
     {
-        question: 'Prisons should no longer exist.',
+        question: 'السجون ينبغي أن تزول.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1081,7 +1081,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is unfair to set a minimal penalty for an offense or a crime.',
+        question: 'ليس من العدل تقنين حدّ أدنى للعقوبة جرّاء جنحة أو جناية.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1093,7 +1093,7 @@ var questions = [
             }]
     },
     {
-        question: 'Individuals who get out of prison should be assisted in their reinsertion.',
+        question: 'الأشخاص الخارجون من السجن تنبغي مساعدتهم على إعادة الاندماج في المجتمع.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1105,7 +1105,7 @@ var questions = [
             }]
     },
     {
-        question: 'Justice should always take into consideration the context and the past of the condemned and adapt their penalty accordingly.',
+        question: 'ينبغي لمرفق العدالة دومًا أن يأخذ في الاعتبار السياق و تاريخ المحكوم عليه لتكييف العقوبة.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1117,7 +1117,7 @@ var questions = [
             }]
     },
     {
-        question: 'Conditions of life in jail should be greatly improved.',
+        question: 'ظروف الحياة في السجون ينبغي أن تُحسّن كثيرًا.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1129,7 +1129,7 @@ var questions = [
             }]
     },
     {
-        question: 'The filing and storage of personal records should be delimited strictly and database cross-checking should be forbidden.',
+        question: 'حفظ البيانات الشخصية ينبغي تقييده بصرامة و الاستعلامات عابرة قواعد البيانات ينبغي منعه.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1141,7 +1141,7 @@ var questions = [
             }]
     },
     {
-        question: 'The right to be anonymous on Internet should be guaranteed.',
+        question: 'ينبغي ضمان الحق في المجهولية على الإنترنت.',
         answer: 0,
         valuesYes: [{
                 axis: 'j0',
@@ -1153,7 +1153,7 @@ var questions = [
             }]
     },
     {
-        question: 'The purpose of the judiciary system should be to punish those who went against the law.',
+        question: 'ينبغي أن يكون الغرض من مرفق العدالة معاقبة من يخالفون القانون.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1165,7 +1165,7 @@ var questions = [
             }]
     },
     {
-        question: 'The police should be armed.',
+        question: 'ينبغي تسليح الشرطة.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1177,7 +1177,7 @@ var questions = [
             }]
     },
     {
-        question: 'The sacrifice of some civil liberties is a necessity in order to be protected from terrorist acts.',
+        question: 'التضحية ببعض الحقوق المدنية ضروري للحماية من الأفعال الإرهابيّة.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1189,7 +1189,7 @@ var questions = [
             }]
     },
     {
-        question: 'Order and authority should be respected in all circumstances.',
+        question: 'النظام و السلطة ينبغي احترامهما في كل الظروف.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1201,7 +1201,7 @@ var questions = [
             }]
     },
     {
-        question: 'Heavy penalties are efficient because they are dissuasive.',
+        question: 'العقوبات القاسية فعّالة لأنها رادعة.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1213,7 +1213,7 @@ var questions = [
             }]
     },
     {
-        question: 'It is better to arrest someone potentially dangerous preemptively rather than taking the risk of having them committing a crime.',
+        question: 'اعتقال بريء احتياطيًا أفضل من المخاطرة بقيامه بارتكاب جريمة.',
         answer: 0,
         valuesYes: [{
                 axis: 'j1',
@@ -1226,7 +1226,7 @@ var questions = [
     },
     // Revolution/Reform
     {
-        question: 'Mass strike is a good way to acquire new rights.',
+        question: 'الإضرابات الواسعة وسيلة جيّدة لنيل حقوق جديدة.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1238,7 +1238,7 @@ var questions = [
             }]
     },
     {
-        question: 'Armed struggle in a country is sometimes necessary.',
+        question: 'النضال المسلّح في البلد ضروري في بعض الأحيان.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1250,7 +1250,7 @@ var questions = [
             }]
     },
     {
-        question: 'Insurrection is necessary to deeply change society.',
+        question: 'التمرّد ضروري لإحداث تغييرات عميقة في المجتمع.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1262,7 +1262,7 @@ var questions = [
             }]
     },
     {
-        question: 'Activism in existing political organizations is not relevant to change society.',
+        question: 'الناشطية في المؤسسات السياسية القائمة لا أثر لها في تغيير المجتمع.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1274,7 +1274,7 @@ var questions = [
             }]
     },
     {
-        question: 'Elections organized by the state cannot question the powers in place.',
+        question: 'الانتخابات التي تننظّمها الدولة لا تمكنها مساءلة القوى القائمة.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1286,7 +1286,7 @@ var questions = [
             }]
     },
     {
-        question: 'Hacking has a legitimate place in political struggle.',
+        question: 'الهكر السبراني من الوسائل المشروعة في النضال السياسي.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1298,7 +1298,7 @@ var questions = [
             }]
     },
     {
-        question: 'Sabotage is legitimate under certain conditions.',
+        question: 'التخريب مشروع في بعض الظروف.',
         answer: 0,
         valuesYes: [{
                 axis: 't0',
@@ -1310,7 +1310,7 @@ var questions = [
             }]
     },
     {
-        question: 'Activists must always act in strict accordance with the law.',
+        question: 'يجب على الناشطين التصرف دومًا في حدود القانون.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1322,7 +1322,7 @@ var questions = [
             }]
     },
     {
-        question: 'Revolutions will always end up in a bad way.',
+        question: 'من المحتوم أن تؤول الثورات مآلات سيّئة.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1334,7 +1334,7 @@ var questions = [
             }]
     },
     {
-        question: 'Changing the system radically is counter-productive. We should rather transform it progressively.',
+        question: 'تغيير النظام جذريًا مضر بالإنتاج. من الأفضل تحويله تدريجيًا.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1346,7 +1346,7 @@ var questions = [
             }]
     },
     {
-        question: 'Violence against individuals is never productive.',
+        question: 'العنف ضد الأفراد ليس مفيدًا على الإطلاق.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1358,7 +1358,7 @@ var questions = [
             }]
     },
     {
-        question: 'We should always distance ourselves from protesters who use violence.',
+        question: 'ينبغي أن نبتعد عن المتظاهرين الذين يستخدمون العنف.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1370,7 +1370,7 @@ var questions = [
             }]
     },
     {
-        question: 'We need to make compromises with the opposition to apply our ideas.',
+        question: 'ينبغي تقديم تنازلات لمعارضينا لأجل تطبيق أفكارنا.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1382,7 +1382,7 @@ var questions = [
             }]
     },
     {
-        question: 'Changes in an individual’s way of life can induce changes in society.',
+        question: 'تغيير نمط الحياة الفردي يمكن أن يُحدث تغييرًا في المجتمع.',
         answer: 0,
         valuesYes: [{
                 axis: 't1',
@@ -1395,7 +1395,7 @@ var questions = [
     },
     // Bonus Badges
     {
-        question: 'My religion must be spread as widely as possible.',
+        question: 'يجب أن تنتشر عقيدتي الدينية على أوسع نطاق.',
         answer: 0,
         valuesYes: [{
                 axis: 'reli',
@@ -1404,7 +1404,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'It is a small group that consciously and secretly controls the world.',
+        question: 'العالم تتحّكم فيه من خلف ستار جماعة سريّة.',
         answer: 0,
         valuesYes: [{
                 axis: 'comp',
@@ -1413,7 +1413,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'A good policy is a pragmatic policy without ideology.',
+        question: 'السياسة الجيّدة تتصّف بالعملانية بلا أيديولوجيات.',
         answer: 0,
         valuesYes: [{
                 axis: 'prag',
@@ -1422,7 +1422,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'We need to establish a monarchy to federate the people and preserve our sovereignty.',
+        question: 'يلزمنا تأسيس مَلَكيّة لتوحيد الناس و الحفاظ على استقلاليتنا.',
         answer: 0,
         valuesYes: [{
                 axis: 'mona',
@@ -1431,7 +1431,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'Humans should neither eat nor exploit animals.',
+        question: 'ينبغي على الناس ألا يستغلّوا الحيوانات و لا يأكلوها.',
         answer: 0,
         valuesYes: [{
                 axis: 'vega',
@@ -1440,7 +1440,7 @@ var questions = [
         valuesNo: []
     },
     {
-        question: 'The State should be abolished.',
+        question: 'ينبغي إبطال الدولة.',
         answer: 0,
         valuesYes: [{
                 axis: 'anar',
