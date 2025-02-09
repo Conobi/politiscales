@@ -1,75 +1,36 @@
-# Nuxt UI v3 Starter
+# rePolitiscales (WIP)
 
-Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI docs](https://ui3.nuxt.dev) to learn more.
+This a re-implementation of the Politiscales test, with a new design and new questions. The goal is to make the test more accurate and more reliable, and adress some of the issues of the original test.
 
-## Setup
+# To do list
 
-Make sure to install the dependencies:
+## MVP
+- [x] Implement the flag logic
+- [ ] Implement the questions page
+- [ ] Fix all the horrible typing issues
+- [ ] Write new questions for the new axes
+- [ ] Address the issues of the original questions
+- [ ] Add new flags symbols and colors for the new axes
+- [ ] Create new icons for the new axes
+- [ ] Add new values
+- [ ] Add proto serialization to the results (+ anchor anonymization)
+- [ ] Implement the result page
+- [ ] Write the /about page
+- [ ] Find and implement a new translation system
+- [ ] Add a CI pipeline w/ Semantic Release
+- [ ] Create a new logo
+- [ ] Deploy in production
+- [ ] Put the legacy test somewhere
 
-```bash
-# npm
-npm install
+## Future
+- [ ] Track unclear questions
+- [ ] Track questions that are 
+- [ ] Graph of friends results
+- [ ] Global stats page
+- [ ] Find a goal for the test
 
-# pnpm
-pnpm install
+## How to run it in dev?
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+1. Clone the repository
+2. Run `pnpm i`
+3. Run `pnpm run dev`
