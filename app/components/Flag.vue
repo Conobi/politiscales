@@ -1,13 +1,19 @@
 <template>
-  <canvas ref="flagCanvas" width="512" height="256"></canvas>
-  <p>{{ generatedFlagColors }}</p>
+  <UTooltip
+    :text="`Couleurs générées : ${generatedFlagColors.length} ID de forme généré : ${generatedFlagShape}`"
+    size="xl"
+  >
+    <canvas ref="flagCanvas" width="512" height="256"></canvas>
+  </UTooltip>
+  <!-- <p>{{ generatedFlagColors }}</p>
   <p>{{ generatedFlagSymbol }}</p>
   <p>{{ generatedFlagShape }}</p>
+  <p>{{ flagShapes[generatedFlagShape] }}</p> -->
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
-import { axes, flagColors, flagSymbols, flagShapes } from '~/utils/constants'
+import { flagColors, flagSymbols, flagShapes } from '~/utils/constants'
 import type { AxisValues, SymbolData, FlagSymbol } from '~/utils/constants'
 
 interface Props {
@@ -16,7 +22,8 @@ interface Props {
 
 const props = defineProps<Props>()
 const flagCanvas = ref<HTMLCanvasElement | null>(null)
-// const sprite = new Image()
+
+const countNumColors = reactive<Record<number, number>>({})
 
 // Image loading handler
 const loadImages = async () => {
@@ -57,7 +64,6 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
 
   const colors = generatedFlagColors.value
   var flagId = generatedFlagShape.value
-  // var flagId = 42
   var symbolData = generatedFlagSymbol.value
 
   if (flagId < 0) {
@@ -180,6 +186,15 @@ onMounted(async () => {
   drawFlag(images)
 })
 
+watch(
+  () => props.axes,
+  async () => {
+    const images = await loadImages()
+    drawFlag(images)
+  },
+  { deep: true }
+)
+
 const axesValues = computed<AxisValues>(() => {
   return props.axes
 })
@@ -218,6 +233,11 @@ const generatedFlagColors = computed(() => {
 
   if (colors.length <= 0)
     colors.push({ bgColor: '#ffffff', fgColor: '#000000', value: 0 })
+
+  // If the delta between the second and third color is over 0.2, we keep only the first two colors
+  if (colors.length > 2 && colors[1].value - colors[2].value > 0.2) {
+    colors.splice(2, colors.length - 2)
+  }
 
   return colors
 })
@@ -265,8 +285,8 @@ const generatedFlagSymbol = computed<SymbolData[]>(() => {
       ([axis, axisPercentage]) => {
         if (axis in flagSymbol.cond) {
           return (
-            axisPercentage > flagSymbol.cond[axis].vmin &&
-            axisPercentage < flagSymbol.cond[axis].vmax
+            axisPercentage >= flagSymbol.cond[axis].vmin &&
+            axisPercentage <= flagSymbol.cond[axis].vmax
           )
         }
       }

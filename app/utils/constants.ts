@@ -1,120 +1,129 @@
-export const axes = [
-  {
-    key: 'constructivism',
+export const axes = {
+  constructivism: {
+    pair: 'identity',
     legacyKey: 'c0',
     color: '#a425b6'
   },
-  {
-    key: 'essentialism',
+  essentialism: {
+    pair: 'identity',
     legacyKey: 'c1',
     color: '#34b634'
   },
-  {
-    key: 'rehabilitative_justice',
+  rehabilitative_justice: {
+    pair: 'justice',
     legacyKey: 'j0',
     color: '#14bee1'
   },
-  {
-    key: 'punitive_justice',
+  punitive_justice: {
+    pair: 'justice',
     legacyKey: 'j1',
     color: '#e6cc27'
   },
-  {
-    key: 'progressive',
+  progressive: {
+    pair: 'culture',
     legacyKey: 's0',
     color: '#850083'
   },
-  {
-    key: 'conservative',
+  conservative: {
+    pair: 'culture',
     legacyKey: 's1',
     color: '#970000'
   },
-  {
-    key: 'internationalism',
+  internationalism: {
+    pair: 'globalism',
     legacyKey: 'b0',
     color: '#3e6ffd'
   },
-  {
-    key: 'nationalism',
+  nationalism: {
+    pair: 'globalism',
     legacyKey: 'b1',
     color: '#ff8500'
   },
-  {
-    key: 'communism',
+  communism: {
+    pair: 'economy',
     legacyKey: 'p0',
     color: '#cc0000'
   },
-  {
-    key: 'capitalism',
+  capitalism: {
+    pair: 'economy',
     legacyKey: 'p1',
     color: '#ffb800'
   },
-  {
-    key: 'regulation',
+  regulation: {
+    pair: 'markets',
     legacyKey: 'm0',
     color: '#269B32'
   },
-  {
-    key: 'laissez_faire',
+  laissez_faire: {
+    pair: 'markets',
     legacyKey: 'm1',
     color: '#6608C0'
   },
-  {
-    key: 'ecology',
+  ecology: {
+    pair: 'environment',
     legacyKey: 'e0',
     color: '#a0e90d'
   },
-  {
-    key: 'production',
+  production: {
+    pair: 'environment',
     legacyKey: 'e1',
     color: '#4deae9'
   },
-  {
-    key: 'revolution',
+  revolution: {
+    pair: 'radicalism',
     legacyKey: 't0',
     color: '#eb1a66'
   },
-  {
-    key: 'reform',
+  reform: {
+    pair: 'radicalism',
     legacyKey: 't1',
     color: '#0ee4c8'
   },
-  {
-    key: 'anarchism',
+  materialism: {
+    pair: 'perspective',
+    color: '#ff00ff'
+  },
+  idealism: {
+    pair: 'perspective',
+    color: '#00ffff'
+  },
+  sustainability: {
+    pair: 'development',
+    color: '#00ff00'
+  },
+  growth_at_all_costs: {
+    pair: 'development',
+    color: '#ff0000'
+  },
+  anarchism: {
     legacyKey: 'anar',
     color: null
   },
-  {
-    key: 'pragmatism',
+  pragmatism: {
     legacyKey: 'prag',
     color: null
   },
-  {
-    key: 'feminism',
+  feminism: {
     legacyKey: 'femi',
     color: null
   },
-  {
-    key: 'complotism',
+  complotism: {
     legacyKey: 'compl',
     color: null
   },
-  {
-    key: 'veganism',
+  veganism: {
     legacyKey: 'vega',
     color: null
   },
-  {
-    key: 'monarchism',
+  monarchism: {
     legacyKey: 'mona',
     color: null
   },
-  {
-    key: 'religion',
+  religion: {
     legacyKey: 'reli',
     color: null
   }
-]
+}
 
 export interface AxisValues {
   [key: string]: number
@@ -567,7 +576,7 @@ export const flagShapes: FlagShape[] = [
       [2, 7.4 / 16, 0, 8.6 / 16, 0, 8.6 / 16, 1, 7.4 / 16, 1],
       [2, 0, 3.4 / 8, 0, 4.6 / 8, 1, 4.6 / 8, 1, 3.4 / 8]
     ],
-    symbol: [3.5 / 16, 1.5 / 8, 0.8],
+    symbol: [3.5 / 16, 1.5 / 8, 0.7],
     cond: {
       reform: {
         vmin: 0,
@@ -593,7 +602,7 @@ export const flagShapes: FlagShape[] = [
       [2, 0, 8 / 12, 1, 8 / 12, 1, 9 / 12, 0, 9 / 12],
       [1, 0, 9 / 12, 1, 9 / 12, 1, 1, 0, 1]
     ],
-    symbol: [1 / 2, 1 / 2, 0.9],
+    symbol: [1 / 2, 1 / 2, 0.6],
     cond: {
       reform: {
         vmin: 0,
@@ -624,7 +633,7 @@ export const flagShapes: FlagShape[] = [
       [2, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
       [1, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1]
     ],
-    symbol: [1 / 2, 1 / 2, 0.9],
+    symbol: [1 / 2, 1 / 2, 0.6],
     cond: {
       reform: {
         vmin: 0,
@@ -708,7 +717,7 @@ export const flagShapes: FlagShape[] = [
       [1, 0, 6 / 7, 1, 6 / 7, 1, 1, 0, 1],
       [0, 'circleSymbol', 0.5, 0.5, 0.25]
     ],
-    symbol: [0.5, 0.5, 1.0],
+    symbol: [0.5, 0.5, 0.7],
     cond: {
       reform: {
         vmin: 0,
@@ -998,7 +1007,7 @@ export const flagShapes: FlagShape[] = [
       [0, 0, 7 / 8, 1, 7 / 8, 1, 1, 0, 1],
       [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
     ],
-    symbol: [1 / 6, 0.5, 1.0],
+    symbol: [1 / 6, 0.25, 1.0],
     cond: {
       revolution: {
         vmin: 0,
@@ -1098,7 +1107,7 @@ export const flagShapes: FlagShape[] = [
       [0, 0, 0.2, 0, 0, 0.1, 0, 1, 0.8, 1, 1, 0.9, 1],
       [0, 0, 0.8, 0, 1, 0.1, 1, 1, 0.2, 1, 0, 0.9, 0]
     ],
-    symbol: [0.5, 0.5, 1.0],
+    symbol: [0.5, 0.5, 0.5],
     cond: {
       revolution: {
         vmin: 0,
@@ -1299,7 +1308,7 @@ export const flagShapes: FlagShape[] = [
       [0, 0, 1 / 5, 1, 1 / 5, 1, 4 / 5, 0, 4 / 5],
       [1, 'circle', 0.5, 0.5, 0.25]
     ],
-    symbol: [0.5, 0.5, 0.9],
+    symbol: [0.5, 0.5, 0.8],
     cond: {
       reform: {
         vmin: 0,
