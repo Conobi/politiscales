@@ -116,7 +116,23 @@ export const axes = [
   }
 ]
 
-export const flagShapes = [
+export interface AxisValues {
+  [key: string]: number
+}
+
+interface FlagShape {
+  numColors: number
+  shapes: Array<number[]>
+  symbol: number[]
+  cond: {
+    [key: string]: {
+      vmin: number
+      vmax: number
+    }
+  }
+}
+
+export const flagShapes: FlagShape[] = [
   /*
   ****************************************************************************
   3C, REVO, JREH
@@ -1401,19 +1417,17 @@ export const flagColors: FlagColor[] = [
       }
     }
   },
-  /*
   //Nationalisme
-  {
-    bgColor: "#a45e22",
-    fgColor: "#ffffff",
-    cond: {
-      nationalism: {
-        vmin: 0.4,
-        vmax: 1
-      }
-    }
-  },
-  */
+  // {
+  //   bgColor: '#a45e22',
+  //   fgColor: '#ffffff',
+  //   cond: {
+  //     nationalism: {
+  //       vmin: 0.4,
+  //       vmax: 1
+  //     }
+  //   }
+  // },
   //Conservatism
   {
     bgColor: '#062b85',
@@ -1447,17 +1461,7 @@ export const flagColors: FlagColor[] = [
       },
       communism: {
         vmin: 0,
-        vmax: 0.59999
-      }
-    }
-  },
-  {
-    bgColor: '#c92375',
-    fgColor: '#ffffff',
-    cond: {
-      regulation: {
-        vmin: 0.4,
-        vmax: 1
+        vmax: 0.6
       },
       capitalism: {
         vmin: 0,
@@ -1526,7 +1530,42 @@ export const flagColors: FlagColor[] = [
   }
 ]
 
-export const flagSymbols = [
+export interface Transform {
+  child_type?: string
+  x?: number
+  y?: number
+  main?: boolean
+  parent_tx?: number
+  parent_ty?: number
+  parent_sx?: number
+  parent_sy?: number
+  parent_r?: number
+  child_tx?: number
+  child_ty?: number
+  child_sx?: number
+  child_sy?: number
+  child_r?: number
+}
+
+export interface SymbolData {
+  parent_type: string
+  transform: Transform
+}
+
+export interface FlagSymbol {
+  data: {
+    parent_type: string
+    transforms: Transform[]
+  }
+  cond: {
+    [key: string]: {
+      vmin: number
+      vmax: number
+    }
+  }
+}
+
+export const flagSymbols: FlagSymbol[] = [
   //Féminisme
   {
     data: {
