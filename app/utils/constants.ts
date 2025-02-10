@@ -108,7 +108,7 @@ export const axes = {
     color: null
   },
   complotism: {
-    legacyKey: 'compl',
+    legacyKey: 'comp',
     color: null
   },
   veganism: {

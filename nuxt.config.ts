@@ -2,9 +2,63 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ['@nuxt/ui', '@nuxt/eslint', '@nuxt/content'],
+  modules: ['@nuxt/ui-pro', '@nuxt/eslint', '@nuxtjs/i18n'],
 
   css: ['~/assets/css/main.css'],
+
+  i18n: {
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root' // recommended
+    },
+    locales: [
+      {
+        code: 'fr',
+        file: 'fr.json',
+        name: 'Français',
+        emoji: '🇫🇷'
+      },
+      {
+        code: 'en',
+        file: 'en.json',
+        name: 'English',
+        emoji: '🇬🇧'
+      },
+      {
+        code: 'es',
+        file: 'es.json',
+        name: 'Español',
+        emoji: '🇪🇸'
+      },
+      {
+        code: 'zh',
+        file: 'zh.json',
+        name: '中文',
+        emoji: '🇨🇳'
+      },
+      {
+        code: 'ru',
+        file: 'ru.json',
+        name: 'Русский',
+        emoji: '🇷🇺'
+      },
+      {
+        code: 'it',
+        file: 'it.json',
+        name: 'Italiano',
+        emoji: '🇮🇹'
+      },
+      {
+        code: 'ar',
+        file: 'ar.json',
+        name: 'العربية',
+        emoji: '🇸🇦'
+      }
+    ],
+    lazy: true,
+    defaultLocale: 'en'
+  },
 
   future: {
     compatibilityVersion: 4

@@ -1,15 +1,13 @@
-<script setup lang="ts">
-const { data: home } = await useAsyncData(() =>
-  queryCollection('content').path('/').first()
-)
-
-useSeoMeta({
-  title: home.value?.title,
-  description: home.value?.description
-})
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <ContentRenderer v-if="home" :value="home" />
-  <div v-else>Home not found</div>
+  <UPageHeader title="Hello world!" />
+  <div class="flex justify-center p-10">
+    <UButton
+      to="questions"
+      label="Commencer le test"
+      color="primary"
+      size="xl"
+    />
+  </div>
 </template>

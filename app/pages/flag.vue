@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex items-center justify-center flex-col mt-10 gap-10 max-w-xl mx-auto"
-  >
+  <div class="flex items-center justify-center flex-col mt-10 gap-10">
     <template v-if="userAxes">
       <div @click="randomizeAxes">
         <Flag :axes="userAxes" class="cursor-pointer" />

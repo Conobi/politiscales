@@ -16,7 +16,7 @@ This a re-implementation of the Politiscales test, with a new design and new que
 - [ ] Add proto serialization to the results (+ anchor anonymization)
 - [ ] Implement the result page
 - [ ] Write the /about page
-- [ ] Find and implement a new translation system
+- [x] Find and implement a new translation system
 - [ ] Add a CI pipeline w/ Semantic Release
 - [ ] Create a new logo
 - [ ] Deploy in production

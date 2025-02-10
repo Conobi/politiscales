@@ -1,5 +1,11 @@
 <template>
   <UApp :tooltip="{ delayDuration: 0 }">
-    <NuxtPage />
+    <NuxtLayout>
+      <UMain>
+        <NuxtPage />
+      </UMain>
+    </NuxtLayout>
+
+    <UFooter />
   </UApp>
 </template>
