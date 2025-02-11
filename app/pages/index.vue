@@ -1,5 +1,3 @@
-<script setup lang="ts"></script>
-
 <template>
   <UPageHeader title="Hello world!" />
   <div class="flex justify-center p-10">
