@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "politiscales",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,21 +12,21 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
-    "@iconify-json/lucide": "^1.2.22",
-    "@iconify-json/simple-icons": "^1.2.19",
-    "@nuxt/ui": "3.0.0-alpha.12",
-    "@nuxt/ui-pro": "3.0.0-alpha.12",
-    "@nuxtjs/i18n": "9.2.0",
-    "nuxt": "^3.15.1",
-    "tailwindcss": "^4.0.0"
+    "@nuxt/ui": "^3.0.0-alpha.12",
+    "@nuxt/ui-pro": "^3.0.0-alpha.12",
+    "@nuxtjs/i18n": "^9.2.0",
+    "nuxt": "^3.15.4"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxt/eslint": "^0.7.5",
+    "@iconify-json/lucide": "^1.2.26",
+    "@iconify-json/simple-icons": "^1.2.24",
+    "@nuxt/devtools": "^2.0.0",
+    "@nuxt/eslint": "^1.0.1",
     "@types/eslint-config-prettier": "^6.11.3",
-    "eslint": "^9.17.0",
+    "eslint": "^9.20.1",
     "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.5.0",
     "typescript": "^5.7.3"
   },
-  "packageManager": "pnpm@8.10.5+sha1.4370a069f21873a0ad83c785b8048ed8caf6e6e9"
+  "packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d"
 }
