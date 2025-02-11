@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.2.19
     version: 1.2.23
   '@nuxt/ui':
-    specifier: 3.0.0-alpha.10
-    version: 3.0.0-alpha.10(embla-carousel@8.5.2)(radix-vue@1.9.13)(rollup@4.34.1)(typescript@5.7.3)(vite@6.0.11)(vue@3.5.13)
+    specifier: 3.0.0-alpha.12
+    version: 3.0.0-alpha.12(embla-carousel@8.5.2)(radix-vue@1.9.13)(rollup@4.34.1)(typescript@5.7.3)(vite@6.0.11)(vue@3.5.13)
   '@nuxt/ui-pro':
     specifier: 3.0.0-alpha.12
     version: 3.0.0-alpha.12(embla-carousel@8.5.2)(radix-vue@1.9.13)(rollup@4.34.1)(typescript@5.7.3)(vite@6.0.11)(vue@3.5.13)
@@ -23,6 +23,9 @@ dependencies:
   nuxt:
     specifier: ^3.15.1
     version: 3.15.4(eslint@9.19.0)(rollup@4.34.1)(typescript@5.7.3)(vite@6.0.11)
+  tailwindcss:
+    specifier: ^4.0.0
+    version: 4.0.0
 
 devDependencies:
   '@nuxt/devtools':
@@ -1583,97 +1586,6 @@ packages:
       - vue
     dev: false
 
-  /@nuxt/ui@3.0.0-alpha.10(embla-carousel@8.5.2)(radix-vue@1.9.13)(rollup@4.34.1)(typescript@5.7.3)(vite@6.0.11)(vue@3.5.13):
-    resolution: {integrity: sha512-OpCfAahgPY6Ts8D9/P7AHr/sP0s2w0erxliTvVDy7Bvr+xCyE3xAaA9w26S4mC4yZA0ShodQQkiI7zKXGy2k5Q==}
-    hasBin: true
-    peerDependencies:
-      typescript: ^5.6.3
-    dependencies:
-      '@iconify/vue': 4.3.0(vue@3.5.13)
-      '@internationalized/date': 3.7.0
-      '@internationalized/number': 3.6.0
-      '@nuxt/devtools-kit': 1.7.0(magicast@0.3.5)(rollup@4.34.1)(vite@6.0.11)
-      '@nuxt/fonts': 0.10.3(rollup@4.34.1)(vite@6.0.11)
-      '@nuxt/icon': 1.10.3(rollup@4.34.1)(vite@6.0.11)(vue@3.5.13)
-      '@nuxt/kit': 3.15.4(magicast@0.3.5)(rollup@4.34.1)
-      '@nuxt/schema': 3.15.4
-      '@nuxtjs/color-mode': 3.5.2(rollup@4.34.1)
-      '@tailwindcss/postcss': 4.0.0-beta.6
-      '@tailwindcss/vite': 4.0.0-beta.6(vite@6.0.11)
-      '@tanstack/vue-table': 8.20.5(vue@3.5.13)
-      '@types/color': 4.2.0
-      '@unhead/vue': 1.11.18(vue@3.5.13)
-      '@vueuse/core': 12.5.0(typescript@5.7.3)
-      '@vueuse/integrations': 12.5.0(fuse.js@7.1.0)(typescript@5.7.3)
-      color: 4.2.3
-      consola: 3.4.0
-      defu: 6.1.4
-      embla-carousel-auto-height: 8.5.2(embla-carousel@8.5.2)
-      embla-carousel-auto-scroll: 8.5.2(embla-carousel@8.5.2)
-      embla-carousel-autoplay: 8.5.2(embla-carousel@8.5.2)
-      embla-carousel-class-names: 8.5.2(embla-carousel@8.5.2)
-      embla-carousel-fade: 8.5.2(embla-carousel@8.5.2)
-      embla-carousel-vue: 8.5.2(vue@3.5.13)
-      embla-carousel-wheel-gestures: 8.0.1(embla-carousel@8.5.2)
-      fuse.js: 7.1.0
-      get-port-please: 3.1.2
-      knitwork: 1.2.0
-      magic-string: 0.30.17
-      mlly: 1.7.4
-      ohash: 1.1.4
-      pathe: 1.1.2
-      reka-ui: 1.0.0-alpha.6(typescript@5.7.3)(vue@3.5.13)
-      scule: 1.3.0
-      sirv: 3.0.0
-      tailwind-variants: 0.3.1(tailwindcss@4.0.0-beta.6)
-      tailwindcss: 4.0.0-beta.6
-      tinyglobby: 0.2.10
-      typescript: 5.7.3
-      unplugin: 1.16.1
-      unplugin-auto-import: 0.18.6(@nuxt/kit@3.15.4)(@vueuse/core@12.5.0)(rollup@4.34.1)
-      unplugin-vue-components: 0.27.5(@nuxt/kit@3.15.4)(rollup@4.34.1)(vue@3.5.13)
-      vaul-vue: 0.2.1(radix-vue@1.9.13)(vue@3.5.13)
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@babel/parser'
-      - '@capacitor/preferences'
-      - '@deno/kv'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@upstash/redis'
-      - '@vercel/blob'
-      - '@vercel/kv'
-      - '@vue/composition-api'
-      - async-validator
-      - aws4fetch
-      - axios
-      - change-case
-      - db0
-      - drauu
-      - embla-carousel
-      - encoding
-      - focus-trap
-      - idb-keyval
-      - ioredis
-      - jwt-decode
-      - magicast
-      - nprogress
-      - qrcode
-      - radix-vue
-      - rollup
-      - sortablejs
-      - supports-color
-      - universal-cookie
-      - uploadthing
-      - vite
-      - vue
-    dev: false
-
   /@nuxt/ui@3.0.0-alpha.12(embla-carousel@8.5.2)(radix-vue@1.9.13)(rollup@4.34.1)(typescript@5.7.3)(vite@6.0.11)(vue@3.5.13):
     resolution: {integrity: sha512-ANm/CUum3bkxEaBN9+Bny+SXGZA9eCAN1+ALV5YDPQ4P2VXZ6V0switxAOzKxDQ9qw1n2dxROyfdwkbg/bKl4A==}
     hasBin: true
@@ -2380,14 +2292,6 @@ packages:
       tslib: 2.8.1
     dev: false
 
-  /@tailwindcss/node@4.0.0-beta.6:
-    resolution: {integrity: sha512-W07J19+05rRFKfk4sVtkNTb4iuGTI3BU6Ip/iEbb/w5NvaP+fSFK31OYFpJ+CXEWrbNgidUg46BQpw4Y1gophA==}
-    dependencies:
-      enhanced-resolve: 5.18.0
-      jiti: 2.4.2
-      tailwindcss: 4.0.0-beta.6
-    dev: false
-
   /@tailwindcss/node@4.0.5:
     resolution: {integrity: sha512-ffTz4DX1cgr4XPuqjhm32YV6Lyx58R1CxAAnSFTamg6wXwfk3oWdb6exgAbGesPzvUgicTO0gwUdQGSsg4nNog==}
     dependencies:
@@ -2395,15 +2299,6 @@ packages:
       jiti: 2.4.2
       tailwindcss: 4.0.5
     dev: false
-
-  /@tailwindcss/oxide-android-arm64@4.0.0-beta.6:
-    resolution: {integrity: sha512-yrUH/IfhkJWSYjF86UxpwrfaO866MjOhVQKG+wCgp0+YZGwirs8vX//a+8Y0SpEJrO0PVgmUU7xbsIM1EQWyTw==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [android]
-    requiresBuild: true
-    dev: false
-    optional: true
 
   /@tailwindcss/oxide-android-arm64@4.0.5:
     resolution: {integrity: sha512-kK/ik8aIAKWDIEYDZGUCJcnU1qU5sPoMBlVzPvtsUqiV6cSHcnVRUdkcLwKqTeUowzZtjjRiamELLd9Gb0x5BQ==}
@@ -2414,28 +2309,10 @@ packages:
     dev: false
     optional: true
 
-  /@tailwindcss/oxide-darwin-arm64@4.0.0-beta.6:
-    resolution: {integrity: sha512-WqFHSD/kocp8rH3KYJow8zTatTEMfdrkZu2KL8nnKfuAEk+juJuUnOQaXDmfsYNQSkGjtnGdcB/fueq4UtUSvw==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
   /@tailwindcss/oxide-darwin-arm64@4.0.5:
     resolution: {integrity: sha512-vkbXFv0FfAEbrSa5NBjFEE+xi06ha7mxuxjY8LRn7d7/tBGrAZOEJnnsEbB6M1+x2pGRTjjei0XyTIXdVCglJA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@tailwindcss/oxide-darwin-x64@4.0.0-beta.6:
-    resolution: {integrity: sha512-zFc/TTBkDNLOKl/G9i1JOpg0AgrUOgBcSgURT/E0RsF0ZcKdiIjcyNswNThmjQnj+JAA8QL1Rct+04dH5j7Xjw==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
     os: [darwin]
     requiresBuild: true
     dev: false
@@ -2450,29 +2327,11 @@ packages:
     dev: false
     optional: true
 
-  /@tailwindcss/oxide-freebsd-x64@4.0.0-beta.6:
-    resolution: {integrity: sha512-J3+uiPmKTeyefQBy4F0fz5sBQOj9eUTke6W/do/CplM5zXORQVCOKnrY2CPyDpN9bh4TYutldoiI0BP0Yo2ShA==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [freebsd]
-    requiresBuild: true
-    dev: false
-    optional: true
-
   /@tailwindcss/oxide-freebsd-x64@4.0.5:
     resolution: {integrity: sha512-silz3nuZdEYDfic3v/ooVUQChj9hbxDSee43GCQNwr/iD9L4K/JsZtoNqr0w69pUkvWcKINOGOG0r7WqUqkAeg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [freebsd]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@tailwindcss/oxide-linux-arm-gnueabihf@4.0.0-beta.6:
-    resolution: {integrity: sha512-oWAwN6LjX2KH8ej0a/Uc1qnuy0ZSyAwOoJ1Fm2s38ipDmvxC8ARkNfWbYKN/D7dFhY7T3NMV4qjzamFKsrgchQ==}
-    engines: {node: '>= 10'}
-    cpu: [arm]
-    os: [linux]
     requiresBuild: true
     dev: false
     optional: true
@@ -2486,26 +2345,8 @@ packages:
     dev: false
     optional: true
 
-  /@tailwindcss/oxide-linux-arm64-gnu@4.0.0-beta.6:
-    resolution: {integrity: sha512-p5jDtF6P3gOPl4eOH0YsN09yx/kXqLbgy4VMnOA9DB6Nlt+RVwM+JDa+RK/GAHL/qkAqO6YBEHeBURbWOeSuBw==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
   /@tailwindcss/oxide-linux-arm64-gnu@4.0.5:
     resolution: {integrity: sha512-8yoXpWTeIFaByUaKy2qRAppznLVaDHP9xYCAbS3FG7+uUwHi8CHE4TcomM7eyamo0U7dbUIDgKMGoAX5s2iVrA==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@tailwindcss/oxide-linux-arm64-musl@4.0.0-beta.6:
-    resolution: {integrity: sha512-ZI92S4LFuXx50gzkv98RXmybbRga183Y3NwBrQ+PfbRUOgDR0/tyT3Zh4CF/0eL9zzxa1mIE7cBbQjXNnejYqQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -2522,26 +2363,8 @@ packages:
     dev: false
     optional: true
 
-  /@tailwindcss/oxide-linux-x64-gnu@4.0.0-beta.6:
-    resolution: {integrity: sha512-F0z48W0Yksrw+xg0GK54wUFa0KmFO9lpbKy2u/2yZtHs+ZwJ55PjdljjW1OJzEHpD81AT+8DT1PhNCkaqpOlqg==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
   /@tailwindcss/oxide-linux-x64-gnu@4.0.5:
     resolution: {integrity: sha512-DYgieNDRkTy69bWPgdsc47nAXa74P63P/RetUwYM9vYj5USyOfHCEcqIthkCuYw3dXKBhjgwe697TmL2g2jpAw==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@tailwindcss/oxide-linux-x64-musl@4.0.0-beta.6:
-    resolution: {integrity: sha512-GQx5f3qzLuAO7s1NTGY8PDhiEvrRTgYQhGN8HzH1LhP+URSbwgysyHKWFacejWrZS2azr6jlE84usxk8yn/7Xg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -2558,28 +2381,10 @@ packages:
     dev: false
     optional: true
 
-  /@tailwindcss/oxide-win32-arm64-msvc@4.0.0-beta.6:
-    resolution: {integrity: sha512-DUs1A5rVK1Da7XvY2FzVgS+5vinwVDOeXgOsL6dblL8ag70wlwzZjyB3YRbxKRekPynwKdILgIv8/TYE3cv7AQ==}
-    engines: {node: '>= 10'}
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: false
-    optional: true
-
   /@tailwindcss/oxide-win32-arm64-msvc@4.0.5:
     resolution: {integrity: sha512-ho1dJ4o5Q8nAOxdMkbfBu5aSqI+/bzQ0jEeHcXaEdEJzf2fSWs3HY7bIKtE6vQS8c4SmSBvls7IhGPuJxNg+2Q==}
     engines: {node: '>= 10'}
     cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: false
-    optional: true
-
-  /@tailwindcss/oxide-win32-x64-msvc@4.0.0-beta.6:
-    resolution: {integrity: sha512-VRsHAs3QBZa88N2Bp+LOV1vxr6f82L3KtamLIhyNTYXnEQjJxazaGwVow0VzN9sru2MTvcXjVFwdd9hUbeBKbA==}
-    engines: {node: '>= 10'}
-    cpu: [x64]
     os: [win32]
     requiresBuild: true
     dev: false
@@ -2593,23 +2398,6 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
-
-  /@tailwindcss/oxide@4.0.0-beta.6:
-    resolution: {integrity: sha512-i/Fg/rXYwzV7OJEXbcwjNVkYPgnyfLdYXtduOX7Kvf686xn6jR/k6bhl9fVkQcDb/ujyKzNjD2POAjwhHAC8aw==}
-    engines: {node: '>= 10'}
-    optionalDependencies:
-      '@tailwindcss/oxide-android-arm64': 4.0.0-beta.6
-      '@tailwindcss/oxide-darwin-arm64': 4.0.0-beta.6
-      '@tailwindcss/oxide-darwin-x64': 4.0.0-beta.6
-      '@tailwindcss/oxide-freebsd-x64': 4.0.0-beta.6
-      '@tailwindcss/oxide-linux-arm-gnueabihf': 4.0.0-beta.6
-      '@tailwindcss/oxide-linux-arm64-gnu': 4.0.0-beta.6
-      '@tailwindcss/oxide-linux-arm64-musl': 4.0.0-beta.6
-      '@tailwindcss/oxide-linux-x64-gnu': 4.0.0-beta.6
-      '@tailwindcss/oxide-linux-x64-musl': 4.0.0-beta.6
-      '@tailwindcss/oxide-win32-arm64-msvc': 4.0.0-beta.6
-      '@tailwindcss/oxide-win32-x64-msvc': 4.0.0-beta.6
-    dev: false
 
   /@tailwindcss/oxide@4.0.5:
     resolution: {integrity: sha512-iWGyOCu0TuzvCBisWbGv2K9+7QCfE0ztgtrZOvb9iF7V7ChVkD15Obe3HevZrhjngAc34jDA+OMSuSvkrpTy4A==}
@@ -2639,17 +2427,6 @@ packages:
       tailwindcss: 4.0.0
     dev: false
 
-  /@tailwindcss/postcss@4.0.0-beta.6:
-    resolution: {integrity: sha512-zTOUcNovZ1v3Uuu1ftFEYr8HUTEA5e06pwN4G5VceoA0n5NQ0HC/3rfLkSpSj5rAd7Z/KGXBMdD9IAJp6eMSbA==}
-    dependencies:
-      '@alloc/quick-lru': 5.2.0
-      '@tailwindcss/node': 4.0.0-beta.6
-      '@tailwindcss/oxide': 4.0.0-beta.6
-      lightningcss: 1.29.1
-      postcss: 8.5.1
-      tailwindcss: 4.0.0-beta.6
-    dev: false
-
   /@tailwindcss/vite@4.0.0(vite@6.0.11):
     resolution: {integrity: sha512-4uukMiU9gHui8KMPMdWic5SP1O/tmQ1NFSRNrQWmcop5evAVl/LZ6/LuWL3quEiecp2RBcRWwqJrG+mFXlRlew==}
     peerDependencies:
@@ -2659,18 +2436,6 @@ packages:
       '@tailwindcss/oxide': 4.0.5
       lightningcss: 1.29.1
       tailwindcss: 4.0.0
-      vite: 6.0.11(jiti@2.4.2)
-    dev: false
-
-  /@tailwindcss/vite@4.0.0-beta.6(vite@6.0.11):
-    resolution: {integrity: sha512-SDlW8wrfhoGvEmNdbxdjPD0RJV5ErPegeJQFXNlS6CF815tzMMTekToIeMJphvwUO6w2TLSjvO9w3F9Z0ElMgQ==}
-    peerDependencies:
-      vite: ^5.2.0 || ^6
-    dependencies:
-      '@tailwindcss/node': 4.0.0-beta.6
-      '@tailwindcss/oxide': 4.0.0-beta.6
-      lightningcss: 1.29.1
-      tailwindcss: 4.0.0-beta.6
       vite: 6.0.11(jiti@2.4.2)
     dev: false
 
@@ -2705,22 +2470,6 @@ packages:
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
-    dev: false
-
-  /@types/color-convert@2.0.4:
-    resolution: {integrity: sha512-Ub1MmDdyZ7mX//g25uBAoH/mWGd9swVbt8BseymnaE18SU4po/PjmCrHxqIIRjBo3hV/vh1KGr0eMxUhp+t+dQ==}
-    dependencies:
-      '@types/color-name': 1.1.5
-    dev: false
-
-  /@types/color-name@1.1.5:
-    resolution: {integrity: sha512-j2K5UJqGTxeesj6oQuGpMgifpT5k9HprgQd8D1Y0lOFqKHl3PJu5GMeS4Y5EgjS55AE6OQxf8mPED9uaGbf4Cg==}
-    dev: false
-
-  /@types/color@4.2.0:
-    resolution: {integrity: sha512-6+xrIRImMtGAL2X3qYkd02Mgs+gFGs+WsK0b7VVMaO4mYRISwyTjcqNrO0mNSmYEoq++rSLDB2F5HDNmqfOe+A==}
-    dependencies:
-      '@types/color-convert': 2.0.4
     dev: false
 
   /@types/doctrine@0.0.9:
@@ -3653,21 +3402,6 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
-
-  /color-string@1.9.1:
-    resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
-    dependencies:
-      color-name: 1.1.4
-      simple-swizzle: 0.2.2
-    dev: false
-
-  /color@4.2.3:
-    resolution: {integrity: sha512-1rXeuUUiGGrykh+CeBdu5Ie7OJwinCgQY0bc7GCRxy5xVHy+moaqkpL/jqQq0MtQOeYcrqEz4abc5f0KtU7W4A==}
-    engines: {node: '>=12.5.0'}
-    dependencies:
-      color-convert: 2.0.1
-      color-string: 1.9.1
-    dev: false
 
   /colord@2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
@@ -5166,10 +4900,6 @@ packages:
   /is-arrayish@0.2.1:
     resolution: {integrity: sha512-zz06S8t0ozoDXMG+ube26zeCTNXcKIPJZJi8hBrF4idCLms4CG9QtK7qBl1boi5ODzFpjswb5JPmHCbMpjaYzg==}
     dev: true
-
-  /is-arrayish@0.3.2:
-    resolution: {integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==}
-    dev: false
 
   /is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
@@ -6973,28 +6703,6 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /reka-ui@1.0.0-alpha.6(typescript@5.7.3)(vue@3.5.13):
-    resolution: {integrity: sha512-/t9IhuJxdPg1NR4JLKTI8FZzvgkeQon/gfoLDqxLODdPHfhawNfLz4/qwP7SnLnwk8dw7TK/E6e/ngdGFlgPyw==}
-    peerDependencies:
-      vue: '>= 3.2.0'
-    dependencies:
-      '@floating-ui/dom': 1.6.13
-      '@floating-ui/vue': 1.1.6(vue@3.5.13)
-      '@internationalized/date': 3.7.0
-      '@internationalized/number': 3.6.0
-      '@tanstack/vue-virtual': 3.12.0(vue@3.5.13)
-      '@vueuse/core': 12.5.0(typescript@5.7.3)
-      '@vueuse/shared': 12.5.0(typescript@5.7.3)
-      aria-hidden: 1.2.4
-      defu: 6.1.4
-      ohash: 1.1.4
-      uncrypto: 0.1.3
-      vue: 3.5.13(typescript@5.7.3)
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - typescript
-    dev: false
-
   /reka-ui@1.0.0-alpha.8(typescript@5.7.3)(vue@3.5.13):
     resolution: {integrity: sha512-FmAUxWFLWtvbheBLvjgotR/RsE1KSjciMJOLmo7wL0Sbe+sW7M35O8K6f141a0Vc1cE0mH57UHcWBuVpeJNQNA==}
     peerDependencies:
@@ -7236,12 +6944,6 @@ packages:
       debug: 4.4.0(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
-
-  /simple-swizzle@0.2.2:
-    resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
-    dependencies:
-      is-arrayish: 0.3.2
-    dev: false
 
   /sirv@3.0.0:
     resolution: {integrity: sha512-BPwJGUeDaDCHihkORDchNyyTvWFhcusy1XMmhEVTQTwGeybFbp8YEmB+njbPnth1FibULBSBVwCQni25XlCUDg==}
@@ -7515,22 +7217,8 @@ packages:
       tailwindcss: 4.0.0
     dev: false
 
-  /tailwind-variants@0.3.1(tailwindcss@4.0.0-beta.6):
-    resolution: {integrity: sha512-krn67M3FpPwElg4FsZrOQd0U26o7UDH/QOkK8RNaiCCrr052f6YJPBUfNKnPo/s/xRzNPtv1Mldlxsg8Tb46BQ==}
-    engines: {node: '>=16.x', pnpm: '>=7.x'}
-    peerDependencies:
-      tailwindcss: '*'
-    dependencies:
-      tailwind-merge: 2.5.4
-      tailwindcss: 4.0.0-beta.6
-    dev: false
-
   /tailwindcss@4.0.0:
     resolution: {integrity: sha512-ULRPI3A+e39T7pSaf1xoi58AqqJxVCLg8F/uM5A3FadUbnyDTgltVnXJvdkTjwCOGA6NazqHVcwPJC5h2vRYVQ==}
-    dev: false
-
-  /tailwindcss@4.0.0-beta.6:
-    resolution: {integrity: sha512-eCCuMk3H65w4J/QWkjxfeWoBSKbCD3E6Uj2LA6Xkkl4eMa1MXuwVpIU1RXcLIp+BVsXGEZMP7i7uJig7KxfAXQ==}
     dev: false
 
   /tailwindcss@4.0.5:
@@ -7816,32 +7504,6 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: false
 
-  /unplugin-auto-import@0.18.6(@nuxt/kit@3.15.4)(@vueuse/core@12.5.0)(rollup@4.34.1):
-    resolution: {integrity: sha512-LMFzX5DtkTj/3wZuyG5bgKBoJ7WSgzqSGJ8ppDRdlvPh45mx6t6w3OcbExQi53n3xF5MYkNGPNR/HYOL95KL2A==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      '@nuxt/kit': ^3.2.2
-      '@vueuse/core': '*'
-    peerDependenciesMeta:
-      '@nuxt/kit':
-        optional: true
-      '@vueuse/core':
-        optional: true
-    dependencies:
-      '@antfu/utils': 0.7.10
-      '@nuxt/kit': 3.15.4(magicast@0.3.5)(rollup@4.34.1)
-      '@rollup/pluginutils': 5.1.4(rollup@4.34.1)
-      '@vueuse/core': 12.5.0(typescript@5.7.3)
-      fast-glob: 3.3.3
-      local-pkg: 0.5.1
-      magic-string: 0.30.17
-      minimatch: 9.0.5
-      unimport: 3.14.6(rollup@4.34.1)
-      unplugin: 1.16.1
-    transitivePeerDependencies:
-      - rollup
-    dev: false
-
   /unplugin-auto-import@19.0.0(@nuxt/kit@3.15.4)(@vueuse/core@12.5.0)(rollup@4.34.1):
     resolution: {integrity: sha512-TREXtXqCM6YLy3rE2tjvKZEaCiPlP2e5bmnRKaS8AM2MlNgjV7UP4RPieWIfs4Isv0GoeHmov956PIIvJYdqpQ==}
     engines: {node: '>=14'}
@@ -7865,36 +7527,6 @@ packages:
       unplugin: 2.1.2
     transitivePeerDependencies:
       - rollup
-    dev: false
-
-  /unplugin-vue-components@0.27.5(@nuxt/kit@3.15.4)(rollup@4.34.1)(vue@3.5.13):
-    resolution: {integrity: sha512-m9j4goBeNwXyNN8oZHHxvIIYiG8FQ9UfmKWeNllpDvhU7btKNNELGPt+o3mckQKuPwrE7e0PvCsx+IWuDSD9Vg==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      '@babel/parser': ^7.15.8
-      '@nuxt/kit': ^3.2.2
-      vue: 2 || 3
-    peerDependenciesMeta:
-      '@babel/parser':
-        optional: true
-      '@nuxt/kit':
-        optional: true
-    dependencies:
-      '@antfu/utils': 0.7.10
-      '@nuxt/kit': 3.15.4(magicast@0.3.5)(rollup@4.34.1)
-      '@rollup/pluginutils': 5.1.4(rollup@4.34.1)
-      chokidar: 3.6.0
-      debug: 4.4.0(supports-color@9.4.0)
-      fast-glob: 3.3.3
-      local-pkg: 0.5.1
-      magic-string: 0.30.17
-      minimatch: 9.0.5
-      mlly: 1.7.4
-      unplugin: 1.16.1
-      vue: 3.5.13(typescript@5.7.3)
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
     dev: false
 
   /unplugin-vue-components@28.0.0(@nuxt/kit@3.15.4)(rollup@4.34.1)(vue@3.5.13):

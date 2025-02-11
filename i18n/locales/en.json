@@ -1,4 +1,14 @@
 {
+  "start_test": "Start the test",
+  "question_x_of_n": "Question {x} of {n}",
+  "back_home": "Back to home",
+  "prev_question": "Return to the previous question",
+  "strong_disagree": "Strongly disagree",
+  "disagree": "Disagree",
+  "neutral": "Neutral",
+  "agree": "Agree",
+  "strong_agree": "Strongly agree",
+  "result": "Result",
   "questions": {
     "constructivism_becoming_woman": "“One is not born, but rather becomes, a woman.”",
     "constructivism_racism_presence": "Differences in treatment and quality of life in our society show that racism is still omnipresent.",
