@@ -57,9 +57,9 @@ export default defineNuxtConfig({
       }
     ],
     lazy: true,
-    defaultLocale: 'en'
+    defaultLocale: 'en',
+    vueI18n: '~/i18n.config.ts'
   },
-
   future: {
     compatibilityVersion: 4
   },

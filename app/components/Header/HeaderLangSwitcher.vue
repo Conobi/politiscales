@@ -30,7 +30,9 @@ const selected = ref({
     v-model="selected"
     :items="items"
     :search-input="false"
-    @update:model-value="(to) => navigateTo(switchLocalePath(to.value))"
+    @update:model-value="
+      (to) => navigateTo(switchLocalePath(to.value), { replace: true })
+    "
   >
     <template #leading="{ modelValue, ui }">
       <span v-if="modelValue?.emoji" class="size-5 text-center">
