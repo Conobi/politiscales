@@ -5,7 +5,7 @@ interface CompressedData {
 
 export const useSerializer = () => {
   const chars =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmno0123456789pqrstuvwxyz-.'
+    'tSEU1dhNY5GRcVC0mXexwsDbBlPjk2IQ86Krnu9J37HzOgf4oZqyap.-FWvTAiML'
   const NaN_VALUE = 101 // Using 101 as our special NaN/null indicator
 
   /**
@@ -15,7 +15,10 @@ export const useSerializer = () => {
    * @returns A 2-character string encoding both values
    * @throws {Error} If inputs are out of range
    */
-  const encode = (axis: number, score: number | null | undefined): string => {
+  const encodeAxis = (
+    axis: number,
+    score: number | null | undefined
+  ): string => {
     if (axis < 0 || axis > 31) {
       throw new Error('axis must be between 0 and 31')
     }
@@ -33,8 +36,8 @@ export const useSerializer = () => {
     const scoreBits = scoreValue & 0b1111111
     const combined = (axisBits << 7) | scoreBits
 
-    const char1 = chars[combined >> 6]
-    const char2 = chars[combined & 0b111111]
+    const char1 = chars[combined >> 6] as string
+    const char2 = chars[combined & 0b111111] as string
 
     return char1 + char2
   }
@@ -45,13 +48,13 @@ export const useSerializer = () => {
    * @returns Object containing axis and score values (score can be null)
    * @throws {Error} If input string is invalid
    */
-  const decode = (str: string): CompressedData => {
+  const decodeAxis = (str: string): CompressedData => {
     if (str.length !== 2) {
       throw new Error('Invalid encoded string length')
     }
 
-    const val1 = chars.indexOf(str[0])
-    const val2 = chars.indexOf(str[1])
+    const val1 = chars.indexOf(str[0] as string)
+    const val2 = chars.indexOf(str[1] as string)
 
     if (val1 === -1 || val2 === -1) {
       throw new Error('Invalid characters in encoded string')
@@ -67,28 +70,64 @@ export const useSerializer = () => {
     }
   }
 
-  /**
-   * Validates if a string is a valid encoded value
-   * @param str String to validate
-   * @returns boolean indicating if the string is valid
-   */
-  const isValid = (str: string): boolean => {
-    if (str.length !== 2) return false
+  const encodeResultsStr = (axisValues: AxisValues): string => {
+    let finalStr = ''
 
-    const val1 = chars.indexOf(str[0])
-    const val2 = chars.indexOf(str[1])
+    Object.entries(axisValues).forEach(([axis, score]) => {
+      const axisIndex = Object.keys(axes).indexOf(axis)
 
-    if (val1 === -1 || val2 === -1) return false
+      finalStr += encodeAxis(axisIndex, score)
+    })
 
-    const combined = (val1 << 6) | val2
-    const score = combined & 0b1111111
+    return finalStr
+  }
 
-    return score === NaN_VALUE || score <= 100
+  const decodeResultsStr = (str: string): AxisValues | null => {
+    try {
+      const axisValues: AxisValues = {}
+      const axesKeys = Object.keys(axes)
+      if (!str || str.length % 2 !== 0) return null
+      for (let i = 0; i < str.length; i += 2) {
+        const axisValue = decodeAxis(str.slice(i, i + 2))
+        axisValues[axesKeys[axisValue.axis] as string] = axisValue.score
+      }
+      return axisValues
+    } catch (e) {
+      return null
+    }
+  }
+
+  const decodeLegacyResultsStr = (str: string): AxisValues | null => {
+    try {
+      const decoded = atob(str)
+      const pairs = decoded.split('&')
+
+      const pairsDict: Record<string, string> = pairs.reduce((acc, pair) => {
+        const [key, value] = pair.split('=')
+        if (!key || !value) return acc
+        return { ...acc, [key]: value }
+      }, {})
+
+      const retAxesValues: AxisValues = {}
+
+      // We convert the legacy keys to the new keys (e.g "j0" to "rehabilitative_justice")
+      Object.keys(axes).forEach((key) => {
+        const axis = axes[key] as Axis
+        const value = parseInt(pairsDict[axis.legacyKey] as string)
+        if (value) {
+          retAxesValues[key] = value
+        } else if (axis.legacyKey && axis.pair) retAxesValues[key] = 0
+      })
+
+      return retAxesValues
+    } catch (e) {
+      return null
+    }
   }
 
   return {
-    encode,
-    decode,
-    isValid
+    encodeResultsStr,
+    decodeResultsStr,
+    decodeLegacyResultsStr
   }
 }

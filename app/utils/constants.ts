@@ -1,4 +1,14 @@
-export const axes = {
+export interface Axis {
+  pair: string
+  legacyKey: string
+  color: string
+}
+
+export interface Axes {
+  [key: string]: Axis
+}
+
+export const axes: Axes = {
   constructivism: {
     pair: 'identity',
     legacyKey: 'c0',
@@ -126,7 +136,7 @@ export const axes = {
 }
 
 export interface AxisValues {
-  [key: string]: number
+  [key: string]: number | null
 }
 
 interface FlagShape {
