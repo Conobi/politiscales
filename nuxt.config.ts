@@ -6,6 +6,14 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  icon: {
+    clientBundle: {
+      scan: {
+        globInclude: ['app/**.vue']
+      }
+    }
+  },
+
   i18n: {
     detectBrowserLanguage: {
       useCookie: true,
