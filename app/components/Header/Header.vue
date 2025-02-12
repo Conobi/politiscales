@@ -1,9 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const localePath = useLocalePath()
+</script>
 
 <template>
-  <UHeader>
+  <UHeader :to="localePath('/')">
     <template #title>
-      <h1></h1>
+      <h1 class="font-serif">Politiscales</h1>
     </template>
 
     <template #right>
@@ -12,3 +14,5 @@
     </template>
   </UHeader>
 </template>
+
+<style scoped></style>

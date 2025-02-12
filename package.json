@@ -18,6 +18,7 @@
     "nuxt": "^3.15.4"
   },
   "devDependencies": {
+    "@nuxt/fonts": "0.10.3",
     "@iconify-json/lucide": "^1.2.26",
     "@iconify-json/simple-icons": "^1.2.24",
     "@nuxt/devtools": "^2.0.0",

@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ['@nuxt/ui-pro', '@nuxt/eslint', '@nuxtjs/i18n'],
+  modules: ['@nuxt/ui-pro', '@nuxt/eslint', '@nuxtjs/i18n', '@nuxt/fonts'],
 
   css: ['~/assets/css/main.css'],
 
@@ -13,7 +13,15 @@ export default defineNuxtConfig({
       }
     }
   },
-
+  fonts: {
+    defaults: {
+      weights: [400, 600],
+      styles: ['normal', 'italic']
+    },
+    experimental: {
+      processCSSVariables: true
+    }
+  },
   i18n: {
     detectBrowserLanguage: {
       useCookie: true,

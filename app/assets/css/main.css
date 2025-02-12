@@ -9,5 +9,6 @@
 @import '@nuxt/ui-pro';
 
 @theme {
-  --font-sans: 'Public Sans', sans-serif;
+  --font-sans: 'Inter', 'sans-serif';
+  --font-serif: 'Donegal One', serif;
 }
