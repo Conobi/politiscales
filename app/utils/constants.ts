@@ -1,7 +1,7 @@
 export interface Axis {
   pair: string
-  legacyKey: string
-  color: string
+  legacyKey?: string
+  color?: string
 }
 
 export interface Axes {
@@ -106,32 +106,25 @@ export const axes: Axes = {
     color: '#ff0000'
   },
   anarchism: {
-    legacyKey: 'anar',
-    color: null
+    legacyKey: 'anar'
   },
   pragmatism: {
-    legacyKey: 'prag',
-    color: null
+    legacyKey: 'prag'
   },
   feminism: {
-    legacyKey: 'femi',
-    color: null
+    legacyKey: 'femi'
   },
   complotism: {
-    legacyKey: 'comp',
-    color: null
+    legacyKey: 'comp'
   },
   veganism: {
-    legacyKey: 'vega',
-    color: null
+    legacyKey: 'vega'
   },
   monarchism: {
-    legacyKey: 'mona',
-    color: null
+    legacyKey: 'mona'
   },
   religion: {
-    legacyKey: 'reli',
-    color: null
+    legacyKey: 'reli'
   }
 }
 

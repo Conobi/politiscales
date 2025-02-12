@@ -1,14 +1,5 @@
 <template>
-  <UTooltip
-    :text="`Couleurs générées : ${generatedFlagColors.length} ID de forme généré : ${generatedFlagShape}`"
-    size="xl"
-  >
-    <canvas ref="flagCanvas" width="512" height="256"></canvas>
-  </UTooltip>
-  <!-- <p>{{ generatedFlagColors }}</p>
-  <p>{{ generatedFlagSymbol }}</p>
-  <p>{{ generatedFlagShape }}</p>
-  <p>{{ flagShapes[generatedFlagShape] }}</p> -->
+  <canvas ref="flagCanvas" :height="props.height" :width="props.width"></canvas>
 </template>
 
 <script setup lang="ts">
@@ -16,12 +7,14 @@ import { ref, onMounted, watch } from 'vue'
 import { flagColors, flagSymbols, flagShapes } from '~/utils/constants'
 import type { AxisValues, SymbolData, FlagSymbol } from '~/utils/constants'
 
-interface Props {
+const props = defineProps<{
+  height: number
+  width: number
   axes: AxisValues
-}
+}>()
 
-const props = defineProps<Props>()
 const flagCanvas = ref<HTMLCanvasElement | null>(null)
+defineExpose({ flagCanvas })
 
 // Image loading handler
 const loadImages = async () => {
@@ -405,9 +398,3 @@ const generatedFlagShape = computed(() => {
   return flagFound
 })
 </script>
-
-<style scoped>
-canvas {
-  border: 1px solid black;
-}
-</style>

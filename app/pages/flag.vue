@@ -2,9 +2,9 @@
   <div class="flex items-center justify-center flex-col mt-10 gap-10">
     <template v-if="userAxes">
       <div @click="randomizeAxes">
-        <Flag :axes="userAxes" class="cursor-pointer" />
+        <ResultsFlag :axes="userAxes" class="cursor-pointer" />
       </div>
-      <ResultTester v-model="userAxes" />
+      <ResultsTester v-model="userAxes" />
     </template>
     <!-- <p>{{ userAxes }}</p> -->
   </div>
@@ -28,31 +28,6 @@ const userAxes = ref<AxisValues>(initUserAxes)
 const axesValuesLegacyUrl = computed<AxisValues | null>(() => {
   const params = route.query.results
   // if (!params || typeof params !== 'string') return null
-
-  try {
-    const decoded = atob(String(params))
-    const pairs = decoded.split('&')
-    const pairsDict: Record<string, string> = pairs.reduce((acc, pair) => {
-      const [key, value] = pair.split('=')
-      if (!key || !value) return acc
-      return { ...acc, [key]: value }
-    }, {})
-
-    if (Object.keys(pairsDict).length < 1) return null
-
-    // We convert the legacy keys to the new keys (e.g "j0" to "rehabilitative_justice")
-    const retAxesValues = {}
-    Object.keys(axes).forEach((key) => {
-      const axis = axes[key]
-      const value = parseInt(pairsDict[axis.legacyKey]) / 100
-      if (value) {
-        retAxesValues[key] = value
-      } else if (axis.legacyKey && axis.pair) retAxesValues[key] = 0
-    })
-    return retAxesValues
-  } catch (e) {
-    return null
-  }
 })
 
 // function randomizeAxes() {

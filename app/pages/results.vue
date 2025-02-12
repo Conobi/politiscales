@@ -1,7 +1,6 @@
 <template>
   <div>
-    <code>{{ results }}</code>
-    <ResultsImage v-if="results" :values="results" />
+    <ResultsImage v-if="results" :axes="results" />
   </div>
 </template>
 

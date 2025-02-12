@@ -1,14 +1,30 @@
 <template>
   <svg
-    class="w-full bg-gray-100"
+    class="max-w-[800px] mx-auto bg-gray-100"
     :height="totalHeight"
     :viewBox="`0 0 800 ${totalHeight}`"
   >
+    <!-- Add the flag at the top of the SVG -->
+    <foreignObject
+      :x="800 / 2 - 512 * 0.25"
+      y="150"
+      width="512"
+      height="256"
+      transform="scale(0.75)"
+    >
+      <ResultsFlag
+        v-if="$props.axes"
+        :axes="$props.axes"
+        width="512"
+        height="256"
+      />
+    </foreignObject>
+
     <!-- For each axis pair -->
     <g
       v-for="(pair, index) in axesPairs"
       :key="pair.name"
-      :transform="`translate(0, ${100 + index * (barHeight + axisSpacing)})`"
+      :transform="`translate(0, ${450 + index * (barHeight + axisSpacing)})`"
     >
       <!-- Bar group - moved left to make room for icons -->
       <g :transform="`translate(150, 0)`" width="100%">
@@ -86,22 +102,22 @@
         />
         <!-- Axis names -->
         <text
-          x="0"
+          :x="iconSize * 0.2 - 10"
           :y="-barHeight / 1.5"
           z="0"
-          text-anchor="middle"
+          text-anchor="start"
           dominant-baseline="middle"
-          class="text-sm"
+          class="text-lg font-serif"
         >
           {{ $t(`axes.${pair.axis1}`) }}
         </text>
         <text
-          :x="barWidth + barHeight / 2"
+          :x="barWidth + iconSize * 0.2 - 10"
           :y="-barHeight / 1.5"
           z="0"
-          text-anchor="middle"
+          text-anchor="end"
           dominant-baseline="middle"
-          class="text-sm"
+          class="text-lg font-serif"
         >
           {{ $t(`axes.${pair.axis2}`) }}
         </text>
@@ -115,25 +131,26 @@ import { computed } from 'vue'
 import { axes } from '~/utils/constants'
 import type { AxisValues } from '~/utils/constants'
 
-interface Props {
-  values: AxisValues
-}
-
-const props = defineProps<Props>()
+const props = defineProps<{
+  axes: AxisValues
+}>()
 
 // Constants for SVG layout
-const barHeight = 38
+const barHeight = 28
 const barWidth = 500
 const iconSize = 76
 const axisHeight = 80
-const axisSpacing = 64
+const axisSpacing = 80
+
+const flagComponent = ref<InstanceType<typeof ResultsFlag> | null>(null)
+const flagCanvas = ref<HTMLCanvasElement | null>(null)
 
 const axesPairs = computed(() => {
   const pairs: { [key: string]: string[] } = {}
 
   // Group axes by pairs
   Object.entries(axes)
-    .filter(([axisKey]) => props.values[axisKey])
+    .filter(([axisKey]) => props.axes[axisKey] != null)
     .forEach(([axisKey, axis]) => {
       if (axis.pair) {
         if (!pairs[axis.pair]) {
@@ -146,8 +163,8 @@ const axesPairs = computed(() => {
   // Calculate values for each pair
   return Object.entries(pairs).map(([pairName, pairAxes]) => {
     const [axis1, axis2] = pairAxes
-    const value1 = props.values[axis1] || 0
-    const value2 = props.values[axis2] || 0
+    const value1 = props.axes[axis1] || 0
+    const value2 = props.axes[axis2] || 0
     const neutral = Math.max(0, 100 - value1 - value2)
 
     return {
@@ -160,9 +177,18 @@ const axesPairs = computed(() => {
     }
   })
 })
+// Watch for the flag component to be ready and copy its canvas content
+watchEffect(() => {
+  if (flagComponent.value?.flagCanvas && flagCanvas.value) {
+    const ctx = flagCanvas.value.getContext('2d')
+    if (ctx) {
+      ctx.drawImage(flagComponent.value.flagCanvas, 0, 0)
+    }
+  }
+})
 
 const totalHeight = computed(() => {
-  return axesPairs.value.length * (axisHeight + axisSpacing / 2)
+  return axesPairs.value.length * (axisHeight + axisSpacing / 2) + 456 // 356 (flag height + padding) + 100 (original padding)
 })
 </script>
 
