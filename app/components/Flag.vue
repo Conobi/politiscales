@@ -194,7 +194,12 @@ watch(
 )
 
 const axesValues = computed<AxisValues>(() => {
-  return props.axes
+  return Object.fromEntries(
+    Object.entries(props.axes).map(([key, value]) => [
+      key,
+      value !== null ? value / 100 : null
+    ])
+  )
 })
 
 interface FlagColor {
