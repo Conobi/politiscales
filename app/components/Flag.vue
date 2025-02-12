@@ -209,17 +209,18 @@ const generatedFlagColors = computed(() => {
   if (!axesValues.value) return colors
   for (const flagColor of flagColors) {
     for (const [axis, axisPercentage] of Object.entries(axesValues.value)) {
+      const cond = flagColor.cond[axis] as { vmin: number; vmax: number }
       if (
         !(axis in flagColor.cond) ||
-        axisPercentage < flagColor.cond[axis].vmin ||
-        axisPercentage > flagColor.cond[axis].vmax
+        (axisPercentage || 0) < cond.vmin ||
+        (axisPercentage || 0) > cond.vmax
       ) {
         continue
       }
       colors.push({
         bgColor: flagColor.bgColor,
         fgColor: flagColor.fgColor,
-        value: axisPercentage
+        value: axisPercentage || 0
       })
       break
     }
@@ -281,10 +282,11 @@ const generatedFlagSymbol = computed<SymbolData[]>(() => {
   function matchCharacteristic(flagSymbol: FlagSymbol): number {
     const match = Object.entries(axesValues.value).find(
       ([axis, axisPercentage]) => {
+        const cond = flagSymbol.cond[axis] as { vmin: number; vmax: number }
         if (axis in flagSymbol.cond) {
           return (
-            axisPercentage >= flagSymbol.cond[axis].vmin &&
-            axisPercentage <= flagSymbol.cond[axis].vmax
+            (axisPercentage || 0) >= cond.vmin &&
+            (axisPercentage || 0) <= cond.vmax
           )
         }
       }

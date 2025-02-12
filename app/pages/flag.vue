@@ -32,7 +32,6 @@ const axesValuesLegacyUrl = computed<AxisValues | null>(() => {
   try {
     const decoded = atob(String(params))
     const pairs = decoded.split('&')
-    console.log(pairs)
     const pairsDict: Record<string, string> = pairs.reduce((acc, pair) => {
       const [key, value] = pair.split('=')
       if (!key || !value) return acc

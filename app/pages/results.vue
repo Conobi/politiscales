@@ -1,5 +1,8 @@
 <template>
-  <code>{{ results }}</code>
+  <div>
+    <code>{{ results }}</code>
+    <ResultsImage v-if="results" :values="results" />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -14,7 +17,7 @@ const results = computed<AxisValues | null>(() => {
     const ret = decodeResultsStr(route.hash.slice(1))
     if (!ret) throw new Error()
     return ret
-  } catch (e) {
+  } catch {
     try {
       const ret = decodeLegacyResultsStr(Object.keys(route.query)[0] as string)
       if (!ret) throw new Error()
@@ -22,7 +25,7 @@ const results = computed<AxisValues | null>(() => {
         localePath({ name: 'results', hash: `#${encodeResultsStr(ret)}` })
       )
       return null
-    } catch (e) {
+    } catch {
       return null
     }
   }
