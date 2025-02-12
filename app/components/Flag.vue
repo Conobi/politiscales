@@ -23,8 +23,6 @@ interface Props {
 const props = defineProps<Props>()
 const flagCanvas = ref<HTMLCanvasElement | null>(null)
 
-const countNumColors = reactive<Record<number, number>>({})
-
 // Image loading handler
 const loadImages = async () => {
   const imageUrls = {
@@ -58,13 +56,13 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
   const ctx = flagCanvas.value.getContext('2d')
   if (!ctx) return
 
-  var spriteX = 256
-  var spriteY = 128
-  var spriteS = 1.0
+  let spriteX = 256
+  let spriteY = 128
+  let spriteS = 1.0
 
   const colors = generatedFlagColors.value
-  var flagId = generatedFlagShape.value
-  var symbolData = generatedFlagSymbol.value
+  const flagId = generatedFlagShape.value
+  const symbolData = generatedFlagSymbol.value
 
   if (flagId < 0) {
     ctx.beginPath()
@@ -72,9 +70,9 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
     ctx.fillStyle = '#ffffff'
     ctx.fill()
   } else {
-    for (var i = 0; i < flagShapes[flagId].shapes.length; i++) {
-      var path = flagShapes[flagId].shapes[i]
-      var numPoints = path.length / 2
+    for (let i = 0; i < flagShapes[flagId].shapes.length; i++) {
+      const path = flagShapes[flagId].shapes[i]
+      const numPoints = path.length / 2
 
       ctx.beginPath()
       ctx.moveTo(path[1] * 512, path[2] * 256)
@@ -101,7 +99,7 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
           false
         )
       } else {
-        for (var j = 1; j < numPoints; j++) {
+        for (let j = 1; j < numPoints; j++) {
           ctx.lineTo(path[1 + j * 2 + 0] * 512, path[1 + j * 2 + 1] * 256)
         }
       }
@@ -115,10 +113,10 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
   }
 
   if (symbolData[0].parent_type != 'none') {
-    var tmpC = document.createElement('canvas')
+    const tmpC = document.createElement('canvas')
     tmpC.width = images['sprites'].width
     tmpC.height = images['sprites'].height
-    var tmpCtx = tmpC.getContext('2d')
+    const tmpCtx = tmpC.getContext('2d')
 
     tmpCtx.beginPath()
     tmpCtx.rect(0, 0, tmpC.width, tmpC.height)
@@ -132,8 +130,8 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
     ctx.translate(spriteX, spriteY)
     ctx.scale(spriteS, spriteS)
 
-    var sx = symbolData[0].transform.x
-    var sy = symbolData[0].transform.y
+    const sx = symbolData[0].transform.x
+    const sy = symbolData[0].transform.y
 
     ctx.save()
     ctx.translate(
@@ -149,8 +147,8 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
     ctx.restore()
 
     if (symbolData[1].parent_type != 'none') {
-      var sx = symbolData[1].transform.x
-      var sy = symbolData[1].transform.y
+      const sx = symbolData[1].transform.x
+      const sy = symbolData[1].transform.y
 
       ctx.translate(
         symbolData[0].transform.child_tx,
@@ -362,7 +360,7 @@ const generatedFlagShape = computed(() => {
   for (let i = 0; i < flagShapes.length; i++) {
     if (flagShapes[i].numColors > numColors) continue
 
-    let condValue = [0, 0, 0]
+    const condValue = [0, 0, 0]
     let accepted = true
 
     let j = -1

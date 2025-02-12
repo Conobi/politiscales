@@ -2,8 +2,6 @@
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
-const toast = useToast()
-
 const availableLocales = computed(() => {
   return locales.value.filter((i) => i.code !== locale.value)
 })

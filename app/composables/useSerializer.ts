@@ -92,7 +92,7 @@ export const useSerializer = () => {
         axisValues[axesKeys[axisValue.axis] as string] = axisValue.score
       }
       return axisValues
-    } catch (e) {
+    } catch {
       return null
     }
   }
@@ -120,7 +120,7 @@ export const useSerializer = () => {
       })
 
       return retAxesValues
-    } catch (e) {
+    } catch {
       return null
     }
   }

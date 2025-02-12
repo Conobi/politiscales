@@ -16,6 +16,7 @@ export default withNuxt(
           allowTemplateLiterals: true
         }
       ],
+      'vue/multi-word-component-names': 'off',
       'no-console': 'off'
     }
   },

@@ -25,10 +25,13 @@ interface Score {
 }
 
 const quizResults = computed<AxisValues>(() => {
-  const scores = axesKeys.reduce((acc, axis) => {
-    acc[axis] = { val: 0, sum: 0 }
-    return acc
-  }, {} as Record<string, Score>)
+  const scores = axesKeys.reduce(
+    (acc, axis) => {
+      acc[axis] = { val: 0, sum: 0 }
+      return acc
+    },
+    {} as Record<string, Score>
+  )
 
   Object.entries(questionsState.value.answers).forEach(
     ([questionId, answerValue]) => {
@@ -88,10 +91,10 @@ const nextQuestion = (mult: number) => {
     tag="span"
     class="text-2xl my-4"
   >
-    <template v-slot:x>
+    <template #x>
       <span>{{ questionsState.currentQuestionIndex + 1 }}</span>
     </template>
-    <template v-slot:n>
+    <template #n>
       {{ questionsIds.length }}
     </template>
   </i18n-t>
@@ -116,18 +119,18 @@ const nextQuestion = (mult: number) => {
     </UButton>
 
     <UButton
+      v-if="questionsState.currentQuestionIndex > 0"
       color="neutral"
       size="xl"
       @click="prevQuestion"
-      v-if="questionsState.currentQuestionIndex > 0"
     >
       {{ $t('prev_question') }}
     </UButton>
     <UButton
+      v-if="questionsState.currentQuestionIndex === 0"
       color="neutral"
       size="xl"
       to="/"
-      v-if="questionsState.currentQuestionIndex === 0"
     >
       {{ $t('back_home') }}
     </UButton>

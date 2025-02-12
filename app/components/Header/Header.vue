@@ -1,11 +1,9 @@
-<script setup lang="ts">
-const route = useRoute()
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <UHeader>
     <template #title>
-      <h1>Politiscales</h1>
+      <h1></h1>
     </template>
 
     <template #right>
