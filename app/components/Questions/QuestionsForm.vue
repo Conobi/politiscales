@@ -25,6 +25,7 @@ interface Score {
 }
 
 const quizResults = computed<AxisValues>(() => {
+  // First calculate raw scores as before
   const scores = axesKeys.reduce(
     (acc, axis) => {
       acc[axis] = { val: 0, sum: 0 }
@@ -49,6 +50,31 @@ const quizResults = computed<AxisValues>(() => {
     }
   )
 
+  // Normalize paired axes
+  const pairedAxes: { [key: string]: string[] } = {}
+  axesKeys.forEach((axis) => {
+    if (axes[axis].pair) {
+      if (!pairedAxes[axes[axis].pair]) {
+        pairedAxes[axes[axis].pair] = []
+      }
+      pairedAxes[axes[axis].pair].push(axis)
+    }
+  })
+
+  // For each pair, ensure their sum doesn't exceed 100%
+  Object.values(pairedAxes).forEach((pair) => {
+    const [axis1, axis2] = pair
+    const value1 = (scores[axis1].val / scores[axis1].sum) * 100
+    const value2 = (scores[axis2].val / scores[axis2].sum) * 100
+
+    if (value1 + value2 > 100) {
+      const ratio = 100 / (value1 + value2)
+      scores[axis1].val *= ratio
+      scores[axis2].val *= ratio
+    }
+  })
+
+  // Convert to percentages
   return Object.entries(scores).reduce((acc, [axis, score]) => {
     acc[axis] = (score.val / score.sum) * 100
     return acc
@@ -76,8 +102,8 @@ const nextQuestion = (mult: number) => {
         hash: `#${encodeResultsStr(quizResults.value)}`
       })
     )
-    // questionsState.value.currentQuestionIndex = 0
-    // questionsState.value.answers = {}
+    questionsState.value.currentQuestionIndex = 0
+    questionsState.value.answers = {}
   } else {
     questionsState.value.currentQuestionIndex++
   }
@@ -89,7 +115,7 @@ const nextQuestion = (mult: number) => {
     keypath="question_x_of_n"
     scope="global"
     tag="span"
-    class="text-2xl my-4"
+    class="text-xl my-4 font-serif"
   >
     <template #x>
       <span>{{ questionsState.currentQuestionIndex + 1 }}</span>
