@@ -134,6 +134,30 @@
         </text>
       </g>
     </g>
+
+    <!-- Unpaired axes badges -->
+    <g
+      v-for="(badge, index) in unpairedAxesBadges"
+      :key="badge.name"
+      :transform="`translate(${800 / 2 - ((iconSize + badgeSpacing) * unpairedAxesBadges.length) / 2 + index * (iconSize + badgeSpacing)}, ${350 + axesPairs.length * (barHeight + axisSpacing) + badgeHeight})`"
+    >
+      <image
+        :href="`/images/${badge.name}_small.png`"
+        :x="0"
+        y="0"
+        :width="iconSize"
+        :height="iconSize"
+      />
+      <text
+        :x="iconSize / 2"
+        :y="iconSize + 10"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        class="text-sm fill-black"
+      >
+        {{ $t(`axes.${badge.name}`) }}
+      </text>
+    </g>
   </svg>
 </template>
 
@@ -153,6 +177,8 @@ const barWidth = 500
 const iconSize = 76
 const axisHeight = 80
 const axisSpacing = 80
+const badgeHeight = 100
+const badgeSpacing = 50
 
 const axesPairs = computed(() => {
   const pairs: { [key: string]: string[] } = {}
@@ -214,8 +240,22 @@ const generatedSlogan = computed(() => {
   return slogan
 })
 
+const unpairedAxesBadges = computed(() => {
+  return Object.entries(props.axes)
+    .filter(([key, value]) => value !== null && !axes[key].pair)
+    .map(([key, value]) => ({
+      name: key,
+      value: value
+    }))
+    .sort((a, b) => b.value - a.value)
+})
+
 const totalHeight = computed(() => {
-  return axesPairs.value.length * (axisHeight + axisSpacing / 2) + 456 // 356 (flag height + padding) + 100 (original padding)
+  return (
+    axesPairs.value.length * (axisHeight + axisSpacing / 2) +
+    (badgeHeight + badgeSpacing) +
+    400
+  )
 })
 </script>
 
