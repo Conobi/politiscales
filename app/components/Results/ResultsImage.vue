@@ -15,10 +15,21 @@
       <ResultsFlag
         v-if="$props.axes"
         :axes="$props.axes"
-        width="512"
-        height="256"
+        :width="512"
+        :height="256"
       />
     </foreignObject>
+
+    <!-- Slogan -->
+    <text
+      x="400"
+      y="360"
+      text-anchor="middle"
+      dominant-baseline="middle"
+      class="text-lg font-serif"
+    >
+      {{ generatedSlogan }}
+    </text>
 
     <!-- For each axis pair -->
     <g
@@ -128,9 +139,10 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { axes } from '~/utils/constants'
+import { axes, charSlogan } from '~/utils/constants'
 import type { AxisValues } from '~/utils/constants'
 
+const { t } = useI18n()
 const props = defineProps<{
   axes: AxisValues
 }>()
@@ -141,9 +153,6 @@ const barWidth = 500
 const iconSize = 76
 const axisHeight = 80
 const axisSpacing = 80
-
-const flagComponent = ref<InstanceType<typeof ResultsFlag> | null>(null)
-const flagCanvas = ref<HTMLCanvasElement | null>(null)
 
 const axesPairs = computed(() => {
   const pairs: { [key: string]: string[] } = {}
@@ -177,14 +186,32 @@ const axesPairs = computed(() => {
     }
   })
 })
-// Watch for the flag component to be ready and copy its canvas content
-watchEffect(() => {
-  if (flagComponent.value?.flagCanvas && flagCanvas.value) {
-    const ctx = flagCanvas.value.getContext('2d')
-    if (ctx) {
-      ctx.drawImage(flagComponent.value.flagCanvas, 0, 0)
+
+const characteristics = computed(() => {
+  return Object.entries(props.axes)
+    .filter(([value]) => value !== null)
+    .map(([key, value]) => ({
+      name: key,
+      value: value
+    }))
+    .sort((a, b) => b.value - a.value)
+})
+
+const generatedSlogan = computed(() => {
+  let slogan = ''
+  let counter = 0
+
+  for (const characteristic of characteristics.value) {
+    if (charSlogan[characteristic.name]) {
+      if (slogan !== '') slogan += ' · '
+      slogan += t(`slogans.${charSlogan[characteristic.name]}`)
+      counter++
+
+      if (counter >= 3) break
     }
   }
+
+  return slogan
 })
 
 const totalHeight = computed(() => {

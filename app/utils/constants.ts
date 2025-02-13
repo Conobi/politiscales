@@ -132,6 +132,20 @@ export interface AxisValues {
   [key: string]: number | null
 }
 
+export const charSlogan = {
+  internationalism: 'humanity',
+  nationalism: 'fatherland',
+  constructivism: 'equality',
+  ecology: 'ecology',
+  rehabilitative_justice: 'justice',
+  punitive_justice: 'order',
+  laissez_faire: 'liberty',
+  communism: 'socialism',
+  capitalism: 'work',
+  conservative: 'family',
+  revolution: 'revolution'
+}
+
 interface FlagShape {
   numColors: number
   shapes: Array<number[]>
