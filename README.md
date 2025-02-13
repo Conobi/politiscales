@@ -6,14 +6,14 @@ This a re-implementation of the Politiscales test, with a new design and new que
 
 ## MVP
 - [x] Implement the flag logic
-- [ ] Implement the questions page
+- [x] Implement the questions page
 - [ ] Fix all the horrible typing issues
 - [ ] Write new questions for the new axes
 - [ ] Address the issues of the original questions
 - [ ] Add new flags symbols and colors for the new axes
 - [ ] Create new icons for the new axes
 - [ ] Add new values
-- [ ] Add proto serialization to the results (+ anchor anonymization)
+- [x] Add new serialization to the results (+ anchor anonymization)
 - [ ] Implement the result page
 - [ ] Write the /about page
 - [x] Find and implement a new translation system
