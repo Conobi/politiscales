@@ -146,6 +146,16 @@ export const charSlogan = {
   revolution: 'revolution'
 }
 
+export const badgeThreshold = {
+  anarchism: 0.9,
+  pragmatism: 0.5,
+  feminism: 0.9,
+  complotism: 0.9,
+  veganism: 0.5,
+  religion: 0.5,
+  monarchism: 0.5
+}
+
 interface FlagShape {
   numColors: number
   shapes: Array<number[]>

@@ -163,7 +163,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { axes, charSlogan } from '~/utils/constants'
+import { axes, badgeThreshold, charSlogan } from '~/utils/constants'
 import type { AxisValues } from '~/utils/constants'
 
 const { t } = useI18n()
@@ -242,7 +242,10 @@ const generatedSlogan = computed(() => {
 
 const unpairedAxesBadges = computed(() => {
   return Object.entries(props.axes)
-    .filter(([key, value]) => value !== null && !axes[key].pair)
+    .filter(
+      ([key, value]) =>
+        value !== null && value / 100 >= badgeThreshold[key] && !axes[key].pair
+    )
     .map(([key, value]) => ({
       name: key,
       value: value
