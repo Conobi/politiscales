@@ -1,14 +1,10 @@
 export interface Axis {
-  pair: string
+  pair?: string
   legacyKey?: string
   color?: string
 }
 
-export interface Axes {
-  [key: string]: Axis
-}
-
-export const axes: Axes = {
+export const axes = {
   constructivism: {
     pair: 'identity',
     legacyKey: 'c0',
@@ -126,7 +122,7 @@ export const axes: Axes = {
   religion: {
     legacyKey: 'reli'
   }
-}
+} satisfies Record<string, Axis>
 
 export interface AxisValues {
   [key: string]: number | null
@@ -158,7 +154,7 @@ export const badgeThreshold = {
 
 interface FlagShape {
   numColors: number
-  shapes: Array<number[]>
+  shapes: [number, string | number, number, number, number, ...number[]][]
   symbol: number[]
   cond: {
     [key: string]: {

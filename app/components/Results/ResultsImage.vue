@@ -45,7 +45,7 @@
           y="0"
           :width="`${(pair.value1 / 100) * barWidth}`"
           :height="barHeight"
-          :fill="axes[pair.axis1].color"
+          :fill="pair.fill1"
         />
         <text
           v-if="(pair.value1 / 100) * barWidth > 40"
@@ -83,7 +83,7 @@
           y="0"
           :width="`${(pair.value2 / 100) * barWidth}`"
           :height="barHeight"
-          :fill="axes[pair.axis2].color"
+          :fill="pair.fill2"
         />
         <text
           v-if="(pair.value2 / 100) * barWidth > 40"
@@ -181,29 +181,35 @@ const badgeHeight = 100
 const badgeSpacing = 50
 
 const axesPairs = computed(() => {
-  const pairs: { [key: string]: string[] } = {}
+  const pairs: { [key: string]: (keyof typeof axes)[] } = {}
 
   // Group axes by pairs
   Object.entries(axes)
     .filter(([axisKey]) => props.axes[axisKey] != null)
     .forEach(([axisKey, axis]) => {
-      if (axis.pair) {
-        if (!pairs[axis.pair]) {
-          pairs[axis.pair] = []
+      if ('pair' in axis) {
+        if (axis.pair) {
+          if (!(axis.pair in pairs)) {
+            pairs[axis.pair] = []
+          }
+          pairs[axis.pair]!.push(axisKey as keyof typeof axes)
         }
-        pairs[axis.pair].push(axisKey)
       }
     })
 
   // Calculate values for each pair
   return Object.entries(pairs).map(([pairName, pairAxes]) => {
     const [axis1, axis2] = pairAxes
-    const value1 = props.axes[axis1] || 0
-    const value2 = props.axes[axis2] || 0
+    const value1 = (axis1 && props.axes[axis1]) || 0
+    const value2 = (axis2 && props.axes[axis2]) || 0
     const neutral = Math.max(0, 100 - value1 - value2)
+    const axe1 = (axis1 && axes[axis1]) || null
+    const axe2 = (axis2 && axes[axis2]) || null
 
     return {
       name: pairName,
+      fill1: (axe1 && 'color' in axe1 && axe1.color) || '',
+      fill2: (axe2 && 'color' in axe2 && axe2.color) || '',
       axis1,
       axis2,
       value1,
@@ -217,10 +223,10 @@ const characteristics = computed(() => {
   return Object.entries(props.axes)
     .filter(([value]) => value !== null)
     .map(([key, value]) => ({
-      name: key,
+      name: key as keyof typeof charSlogan,
       value: value
     }))
-    .sort((a, b) => b.value - a.value)
+    .sort((a, b) => (b.value || 0) - (a.value || 0))
 })
 
 const generatedSlogan = computed(() => {
@@ -244,13 +250,15 @@ const unpairedAxesBadges = computed(() => {
   return Object.entries(props.axes)
     .filter(
       ([key, value]) =>
-        value !== null && value / 100 >= badgeThreshold[key] && !axes[key].pair
+        value !== null &&
+        value / 100 >= badgeThreshold[key as keyof typeof badgeThreshold] &&
+        'pair' in axes[key as keyof typeof axes]
     )
     .map(([key, value]) => ({
       name: key,
       value: value
     }))
-    .sort((a, b) => b.value - a.value)
+    .sort((a, b) => (b.value || 0) - (a.value || 0))
 })
 
 const totalHeight = computed(() => {

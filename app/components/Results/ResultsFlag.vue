@@ -4,8 +4,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted, watch } from 'vue'
-import { flagColors, flagSymbols, flagShapes } from '~/utils/constants'
-import type { AxisValues, SymbolData, FlagSymbol } from '~/utils/constants'
 
 const props = defineProps<{
   height: number
@@ -62,13 +60,18 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
     ctx.rect(0, 0, 512, 256)
     ctx.fillStyle = '#ffffff'
     ctx.fill()
-  } else {
+  } else if (flagShapes[flagId]) {
     for (let i = 0; i < flagShapes[flagId].shapes.length; i++) {
       const path = flagShapes[flagId].shapes[i]
+      if (!path) {
+        throw new Error(`Invalid path for flag shape ${flagId}`)
+      }
+
       const numPoints = path.length / 2
 
       ctx.beginPath()
-      ctx.moveTo(path[1] * 512, path[2] * 256)
+      const moveToX = typeof path[1] === 'string' ? NaN : path[1]
+      ctx.moveTo(moveToX * 512, path[2] * 256)
 
       if (path[1] == 'circle') {
         ctx.arc(
@@ -81,7 +84,7 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
         )
       } else if (
         path[1] == 'circleSymbol' &&
-        symbolData[0].parent_type != 'none'
+        symbolData[0].parent_type !== 'none'
       ) {
         ctx.arc(
           path[2] * 512,
@@ -93,27 +96,41 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
         )
       } else {
         for (let j = 1; j < numPoints; j++) {
-          ctx.lineTo(path[1 + j * 2 + 0] * 512, path[1 + j * 2 + 1] * 256)
+          const pathX = path[1 + j * 2 + 0]
+          const pathY = path[1 + j * 2 + 1]
+          if (typeof pathX !== 'number' || typeof pathY !== 'number') {
+            // throw new Error(`Invalid path types, x=${pathX} y=${pathY}`)
+          }
+
+          if (typeof pathX === 'number' && typeof pathY === 'number')
+            ctx.lineTo(pathX * 512, pathY * 256)
         }
       }
-      ctx.fillStyle = colors[path[0]].bgColor
+      ctx.fillStyle = colors[path[0]]?.bgColor ?? ''
       ctx.fill()
     }
 
-    spriteX = flagShapes[flagId].symbol[0] * 512
-    spriteY = flagShapes[flagId].symbol[1] * 256
-    spriteS = flagShapes[flagId].symbol[2]
+    spriteX = (flagShapes[flagId].symbol[0] ?? 0) * 512
+    spriteY = (flagShapes[flagId].symbol[1] ?? 0) * 256
+    spriteS = flagShapes[flagId].symbol[2] ?? 0
   }
 
-  if (symbolData[0].parent_type != 'none') {
+  if (symbolData[0].parent_type !== 'none') {
+    if (!('sprites' in images)) {
+      throw new Error(`Invalid image : ${images}`)
+    }
+
     const tmpC = document.createElement('canvas')
     tmpC.width = images['sprites'].width
     tmpC.height = images['sprites'].height
     const tmpCtx = tmpC.getContext('2d')
+    if (!tmpCtx) {
+      throw new Error('Could not create 2d context')
+    }
 
     tmpCtx.beginPath()
     tmpCtx.rect(0, 0, tmpC.width, tmpC.height)
-    tmpCtx.fillStyle = colors[0].fgColor
+    tmpCtx.fillStyle = colors[0]?.fgColor ?? ''
     tmpCtx.fill()
 
     tmpCtx.globalCompositeOperation = 'destination-in'
@@ -123,47 +140,47 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
     ctx.translate(spriteX, spriteY)
     ctx.scale(spriteS, spriteS)
 
-    const sx = symbolData[0].transform.x
-    const sy = symbolData[0].transform.y
+    const symbol0Tf = symbolData[0].transform
 
     ctx.save()
-    ctx.translate(
-      symbolData[0].transform.parent_tx,
-      -symbolData[0].transform.parent_ty
+    ctx.translate(symbol0Tf.parent_tx ?? 0, -(symbol0Tf.parent_ty ?? 0))
+    ctx.rotate(((symbol0Tf.parent_r ?? 0) * Math.PI) / 180)
+    ctx.scale(symbol0Tf.parent_sx ?? 0, symbol0Tf.parent_sy ?? 0)
+    ctx.drawImage(
+      tmpC,
+      (symbol0Tf.x ?? 0) * 128,
+      (symbol0Tf.y ?? 0) * 128,
+      128,
+      128,
+      -64,
+      -64,
+      128,
+      128
     )
-    ctx.rotate((symbolData[0].transform.parent_r * Math.PI) / 180)
-    ctx.scale(
-      symbolData[0].transform.parent_sx,
-      symbolData[0].transform.parent_sy
-    )
-    ctx.drawImage(tmpC, sx * 128, sy * 128, 128, 128, -64, -64, 128, 128)
     ctx.restore()
 
     if (symbolData[1].parent_type != 'none') {
-      const sx = symbolData[1].transform.x
-      const sy = symbolData[1].transform.y
+      const symbol1Tf = symbolData[1].transform
 
-      ctx.translate(
-        symbolData[0].transform.child_tx,
-        -symbolData[0].transform.child_ty
-      )
-      ctx.rotate((symbolData[0].transform.child_r * Math.PI) / 180)
-      ctx.scale(
-        symbolData[0].transform.child_sx,
-        symbolData[0].transform.child_sy
-      )
+      ctx.translate(symbol0Tf.child_tx ?? 0, -(symbol0Tf.child_ty ?? 0))
+      ctx.rotate(((symbol0Tf.child_r ?? 0) * Math.PI) / 180)
+      ctx.scale(symbol0Tf.child_sx ?? 0, symbol0Tf.child_sy ?? 0)
 
-      ctx.translate(
-        symbolData[1].transform.parent_tx,
-        -symbolData[1].transform.parent_ty
-      )
-      ctx.rotate((symbolData[1].transform.parent_r * Math.PI) / 180)
-      ctx.scale(
-        symbolData[1].transform.parent_sx,
-        symbolData[1].transform.parent_sy
-      )
+      ctx.translate(symbol1Tf.parent_tx ?? 0, -(symbol1Tf.parent_ty ?? 0))
+      ctx.rotate(((symbol1Tf.parent_r ?? 0) * Math.PI) / 180)
+      ctx.scale(symbol1Tf.parent_sx ?? 0, symbol1Tf.parent_sy ?? 0)
 
-      ctx.drawImage(tmpC, sx * 128, sy * 128, 128, 128, -64, -64, 128, 128)
+      ctx.drawImage(
+        tmpC,
+        (symbol1Tf.x ?? 0) * 128,
+        (symbol1Tf.y ?? 0) * 128,
+        128,
+        128,
+        -64,
+        -64,
+        128,
+        128
+      )
       ctx.restore()
     }
 
@@ -232,14 +249,14 @@ const generatedFlagColors = computed(() => {
     colors.push({ bgColor: '#ffffff', fgColor: '#000000', value: 0 })
 
   // If the delta between the second and third color is over 0.2, we keep only the first two colors
-  if (colors.length > 2 && colors[1].value - colors[2].value > 0.2) {
+  if (colors.length > 2 && colors[1]!.value - colors[2]!.value > 0.2) {
     colors.splice(2, colors.length - 2)
   }
 
   return colors
 })
 
-const generatedFlagSymbol = computed<SymbolData[]>(() => {
+const generatedFlagSymbol = computed(() => {
   const defaultSymbol: SymbolData = {
     parent_type: 'none',
     transform: {}
@@ -294,44 +311,46 @@ const generatedFlagSymbol = computed<SymbolData[]>(() => {
   }
 
   for (let s0 = 0; s0 < flagSymbols.length; s0++) {
-    const matchingCharacteristic0 = matchCharacteristic(flagSymbols[s0])
+    const flagSymbol0 = flagSymbols[s0]!
+    const matchingCharacteristic0 = matchCharacteristic(flagSymbol0)
     if (matchingCharacteristic0 > 0) {
-      const transform0 = getTransformIndex(flagSymbols[s0], 'none')
+      const transform0 = getTransformIndex(flagSymbol0, 'none')
 
       if (matchingCharacteristic0 > maxValue && transform0 >= 0) {
         symbol0 = {
-          parent_type: flagSymbols[s0].data.parent_type,
-          transform: flagSymbols[s0].data.transforms[transform0]
+          parent_type: flagSymbol0.data.parent_type,
+          transform: flagSymbol0.data.transforms[transform0]!
         }
         symbol1 = { ...defaultSymbol }
         maxValue = matchingCharacteristic0
       }
 
       for (let s1 = s0 + 1; s1 < flagSymbols.length; s1++) {
+        const flagSymbol1 = flagSymbols[s1]!
         const transform0 = getTransformIndex(
-          flagSymbols[s0],
-          flagSymbols[s1].data.parent_type
+          flagSymbol0,
+          flagSymbol1.data.parent_type
         )
         const transform1 = getTransformIndex(
-          flagSymbols[s1],
-          flagSymbols[s0].data.parent_type
+          flagSymbol1,
+          flagSymbol0.data.parent_type
         )
 
         if (transform0 < 0 || transform1 < 0) continue
 
-        const matchingCharacteristic1 = matchCharacteristic(flagSymbols[s1])
+        const matchingCharacteristic1 = matchCharacteristic(flagSymbol1)
 
         if (matchingCharacteristic1 > 0) {
           const combinedValue =
             matchingCharacteristic0 + matchingCharacteristic1
           if (combinedValue > maxValue) {
             symbol0 = {
-              parent_type: flagSymbols[s0].data.parent_type,
-              transform: flagSymbols[s0].data.transforms[transform0]
+              parent_type: flagSymbol0.data.parent_type,
+              transform: flagSymbol0.data.transforms[transform0]!
             }
             symbol1 = {
-              parent_type: flagSymbols[s1].data.parent_type,
-              transform: flagSymbols[s1].data.transforms[transform1]
+              parent_type: flagSymbol1.data.parent_type,
+              transform: flagSymbol1.data.transforms[transform1]!
             }
             maxValue = combinedValue
           }
@@ -346,9 +365,9 @@ const generatedFlagSymbol = computed<SymbolData[]>(() => {
     symbol1.transform.main &&
     !symbol0.transform.main
   ) {
-    return [symbol1, symbol0]
+    return [symbol1, symbol0] as const
   } else {
-    return [symbol0, symbol1]
+    return [symbol0, symbol1] as const
   }
 })
 
@@ -358,37 +377,46 @@ const generatedFlagShape = computed(() => {
   let flagColor = 0
   const numColors = generatedFlagColors.value.length
   for (let i = 0; i < flagShapes.length; i++) {
-    if (flagShapes[i].numColors > numColors) continue
+    const flagShape = flagShapes[i]!
+    if (flagShape.numColors > numColors) continue
 
     const condValue = [0, 0, 0]
     let accepted = true
 
     let j = -1
-    for (const axisName in flagShapes[i].cond) {
+    for (const axisName in flagShape.cond) {
       j++
       const value = axesValues.value[axisName]
 
-      if (
-        value < flagShapes[i].cond[axisName].vmin ||
-        value > flagShapes[i].cond[axisName].vmax
-      ) {
-        accepted = false
-        break
+      if (typeof value === 'number') {
+        if (
+          flagShape.cond[axisName] &&
+          (value < flagShape.cond[axisName].vmin ||
+            value > flagShape.cond[axisName].vmax)
+        ) {
+          accepted = false
+          break
+        }
+        if (j < 3) condValue[j] = value
       }
-      if (j < 3) condValue[j] = value
     }
 
     if (!accepted) continue
 
-    if (accepted && flagColor <= flagShapes[i].numColors) {
+    if (
+      accepted &&
+      flagColor <= flagShape.numColors &&
+      condValue.length >= 3 &&
+      flagValue.length >= 3
+    ) {
       if (
-        flagShapes[i].numColors > flagColor ||
-        condValue[0] > flagValue[0] ||
+        flagShape.numColors > flagColor ||
+        condValue[0]! > flagValue[0]! ||
         (condValue[0] == flagValue[0] &&
-          (condValue[1] > flagValue[1] ||
-            (condValue[1] == flagValue[1] && condValue[2] > flagValue[2])))
+          (condValue[1]! > flagValue[1]! ||
+            (condValue[1] == flagValue[1] && condValue[2]! > flagValue[2]!)))
       ) {
-        flagColor = flagShapes[i].numColors
+        flagColor = flagShape.numColors
         flagValue = [...condValue]
         flagFound = i
       }

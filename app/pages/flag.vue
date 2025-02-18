@@ -2,7 +2,12 @@
   <div class="flex items-center justify-center flex-col mt-10 gap-10">
     <template v-if="userAxes">
       <div @click="randomizeAxes">
-        <ResultsFlag :axes="userAxes" class="cursor-pointer" />
+        <ResultsFlag
+          :axes="userAxes"
+          class="cursor-pointer"
+          :height="200"
+          :width="400"
+        />
       </div>
       <ResultsTester v-model="userAxes" />
     </template>
@@ -11,8 +16,6 @@
 </template>
 
 <script lang="ts" setup>
-import { axes } from '~/utils/constants'
-import type { AxisValues } from '~/utils/constants'
 import { onMounted } from 'vue'
 
 const route = useRoute()
@@ -27,6 +30,7 @@ const userAxes = ref<AxisValues>(initUserAxes)
 
 const axesValuesLegacyUrl = computed<AxisValues | null>(() => {
   const params = route.query.results
+  return null
   // if (!params || typeof params !== 'string') return null
 })
 
@@ -45,11 +49,12 @@ function randomizeAxes() {
 
   // Separate paired and unpaired axes
   for (const axis in axes) {
-    if (axes[axis].pair) {
-      if (!pairedAxes[axes[axis].pair]) {
-        pairedAxes[axes[axis].pair] = []
+    const axe = axes[axis as keyof typeof axes]
+    if ('pair' in axe) {
+      if (!pairedAxes[axe.pair]) {
+        pairedAxes[axe.pair] = []
       }
-      pairedAxes[axes[axis].pair].push(axis)
+      pairedAxes[axe.pair]!.push(axis)
     } else {
       unpairedAxes.push(axis)
     }
@@ -57,11 +62,11 @@ function randomizeAxes() {
 
   // Assign random values to paired axes
   for (const pair in pairedAxes) {
-    const [axisA, axisB] = pairedAxes[pair]
+    const [axisA, axisB] = pairedAxes[pair]!
     const valueA = Math.random()
     const valueB = Math.random() * (1 - valueA)
-    axisValues[axisA] = valueA
-    axisValues[axisB] = valueB
+    axisValues[axisA!] = valueA
+    axisValues[axisB!] = valueB
   }
 
   // Randomly select some unpaired axes and assign them random values

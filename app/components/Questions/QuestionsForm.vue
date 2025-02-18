@@ -53,24 +53,25 @@ const quizResults = computed<AxisValues>(() => {
   // Normalize paired axes
   const pairedAxes: { [key: string]: string[] } = {}
   axesKeys.forEach((axis) => {
-    if (axes[axis].pair) {
-      if (!pairedAxes[axes[axis].pair]) {
-        pairedAxes[axes[axis].pair] = []
+    const axe = axes[axis as keyof typeof axes]
+    if ('pair' in axe) {
+      if (!pairedAxes[axe.pair]) {
+        pairedAxes[axe.pair] = []
       }
-      pairedAxes[axes[axis].pair].push(axis)
+      pairedAxes[axe.pair]!.push(axis)
     }
   })
 
   // For each pair, ensure their sum doesn't exceed 100%
   Object.values(pairedAxes).forEach((pair) => {
-    const [axis1, axis2] = pair
-    const value1 = (scores[axis1].val / scores[axis1].sum) * 100
-    const value2 = (scores[axis2].val / scores[axis2].sum) * 100
+    const [axis1, axis2] = pair as [string, string]
+    const value1 = (scores[axis1]!.val / scores[axis1]!.sum) * 100
+    const value2 = (scores[axis2]!.val / scores[axis2]!.sum) * 100
 
     if (value1 + value2 > 100) {
       const ratio = 100 / (value1 + value2)
-      scores[axis1].val *= ratio
-      scores[axis2].val *= ratio
+      scores[axis1]!.val *= ratio
+      scores[axis2]!.val *= ratio
     }
   })
 

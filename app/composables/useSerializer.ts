@@ -111,12 +111,16 @@ export const useSerializer = () => {
       const retAxesValues: AxisValues = {}
 
       // We convert the legacy keys to the new keys (e.g "j0" to "rehabilitative_justice")
-      Object.keys(axes).forEach((key) => {
-        const axis = axes[key] as Axis
-        const value = parseInt(pairsDict[axis.legacyKey] as string)
-        if (value) {
-          retAxesValues[key] = value
-        } else if (axis.legacyKey && axis.pair) retAxesValues[key] = 0
+      ;(Object.keys(axes) as (keyof typeof axes)[]).forEach((key) => {
+        const axis = axes[key]
+        if ('legacyKey' in axis) {
+          const value = parseInt(pairsDict[axis.legacyKey]!)
+          if (typeof value === 'number' && !isNaN(value)) {
+            retAxesValues[key] = value
+            return
+          }
+          if (axis.legacyKey && 'pair' in axis) retAxesValues[key] = 0
+        }
       })
 
       return retAxesValues
