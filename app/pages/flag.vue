@@ -1,18 +1,16 @@
 <template>
-  <div
-    v-if="userAxes"
-    class="flex items-center justify-center flex-col mt-10 gap-10"
-  >
-    <div @click="randomizeAxes">
-      <ResultsFlag :axes="userAxes" />
-    </div>
-    <ResultsTester v-model="userAxes" />
+  <div v-if="userAxes">
+    <ResultsFlag :axes="userAxes" @click="randomizeAxes" class="m-auto" />
+    <ResultsTester v-model="userAxes" class="mt-10 m-auto" />
   </div>
 </template>
 
 <script lang="ts" setup>
-const initUserAxes = axesKeys.reduce<AxisValues>((acc, key) => {
-  return { ...acc, [key]: 0.5 }
+const initUserAxes = pairedAxesByPair.reduce<AxisValues>((acc, pair) => {
+  acc[pair.left] = 0.3
+  acc[pair.right] = 0.3
+
+  return acc
 }, {})
 
 const userAxes = ref<AxisValues>(initUserAxes)

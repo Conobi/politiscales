@@ -8,7 +8,7 @@ export interface PairedAxis {
   color?: string
 }
 
-const pairedAxes = {
+export const pairedAxes = {
   constructivism: {
     pair: 'identity',
     legacyKey: 'c0',
@@ -105,10 +105,16 @@ const pairedAxes = {
     pair: 'development',
     color: '#ff0000'
   }
-} satisfies Record<string, PairedAxis>
+} as const satisfies Record<string, PairedAxis>
 
 type PairedAxesKey = keyof typeof pairedAxes
 export const pairedAxesKeys = Object.keys(pairedAxes) as PairedAxesKey[]
+
+export interface PairedAxisByPair {
+  name: string
+  left: PairedAxesKey
+  right: PairedAxesKey
+}
 
 export const pairedAxesByPair = Object.entries(pairedAxes).reduce(
   (acc, [key, value]) => {
@@ -131,7 +137,7 @@ export const pairedAxesByPair = Object.entries(pairedAxes).reduce(
 
     return acc
   },
-  [] as { name: string; left: PairedAxesKey; right: PairedAxesKey }[]
+  [] as PairedAxisByPair[]
 )
 
 export const unpairedAxes = {

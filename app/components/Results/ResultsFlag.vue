@@ -1,5 +1,10 @@
 <template>
-  <canvas ref="flagCanvas" :height="props.height" :width="props.width"></canvas>
+  <canvas
+    ref="flagCanvas"
+    :height="props.height"
+    :width="props.width"
+    class="cursor-pointer"
+  ></canvas>
 </template>
 
 <script setup lang="ts">
