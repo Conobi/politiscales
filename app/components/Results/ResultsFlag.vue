@@ -3,45 +3,26 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
-
-const props = defineProps<{
-  height: number
-  width: number
-  axes: AxisValues
-}>()
+const props = withDefaults(
+  defineProps<{
+    height?: number
+    width?: number
+    axes: AxisValues
+  }>(),
+  { height: 256, width: 512 }
+)
 
 const flagCanvas = ref<HTMLCanvasElement | null>(null)
-defineExpose({ flagCanvas })
 
-// Image loading handler
-const loadImages = async () => {
-  const imageUrls = {
-    sprites: '/images/flag_sprites.png'
-    // Add all your image paths here
-  }
-
-  const loadedImages = {} as Record<string, HTMLImageElement>
-
-  const loadImage = (key: string, url: string): Promise<void> => {
-    return new Promise((resolve) => {
-      const img = new Image()
-      img.onload = () => {
-        loadedImages[key] = img
-        resolve()
-      }
-      img.src = url
-    })
-  }
-
-  await Promise.all(
-    Object.entries(imageUrls).map(([key, url]) => loadImage(key, url))
-  )
-
-  return loadedImages
+const loadSprite = async () => {
+  return new Promise<HTMLImageElement>((resolve) => {
+    const img = new Image()
+    img.onload = () => resolve(img)
+    img.src = '/images/flag_sprites.png'
+  })
 }
 
-const drawFlag = (images: Record<string, HTMLImageElement>) => {
+const drawFlag = (sprite: HTMLImageElement) => {
   if (!flagCanvas.value) return
 
   const ctx = flagCanvas.value.getContext('2d')
@@ -116,13 +97,9 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
   }
 
   if (symbolData[0].parent_type !== 'none') {
-    if (!('sprites' in images)) {
-      throw new Error(`Invalid image : ${images}`)
-    }
-
     const tmpC = document.createElement('canvas')
-    tmpC.width = images['sprites'].width
-    tmpC.height = images['sprites'].height
+    tmpC.width = sprite.width
+    tmpC.height = sprite.height
     const tmpCtx = tmpC.getContext('2d')
     if (!tmpCtx) {
       throw new Error('Could not create 2d context')
@@ -134,7 +111,7 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
     tmpCtx.fill()
 
     tmpCtx.globalCompositeOperation = 'destination-in'
-    tmpCtx.drawImage(images['sprites'], 0, 0)
+    tmpCtx.drawImage(sprite, 0, 0)
 
     ctx.save()
     ctx.translate(spriteX, spriteY)
@@ -189,16 +166,13 @@ const drawFlag = (images: Record<string, HTMLImageElement>) => {
 }
 
 onMounted(async () => {
-  // sprite.src = '/images/flag_sprites.png'
-  const images = await loadImages()
-  drawFlag(images)
+  drawFlag(await loadSprite())
 })
 
 watch(
   () => props.axes,
   async () => {
-    const images = await loadImages()
-    drawFlag(images)
+    drawFlag(await loadSprite())
   },
   { deep: true }
 )
@@ -207,7 +181,7 @@ const axesValues = computed<AxisValues>(() => {
   return Object.fromEntries(
     Object.entries(props.axes).map(([key, value]) => [
       key,
-      value !== null ? value / 100 : null
+      value !== null ? value : null
     ])
   )
 })
@@ -241,17 +215,14 @@ const generatedFlagColors = computed(() => {
     }
   }
 
-  colors.sort(function (a, b) {
-    return b.value - a.value
-  })
+  colors.sort((a, b) => b.value - a.value)
 
   if (colors.length <= 0)
     colors.push({ bgColor: '#ffffff', fgColor: '#000000', value: 0 })
 
   // If the delta between the second and third color is over 0.2, we keep only the first two colors
-  if (colors.length > 2 && colors[1]!.value - colors[2]!.value > 0.2) {
+  if (colors.length > 2 && colors[1]!.value - colors[2]!.value > 0.2)
     colors.splice(2, colors.length - 2)
-  }
 
   return colors
 })

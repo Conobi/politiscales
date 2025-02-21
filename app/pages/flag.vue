@@ -1,89 +1,40 @@
 <template>
-  <div class="flex items-center justify-center flex-col mt-10 gap-10">
-    <template v-if="userAxes">
-      <div @click="randomizeAxes">
-        <ResultsFlag
-          :axes="userAxes"
-          class="cursor-pointer"
-          :height="200"
-          :width="400"
-        />
-      </div>
-      <ResultsTester v-model="userAxes" />
-    </template>
-    <!-- <p>{{ userAxes }}</p> -->
+  <div
+    v-if="userAxes"
+    class="flex items-center justify-center flex-col mt-10 gap-10"
+  >
+    <div @click="randomizeAxes">
+      <ResultsFlag :axes="userAxes" />
+    </div>
+    <ResultsTester v-model="userAxes" />
   </div>
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue'
-
-const route = useRoute()
-
-const initUserAxes: AxisValues = {
-  ...Object.keys(axes).reduce((acc, key) => {
-    return { ...acc, [key]: 0.5 }
-  }, {})
-}
+const initUserAxes = axesKeys.reduce<AxisValues>((acc, key) => {
+  return { ...acc, [key]: 0.5 }
+}, {})
 
 const userAxes = ref<AxisValues>(initUserAxes)
 
-const axesValuesLegacyUrl = computed<AxisValues | null>(() => {
-  const params = route.query.results
-  return null
-  // if (!params || typeof params !== 'string') return null
-})
-
-// function randomizeAxes() {
-//   const newAxes = { ...userAxes.value }
-//   Object.keys(newAxes).forEach((key) => {
-//     newAxes[key] = Math.random()
-//   })
-//   userAxes.value = newAxes
-// }
-
 function randomizeAxes() {
   const axisValues: AxisValues = {}
-  const pairedAxes: { [key: string]: string[] } = {}
-  const unpairedAxes: string[] = []
-
-  // Separate paired and unpaired axes
-  for (const axis in axes) {
-    const axe = axes[axis as keyof typeof axes]
-    if ('pair' in axe) {
-      if (!pairedAxes[axe.pair]) {
-        pairedAxes[axe.pair] = []
-      }
-      pairedAxes[axe.pair]!.push(axis)
-    } else {
-      unpairedAxes.push(axis)
-    }
-  }
 
   // Assign random values to paired axes
-  for (const pair in pairedAxes) {
-    const [axisA, axisB] = pairedAxes[pair]!
+  for (const { left, right } of pairedAxesByPair) {
     const valueA = Math.random()
     const valueB = Math.random() * (1 - valueA)
-    axisValues[axisA!] = valueA
-    axisValues[axisB!] = valueB
+    axisValues[left] = valueA
+    axisValues[right] = valueB
   }
 
-  // Randomly select some unpaired axes and assign them random values
-  const selectedUnpairedAxes = unpairedAxes.filter(() => Math.random() > 0.5)
-  selectedUnpairedAxes.forEach((axis) => {
-    axisValues[axis] = Math.random()
-  })
+  // Assign random values to unpaired axes
+  for (const unpairedAxis of unpairedAxesKeys) {
+    axisValues[unpairedAxis] = Math.random()
+  }
 
   userAxes.value = axisValues
 }
-
-// If we have a legacy URL, we set the userAxes to the legacy values
-onMounted(() => {
-  if (axesValuesLegacyUrl.value) {
-    userAxes.value = axesValuesLegacyUrl.value
-  }
-})
 </script>
 
 <style></style>

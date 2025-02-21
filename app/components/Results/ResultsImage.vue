@@ -162,10 +162,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { axes, badgeThreshold, charSlogan } from '~/utils/constants'
-import type { AxisValues } from '~/utils/constants'
-
 const { t } = useI18n()
 const props = defineProps<{
   axes: AxisValues
