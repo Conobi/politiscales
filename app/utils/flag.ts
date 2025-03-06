@@ -1,7 +1,552 @@
-interface FlagShape {
+type FlagShapePath = [
+  number,
+  string | number,
+  number,
+  number,
+  number,
+  ...number[]
+]
+
+interface Shape {
+  paths: FlagShapePath[]
+  symbol: [number, number, number]
+}
+
+const shapes = {
+  threeColors: {
+    leftTriangle6Strips: {
+      // ex. Cuba, but with 6 strips
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
+        [2, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
+        [1, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
+        [2, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
+        [1, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
+        [2, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1],
+        [0, 0, 0, 0.5, 0.5, 0, 1]
+      ],
+      symbol: [0.2, 0.5, 1.0]
+    },
+
+    leftTriangle5Strips: {
+      // ex. Cuba
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 5, 0, 1 / 5],
+        [2, 0, 1 / 5, 1, 1 / 5, 1, 2 / 5, 0, 2 / 5],
+        [1, 0, 2 / 5, 1, 2 / 5, 1, 3 / 5, 0, 3 / 5],
+        [2, 0, 3 / 5, 1, 3 / 5, 1, 4 / 5, 0, 4 / 5],
+        [1, 0, 4 / 5, 1, 4 / 5, 1, 1, 0, 1],
+        [0, 0, 0, 0.5, 0.5, 0, 1]
+      ],
+      symbol: [0.2, 0.5, 1.0]
+    },
+
+    leftTriangle4Strips: {
+      // ex. Cuba, but with 4 strips
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 4, 0, 1 / 4],
+        [2, 0, 1 / 4, 1, 1 / 4, 1, 2 / 4, 0, 2 / 4],
+        [1, 0, 2 / 4, 1, 2 / 4, 1, 3 / 4, 0, 3 / 4],
+        [2, 0, 3 / 4, 1, 3 / 4, 1, 1, 0, 1],
+        [0, 0, 0, 0.5, 0.5, 0, 1]
+      ],
+      symbol: [0.2, 0.5, 1.0]
+    },
+
+    leftTriangle3Strips: {
+      // ex. Palestine
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 3, 0, 1 / 3],
+        [2, 0, 1 / 3, 1, 1 / 3, 1, 2 / 3, 0, 2 / 3],
+        [1, 0, 2 / 3, 1, 2 / 3, 1, 1, 0, 1],
+        [0, 0, 0, 0.5, 0.5, 0, 1]
+      ],
+      symbol: [0.2, 0.5, 1.0]
+    },
+
+    leftTriangle2Strips: {
+      // ex. Martinique
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 2, 0, 1 / 2],
+        [2, 0, 1 / 2, 1, 1 / 2, 1, 1, 0, 1],
+        [0, 0, 0, 0.5, 0.5, 0, 1]
+      ],
+      symbol: [0.2, 0.5, 1.0]
+    },
+
+    upperleftSquare8Strips: {
+      // ex. Uruguay
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 8, 0, 1 / 8],
+        [2, 0, 1 / 8, 1, 1 / 8, 1, 2 / 8, 0, 2 / 8],
+        [1, 0, 2 / 8, 1, 2 / 8, 1, 3 / 8, 0, 3 / 8],
+        [2, 0, 3 / 8, 1, 3 / 8, 1, 4 / 8, 0, 4 / 8],
+        [1, 0, 4 / 8, 1, 4 / 8, 1, 5 / 8, 0, 5 / 8],
+        [2, 0, 5 / 8, 1, 5 / 8, 1, 6 / 8, 0, 6 / 8],
+        [1, 0, 6 / 8, 1, 6 / 8, 1, 7 / 8, 0, 7 / 8],
+        [2, 0, 7 / 8, 1, 7 / 8, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
+      ],
+      symbol: [1 / 6, 1 / 4, 1.0]
+    },
+
+    upperleftSquare6Strips: {
+      // ex. Togo, but with 6 strips
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
+        [2, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
+        [1, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
+        [2, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
+        [1, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
+        [2, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
+      ],
+      symbol: [1 / 6, 1 / 4, 1.0]
+    },
+
+    upperleftSquare4Strips: {
+      // ex. Togo, but with 4 strips
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 4, 0, 1 / 4],
+        [2, 0, 1 / 4, 1, 1 / 4, 1, 2 / 4, 0, 2 / 4],
+        [1, 0, 2 / 4, 1, 2 / 4, 1, 3 / 4, 0, 3 / 4],
+        [2, 0, 3 / 4, 1, 3 / 4, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
+      ],
+      symbol: [1 / 6, 1 / 4, 1.0]
+    },
+
+    upperleftSquare2Strips: {
+      // ex. Chile
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 2, 0, 1 / 2],
+        [2, 0, 1 / 2, 1, 1 / 2, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
+      ],
+      symbol: [1 / 6, 1 / 4, 1.0]
+    },
+
+    leftRectangle8Strips: {
+      // ex. UAB, but with 8 strips
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 8, 0, 1 / 8],
+        [2, 0, 1 / 8, 1, 1 / 8, 1, 2 / 8, 0, 2 / 8],
+        [1, 0, 2 / 8, 1, 2 / 8, 1, 3 / 8, 0, 3 / 8],
+        [2, 0, 3 / 8, 1, 3 / 8, 1, 4 / 8, 0, 4 / 8],
+        [1, 0, 4 / 8, 1, 4 / 8, 1, 5 / 8, 0, 5 / 8],
+        [2, 0, 5 / 8, 1, 5 / 8, 1, 6 / 8, 0, 6 / 8],
+        [1, 0, 6 / 8, 1, 6 / 8, 1, 7 / 8, 0, 7 / 8],
+        [2, 0, 7 / 8, 1, 7 / 8, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1]
+      ],
+      symbol: [1 / 6, 1 / 2, 1.0]
+    },
+
+    leftRectangle6Strips: {
+      // ex. UAB, but with 6 strips
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
+        [2, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
+        [1, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
+        [2, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
+        [1, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
+        [2, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1]
+      ],
+      symbol: [1 / 6, 1 / 2, 1.0]
+    },
+
+    leftRectangle4Strips: {
+      // ex. UAB, but with 4 strips
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 4, 0, 1 / 4],
+        [2, 0, 1 / 4, 1, 1 / 4, 1, 2 / 4, 0, 2 / 4],
+        [1, 0, 2 / 4, 1, 2 / 4, 1, 3 / 4, 0, 3 / 4],
+        [2, 0, 3 / 4, 1, 3 / 4, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1]
+      ],
+      symbol: [1 / 6, 1 / 2, 1.0]
+    },
+
+    leftRectangle2Strips: {
+      // ex. Benin
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 2, 0, 1 / 2],
+        [2, 0, 1 / 2, 1, 1 / 2, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1]
+      ],
+      symbol: [1 / 6, 1 / 2, 1.0]
+    },
+
+    tripleVerticalStrips: {
+      // ex. France
+      paths: [
+        [1, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1],
+        [2, 2 / 3, 0, 1, 0, 1, 1, 2 / 3, 1],
+        [0, 1 / 3, 0, 2 / 3, 0, 2 / 3, 1, 1 / 3, 1]
+      ],
+      symbol: [1 / 2, 1 / 2, 1.0]
+    },
+
+    leftStraightCrosses: {
+      // ex. Norway
+      paths: [
+        [0, 0, 0, 1, 0, 1, 1, 0, 1],
+        [1, 4 / 16, 0, 6 / 16, 0, 6 / 16, 1, 4 / 16, 1],
+        [1, 0, 3 / 8, 0, 5 / 8, 1, 5 / 8, 1, 3 / 8],
+        [2, 4.4 / 16, 0, 5.6 / 16, 0, 5.6 / 16, 1, 4.4 / 16, 1],
+        [2, 0, 3.4 / 8, 0, 4.6 / 8, 1, 4.6 / 8, 1, 3.4 / 8]
+      ],
+      symbol: [2 / 16, 1.5 / 8, 0.8]
+    },
+
+    centeredStraightCrosses: {
+      // ex. Norway, but the cross is centered
+      paths: [
+        [0, 0, 0, 1, 0, 1, 1, 0, 1],
+        [1, 7 / 16, 0, 9 / 16, 0, 9 / 16, 1, 7 / 16, 1],
+        [1, 0, 3 / 8, 0, 5 / 8, 1, 5 / 8, 1, 3 / 8],
+        [2, 7.4 / 16, 0, 8.6 / 16, 0, 8.6 / 16, 1, 7.4 / 16, 1],
+        [2, 0, 3.4 / 8, 0, 4.6 / 8, 1, 4.6 / 8, 1, 3.4 / 8]
+      ],
+      symbol: [3.5 / 16, 1.5 / 8, 0.7]
+    },
+
+    fiveStripsSmall2and4: {
+      // ex. Atapuerca
+      paths: [
+        [1, 0, 0, 1, 0, 1, 3 / 12, 0, 3 / 12],
+        [2, 0, 3 / 12, 1, 3 / 12, 1, 4 / 12, 0, 4 / 12],
+        [0, 0, 4 / 12, 1, 4 / 12, 1, 8 / 12, 0, 8 / 12],
+        [2, 0, 8 / 12, 1, 8 / 12, 1, 9 / 12, 0, 9 / 12],
+        [1, 0, 9 / 12, 1, 9 / 12, 1, 1, 0, 1]
+      ],
+      symbol: [1 / 2, 1 / 2, 0.6]
+    },
+
+    fiveStrips: {
+      // ex. Baraya
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
+        [2, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
+        [0, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
+        [0, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
+        [2, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
+        [1, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1]
+      ],
+      symbol: [1 / 2, 1 / 2, 0.6]
+    },
+
+    threeStrips: {
+      // ex. Bolivia
+      paths: [
+        [1, 0, 0, 0, 1 / 3, 1, 1 / 3, 1, 0],
+        [2, 0, 2 / 3, 0, 1, 1, 1, 1, 2 / 3],
+        [0, 0, 1 / 3, 0, 2 / 3, 1, 2 / 3, 1, 1 / 3]
+      ],
+      symbol: [1 / 2, 1 / 2, 1.0]
+    }
+  },
+
+  twoColors: {
+    middleCircle9Strips: {
+      paths: [
+        [0, 0, 0, 1, 0, 1, 1, 0, 1],
+        [1, 0, 0, 1, 0, 1, 1 / 9, 0, 1 / 9],
+        [1, 0, 2 / 9, 1, 2 / 9, 1, 3 / 9, 0, 3 / 9],
+        [1, 0, 4 / 9, 1, 4 / 9, 1, 5 / 9, 0, 5 / 9],
+        [1, 0, 6 / 9, 1, 6 / 9, 1, 7 / 9, 0, 7 / 9],
+        [1, 0, 8 / 9, 1, 8 / 9, 1, 9 / 9, 0, 9 / 9],
+        [0, 'circleSymbol', 0.5, 0.5, 0.25]
+      ],
+      symbol: [0.5, 0.5, 1.0]
+    },
+
+    middleCircle7Strips: {
+      paths: [
+        [0, 0, 0, 1, 0, 1, 1, 0, 1],
+        [1, 0, 0, 1, 0, 1, 1 / 7, 0, 1 / 7],
+        [1, 0, 2 / 7, 1, 2 / 7, 1, 3 / 7, 0, 3 / 7],
+        [1, 0, 4 / 7, 1, 4 / 7, 1, 5 / 7, 0, 5 / 7],
+        [1, 0, 6 / 7, 1, 6 / 7, 1, 1, 0, 1],
+        [0, 'circleSymbol', 0.5, 0.5, 0.25]
+      ],
+      symbol: [0.5, 0.5, 0.7]
+    },
+
+    fiveStripsBigMiddle: {
+      paths: [
+        [0, 0, 0, 1, 0, 1, 1, 0, 1],
+        [1, 0, 0.75, 1, 0.75, 1, 0.8, 0, 0.8],
+        [1, 0, 0.25, 1, 0.25, 1, 0.2, 0, 0.2]
+      ],
+      symbol: [0.5, 0.5, 1.0]
+    },
+
+    threeStripsBigMiddle: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [0, 0, 4 / 5, 1, 4 / 5, 1, 1 / 5, 0, 1 / 5]
+      ],
+      symbol: [0.5, 0.5, 1.0]
+    },
+
+    threeStripsSmallMiddle: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 3, 0, 1 / 3],
+        [0, 0, 1 / 3, 1, 1 / 3, 1, 2 / 3, 0, 2 / 3],
+        [1, 0, 2 / 3, 1, 2 / 3, 1, 1, 0, 1]
+      ],
+      symbol: [0.5, 0.5, 1.0]
+    },
+
+    twoStrips: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 2, 0, 1 / 2],
+        [0, 0, 1 / 2, 1, 1 / 2, 1, 1, 0, 1]
+      ],
+      symbol: [0.5, 0.5, 1.0]
+    },
+
+    leftTriangle9Strips: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 9, 0, 1 / 9],
+        [0, 0, 1 / 9, 1, 1 / 9, 1, 2 / 9, 0, 2 / 9],
+        [1, 0, 2 / 9, 1, 2 / 9, 1, 3 / 9, 0, 3 / 9],
+        [0, 0, 3 / 9, 1, 3 / 9, 1, 4 / 9, 0, 4 / 9],
+        [1, 0, 4 / 9, 1, 4 / 9, 1, 5 / 9, 0, 5 / 9],
+        [0, 0, 5 / 9, 1, 5 / 9, 1, 6 / 9, 0, 6 / 9],
+        [1, 0, 6 / 9, 1, 6 / 9, 1, 7 / 9, 0, 7 / 9],
+        [0, 0, 7 / 9, 1, 7 / 9, 1, 8 / 9, 0, 8 / 9],
+        [1, 0, 8 / 9, 1, 8 / 9, 1, 1, 0, 1],
+        [0, 0, 0, 0.5, 0.5, 0, 1]
+      ],
+      symbol: [0.2, 0.5, 1.0]
+    },
+
+    leftTriangle7Strips: {
+      // ex. Zimbabwe
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 7, 0, 1 / 7],
+        [0, 0, 1 / 7, 1, 1 / 7, 1, 2 / 7, 0, 2 / 7],
+        [1, 0, 2 / 7, 1, 2 / 7, 1, 3 / 7, 0, 3 / 7],
+        [0, 0, 3 / 7, 1, 3 / 7, 1, 4 / 7, 0, 4 / 7],
+        [1, 0, 4 / 7, 1, 4 / 7, 1, 5 / 7, 0, 5 / 7],
+        [0, 0, 5 / 7, 1, 5 / 7, 1, 6 / 7, 0, 6 / 7],
+        [1, 0, 6 / 7, 1, 6 / 7, 1, 1, 0, 1],
+        [0, 0, 0, 0.5, 0.5, 0, 1]
+      ],
+      symbol: [0.2, 0.5, 1.0]
+    },
+
+    leftTriangle5Strips: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 5, 0, 1 / 5],
+        [0, 0, 1 / 5, 1, 1 / 5, 1, 2 / 5, 0, 2 / 5],
+        [1, 0, 2 / 5, 1, 2 / 5, 1, 3 / 5, 0, 3 / 5],
+        [0, 0, 3 / 5, 1, 3 / 5, 1, 4 / 5, 0, 4 / 5],
+        [1, 0, 4 / 5, 1, 4 / 5, 1, 1, 0, 1],
+        [0, 0, 0, 0.5, 0.5, 0, 1]
+      ],
+      symbol: [0.2, 0.5, 1.0]
+    },
+
+    threeDiagonalStrips: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [0, 0, 1, 0, 0.5, 1, 0, 1, 0.5]
+      ],
+      symbol: [0.5, 0.5, 1.0]
+    },
+
+    bigLeftTriangle: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [0, 0, 0, 1, 0.5, 0, 1]
+      ],
+      symbol: [0.33, 0.5, 1.0]
+    },
+
+    dividedDiagonally: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [0, 0, 1, 1, 1, 1, 0]
+      ],
+      symbol: [0.125, 0.25, 1.0]
+    },
+
+    upperleftSquare8Strips: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1 / 8, 0, 1 / 8],
+        [0, 0, 1 / 8, 1, 1 / 8, 1, 2 / 8, 0, 2 / 8],
+        [1, 0, 2 / 8, 1, 2 / 8, 1, 3 / 8, 0, 3 / 8],
+        [0, 0, 3 / 8, 1, 3 / 8, 1, 4 / 8, 0, 4 / 8],
+        [1, 0, 4 / 8, 1, 4 / 8, 1, 5 / 8, 0, 5 / 8],
+        [0, 0, 5 / 8, 1, 5 / 8, 1, 6 / 8, 0, 6 / 8],
+        [1, 0, 6 / 8, 1, 6 / 8, 1, 7 / 8, 0, 7 / 8],
+        [0, 0, 7 / 8, 1, 7 / 8, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
+      ],
+      symbol: [1 / 6, 1 / 4, 1.0]
+    },
+
+    leftRectangle6Strips: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1],
+        [0, 0, 0 / 6, 1, 0 / 6, 1, 1 / 6, 0, 1 / 6],
+        [0, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
+        [0, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6]
+      ],
+      symbol: [1 / 6, 0.5, 1.0]
+    },
+
+    leftRectangle5Strips: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1],
+        [0, 0, 0 / 5, 1, 0 / 5, 1, 1 / 5, 0, 1 / 5],
+        [0, 0, 2 / 5, 1, 2 / 5, 1, 3 / 5, 0, 3 / 5],
+        [0, 0, 4 / 5, 1, 4 / 5, 1, 5 / 5, 0, 5 / 5]
+      ],
+      symbol: [1 / 6, 0.5, 1.0]
+    },
+
+    threeVerticalStripsBigMiddle: {
+      paths: [
+        [0, 0, 0, 1, 0, 1, 1, 0, 1],
+        [1, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1],
+        [1, 2 / 3, 0, 1, 0, 1, 1, 2 / 3, 1]
+      ],
+      symbol: [0.5, 0.5, 1.0]
+    },
+
+    x: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [0, 0, 0.2, 0, 0, 0.1, 0, 1, 0.8, 1, 1, 0.9, 1],
+        [0, 0, 0.8, 0, 1, 0.1, 1, 1, 0.2, 1, 0, 0.9, 0]
+      ],
+      symbol: [0.5, 0.5, 0.5]
+    },
+
+    leftRectangleSawtoothLine: {
+      // ex. Bahrain
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [
+          0,
+          0,
+          0,
+          0.37,
+          0,
+          0.43,
+          1 / 16,
+          0.37,
+          2 / 16,
+          0.43,
+          3 / 16,
+          0.37,
+          4 / 16,
+          0.43,
+          5 / 16,
+          0.37,
+          6 / 16,
+          0.43,
+          7 / 16,
+          0.37,
+          8 / 16,
+          0.43,
+          9 / 16,
+          0.37,
+          10 / 16,
+          0.43,
+          11 / 16,
+          0.37,
+          12 / 16,
+          0.43,
+          13 / 16,
+          0.37,
+          14 / 16,
+          0.43,
+          15 / 16,
+          0.37,
+          1,
+          0.43,
+          1,
+          0,
+          1
+        ]
+      ],
+      symbol: [0.2, 0.5, 1.0]
+    },
+
+    upperleftSquare6Strips: {
+      paths: [
+        [0, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
+        [1, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
+        [0, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
+        [1, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
+        [0, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
+        [1, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1],
+        [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
+      ],
+      symbol: [1 / 6, 1 / 4, 1.0]
+    },
+
+    centeredStraightCross: {
+      paths: [
+        [0, 0, 0, 1, 0, 1, 1, 0, 1],
+        [1, 0.45, 0, 0.45, 1, 0.55, 1, 0.55, 0],
+        [1, 0, 0.4, 1, 0.4, 1, 0.6, 0, 0.6]
+      ],
+      symbol: [0.215, 0.2, 0.8]
+    },
+
+    leftStraightCrossWithCircle: {
+      paths: [
+        [0, 0, 0, 1, 0, 1, 1, 0, 1],
+        [1, 0, 2 / 5, 1, 2 / 5, 1, 3 / 5, 0, 3 / 5],
+        [1, 0.25, 0, 0.35, 0, 0.35, 1, 0.25, 1],
+        [1, 'circle', 0.3, 0.5, 0.25]
+      ],
+      symbol: [0.3, 0.5, 0.9]
+    },
+
+    threeStripsMiddleCircle: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [0, 0, 1 / 5, 1, 1 / 5, 1, 4 / 5, 0, 4 / 5],
+        [1, 'circle', 0.5, 0.5, 0.25]
+      ],
+      symbol: [0.5, 0.5, 0.8]
+    },
+
+    circle: {
+      paths: [
+        [1, 0, 0, 1, 0, 1, 1, 0, 1],
+        [0, 'circle', 0.5, 0.5, 0.35]
+      ],
+      symbol: [0.5, 0.5, 1.0]
+    }
+  },
+
+  oneColor: {
+    plainUpperLeftSymbol: {
+      paths: [[0, 0, 0, 1, 0, 1, 1, 0, 1]],
+      symbol: [0.125, 0.25, 1.0]
+    },
+
+    plainCenterSymbol: {
+      paths: [[0, 0, 0, 1, 0, 1, 1, 0, 1]],
+      symbol: [0.5, 0.5, 1.0]
+    }
+  }
+} satisfies Record<string, Record<string, Shape>>
+
+export interface FlagShape {
   numColors: number
-  shapes: [number, string | number, number, number, number, ...number[]][]
-  symbol: number[]
+  shape: Shape
   cond: {
     [key: string]: {
       vmin: number
@@ -19,16 +564,7 @@ export const flagShapes: FlagShape[] = [
   // Révo, Int++
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
-      [2, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
-      [1, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
-      [2, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
-      [1, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
-      [2, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1],
-      [0, 0, 0, 0.5, 0.5, 0, 1]
-    ],
-    symbol: [0.2, 0.5, 1.0],
+    shape: shapes.threeColors.leftTriangle6Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -47,15 +583,7 @@ export const flagShapes: FlagShape[] = [
   // Révo, Int+
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 5, 0, 1 / 5],
-      [2, 0, 1 / 5, 1, 1 / 5, 1, 2 / 5, 0, 2 / 5],
-      [1, 0, 2 / 5, 1, 2 / 5, 1, 3 / 5, 0, 3 / 5],
-      [2, 0, 3 / 5, 1, 3 / 5, 1, 4 / 5, 0, 4 / 5],
-      [1, 0, 4 / 5, 1, 4 / 5, 1, 1, 0, 1],
-      [0, 0, 0, 0.5, 0.5, 0, 1]
-    ],
-    symbol: [0.2, 0.5, 1.0],
+    shape: shapes.threeColors.leftTriangle5Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -74,14 +602,7 @@ export const flagShapes: FlagShape[] = [
   // Révo
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 4, 0, 1 / 4],
-      [2, 0, 1 / 4, 1, 1 / 4, 1, 2 / 4, 0, 2 / 4],
-      [1, 0, 2 / 4, 1, 2 / 4, 1, 3 / 4, 0, 3 / 4],
-      [2, 0, 3 / 4, 1, 3 / 4, 1, 1, 0, 1],
-      [0, 0, 0, 0.5, 0.5, 0, 1]
-    ],
-    symbol: [0.2, 0.5, 1.0],
+    shape: shapes.threeColors.leftTriangle4Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -104,13 +625,7 @@ export const flagShapes: FlagShape[] = [
   // Révo, Nat+
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 3, 0, 1 / 3],
-      [2, 0, 1 / 3, 1, 1 / 3, 1, 2 / 3, 0, 2 / 3],
-      [1, 0, 2 / 3, 1, 2 / 3, 1, 1, 0, 1],
-      [0, 0, 0, 0.5, 0.5, 0, 1]
-    ],
-    symbol: [0.2, 0.5, 1.0],
+    shape: shapes.threeColors.leftTriangle3Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -129,12 +644,7 @@ export const flagShapes: FlagShape[] = [
   // Révo, Nat++
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 2, 0, 1 / 2],
-      [2, 0, 1 / 2, 1, 1 / 2, 1, 1, 0, 1],
-      [0, 0, 0, 0.5, 0.5, 0, 1]
-    ],
-    symbol: [0.2, 0.5, 1.0],
+    shape: shapes.threeColors.leftTriangle2Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -158,18 +668,7 @@ export const flagShapes: FlagShape[] = [
   // Réfo, Int++
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 8, 0, 1 / 8],
-      [2, 0, 1 / 8, 1, 1 / 8, 1, 2 / 8, 0, 2 / 8],
-      [1, 0, 2 / 8, 1, 2 / 8, 1, 3 / 8, 0, 3 / 8],
-      [2, 0, 3 / 8, 1, 3 / 8, 1, 4 / 8, 0, 4 / 8],
-      [1, 0, 4 / 8, 1, 4 / 8, 1, 5 / 8, 0, 5 / 8],
-      [2, 0, 5 / 8, 1, 5 / 8, 1, 6 / 8, 0, 6 / 8],
-      [1, 0, 6 / 8, 1, 6 / 8, 1, 7 / 8, 0, 7 / 8],
-      [2, 0, 7 / 8, 1, 7 / 8, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
-    ],
-    symbol: [1 / 6, 1 / 4, 1.0],
+    shape: shapes.threeColors.upperleftSquare8Strips,
     cond: {
       reform: {
         vmin: 0,
@@ -188,16 +687,7 @@ export const flagShapes: FlagShape[] = [
   // Réfo, Int+
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
-      [2, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
-      [1, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
-      [2, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
-      [1, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
-      [2, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
-    ],
-    symbol: [1 / 6, 1 / 4, 1.0],
+    shape: shapes.threeColors.upperleftSquare6Strips,
     cond: {
       reform: {
         vmin: 0,
@@ -216,14 +706,7 @@ export const flagShapes: FlagShape[] = [
   // Réfo, Nat+
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 4, 0, 1 / 4],
-      [2, 0, 1 / 4, 1, 1 / 4, 1, 2 / 4, 0, 2 / 4],
-      [1, 0, 2 / 4, 1, 2 / 4, 1, 3 / 4, 0, 3 / 4],
-      [2, 0, 3 / 4, 1, 3 / 4, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
-    ],
-    symbol: [1 / 6, 1 / 4, 1.0],
+    shape: shapes.threeColors.upperleftSquare4Strips,
     cond: {
       reform: {
         vmin: 0,
@@ -242,12 +725,7 @@ export const flagShapes: FlagShape[] = [
   // Réfo, Nat++
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 2, 0, 1 / 2],
-      [2, 0, 1 / 2, 1, 1 / 2, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
-    ],
-    symbol: [1 / 6, 1 / 4, 1.0],
+    shape: shapes.threeColors.upperleftSquare2Strips,
     cond: {
       reform: {
         vmin: 0,
@@ -271,18 +749,7 @@ export const flagShapes: FlagShape[] = [
   // JPun, Int++
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 8, 0, 1 / 8],
-      [2, 0, 1 / 8, 1, 1 / 8, 1, 2 / 8, 0, 2 / 8],
-      [1, 0, 2 / 8, 1, 2 / 8, 1, 3 / 8, 0, 3 / 8],
-      [2, 0, 3 / 8, 1, 3 / 8, 1, 4 / 8, 0, 4 / 8],
-      [1, 0, 4 / 8, 1, 4 / 8, 1, 5 / 8, 0, 5 / 8],
-      [2, 0, 5 / 8, 1, 5 / 8, 1, 6 / 8, 0, 6 / 8],
-      [1, 0, 6 / 8, 1, 6 / 8, 1, 7 / 8, 0, 7 / 8],
-      [2, 0, 7 / 8, 1, 7 / 8, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1]
-    ],
-    symbol: [1 / 6, 1 / 2, 1.0],
+    shape: shapes.threeColors.leftRectangle8Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -301,16 +768,7 @@ export const flagShapes: FlagShape[] = [
   // JPun, Int+
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
-      [2, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
-      [1, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
-      [2, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
-      [1, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
-      [2, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1]
-    ],
-    symbol: [1 / 6, 1 / 2, 1.0],
+    shape: shapes.threeColors.leftRectangle6Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -329,14 +787,7 @@ export const flagShapes: FlagShape[] = [
   // JPun
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 4, 0, 1 / 4],
-      [2, 0, 1 / 4, 1, 1 / 4, 1, 2 / 4, 0, 2 / 4],
-      [1, 0, 2 / 4, 1, 2 / 4, 1, 3 / 4, 0, 3 / 4],
-      [2, 0, 3 / 4, 1, 3 / 4, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1]
-    ],
-    symbol: [1 / 6, 1 / 2, 1.0],
+    shape: shapes.threeColors.leftRectangle4Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -359,12 +810,7 @@ export const flagShapes: FlagShape[] = [
   // JPun, Nat+
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 2, 0, 1 / 2],
-      [2, 0, 1 / 2, 1, 1 / 2, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1]
-    ],
-    symbol: [1 / 6, 1 / 2, 1.0],
+    shape: shapes.threeColors.leftRectangle2Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -383,12 +829,7 @@ export const flagShapes: FlagShape[] = [
   // JPun, Nat++
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1],
-      [2, 2 / 3, 0, 1, 0, 1, 1, 2 / 3, 1],
-      [0, 1 / 3, 0, 2 / 3, 0, 2 / 3, 1, 1 / 3, 1]
-    ],
-    symbol: [1 / 2, 1 / 2, 1.0],
+    shape: shapes.threeColors.tripleVerticalStrips,
     cond: {
       revolution: {
         vmin: 0,
@@ -412,14 +853,7 @@ export const flagShapes: FlagShape[] = [
   // JReh, Int++
   {
     numColors: 3,
-    shapes: [
-      [0, 0, 0, 1, 0, 1, 1, 0, 1],
-      [1, 4 / 16, 0, 6 / 16, 0, 6 / 16, 1, 4 / 16, 1],
-      [1, 0, 3 / 8, 0, 5 / 8, 1, 5 / 8, 1, 3 / 8],
-      [2, 4.4 / 16, 0, 5.6 / 16, 0, 5.6 / 16, 1, 4.4 / 16, 1],
-      [2, 0, 3.4 / 8, 0, 4.6 / 8, 1, 4.6 / 8, 1, 3.4 / 8]
-    ],
-    symbol: [2 / 16, 1.5 / 8, 0.8],
+    shape: shapes.threeColors.leftStraightCrosses,
     cond: {
       reform: {
         vmin: 0,
@@ -438,14 +872,7 @@ export const flagShapes: FlagShape[] = [
   // JReh, Int+
   {
     numColors: 3,
-    shapes: [
-      [0, 0, 0, 1, 0, 1, 1, 0, 1],
-      [1, 7 / 16, 0, 9 / 16, 0, 9 / 16, 1, 7 / 16, 1],
-      [1, 0, 3 / 8, 0, 5 / 8, 1, 5 / 8, 1, 3 / 8],
-      [2, 7.4 / 16, 0, 8.6 / 16, 0, 8.6 / 16, 1, 7.4 / 16, 1],
-      [2, 0, 3.4 / 8, 0, 4.6 / 8, 1, 4.6 / 8, 1, 3.4 / 8]
-    ],
-    symbol: [3.5 / 16, 1.5 / 8, 0.7],
+    shape: shapes.threeColors.centeredStraightCrosses,
     cond: {
       reform: {
         vmin: 0,
@@ -464,14 +891,7 @@ export const flagShapes: FlagShape[] = [
   // JReh
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 3 / 12, 0, 3 / 12],
-      [2, 0, 3 / 12, 1, 3 / 12, 1, 4 / 12, 0, 4 / 12],
-      [0, 0, 4 / 12, 1, 4 / 12, 1, 8 / 12, 0, 8 / 12],
-      [2, 0, 8 / 12, 1, 8 / 12, 1, 9 / 12, 0, 9 / 12],
-      [1, 0, 9 / 12, 1, 9 / 12, 1, 1, 0, 1]
-    ],
-    symbol: [1 / 2, 1 / 2, 0.6],
+    shape: shapes.threeColors.fiveStripsSmall2and4,
     cond: {
       reform: {
         vmin: 0,
@@ -494,15 +914,7 @@ export const flagShapes: FlagShape[] = [
   // JReh, Nat+
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
-      [2, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
-      [0, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
-      [0, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
-      [2, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
-      [1, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1]
-    ],
-    symbol: [1 / 2, 1 / 2, 0.6],
+    shape: shapes.threeColors.fiveStrips,
     cond: {
       reform: {
         vmin: 0,
@@ -521,12 +933,7 @@ export const flagShapes: FlagShape[] = [
   // JReh, Nat++
   {
     numColors: 3,
-    shapes: [
-      [1, 0, 0, 0, 1 / 3, 1, 1 / 3, 1, 0],
-      [2, 0, 2 / 3, 0, 1, 1, 1, 1, 2 / 3],
-      [0, 0, 1 / 3, 0, 2 / 3, 1, 2 / 3, 1, 1 / 3]
-    ],
-    symbol: [1 / 2, 1 / 2, 1.0],
+    shape: shapes.threeColors.threeStrips,
     cond: {
       reform: {
         vmin: 0,
@@ -550,16 +957,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JReh, Int++
   {
     numColors: 2,
-    shapes: [
-      [0, 0, 0, 1, 0, 1, 1, 0, 1],
-      [1, 0, 0, 1, 0, 1, 1 / 9, 0, 1 / 9],
-      [1, 0, 2 / 9, 1, 2 / 9, 1, 3 / 9, 0, 3 / 9],
-      [1, 0, 4 / 9, 1, 4 / 9, 1, 5 / 9, 0, 5 / 9],
-      [1, 0, 6 / 9, 1, 6 / 9, 1, 7 / 9, 0, 7 / 9],
-      [1, 0, 8 / 9, 1, 8 / 9, 1, 9 / 9, 0, 9 / 9],
-      [0, 'circleSymbol', 0.5, 0.5, 0.25]
-    ],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.twoColors.middleCircle9Strips,
     cond: {
       reform: {
         vmin: 0,
@@ -578,15 +976,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JReh, Int+
   {
     numColors: 2,
-    shapes: [
-      [0, 0, 0, 1, 0, 1, 1, 0, 1],
-      [1, 0, 0, 1, 0, 1, 1 / 7, 0, 1 / 7],
-      [1, 0, 2 / 7, 1, 2 / 7, 1, 3 / 7, 0, 3 / 7],
-      [1, 0, 4 / 7, 1, 4 / 7, 1, 5 / 7, 0, 5 / 7],
-      [1, 0, 6 / 7, 1, 6 / 7, 1, 1, 0, 1],
-      [0, 'circleSymbol', 0.5, 0.5, 0.25]
-    ],
-    symbol: [0.5, 0.5, 0.7],
+    shape: shapes.twoColors.middleCircle7Strips,
     cond: {
       reform: {
         vmin: 0,
@@ -605,12 +995,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JReh, Int
   {
     numColors: 2,
-    shapes: [
-      [0, 0, 0, 1, 0, 1, 1, 0, 1],
-      [1, 0, 0.75, 1, 0.75, 1, 0.8, 0, 0.8],
-      [1, 0, 0.25, 1, 0.25, 1, 0.2, 0, 0.2]
-    ],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.twoColors.fiveStripsBigMiddle,
     cond: {
       reform: {
         vmin: 0,
@@ -629,11 +1014,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JReh, Nat
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [0, 0, 4 / 5, 1, 4 / 5, 1, 1 / 5, 0, 1 / 5]
-    ],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.twoColors.threeStripsBigMiddle,
     cond: {
       reform: {
         vmin: 0,
@@ -652,12 +1033,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JReh, Nat+
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 3, 0, 1 / 3],
-      [0, 0, 1 / 3, 1, 1 / 3, 1, 2 / 3, 0, 2 / 3],
-      [1, 0, 2 / 3, 1, 2 / 3, 1, 1, 0, 1]
-    ],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.twoColors.threeStripsSmallMiddle,
     cond: {
       reform: {
         vmin: 0,
@@ -676,11 +1052,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JReh, Nat++
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 2, 0, 1 / 2],
-      [0, 0, 1 / 2, 1, 1 / 2, 1, 1, 0, 1]
-    ],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.twoColors.twoStrips,
     cond: {
       reform: {
         vmin: 0,
@@ -704,19 +1076,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JReh, Int++
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 9, 0, 1 / 9],
-      [0, 0, 1 / 9, 1, 1 / 9, 1, 2 / 9, 0, 2 / 9],
-      [1, 0, 2 / 9, 1, 2 / 9, 1, 3 / 9, 0, 3 / 9],
-      [0, 0, 3 / 9, 1, 3 / 9, 1, 4 / 9, 0, 4 / 9],
-      [1, 0, 4 / 9, 1, 4 / 9, 1, 5 / 9, 0, 5 / 9],
-      [0, 0, 5 / 9, 1, 5 / 9, 1, 6 / 9, 0, 6 / 9],
-      [1, 0, 6 / 9, 1, 6 / 9, 1, 7 / 9, 0, 7 / 9],
-      [0, 0, 7 / 9, 1, 7 / 9, 1, 8 / 9, 0, 8 / 9],
-      [1, 0, 8 / 9, 1, 8 / 9, 1, 1, 0, 1],
-      [0, 0, 0, 0.5, 0.5, 0, 1]
-    ],
-    symbol: [0.2, 0.5, 1.0],
+    shape: shapes.twoColors.leftTriangle9Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -735,17 +1095,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JReh, Int+
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 7, 0, 1 / 7],
-      [0, 0, 1 / 7, 1, 1 / 7, 1, 2 / 7, 0, 2 / 7],
-      [1, 0, 2 / 7, 1, 2 / 7, 1, 3 / 7, 0, 3 / 7],
-      [0, 0, 3 / 7, 1, 3 / 7, 1, 4 / 7, 0, 4 / 7],
-      [1, 0, 4 / 7, 1, 4 / 7, 1, 5 / 7, 0, 5 / 7],
-      [0, 0, 5 / 7, 1, 5 / 7, 1, 6 / 7, 0, 6 / 7],
-      [1, 0, 6 / 7, 1, 6 / 7, 1, 1, 0, 1],
-      [0, 0, 0, 0.5, 0.5, 0, 1]
-    ],
-    symbol: [0.2, 0.5, 1.0],
+    shape: shapes.twoColors.leftTriangle7Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -764,15 +1114,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JReh, Int
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 5, 0, 1 / 5],
-      [0, 0, 1 / 5, 1, 1 / 5, 1, 2 / 5, 0, 2 / 5],
-      [1, 0, 2 / 5, 1, 2 / 5, 1, 3 / 5, 0, 3 / 5],
-      [0, 0, 3 / 5, 1, 3 / 5, 1, 4 / 5, 0, 4 / 5],
-      [1, 0, 4 / 5, 1, 4 / 5, 1, 1, 0, 1],
-      [0, 0, 0, 0.5, 0.5, 0, 1]
-    ],
-    symbol: [0.2, 0.5, 1.0],
+    shape: shapes.twoColors.leftTriangle5Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -791,11 +1133,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JReh, Nat
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [0, 0, 1, 0, 0.5, 1, 0, 1, 0.5]
-    ],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.twoColors.threeDiagonalStrips,
     cond: {
       revolution: {
         vmin: 0,
@@ -814,11 +1152,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JReh, Nat+
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [0, 0, 0, 1, 0.5, 0, 1]
-    ],
-    symbol: [0.33, 0.5, 1.0],
+    shape: shapes.twoColors.bigLeftTriangle,
     cond: {
       revolution: {
         vmin: 0,
@@ -837,11 +1171,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JReh, Nat++
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [0, 0, 1, 1, 1, 1, 0]
-    ],
-    symbol: [0.125, 0.25, 1.0],
+    shape: shapes.twoColors.dividedDiagonally,
     cond: {
       revolution: {
         vmin: 0,
@@ -865,18 +1195,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JPun, Int++
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 8, 0, 1 / 8],
-      [0, 0, 1 / 8, 1, 1 / 8, 1, 2 / 8, 0, 2 / 8],
-      [1, 0, 2 / 8, 1, 2 / 8, 1, 3 / 8, 0, 3 / 8],
-      [0, 0, 3 / 8, 1, 3 / 8, 1, 4 / 8, 0, 4 / 8],
-      [1, 0, 4 / 8, 1, 4 / 8, 1, 5 / 8, 0, 5 / 8],
-      [0, 0, 5 / 8, 1, 5 / 8, 1, 6 / 8, 0, 6 / 8],
-      [1, 0, 6 / 8, 1, 6 / 8, 1, 7 / 8, 0, 7 / 8],
-      [0, 0, 7 / 8, 1, 7 / 8, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
-    ],
-    symbol: [1 / 6, 0.25, 1.0],
+    shape: shapes.twoColors.upperleftSquare8Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -895,14 +1214,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JPun, Int+
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1],
-      [0, 0, 0 / 6, 1, 0 / 6, 1, 1 / 6, 0, 1 / 6],
-      [0, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
-      [0, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6]
-    ],
-    symbol: [1 / 6, 0.5, 1.0],
+    shape: shapes.twoColors.leftRectangle6Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -921,14 +1233,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JPun, Int
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1],
-      [0, 0, 0 / 5, 1, 0 / 5, 1, 1 / 5, 0, 1 / 5],
-      [0, 0, 2 / 5, 1, 2 / 5, 1, 3 / 5, 0, 3 / 5],
-      [0, 0, 4 / 5, 1, 4 / 5, 1, 5 / 5, 0, 5 / 5]
-    ],
-    symbol: [1 / 6, 0.5, 1.0],
+    shape: shapes.twoColors.leftRectangle5Strips,
     cond: {
       revolution: {
         vmin: 0,
@@ -947,12 +1252,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JPun, Nat
   {
     numColors: 2,
-    shapes: [
-      [0, 0, 0, 1, 0, 1, 1, 0, 1],
-      [1, 0, 0, 1 / 3, 0, 1 / 3, 1, 0, 1],
-      [1, 2 / 3, 0, 1, 0, 1, 1, 2 / 3, 1]
-    ],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.twoColors.threeVerticalStripsBigMiddle,
     cond: {
       revolution: {
         vmin: 0,
@@ -971,12 +1271,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JPun, Nat+
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [0, 0, 0.2, 0, 0, 0.1, 0, 1, 0.8, 1, 1, 0.9, 1],
-      [0, 0, 0.8, 0, 1, 0.1, 1, 1, 0.2, 1, 0, 0.9, 0]
-    ],
-    symbol: [0.5, 0.5, 0.5],
+    shape: shapes.twoColors.x,
     cond: {
       revolution: {
         vmin: 0,
@@ -995,53 +1290,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Révo, JPun, Nat++
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [
-        0,
-        0,
-        0,
-        0.37,
-        0,
-        0.43,
-        1 / 16,
-        0.37,
-        2 / 16,
-        0.43,
-        3 / 16,
-        0.37,
-        4 / 16,
-        0.43,
-        5 / 16,
-        0.37,
-        6 / 16,
-        0.43,
-        7 / 16,
-        0.37,
-        8 / 16,
-        0.43,
-        9 / 16,
-        0.37,
-        10 / 16,
-        0.43,
-        11 / 16,
-        0.37,
-        12 / 16,
-        0.43,
-        13 / 16,
-        0.37,
-        14 / 16,
-        0.43,
-        15 / 16,
-        0.37,
-        1,
-        0.43,
-        1,
-        0,
-        1
-      ]
-    ],
-    symbol: [0.2, 0.5, 1.0],
+    shape: shapes.twoColors.leftRectangleSawtoothLine,
     cond: {
       revolution: {
         vmin: 0,
@@ -1065,18 +1314,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JPun, Int++
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1 / 8, 0, 1 / 8],
-      [0, 0, 1 / 8, 1, 1 / 8, 1, 2 / 8, 0, 2 / 8],
-      [1, 0, 2 / 8, 1, 2 / 8, 1, 3 / 8, 0, 3 / 8],
-      [0, 0, 3 / 8, 1, 3 / 8, 1, 4 / 8, 0, 4 / 8],
-      [1, 0, 4 / 8, 1, 4 / 8, 1, 5 / 8, 0, 5 / 8],
-      [0, 0, 5 / 8, 1, 5 / 8, 1, 6 / 8, 0, 6 / 8],
-      [1, 0, 6 / 8, 1, 6 / 8, 1, 7 / 8, 0, 7 / 8],
-      [0, 0, 7 / 8, 1, 7 / 8, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
-    ],
-    symbol: [1 / 6, 1 / 4, 1.0],
+    shape: shapes.twoColors.upperleftSquare8Strips,
     cond: {
       reform: {
         vmin: 0,
@@ -1095,16 +1333,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JPun, Int+
   {
     numColors: 2,
-    shapes: [
-      [0, 0, 0, 1, 0, 1, 1 / 6, 0, 1 / 6],
-      [1, 0, 1 / 6, 1, 1 / 6, 1, 2 / 6, 0, 2 / 6],
-      [0, 0, 2 / 6, 1, 2 / 6, 1, 3 / 6, 0, 3 / 6],
-      [1, 0, 3 / 6, 1, 3 / 6, 1, 4 / 6, 0, 4 / 6],
-      [0, 0, 4 / 6, 1, 4 / 6, 1, 5 / 6, 0, 5 / 6],
-      [1, 0, 5 / 6, 1, 5 / 6, 1, 1, 0, 1],
-      [0, 0, 0, 1 / 3, 0, 1 / 3, 1 / 2, 0, 1 / 2]
-    ],
-    symbol: [1 / 6, 1 / 4, 1.0],
+    shape: shapes.twoColors.upperleftSquare6Strips,
     cond: {
       reform: {
         vmin: 0,
@@ -1123,12 +1352,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JPun, Int
   {
     numColors: 2,
-    shapes: [
-      [0, 0, 0, 1, 0, 1, 1, 0, 1],
-      [1, 0.45, 0, 0.45, 1, 0.55, 1, 0.55, 0],
-      [1, 0, 0.4, 1, 0.4, 1, 0.6, 0, 0.6]
-    ],
-    symbol: [0.215, 0.2, 0.8],
+    shape: shapes.twoColors.centeredStraightCross,
     cond: {
       reform: {
         vmin: 0,
@@ -1147,13 +1371,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JPun, Nat
   {
     numColors: 2,
-    shapes: [
-      [0, 0, 0, 1, 0, 1, 1, 0, 1],
-      [1, 0, 2 / 5, 1, 2 / 5, 1, 3 / 5, 0, 3 / 5],
-      [1, 0.25, 0, 0.35, 0, 0.35, 1, 0.25, 1],
-      [1, 'circle', 0.3, 0.5, 0.25]
-    ],
-    symbol: [0.3, 0.5, 0.9],
+    shape: shapes.twoColors.leftStraightCrossWithCircle,
     cond: {
       reform: {
         vmin: 0,
@@ -1172,12 +1390,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JPun, Nat+
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [0, 0, 1 / 5, 1, 1 / 5, 1, 4 / 5, 0, 4 / 5],
-      [1, 'circle', 0.5, 0.5, 0.25]
-    ],
-    symbol: [0.5, 0.5, 0.8],
+    shape: shapes.twoColors.threeStripsMiddleCircle,
     cond: {
       reform: {
         vmin: 0,
@@ -1196,11 +1409,7 @@ export const flagShapes: FlagShape[] = [
   // 2C, Réfo, JPun, Nat++
   {
     numColors: 2,
-    shapes: [
-      [1, 0, 0, 1, 0, 1, 1, 0, 1],
-      [0, 'circle', 0.5, 0.5, 0.35]
-    ],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.twoColors.circle,
     cond: {
       reform: {
         vmin: 0,
@@ -1223,8 +1432,7 @@ export const flagShapes: FlagShape[] = [
   */
   {
     numColors: 1,
-    shapes: [[0, 0, 0, 1, 0, 1, 1, 0, 1]],
-    symbol: [0.125, 0.25, 1.0],
+    shape: shapes.oneColor.plainUpperLeftSymbol,
     cond: {
       revolution: {
         vmin: 0,
@@ -1239,8 +1447,7 @@ export const flagShapes: FlagShape[] = [
   */
   {
     numColors: 1,
-    shapes: [[0, 0, 0, 1, 0, 1, 1, 0, 1]],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.oneColor.plainCenterSymbol,
     cond: {
       reform: {
         vmin: 0,
@@ -1255,8 +1462,7 @@ export const flagShapes: FlagShape[] = [
   */
   {
     numColors: 0,
-    shapes: [[0, 0, 0, 1, 0, 1, 1, 0, 1]],
-    symbol: [0.5, 0.5, 1.0],
+    shape: shapes.oneColor.plainCenterSymbol,
     cond: {}
   }
 ]
@@ -1341,9 +1547,9 @@ export const flagColors: FlagColor[] = [
         vmin: 0,
         vmax: 0.6
       },
-      capitalism: {
-        vmin: 0,
-        vmax: 1
+      capitalist: {
+        vmin: 0.05,
+        vmax: 0.4
       }
     }
   },
@@ -1408,7 +1614,7 @@ export const flagColors: FlagColor[] = [
   }
 ]
 
-export interface Transform {
+interface Transform {
   child_type?: string
   x?: number
   y?: number
@@ -1444,7 +1650,7 @@ export interface FlagSymbol {
 }
 
 export const flagSymbols: FlagSymbol[] = [
-  //Féminisme
+  // Féminisme
   {
     data: {
       parent_type: 'curve',
@@ -1506,7 +1712,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Communisme
+  // Communisme
   {
     data: {
       parent_type: 'curve',
@@ -1568,7 +1774,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Internationalisme
+  // Internationalisme
   {
     data: {
       parent_type: 'curve',
@@ -1630,7 +1836,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Productivisme
+  // Productivisme
   {
     data: {
       parent_type: 'curve',
@@ -1692,7 +1898,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Régulationnisme
+  // Régulationnisme
   {
     data: {
       parent_type: 'line',
@@ -1786,7 +1992,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Conservatisme
+  // Conservatisme
   {
     data: {
       parent_type: 'line',
@@ -1880,7 +2086,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Punitif
+  // Punitif
   {
     data: {
       parent_type: 'line',
@@ -1974,7 +2180,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Ecologie
+  // Ecologie
   {
     data: {
       parent_type: 'line',
@@ -2068,7 +2274,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Essentialisme
+  // Essentialisme
   {
     data: {
       parent_type: 'dot',
@@ -2146,7 +2352,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Révolution
+  // Révolution
   {
     data: {
       parent_type: 'dot',
@@ -2224,7 +2430,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Monarchie
+  // Monarchie
   {
     data: {
       parent_type: 'dot',
@@ -2302,7 +2508,7 @@ export const flagSymbols: FlagSymbol[] = [
       }
     }
   },
-  //Constructivisme
+  // Constructivisme
   {
     data: {
       parent_type: 'tri',

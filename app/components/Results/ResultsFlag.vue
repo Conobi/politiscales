@@ -1,15 +1,11 @@
 <template>
-  <canvas
-    ref="flagCanvas"
-    :height="props.height"
-    :width="props.width"
-    class="cursor-pointer"
-  ></canvas>
+  <canvas ref="flagCanvas" :height="props.height" :width="props.width"></canvas>
 </template>
 
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
+    forceFlagShape?: number
     height?: number
     width?: number
     axes: AxisValues
@@ -38,7 +34,7 @@ const drawFlag = (sprite: HTMLImageElement) => {
   let spriteS = 1.0
 
   const colors = generatedFlagColors.value
-  const flagId = generatedFlagShape.value
+  const flagId = props.forceFlagShape ?? generatedFlagShape.value
   const symbolData = generatedFlagSymbol.value
 
   if (flagId < 0) {
@@ -47,8 +43,10 @@ const drawFlag = (sprite: HTMLImageElement) => {
     ctx.fillStyle = '#ffffff'
     ctx.fill()
   } else if (flagShapes[flagId]) {
-    for (let i = 0; i < flagShapes[flagId].shapes.length; i++) {
-      const path = flagShapes[flagId].shapes[i]
+    const flagShape = flagShapes[flagId]
+
+    for (let i = 0; i < flagShape.shape.paths.length; i++) {
+      const path = flagShape.shape.paths[i]
       if (!path) {
         throw new Error(`Invalid path for flag shape ${flagId}`)
       }
@@ -96,9 +94,9 @@ const drawFlag = (sprite: HTMLImageElement) => {
       ctx.fill()
     }
 
-    spriteX = (flagShapes[flagId].symbol[0] ?? 0) * 512
-    spriteY = (flagShapes[flagId].symbol[1] ?? 0) * 256
-    spriteS = flagShapes[flagId].symbol[2] ?? 0
+    spriteX = (flagShape.shape.symbol[0] ?? 0) * 512
+    spriteY = (flagShape.shape.symbol[1] ?? 0) * 256
+    spriteS = flagShape.shape.symbol[2] ?? 0
   }
 
   if (symbolData[0].parent_type !== 'none') {
@@ -175,7 +173,7 @@ onMounted(async () => {
 })
 
 watch(
-  () => props.axes,
+  [() => props.axes, () => props.forceFlagShape],
   async () => {
     drawFlag(await loadSprite())
   },
@@ -201,6 +199,7 @@ const generatedFlagColors = computed(() => {
   const colors: FlagColor[] = []
 
   if (!axesValues.value) return colors
+
   for (const flagColor of flagColors) {
     for (const [axis, axisPercentage] of Object.entries(axesValues.value)) {
       const cond = flagColor.cond[axis] as { vmin: number; vmax: number }
@@ -354,48 +353,41 @@ const generatedFlagShape = computed(() => {
   const numColors = generatedFlagColors.value.length
   for (let i = 0; i < flagShapes.length; i++) {
     const flagShape = flagShapes[i]!
-    if (flagShape.numColors > numColors) continue
+    if (flagShape.numColors > numColors || flagShape.numColors < flagColor)
+      continue
 
-    const condValue = [0, 0, 0]
+    const condValue: number[] = [0, 0, 0]
     let accepted = true
 
-    let j = -1
+    let j = 0
     for (const axisName in flagShape.cond) {
-      j++
       const value = axesValues.value[axisName]
 
-      if (typeof value === 'number') {
-        if (
-          flagShape.cond[axisName] &&
-          (value < flagShape.cond[axisName].vmin ||
-            value > flagShape.cond[axisName].vmax)
-        ) {
-          accepted = false
-          break
-        }
-        if (j < 3) condValue[j] = value
+      if (typeof value !== 'number')
+        throw new Error(`Invalid axis value ${axisName}:${value}`)
+
+      if (
+        flagShape.cond[axisName] &&
+        (value < flagShape.cond[axisName].vmin ||
+          value > flagShape.cond[axisName].vmax)
+      ) {
+        accepted = false
+        break
       }
+      condValue[j++] = value
     }
 
     if (!accepted) continue
 
     if (
-      accepted &&
-      flagColor <= flagShape.numColors &&
-      condValue.length >= 3 &&
-      flagValue.length >= 3
+      condValue[0]! > flagValue[0]! ||
+      (condValue[0] == flagValue[0] &&
+        (condValue[1]! > flagValue[1]! ||
+          (condValue[1] == flagValue[1] && condValue[2]! > flagValue[2]!)))
     ) {
-      if (
-        flagShape.numColors > flagColor ||
-        condValue[0]! > flagValue[0]! ||
-        (condValue[0] == flagValue[0] &&
-          (condValue[1]! > flagValue[1]! ||
-            (condValue[1] == flagValue[1] && condValue[2]! > flagValue[2]!)))
-      ) {
-        flagColor = flagShape.numColors
-        flagValue = [...condValue]
-        flagFound = i
-      }
+      flagColor = flagShape.numColors
+      flagValue = [...condValue]
+      flagFound = i
     }
   }
 

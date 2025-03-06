@@ -107,7 +107,7 @@ export const pairedAxes = {
   }
 } as const satisfies Record<string, PairedAxis>
 
-type PairedAxesKey = keyof typeof pairedAxes
+export type PairedAxesKey = keyof typeof pairedAxes
 export const pairedAxesKeys = Object.keys(pairedAxes) as PairedAxesKey[]
 
 export interface PairedAxisByPair {
@@ -164,7 +164,7 @@ export const unpairedAxes = {
   }
 } satisfies Record<string, UnpairedAxis>
 
-type UnpairedAxesKey = keyof typeof unpairedAxes
+export type UnpairedAxesKey = keyof typeof unpairedAxes
 export const unpairedAxesKeys = Object.keys(unpairedAxes) as UnpairedAxesKey[]
 
 export const axes = { ...pairedAxes, ...unpairedAxes }
