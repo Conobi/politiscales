@@ -1,7 +1,16 @@
 <template>
-  <div v-if="userAxes">
-    <ResultsFlag :axes="userAxes" @click="randomizeAxes" class="m-auto" />
-    <ResultsTester v-model="userAxes" class="mt-10 m-auto" />
+  <div v-if="userAxes" class="flex items-center justify-center flex-col">
+    <ResultsFlag
+      :axes="userAxes"
+      :force-flag-shape="forcedFlagShapeIndex"
+      @click="randomizeAxes"
+      class="cursor-pointer"
+    />
+    <ResultsTester
+      v-model:user-axes="userAxes"
+      v-model:force-flag-shape-index="forceFlagShapeIndex"
+      class="mt-10"
+    />
   </div>
 </template>
 
@@ -13,7 +22,16 @@ const initUserAxes = pairedAxesByPair.reduce<AxisValues>((acc, pair) => {
   return acc
 }, {})
 
+const forceFlagShapeIndex = ref(-1)
 const userAxes = ref<AxisValues>(initUserAxes)
+
+const forcedFlagShapeIndex = computed(() => {
+  if (forceFlagShapeIndex.value === -1) {
+    return undefined
+  }
+
+  return forceFlagShapeIndex.value
+})
 
 function randomizeAxes() {
   const axisValues: AxisValues = {}
@@ -28,11 +46,10 @@ function randomizeAxes() {
 
   // Assign random values to unpaired axes
   for (const unpairedAxis of unpairedAxesKeys) {
-    axisValues[unpairedAxis] = Math.random()
+    const rdm = Math.random()
+    axisValues[unpairedAxis] = rdm >= 0.66 ? 1 : rdm <= 0.33 ? 0 : 0.66
   }
 
   userAxes.value = axisValues
 }
 </script>
-
-<style></style>
