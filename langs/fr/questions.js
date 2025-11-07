@@ -797,7 +797,7 @@ var questions = [
             }]
     },
     {
-        question: 'Les homosexuels n\'ont pas à être traité à égalité avec les hétérosexuels en ce qui concerne le mariage, la filiation, l\'adoption ou la procréation.',
+        question: 'Les homosexuels n\'ont pas à être traités à égalité avec les hétérosexuels en ce qui concerne le mariage, la filiation, l\'adoption ou la procréation.',
         answer: 0,
         valuesYes: [{
                 axis: 's1',
